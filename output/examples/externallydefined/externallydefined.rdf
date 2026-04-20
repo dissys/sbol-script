@@ -1,0 +1,21 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:sbol="http://sbols.org/v3#">
+    <sbol:Component rdf:about="https://sbolstandard.org/examples/interlab16device1">
+        <sbol:displayId>interlab16device1</sbol:displayId>
+        <sbol:hasFeature rdf:resource="https://sbolstandard.org/examples/interlab16device1/ExternallyDefined1"/>
+        <sbol:hasFeature rdf:resource="https://sbolstandard.org/examples/interlab16device1/ExternallyDefined2"/>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
+    </sbol:Component>
+    <sbol:ExternallyDefined rdf:about="https://sbolstandard.org/examples/interlab16device1/ExternallyDefined1">
+        <sbol:definition rdf:resource="http://uniprot.org/gfp"/>
+        <sbol:displayId>ExternallyDefined1</sbol:displayId>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000252"/>
+    </sbol:ExternallyDefined>
+    <sbol:ExternallyDefined rdf:about="https://sbolstandard.org/examples/interlab16device1/ExternallyDefined2">
+        <sbol:definition rdf:resource="http://uniprot.org/rfp"/>
+        <sbol:displayId>ExternallyDefined2</sbol:displayId>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000252"/>
+    </sbol:ExternallyDefined>
+</rdf:RDF>

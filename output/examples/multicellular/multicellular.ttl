@@ -1,0 +1,467 @@
+@prefix sbol: <http://sbols.org/v3#>.
+@prefix exa: <https://sbolstandard.org/examples/>.
+@prefix sbo: <https://sbolstandard.org/>.
+@prefix AHL: <https://sbolstandard.org/examples/AHL_producer/>.
+@prefix Int: <https://sbolstandard.org/examples/AHL_producer/Interaction1/>.
+@prefix AH: <https://sbolstandard.org/examples/AHL_receiver/>.
+@prefix In: <https://sbolstandard.org/examples/AHL_receiver/Interaction1/>.
+@prefix Inte: <https://sbolstandard.org/examples/AHL_receiver/Interaction2/>.
+@prefix I: <https://sbolstandard.org/examples/AHL_receiver/Interaction3/>.
+@prefix Inter: <https://sbolstandard.org/examples/AHL_receiver/Interaction4/>.
+@prefix Mul: <https://sbolstandard.org/examples/MulticellularSystem/>.
+@prefix Sen: <https://sbolstandard.org/examples/SenderSystem/>.
+@prefix Rec: <https://sbolstandard.org/examples/ReceiverSystem/>.
+
+exa:AHL
+    a sbol:Component;
+    sbol:description "AHL";
+    sbol:displayId "AHL";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "AHL";
+    sbol:role <https://identifiers.org/CHEBI:35224>;
+    sbol:type <https://identifiers.org/SBO:0000247>.
+exa:AHL_producer
+    a sbol:Component;
+    sbol:description "AHL producer";
+    sbol:displayId "AHL_producer";
+    sbol:hasFeature
+        AHL:SubComponent1, AHL:SubComponent2, AHL:SubComponent3,
+        AHL:SubComponent4, AHL:SubComponent5;
+    sbol:hasInteraction AHL:Interaction1;
+    sbol:hasNamespace sbo:examples;
+    sbol:name "AHL producer";
+    sbol:role <https://identifiers.org/SO:0000704>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+AHL:Interaction1
+    a sbol:Interaction;
+    sbol:displayId "Interaction1";
+    sbol:hasParticipation Int:Participation1, Int:Participation2;
+    sbol:type <https://identifiers.org/SBO:0000589>.
+Int:Participation1
+    a sbol:Participation;
+    sbol:displayId "Participation1";
+    sbol:participant AHL:SubComponent3;
+    sbol:role <https://identifiers.org/SBO:0000645>.
+Int:Participation2
+    a sbol:Participation;
+    sbol:displayId "Participation2";
+    sbol:participant AHL:SubComponent5;
+    sbol:role <https://identifiers.org/SBO:0000011>.
+AHL:SubComponent1
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent1";
+    sbol:instanceOf exa:pConstLuxI;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+AHL:SubComponent2
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent2";
+    sbol:instanceOf exa:rbs_luxI;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+AHL:SubComponent3
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent3";
+    sbol:instanceOf exa:luxI;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+AHL:SubComponent4
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent4";
+    sbol:instanceOf exa:ter_luxI;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+AHL:SubComponent5
+a sbol:SubComponent; sbol:displayId "SubComponent5"; sbol:instanceOf exa:AHL.
+exa:AHL_receiver
+    a sbol:Component;
+    sbol:description "AHL receiver";
+    sbol:displayId "AHL_receiver";
+    sbol:hasFeature
+        AH:SubComponent1, AH:SubComponent10, AH:SubComponent11,
+        AH:SubComponent12, AH:SubComponent2, AH:SubComponent3, AH:SubComponent4,
+        AH:SubComponent5, AH:SubComponent6, AH:SubComponent7, AH:SubComponent8,
+        AH:SubComponent9;
+    sbol:hasInteraction
+    AH:Interaction1, AH:Interaction2, AH:Interaction3, AH:Interaction4;
+    sbol:hasNamespace sbo:examples;
+    sbol:name "AHL receiver";
+    sbol:role <https://identifiers.org/SO:0000704>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+AH:Interaction1
+    a sbol:Interaction;
+    sbol:displayId "Interaction1";
+    sbol:hasParticipation In:Participation1, In:Participation2;
+    sbol:type <https://identifiers.org/SBO:0000589>.
+In:Participation1
+    a sbol:Participation;
+    sbol:displayId "Participation1";
+    sbol:participant AH:SubComponent3;
+    sbol:role <https://identifiers.org/SBO:0000645>.
+In:Participation2
+    a sbol:Participation;
+    sbol:displayId "Participation2";
+    sbol:participant AH:SubComponent10;
+    sbol:role <https://identifiers.org/SBO:0000011>.
+AH:Interaction2
+    a sbol:Interaction;
+    sbol:displayId "Interaction2";
+    sbol:hasParticipation Inte:Participation1, Inte:Participation2;
+    sbol:type <https://identifiers.org/SBO:0000589>.
+Inte:Participation1
+    a sbol:Participation;
+    sbol:displayId "Participation1";
+    sbol:participant AH:SubComponent7;
+    sbol:role <https://identifiers.org/SBO:0000645>.
+Inte:Participation2
+    a sbol:Participation;
+    sbol:displayId "Participation2";
+    sbol:participant AH:SubComponent11;
+    sbol:role <https://identifiers.org/SBO:0000011>.
+AH:Interaction3
+    a sbol:Interaction;
+    sbol:displayId "Interaction3";
+    sbol:hasParticipation I:Participation1, I:Participation2;
+    sbol:type <https://identifiers.org/SBO:0000170>.
+I:Participation1
+    a sbol:Participation;
+    sbol:displayId "Participation1";
+    sbol:participant AH:SubComponent5;
+    sbol:role <https://identifiers.org/SBO:0000643>.
+I:Participation2
+    a sbol:Participation;
+    sbol:displayId "Participation2";
+    sbol:participant AH:SubComponent12;
+    sbol:role <https://identifiers.org/SBO:0000459>.
+AH:Interaction4
+    a sbol:Interaction;
+    sbol:displayId "Interaction4";
+    sbol:hasParticipation
+    Inter:Participation1, Inter:Participation2, Inter:Participation3;
+    sbol:type <https://identifiers.org/SBO:0000177>.
+Inter:Participation1
+    a sbol:Participation;
+    sbol:displayId "Participation1";
+    sbol:participant AH:SubComponent10;
+    sbol:role <https://identifiers.org/SBO:0000010>.
+Inter:Participation2
+    a sbol:Participation;
+    sbol:displayId "Participation2";
+    sbol:participant AH:SubComponent9;
+    sbol:role <https://identifiers.org/SBO:0000010>.
+Inter:Participation3
+    a sbol:Participation;
+    sbol:displayId "Participation3";
+    sbol:participant AH:SubComponent12;
+    sbol:role <https://identifiers.org/SBO:0000011>.
+AH:SubComponent1
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent1";
+    sbol:instanceOf exa:pConstLuxR;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+AH:SubComponent10
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent10";
+    sbol:instanceOf exa:LuxR_protein.
+AH:SubComponent11
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent11";
+    sbol:instanceOf exa:GFP_protein.
+AH:SubComponent12
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent12";
+    sbol:instanceOf exa:LuxR_AHL.
+AH:SubComponent2
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent2";
+    sbol:instanceOf exa:rbs_luxR;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+AH:SubComponent3
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent3";
+    sbol:instanceOf exa:luxR;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+AH:SubComponent4
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent4";
+    sbol:instanceOf exa:ter_luxR;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+AH:SubComponent5
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent5";
+    sbol:instanceOf exa:pLuxR;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+AH:SubComponent6
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent6";
+    sbol:instanceOf exa:rbs_gfp;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+AH:SubComponent7
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent7";
+    sbol:instanceOf exa:gfp;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+AH:SubComponent8
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent8";
+    sbol:instanceOf exa:ter_gfp;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+AH:SubComponent9
+a sbol:SubComponent; sbol:displayId "SubComponent9"; sbol:instanceOf exa:AHL.
+exa:gfp
+    a sbol:Component;
+    sbol:description "gfp coding sequence";
+    sbol:displayId "gfp";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "gfp";
+    sbol:role <https://identifiers.org/SO:0000316>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:GFP_protein
+    a sbol:Component;
+    sbol:description "GFP";
+    sbol:displayId "GFP_protein";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "GFP";
+    sbol:type <https://identifiers.org/SBO:0000252>.
+exa:luxI
+    a sbol:Component;
+    sbol:description "luxI coding sequence";
+    sbol:displayId "luxI";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "luxI";
+    sbol:role <https://identifiers.org/SO:0000316>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:luxR
+    a sbol:Component;
+    sbol:description "luxR coding sequence";
+    sbol:displayId "luxR";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "luxR";
+    sbol:role <https://identifiers.org/SO:0000316>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:LuxR_AHL
+    a sbol:Component;
+    sbol:description "LuxR_AHL complex";
+    sbol:displayId "LuxR_AHL";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "LuxR_AHL";
+    sbol:role <https://identifiers.org/GO:0003700>;
+    sbol:type <https://identifiers.org/SBO:0000252>.
+exa:LuxR_protein
+    a sbol:Component;
+    sbol:description "LuxR";
+    sbol:displayId "LuxR_protein";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "LuxR_protein";
+    sbol:role <https://identifiers.org/GO:0003700>;
+    sbol:type <https://identifiers.org/SBO:0000252>.
+exa:MulticellularSystem
+    a sbol:Component;
+    sbol:description "Multicellular System";
+    sbol:displayId "MulticellularSystem";
+    sbol:hasConstraint Mul:Constraint1;
+    sbol:hasFeature
+        Mul:ComponentReference1, Mul:ComponentReference2, Mul:SubComponent1,
+        Mul:SubComponent2;
+    sbol:hasNamespace sbo:examples;
+    sbol:name "MulticellularSystem";
+    sbol:role <https://identifiers.org/SBO:0000289>;
+    sbol:type <https://identifiers.org/SBO:0000241>.
+Mul:ComponentReference1
+    a sbol:ComponentReference;
+    sbol:displayId "ComponentReference1";
+    sbol:inChildOf Mul:SubComponent1;
+    sbol:refersTo Sen:SubComponent2 .
+Mul:ComponentReference2
+    a sbol:ComponentReference;
+    sbol:displayId "ComponentReference2";
+    sbol:inChildOf Mul:SubComponent2;
+    sbol:refersTo Rec:SubComponent2 .
+Mul:Constraint1
+    a sbol:Constraint;
+    sbol:displayId "Constraint1";
+    sbol:object Mul:ComponentReference2;
+    sbol:restriction sbol:verifyIdentical;
+    sbol:subject Mul:ComponentReference1 .
+Mul:SubComponent1
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent1";
+    sbol:instanceOf exa:SenderSystem.
+Mul:SubComponent2
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent2";
+    sbol:instanceOf exa:ReceiverSystem.
+exa:OrganismA
+    a sbol:Component;
+    sbol:description "Organism A";
+    sbol:displayId "OrganismA";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "OrganismA";
+    sbol:role <https://identifiers.org/SBO:0000290>;
+    sbol:type <https://identifiers.org/GO:0005623>.
+exa:OrganismB
+    a sbol:Component;
+    sbol:description "Organism B";
+    sbol:displayId "OrganismB";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "OrganismB";
+    sbol:role <https://identifiers.org/SBO:0000290>;
+    sbol:type <https://identifiers.org/GO:0005623>.
+exa:pConstLuxI
+    a sbol:Component;
+    sbol:description "Constitutive promoter";
+    sbol:displayId "pConstLuxI";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "pConstLuxI";
+    sbol:role <https://identifiers.org/SO:0000167>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:pConstLuxR
+    a sbol:Component;
+    sbol:description "Constituve promoter";
+    sbol:displayId "pConstLuxR";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "pLuxR";
+    sbol:role <https://identifiers.org/SO:0000167>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:pLuxR
+    a sbol:Component;
+    sbol:description "LuxR inducible promoter";
+    sbol:displayId "pLuxR";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "pLuxR";
+    sbol:role <https://identifiers.org/SO:0000167>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:rbs_gfp
+    a sbol:Component;
+    sbol:description "RBS";
+    sbol:displayId "rbs_gfp";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "rbs";
+    sbol:role <https://identifiers.org/SO:0000139>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:rbs_luxI
+    a sbol:Component;
+    sbol:description "RBS";
+    sbol:displayId "rbs_luxI";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "rbs";
+    sbol:role <https://identifiers.org/SO:0000139>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:rbs_luxR
+    a sbol:Component;
+    sbol:description "RBS";
+    sbol:displayId "rbs_luxR";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "rbs";
+    sbol:role <https://identifiers.org/SO:0000139>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:ReceiverSystem
+    a sbol:Component;
+    sbol:description "Receiver System";
+    sbol:displayId "ReceiverSystem";
+    sbol:hasConstraint Rec:Constraint1, Rec:Constraint2, Rec:Constraint3;
+    sbol:hasFeature
+        Rec:ComponentReference1, Rec:SubComponent1, Rec:SubComponent2,
+        Rec:SubComponent3;
+    sbol:hasNamespace sbo:examples;
+    sbol:name "ReceiverSystem";
+    sbol:role <https://identifiers.org/SBO:0000289>;
+    sbol:type <https://identifiers.org/SBO:0000241>.
+Rec:ComponentReference1
+    a sbol:ComponentReference;
+    sbol:displayId "ComponentReference1";
+    sbol:inChildOf Rec:SubComponent3;
+    sbol:refersTo AH:SubComponent9 .
+Rec:Constraint1
+    a sbol:Constraint;
+    sbol:displayId "Constraint1";
+    sbol:object Rec:SubComponent2;
+    sbol:restriction sbol:contains;
+    sbol:subject Rec:SubComponent1 .
+Rec:Constraint2
+    a sbol:Constraint;
+    sbol:displayId "Constraint2";
+    sbol:object Rec:SubComponent3;
+    sbol:restriction sbol:contains;
+    sbol:subject Rec:SubComponent1 .
+Rec:Constraint3
+    a sbol:Constraint;
+    sbol:displayId "Constraint3";
+    sbol:object Rec:SubComponent2;
+    sbol:restriction sbol:verifyIdentical;
+    sbol:subject Rec:ComponentReference1 .
+Rec:SubComponent1
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent1";
+    sbol:instanceOf exa:OrganismB.
+Rec:SubComponent2
+a sbol:SubComponent; sbol:displayId "SubComponent2"; sbol:instanceOf exa:AHL.
+Rec:SubComponent3
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent3";
+    sbol:instanceOf exa:AHL_receiver.
+exa:SenderSystem
+    a sbol:Component;
+    sbol:description "Sender System";
+    sbol:displayId "SenderSystem";
+    sbol:hasConstraint Sen:Constraint1, Sen:Constraint2, Sen:Constraint3;
+    sbol:hasFeature
+        Sen:ComponentReference1, Sen:SubComponent1, Sen:SubComponent2,
+        Sen:SubComponent3;
+    sbol:hasNamespace sbo:examples;
+    sbol:name "SenderSystem";
+    sbol:role <https://identifiers.org/SBO:0000289>;
+    sbol:type <https://identifiers.org/SBO:0000241>.
+Sen:ComponentReference1
+    a sbol:ComponentReference;
+    sbol:displayId "ComponentReference1";
+    sbol:inChildOf Sen:SubComponent3;
+    sbol:refersTo AHL:SubComponent5 .
+Sen:Constraint1
+    a sbol:Constraint;
+    sbol:displayId "Constraint1";
+    sbol:object Sen:SubComponent2;
+    sbol:restriction sbol:contains;
+    sbol:subject Sen:SubComponent1 .
+Sen:Constraint2
+    a sbol:Constraint;
+    sbol:displayId "Constraint2";
+    sbol:object Sen:SubComponent3;
+    sbol:restriction sbol:contains;
+    sbol:subject Sen:SubComponent1 .
+Sen:Constraint3
+    a sbol:Constraint;
+    sbol:displayId "Constraint3";
+    sbol:object Sen:SubComponent2;
+    sbol:restriction sbol:verifyIdentical;
+    sbol:subject Sen:ComponentReference1 .
+Sen:SubComponent1
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent1";
+    sbol:instanceOf exa:OrganismA.
+Sen:SubComponent2
+a sbol:SubComponent; sbol:displayId "SubComponent2"; sbol:instanceOf exa:AHL.
+Sen:SubComponent3
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent3";
+    sbol:instanceOf exa:AHL_producer.
+exa:ter_gfp
+    a sbol:Component;
+    sbol:description "Terminator";
+    sbol:displayId "ter_gfp";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "gfp terminator";
+    sbol:role <https://identifiers.org/SO:0000141>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:ter_luxI
+    a sbol:Component;
+    sbol:description "Terminator";
+    sbol:displayId "ter_luxI";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "luxI terminator";
+    sbol:role <https://identifiers.org/SO:0000141>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:ter_luxR
+    a sbol:Component;
+    sbol:description "Terminator";
+    sbol:displayId "ter_luxR";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "luxR terminator";
+    sbol:role <https://identifiers.org/SO:0000141>;
+    sbol:type <https://identifiers.org/SBO:0000251>.

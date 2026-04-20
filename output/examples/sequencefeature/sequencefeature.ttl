@@ -1,0 +1,34 @@
+@prefix sbol: <http://sbols.org/v3#>.
+@prefix exa: <https://sbolstandard.org/examples/>.
+@prefix E: <https://sbolstandard.org/examples/E0040/>.
+@prefix sbo: <https://sbolstandard.org/>.
+@prefix Seq: <https://sbolstandard.org/examples/E0040/SequenceFeature1/>.
+
+exa:E0040
+    a sbol:Component;
+    sbol:displayId "E0040";
+    sbol:hasFeature E:SequenceFeature1;
+    sbol:hasNamespace sbo:examples;
+    sbol:hasSequence exa:E0040_Sequence1;
+    sbol:name "E0040";
+    sbol:role <https://identifiers.org/SO:0000316>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:E0040_Sequence1
+    a sbol:Sequence;
+    sbol:description "E0040 sequence";
+    sbol:displayId "E0040_Sequence1";
+    sbol:elements
+        "atgcgtaaaggagaagaacttttcactggagttgtcccaattcttgttgaattagatggtgatgttaatgggcacaaattttctgtcagtggagagggtgaaggtgatgcaacatacggaaaacttacccttaaatttatttgcactactggaaaactacctgttccatggccaacacttgtcactactttcggttatggtgttcaatgctttgcgagatacccagatcatatgaaacagcatgactttttcaagagtgccatgcccgaaggttatgtacaggaaagaactatatttttcaaagatgacgggaactacaagacacgtgctgaagtcaagtttgaaggtgatacccttgttaatagaatcgagttaaaaggtattgattttaaagaagatggaaacattcttggacacaaattggaatacaactataactcacacaatgtatacatcatggcagacaaacaaaagaatggaatcaaagttaacttcaaaattagacacaacattgaagatggaagcgttcaactagcagaccattatcaacaaaatactccaattggcgatggccctgtccttttaccagacaaccattacctgtccacacaatctgccctttcgaaagatcccaacgaaaagagagaccacatggtccttcttgagtttgtaacagctgctgggattacacatggcatggatgaactatacaaataataa";
+    sbol:encoding <https://identifiers.org/edam:format_1207>;
+    sbol:hasNamespace sbo:examples;
+    sbol:name "Sequence1".
+E:SequenceFeature1
+    a sbol:SequenceFeature;
+    sbol:displayId "SequenceFeature1";
+    sbol:hasLocation Seq:Range1 .
+Seq:Range1
+    a sbol:Range;
+    sbol:displayId "Range1";
+    sbol:end "3";
+    sbol:hasSequence exa:E0040_Sequence1;
+    sbol:start "1".

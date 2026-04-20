@@ -1,0 +1,36 @@
+@prefix sbol: <http://sbols.org/v3#>.
+@prefix exa: <https://sbolstandard.org/examples/>.
+@prefix sbo: <https://sbolstandard.org/>.
+
+exa:attachment1
+    a sbol:Attachment;
+    sbol:displayId "attachment1";
+    sbol:format <https://identifiers.org/edam:format_2585>;
+    sbol:hash "aaa";
+    sbol:hashAlgorithm "sha-256";
+    sbol:hasNamespace sbo:examples;
+    sbol:size "1000";
+    sbol:source sbo:attachment1 .
+exa:attachment2
+    a sbol:Attachment;
+    sbol:displayId "attachment2";
+    sbol:format <https://identifiers.org/edam:format_2585>;
+    sbol:hash "aaa";
+    sbol:hashAlgorithm "sha-256";
+    sbol:hasNamespace sbo:examples;
+    sbol:size "1000";
+    sbol:source sbo:attachment2 .
+exa:impl1
+    a sbol:Implementation;
+    sbol:built exa:TetR_protein;
+    sbol:displayId "impl1";
+    sbol:hasAttachment exa:attachment1;
+    sbol:hasNamespace sbo:examples.
+exa:TetR_protein
+    a sbol:Component;
+    sbol:description "TetR protein";
+    sbol:displayId "TetR_protein";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "TetR";
+    sbol:role <https://identifiers.org/GO:0003700>;
+    sbol:type <https://identifiers.org/SBO:0000252>.

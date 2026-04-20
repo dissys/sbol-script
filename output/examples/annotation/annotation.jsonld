@@ -1,0 +1,187 @@
+{
+  "@context": {
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sbol": "http://sbols.org/v3#",
+    "exa": "https://sbolstandard.org/examples/",
+    "parts": "http://parts.igem.org/",
+    "BBa": "https://sbolstandard.org/examples/BBa_J23119/",
+    "sbo": "https://sbolstandard.org/",
+    "usage": "https://sbolstandard.org/examples/BBa_J23119/usage1/"
+  },
+  "@graph": [
+    {
+      "@id": "exa:BBa_J23119",
+      "@type": "sbol:Component",
+      "parts:belongsTo": [
+        {
+          "@id": "exa:iGEMRepository"
+        },
+        {
+          "@id": "exa:SynBioHubRepository"
+        }
+      ],
+      "parts:experienceURL": {
+        "@id": "http://parts.igem.org/Part:BBa_J23119:Experience"
+      },
+      "parts:group": "iGEM2006_Berkeley",
+      "parts:hasInformation": [
+        {
+          "@id": "BBa:information1"
+        },
+        {
+          "@id": "BBa:information2"
+        },
+        {
+          "@id": "BBa:information3"
+        }
+      ],
+      "parts:hasUsage": [
+        {
+          "@id": "BBa:usage1"
+        },
+        {
+          "@id": "BBa:usage2"
+        },
+        {
+          "@id": "BBa:usage3"
+        }
+      ],
+      "sbol:description": "Parts J23100 through J23119 are a family of constitutive promoter parts isolated from a small combinatorial library.",
+      "sbol:displayId": "BBa_J23119",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "BBa_J23119 part",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000167"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "BBa:information1",
+      "@type": [
+        "parts:Information",
+        "sbol:Identified"
+      ],
+      "parts:regulation": [
+        "//regulation/constitutive",
+        "//regulation/second_regulation"
+      ],
+      "parts:sigmaFactor": "//rnap/prokaryote/ecoli/sigma70",
+      "parts:source": {
+        "@id": "exa:BBa_J23119"
+      },
+      "sbol:description": "The experience page captures users' experience using the BBa_J23119 part",
+      "sbol:displayId": "information1",
+      "sbol:name": "BBa_J23119_experience"
+    },
+    {
+      "@id": "BBa:information2",
+      "@type": [
+        "parts:A_Information",
+        "sbol:Identified"
+      ],
+      "sbol:displayId": "information2",
+      "sbol:name": "BBa_J23119_experience2"
+    },
+    {
+      "@id": "BBa:information3",
+      "@type": [
+        "parts:Z_Information",
+        "sbol:Identified"
+      ],
+      "sbol:displayId": "information3",
+      "sbol:name": "BBa_J23119_experience3"
+    },
+    {
+      "@id": "BBa:usage1",
+      "@type": [
+        "parts:iGEMUsage",
+        "sbol:Identified"
+      ],
+      "parts:inStock": "true",
+      "parts:registryStar": "1",
+      "parts:twins": "7",
+      "parts:twinURLs": {
+        "@id": "usage:twinParts"
+      },
+      "parts:uses": "442",
+      "parts:uses2": {
+        "@value": "442",
+        "@type": "xsd:int"
+      },
+      "sbol:description": "BBa_J23119 usage statistics",
+      "sbol:displayId": "usage1",
+      "sbol:name": "BBa_J23119_usage"
+    },
+    {
+      "@id": "usage:twinParts",
+      "@type": [
+        "parts:TwinPartUsage",
+        "sbol:Identified"
+      ],
+      "parts:twinURL": [
+        {
+          "@id": "http://parts.igem.org/wiki/index.php?title=Part:BBa_J72073"
+        },
+        {
+          "@id": "http://parts.igem.org/wiki/index.php?title=Part:BBa_M1638"
+        },
+        {
+          "@id": "http://parts.igem.org/wiki/index.php?title=Part:BBa_M36800"
+        }
+      ],
+      "sbol:displayId": "twinParts",
+      "sbol:name": "twin parts"
+    },
+    {
+      "@id": "BBa:usage2",
+      "@type": [
+        "parts:A_iGEMUsage",
+        "sbol:Identified"
+      ],
+      "parts:twins": "7",
+      "sbol:displayId": "usage2",
+      "sbol:name": "BBa_J23119_usage_2"
+    },
+    {
+      "@id": "BBa:usage3",
+      "@type": [
+        "parts:Z_iGEMUsage",
+        "sbol:Identified"
+      ],
+      "sbol:displayId": "usage3",
+      "sbol:name": "BBa_J23119_usage_3"
+    },
+    {
+      "@id": "exa:iGEMRepository",
+      "@type": [
+        "parts:Repository",
+        "sbol:TopLevel"
+      ],
+      "parts:website": {
+        "@id": "parts:Main_Page"
+      },
+      "sbol:description": "Registry of Standard Biological Parts",
+      "sbol:displayId": "iGEMRepository",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "iGEM Registry"
+    },
+    {
+      "@id": "exa:SynBioHubRepository",
+      "@type": [
+        "parts:Repository",
+        "sbol:TopLevel"
+      ],
+      "sbol:displayId": "SynBioHubRepository",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "SynBioHub"
+    }
+  ]
+}

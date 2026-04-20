@@ -1,0 +1,47 @@
+{
+  "@context": {
+    "sbol": "http://sbols.org/v3#",
+    "exa": "https://sbolstandard.org/examples/",
+    "sbo": "https://sbolstandard.org/"
+  },
+  "@graph": [
+    {
+      "@id": "exa:attachment1",
+      "@type": "sbol:Attachment",
+      "sbol:displayId": "attachment1",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:source": {
+        "@id": "sbo:attachment1"
+      }
+    },
+    {
+      "@id": "exa:attachment2",
+      "@type": "sbol:Attachment",
+      "sbol:displayId": "attachment2",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:source": {
+        "@id": "sbo:attachment2"
+      }
+    },
+    {
+      "@id": "exa:exp1",
+      "@type": "sbol:Experiment",
+      "sbol:displayId": "exp1",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:member": [
+        {
+          "@id": "exa:attachment1"
+        },
+        {
+          "@id": "exa:attachment2"
+        }
+      ]
+    }
+  ]
+}

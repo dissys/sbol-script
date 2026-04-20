@@ -1,0 +1,51 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:sbol="http://sbols.org/v3#">
+    <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/B0015_Sequence1">
+        <sbol:description>B0015 sequence</sbol:description>
+        <sbol:displayId>B0015_Sequence1</sbol:displayId>
+        <sbol:elements>ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctc</sbol:elements>
+        <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+        <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
+        <sbol:name>Sequence1</sbol:name>
+    </sbol:Sequence>
+    <sbol:Component rdf:about="https://synbiohub.org/public/igem/B0015">
+        <sbol:description>B0015 double terminator</sbol:description>
+        <sbol:displayId>B0015</sbol:displayId>
+        <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
+        <sbol:hasSequence rdf:resource="https://synbiohub.org/public/igem/B0015_Sequence1"/>
+        <sbol:name>terminator</sbol:name>
+        <sbol:role rdf:resource="https://identifiers.org/SO:0000141"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+    </sbol:Component>
+    <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/i13504_Sequence1">
+        <sbol:description>i13504 sequence</sbol:description>
+        <sbol:displayId>i13504_Sequence1</sbol:displayId>
+        <sbol:elements>ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctc</sbol:elements>
+        <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+        <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
+        <sbol:name>Sequence1</sbol:name>
+    </sbol:Sequence>
+    <sbol:Component rdf:about="https://synbiohub.org/public/igem/i13504">
+        <sbol:displayId>i13504</sbol:displayId>
+        <sbol:hasFeature rdf:resource="https://synbiohub.org/public/igem/i13504/SubComponent1"/>
+        <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
+        <sbol:hasSequence rdf:resource="https://synbiohub.org/public/igem/i13504_Sequence1"/>
+        <sbol:role rdf:resource="https://identifiers.org/SO:0000704"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+    </sbol:Component>
+    <sbol:SubComponent rdf:about="https://synbiohub.org/public/igem/i13504/SubComponent1">
+        <sbol:displayId>SubComponent1</sbol:displayId>
+        <sbol:hasLocation rdf:resource="https://synbiohub.org/public/igem/i13504/SubComponent1/Range1"/>
+        <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/B0015"/>
+        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+    </sbol:SubComponent>
+    <sbol:Range rdf:about="https://synbiohub.org/public/igem/i13504/SubComponent1/Range1">
+        <sbol:displayId>Range1</sbol:displayId>
+        <sbol:end>80</sbol:end>
+        <sbol:hasSequence rdf:resource="https://synbiohub.org/public/igem/i13504_Sequence1"/>
+        <sbol:order>1</sbol:order>
+        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+        <sbol:start>1</sbol:start>
+    </sbol:Range>
+</rdf:RDF>

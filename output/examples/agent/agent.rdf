@@ -1,0 +1,19 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:sbol="http://sbols.org/v3#"
+ xmlns:prov="http://www.w3.org/ns/prov#">
+    <prov:Agent rdf:about="https://sbolstandard.org/examples/CodonOptimiserSoftware">
+        <sbol:description>Used to optimise bacterial DNA sequences.</sbol:description>
+        <sbol:displayId>CodonOptimiserSoftware</sbol:displayId>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+        <sbol:name>Codon Optimiser Software</sbol:name>
+        <rdf:type rdf:resource="http://sbols.org/v3#TopLevel"/>
+    </prov:Agent>
+    <sbol:Component rdf:about="https://sbolstandard.org/examples/toggle_switch">
+        <sbol:description>Toggle Switch genetic circuit</sbol:description>
+        <sbol:displayId>toggle_switch</sbol:displayId>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+        <sbol:name>Toggle Switch</sbol:name>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
+    </sbol:Component>
+</rdf:RDF>

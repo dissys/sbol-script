@@ -1,0 +1,22 @@
+@prefix sbol: <http://sbols.org/v3#>.
+@prefix exa: <https://sbolstandard.org/examples/>.
+@prefix int: <https://sbolstandard.org/examples/interlab16device1/>.
+@prefix sbo: <https://sbolstandard.org/>.
+@prefix uni: <http://uniprot.org/>.
+
+exa:interlab16device1
+    a sbol:Component;
+    sbol:displayId "interlab16device1";
+    sbol:hasFeature int:ExternallyDefined1, int:ExternallyDefined2;
+    sbol:hasNamespace sbo:examples;
+    sbol:type <https://identifiers.org/SBO:0000241>.
+int:ExternallyDefined1
+    a sbol:ExternallyDefined;
+    sbol:definition uni:gfp;
+    sbol:displayId "ExternallyDefined1";
+    sbol:type <https://identifiers.org/SBO:0000252>.
+int:ExternallyDefined2
+    a sbol:ExternallyDefined;
+    sbol:definition uni:rfp;
+    sbol:displayId "ExternallyDefined2";
+    sbol:type <https://identifiers.org/SBO:0000252>.

@@ -1,0 +1,463 @@
+@prefix sbol: <http://sbols.org/v3#>.
+@prefix exa: <https://sbolstandard.org/examples/>.
+@prefix sbo: <https://sbolstandard.org/>.
+@prefix LacI: <https://sbolstandard.org/examples/LacI_producer/>.
+@prefix Int: <https://sbolstandard.org/examples/LacI_producer/Interaction1/>.
+@prefix In: <https://sbolstandard.org/examples/LacI_producer/Interaction2/>.
+@prefix Inte: <https://sbolstandard.org/examples/LacI_producer/Interaction3/>.
+@prefix I: <https://sbolstandard.org/examples/LacI_producer/Interaction4/>.
+@prefix TetR: <https://sbolstandard.org/examples/TetR_producer/>.
+@prefix Inter: <https://sbolstandard.org/examples/TetR_producer/Interaction1/>.
+@prefix Int0: <https://sbolstandard.org/examples/TetR_producer/Interaction2/>.
+@prefix Int1: <https://sbolstandard.org/examples/TetR_producer/Interaction3/>.
+@prefix tog: <https://sbolstandard.org/examples/toggle_switch/>.
+
+exa:aTC
+    a sbol:Component;
+    sbol:description "aTC";
+    sbol:displayId "aTC";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "aTC";
+    sbol:role <https://identifiers.org/CHEBI:35224>;
+    sbol:type <https://identifiers.org/SBO:0000247>.
+exa:atC_TetR
+    a sbol:Component;
+    sbol:description "atC_TetR complex";
+    sbol:displayId "atC_TetR";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "atC_TetR";
+    sbol:type <https://identifiers.org/SBO:0000253>.
+exa:gfp
+    a sbol:Component;
+    sbol:description "gfp coding sequence";
+    sbol:displayId "gfp";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "gfp";
+    sbol:role <https://identifiers.org/SO:0000316>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:GFP_protein
+    a sbol:Component;
+    sbol:description "GFP";
+    sbol:displayId "GFP_protein";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "GFP";
+    sbol:type <https://identifiers.org/SBO:0000252>.
+exa:IPTG
+    a sbol:Component;
+    sbol:description "IPTG";
+    sbol:displayId "IPTG";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "IPTG";
+    sbol:role <https://identifiers.org/CHEBI:35224>;
+    sbol:type <https://identifiers.org/SBO:0000247>.
+exa:IPTG_LacI
+    a sbol:Component;
+    sbol:description "IPTG_LacI complex";
+    sbol:displayId "IPTG_LacI";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "IPTG_LacI";
+    sbol:type <https://identifiers.org/SBO:0000253>.
+exa:lacI
+    a sbol:Component;
+    sbol:description "lacI coding sequence";
+    sbol:displayId "lacI";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "lacI";
+    sbol:role <https://identifiers.org/SO:0000316>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:LacI_producer
+    a sbol:Component;
+    sbol:description "LacI producer";
+    sbol:displayId "LacI_producer";
+    sbol:hasFeature
+        LacI:SubComponent1, LacI:SubComponent10, LacI:SubComponent11,
+        LacI:SubComponent2, LacI:SubComponent3, LacI:SubComponent4,
+        LacI:SubComponent5, LacI:SubComponent6, LacI:SubComponent7,
+        LacI:SubComponent8, LacI:SubComponent9;
+    sbol:hasInteraction
+    LacI:Interaction1, LacI:Interaction2, LacI:Interaction3, LacI:Interaction4;
+    sbol:hasNamespace sbo:examples;
+    sbol:name "LacI producer";
+    sbol:role <https://identifiers.org/SO:0000704>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+LacI:Interaction1
+    a sbol:Interaction;
+    sbol:displayId "Interaction1";
+    sbol:hasParticipation Int:Participation1, Int:Participation2;
+    sbol:type <https://identifiers.org/SBO:0000589>.
+Int:Participation1
+    a sbol:Participation;
+    sbol:displayId "Participation1";
+    sbol:participant LacI:SubComponent3;
+    sbol:role <https://identifiers.org/SBO:0000645>.
+Int:Participation2
+    a sbol:Participation;
+    sbol:displayId "Participation2";
+    sbol:participant LacI:SubComponent7;
+    sbol:role <https://identifiers.org/SBO:0000011>.
+LacI:Interaction2
+    a sbol:Interaction;
+    sbol:displayId "Interaction2";
+    sbol:hasParticipation In:Participation1, In:Participation2;
+    sbol:type <https://identifiers.org/SBO:0000589>.
+In:Participation1
+    a sbol:Participation;
+    sbol:displayId "Participation1";
+    sbol:participant LacI:SubComponent5;
+    sbol:role <https://identifiers.org/SBO:0000645>.
+In:Participation2
+    a sbol:Participation;
+    sbol:displayId "Participation2";
+    sbol:participant LacI:SubComponent8;
+    sbol:role <https://identifiers.org/SBO:0000011>.
+LacI:Interaction3
+    a sbol:Interaction;
+    sbol:displayId "Interaction3";
+    sbol:hasParticipation Inte:Participation1, Inte:Participation2;
+    sbol:type <https://identifiers.org/SBO:0000169>.
+Inte:Participation1
+    a sbol:Participation;
+    sbol:displayId "Participation1";
+    sbol:participant LacI:SubComponent1;
+    sbol:role <https://identifiers.org/SBO:0000642>.
+Inte:Participation2
+    a sbol:Participation;
+    sbol:displayId "Participation2";
+    sbol:participant LacI:SubComponent9;
+    sbol:role <https://identifiers.org/SBO:0000020>.
+LacI:Interaction4
+    a sbol:Interaction;
+    sbol:displayId "Interaction4";
+    sbol:hasParticipation I:Participation1, I:Participation2, I:Participation3;
+    sbol:type <https://identifiers.org/SBO:0000177>.
+I:Participation1
+    a sbol:Participation;
+    sbol:displayId "Participation1";
+    sbol:participant LacI:SubComponent9;
+    sbol:role <https://identifiers.org/SBO:0000010>.
+I:Participation2
+    a sbol:Participation;
+    sbol:displayId "Participation2";
+    sbol:participant LacI:SubComponent10;
+    sbol:role <https://identifiers.org/SBO:0000010>.
+I:Participation3
+    a sbol:Participation;
+    sbol:displayId "Participation3";
+    sbol:participant LacI:SubComponent11;
+    sbol:role <https://identifiers.org/SBO:0000011>.
+LacI:SubComponent1
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent1";
+    sbol:instanceOf exa:pTetR;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+LacI:SubComponent10
+a sbol:SubComponent; sbol:displayId "SubComponent10"; sbol:instanceOf exa:aTC.
+LacI:SubComponent11
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent11";
+    sbol:instanceOf exa:atC_TetR.
+LacI:SubComponent2
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent2";
+    sbol:instanceOf exa:rbs_lacI;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+LacI:SubComponent3
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent3";
+    sbol:instanceOf exa:lacI;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+LacI:SubComponent4
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent4";
+    sbol:instanceOf exa:rbs_gfp;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+LacI:SubComponent5
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent5";
+    sbol:instanceOf exa:gfp;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+LacI:SubComponent6
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent6";
+    sbol:instanceOf exa:ter_lacI;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+LacI:SubComponent7
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent7";
+    sbol:instanceOf exa:LacI_protein.
+LacI:SubComponent8
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent8";
+    sbol:instanceOf exa:GFP_protein.
+LacI:SubComponent9
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent9";
+    sbol:instanceOf exa:TetR_protein.
+exa:LacI_protein
+    a sbol:Component;
+    sbol:description "LacI protein";
+    sbol:displayId "LacI_protein";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "LacI";
+    sbol:role <https://identifiers.org/GO:0003700>;
+    sbol:type <https://identifiers.org/SBO:0000252>.
+exa:molecule1
+    a sbol:Component;
+    sbol:description "Signalling Molecule 1";
+    sbol:displayId "molecule1";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "Signalling Molecule 1";
+    sbol:role <https://identifiers.org/GO:0003700>;
+    sbol:type <https://identifiers.org/SBO:0000252>.
+exa:molecule2
+    a sbol:Component;
+    sbol:description "Signalling Molecule 2";
+    sbol:displayId "molecule2";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "Signalling Molecule 2";
+    sbol:role <https://identifiers.org/GO:0003700>;
+    sbol:type <https://identifiers.org/SBO:0000252>.
+exa:pLacI
+    a sbol:Component;
+    sbol:description "LacI repressible promoter";
+    sbol:displayId "pLacI";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "pLacI promoter";
+    sbol:role <https://identifiers.org/SO:0000167>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:pTetR
+    a sbol:Component;
+    sbol:description "TetR repressible promoter";
+    sbol:displayId "pTetR";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "pTetR";
+    sbol:role <https://identifiers.org/SO:0000167>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:rbs_gfp
+    a sbol:Component;
+    sbol:description "RBS";
+    sbol:displayId "rbs_gfp";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "rbs";
+    sbol:role <https://identifiers.org/SO:0000139>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:rbs_lacI
+    a sbol:Component;
+    sbol:description "RBS";
+    sbol:displayId "rbs_lacI";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "rbs";
+    sbol:role <https://identifiers.org/SO:0000139>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:rbs_tetR
+    a sbol:Component;
+    sbol:description "tetR RBS";
+    sbol:displayId "rbs_tetR";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "rbs";
+    sbol:role <https://identifiers.org/SO:0000139>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:ter_lacI
+    a sbol:Component;
+    sbol:description "Terminator";
+    sbol:displayId "ter_lacI";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "lacI terminator";
+    sbol:role <https://identifiers.org/SO:0000141>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:ter_tetR
+    a sbol:Component;
+    sbol:description "Terminator";
+    sbol:displayId "ter_tetR";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "tetR terminator";
+    sbol:role <https://identifiers.org/SO:0000141>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:tetR
+    a sbol:Component;
+    sbol:description "tetR coding sequence";
+    sbol:displayId "tetR";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "tetR";
+    sbol:role <https://identifiers.org/SO:0000316>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+exa:TetR_producer
+    a sbol:Component;
+    sbol:description "TetR producer";
+    sbol:displayId "TetR_producer";
+    sbol:hasFeature
+        TetR:SubComponent1, TetR:SubComponent2, TetR:SubComponent3,
+        TetR:SubComponent4, TetR:SubComponent5, TetR:SubComponent6,
+        TetR:SubComponent7, TetR:SubComponent8;
+    sbol:hasInteraction TetR:Interaction1, TetR:Interaction2, TetR:Interaction3;
+    sbol:hasNamespace sbo:examples;
+    sbol:name "TetR device";
+    sbol:role <https://identifiers.org/SO:0000704>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+TetR:Interaction1
+    a sbol:Interaction;
+    sbol:displayId "Interaction1";
+    sbol:hasParticipation Inter:Participation1, Inter:Participation2;
+    sbol:type <https://identifiers.org/SBO:0000589>.
+Inter:Participation1
+    a sbol:Participation;
+    sbol:displayId "Participation1";
+    sbol:participant TetR:SubComponent3;
+    sbol:role <https://identifiers.org/SBO:0000645>.
+Inter:Participation2
+    a sbol:Participation;
+    sbol:displayId "Participation2";
+    sbol:participant TetR:SubComponent5;
+    sbol:role <https://identifiers.org/SBO:0000011>.
+TetR:Interaction2
+    a sbol:Interaction;
+    sbol:displayId "Interaction2";
+    sbol:hasParticipation Int0:Participation1, Int0:Participation2;
+    sbol:type <https://identifiers.org/SBO:0000169>.
+Int0:Participation1
+    a sbol:Participation;
+    sbol:displayId "Participation1";
+    sbol:participant TetR:SubComponent1;
+    sbol:role <https://identifiers.org/SBO:0000642>.
+Int0:Participation2
+    a sbol:Participation;
+    sbol:displayId "Participation2";
+    sbol:participant TetR:SubComponent6;
+    sbol:role <https://identifiers.org/SBO:0000020>.
+TetR:Interaction3
+    a sbol:Interaction;
+    sbol:displayId "Interaction3";
+    sbol:hasParticipation
+    Int1:Participation1, Int1:Participation2, Int1:Participation3;
+    sbol:type <https://identifiers.org/SBO:0000177>.
+Int1:Participation1
+    a sbol:Participation;
+    sbol:displayId "Participation1";
+    sbol:participant TetR:SubComponent6;
+    sbol:role <https://identifiers.org/SBO:0000010>.
+Int1:Participation2
+    a sbol:Participation;
+    sbol:displayId "Participation2";
+    sbol:participant TetR:SubComponent7;
+    sbol:role <https://identifiers.org/SBO:0000010>.
+Int1:Participation3
+    a sbol:Participation;
+    sbol:displayId "Participation3";
+    sbol:participant TetR:SubComponent8;
+    sbol:role <https://identifiers.org/SBO:0000011>.
+TetR:SubComponent1
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent1";
+    sbol:instanceOf exa:pLacI;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+TetR:SubComponent2
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent2";
+    sbol:instanceOf exa:rbs_tetR;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+TetR:SubComponent3
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent3";
+    sbol:instanceOf exa:tetR;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+TetR:SubComponent4
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent4";
+    sbol:instanceOf exa:ter_tetR;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+TetR:SubComponent5
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent5";
+    sbol:instanceOf exa:TetR_protein.
+TetR:SubComponent6
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent6";
+    sbol:instanceOf exa:LacI_protein.
+TetR:SubComponent7
+a sbol:SubComponent; sbol:displayId "SubComponent7"; sbol:instanceOf exa:IPTG.
+TetR:SubComponent8
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent8";
+    sbol:instanceOf exa:IPTG_LacI.
+exa:TetR_protein
+    a sbol:Component;
+    sbol:description "TetR protein";
+    sbol:displayId "TetR_protein";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "TetR";
+    sbol:role <https://identifiers.org/GO:0003700>;
+    sbol:type <https://identifiers.org/SBO:0000252>.
+exa:toggle_switch
+    a sbol:Component;
+    sbol:description "Toggle Switch genetic circuit";
+    sbol:displayId "toggle_switch";
+    sbol:hasConstraint
+    tog:Constraint1, tog:Constraint2, tog:Constraint3, tog:Constraint4;
+    sbol:hasFeature
+        tog:ComponentReference1, tog:ComponentReference2,
+        tog:ComponentReference3, tog:ComponentReference4, tog:SubComponent1,
+        tog:SubComponent2, tog:SubComponent3, tog:SubComponent4;
+    sbol:hasNamespace sbo:examples;
+    sbol:name "Toggle Switch";
+    sbol:role <https://identifiers.org/SO:0000704>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+tog:ComponentReference1
+    a sbol:ComponentReference;
+    sbol:displayId "ComponentReference1";
+    sbol:inChildOf tog:SubComponent3;
+    sbol:refersTo LacI:SubComponent7 .
+tog:ComponentReference2
+    a sbol:ComponentReference;
+    sbol:displayId "ComponentReference2";
+    sbol:inChildOf tog:SubComponent4;
+    sbol:refersTo TetR:SubComponent6 .
+tog:ComponentReference3
+    a sbol:ComponentReference;
+    sbol:displayId "ComponentReference3";
+    sbol:inChildOf tog:SubComponent3;
+    sbol:refersTo LacI:SubComponent9 .
+tog:ComponentReference4
+    a sbol:ComponentReference;
+    sbol:displayId "ComponentReference4";
+    sbol:inChildOf tog:SubComponent4;
+    sbol:refersTo TetR:SubComponent5 .
+tog:Constraint1
+    a sbol:Constraint;
+    sbol:displayId "Constraint1";
+    sbol:object tog:SubComponent1;
+    sbol:restriction sbol:replaces;
+    sbol:subject tog:ComponentReference1 .
+tog:Constraint2
+    a sbol:Constraint;
+    sbol:displayId "Constraint2";
+    sbol:object tog:SubComponent1;
+    sbol:restriction sbol:replaces;
+    sbol:subject tog:ComponentReference2 .
+tog:Constraint3
+    a sbol:Constraint;
+    sbol:displayId "Constraint3";
+    sbol:object tog:SubComponent2;
+    sbol:restriction sbol:replaces;
+    sbol:subject tog:ComponentReference3 .
+tog:Constraint4
+    a sbol:Constraint;
+    sbol:displayId "Constraint4";
+    sbol:object tog:SubComponent2;
+    sbol:restriction sbol:replaces;
+    sbol:subject tog:ComponentReference4 .
+tog:SubComponent1
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent1";
+    sbol:instanceOf exa:molecule1 .
+tog:SubComponent2
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent2";
+    sbol:instanceOf exa:molecule2 .
+tog:SubComponent3
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent3";
+    sbol:instanceOf exa:LacI_producer.
+tog:SubComponent4
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent4";
+    sbol:instanceOf exa:TetR_producer.

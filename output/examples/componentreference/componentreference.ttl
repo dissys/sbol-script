@@ -1,0 +1,78 @@
+@prefix sbol: <http://sbols.org/v3#>.
+@prefix igem: <https://synbiohub.org/public/igem/>.
+@prefix pub: <https://synbiohub.org/public/>.
+@prefix i: <https://synbiohub.org/public/igem/i13504_system/>.
+@prefix int: <https://synbiohub.org/public/igem/interlab16device1/>.
+@prefix sim: <https://synbiohub.org/public/igem/simpleDevice/>.
+
+igem:B0015
+    a sbol:Component;
+    sbol:description "B0015 double terminator";
+    sbol:displayId "B0015";
+    sbol:hasNamespace pub:igem;
+    sbol:hasSequence igem:B0015_Sequence1;
+    sbol:name "terminator";
+    sbol:role <https://identifiers.org/SO:0000141>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+igem:B0015_Sequence1
+    a sbol:Sequence;
+    sbol:description "B0015 sequence";
+    sbol:displayId "B0015_Sequence1";
+    sbol:elements
+        "ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctc";
+    sbol:encoding <https://identifiers.org/edam:format_1207>;
+    sbol:hasNamespace pub:igem;
+    sbol:name "Sequence1".
+igem:i13504
+    a sbol:Component;
+    sbol:displayId "i13504";
+    sbol:hasNamespace pub:igem;
+    sbol:role <https://identifiers.org/SO:0000704>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+igem:i13504_system
+    a sbol:Component;
+    sbol:displayId "i13504_system";
+    sbol:hasFeature i:SubComponent1;
+    sbol:hasNamespace pub:igem;
+    sbol:name "i13504 system";
+    sbol:role
+    <https://identifiers.org/SBO:0000289>, <https://identifiers.org/SO:0000704>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+i:SubComponent1
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent1";
+    sbol:instanceOf igem:i13504 .
+igem:interlab16device1
+    a sbol:Component;
+    sbol:displayId "interlab16device1";
+    sbol:hasFeature int:ComponentReference1, int:SubComponent1;
+    sbol:hasNamespace pub:igem;
+    sbol:role <https://identifiers.org/SO:0000704>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+int:ComponentReference1
+    a sbol:ComponentReference;
+    sbol:displayId "ComponentReference1";
+    sbol:inChildOf int:SubComponent1;
+    sbol:refersTo i:SubComponent1 .
+int:SubComponent1
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent1";
+    sbol:instanceOf igem:i13504_system.
+igem:simpleDevice
+    a sbol:Component;
+    sbol:displayId "simpleDevice";
+    sbol:hasFeature sim:SubComponent1;
+    sbol:hasNamespace pub:igem;
+    sbol:hasSequence igem:simpleDevice_Sequence1;
+    sbol:role <https://identifiers.org/SO:0000704>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+igem:simpleDevice_Sequence1
+    a sbol:Sequence;
+    sbol:description "simpleDevice sequence";
+    sbol:displayId "simpleDevice_Sequence1";
+    sbol:elements "";
+    sbol:encoding <https://identifiers.org/edam:format_1207>;
+    sbol:hasNamespace pub:igem;
+    sbol:name "Sequence1".
+sim:SubComponent1
+a sbol:SubComponent; sbol:displayId "SubComponent1"; sbol:instanceOf igem:B0015 .

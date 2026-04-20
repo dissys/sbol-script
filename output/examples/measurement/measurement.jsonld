@@ -1,0 +1,234 @@
+{
+  "@context": {
+    "sbol": "http://sbols.org/v3#",
+    "om": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+    "exa": "https://sbolstandard.org/examples/",
+    "sbo": "https://sbolstandard.org/",
+    "M": "https://sbolstandard.org/examples/M9_Glucose_CAA/",
+    "Ext": "https://sbolstandard.org/examples/M9_Glucose_CAA/ExternallyDefined1/"
+  },
+  "@graph": [
+    {
+      "@id": "exa:cubicMeter",
+      "@type": [
+        "sbol:TopLevel",
+        "om:UnitExponentiation"
+      ],
+      "sbol:displayId": "cubicMeter",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "cubicMeter",
+      "om:hasBase": {
+        "@id": "exa:meter"
+      },
+      "om:hasExponent": "3",
+      "om:label": "cubicMeter",
+      "om:symbol": "m3"
+    },
+    {
+      "@id": "exa:kelvin",
+      "@type": [
+        "sbol:TopLevel",
+        "om:SingularUnit"
+      ],
+      "sbol:displayId": "kelvin",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "kelvin",
+      "om:label": "kelvin",
+      "om:symbol": "kelvin"
+    },
+    {
+      "@id": "exa:kelvinMole",
+      "@type": [
+        "sbol:TopLevel",
+        "om:UnitMultiplication"
+      ],
+      "sbol:displayId": "kelvinMole",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "kelvinMole",
+      "om:hasTerm1": {
+        "@id": "exa:kelvin"
+      },
+      "om:hasTerm2": {
+        "@id": "exa:mole"
+      },
+      "om:label": "kelvinMole",
+      "om:symbol": "K mol"
+    },
+    {
+      "@id": "exa:litre",
+      "@type": [
+        "sbol:TopLevel",
+        "om:SingularUnit"
+      ],
+      "sbol:description": "The litre is a unit of volume defined as 1.0e-3 cubic metre.",
+      "sbol:displayId": "litre",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "liter",
+      "om:alternativeLabel": [
+        "liter",
+        "litre2"
+      ],
+      "om:alternativeSymbol": [
+        "L",
+        "L2"
+      ],
+      "om:comment": "The litre is a unit of volume defined as 1.0e-3 cubic metre.",
+      "om:hasFactor": "0.001",
+      "om:label": "liter",
+      "om:longcomment": "This is an example long comment.",
+      "om:symbol": "l"
+    },
+    {
+      "@id": "exa:M9_Glucose_CAA",
+      "@type": "sbol:Component",
+      "sbol:description": "M9 Glucose CAA growth media",
+      "sbol:displayId": "M9_Glucose_CAA",
+      "sbol:hasFeature": {
+        "@id": "M:ExternallyDefined1"
+      },
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "M9 Glucose CAA",
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000241"
+      }
+    },
+    {
+      "@id": "M:ExternallyDefined1",
+      "@type": "sbol:ExternallyDefined",
+      "sbol:definition": {
+        "@id": "https://identifiers.org/CHEBI:3312"
+      },
+      "sbol:displayId": "ExternallyDefined1",
+      "sbol:hasMeasure": {
+        "@id": "Ext:measure1"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000247"
+      }
+    },
+    {
+      "@id": "Ext:measure1",
+      "@type": [
+        "sbol:Identified",
+        "om:Measure"
+      ],
+      "sbol:displayId": "measure1",
+      "sbol:type": [
+        {
+          "@id": "https://identifiers.org/SBO:0000196"
+        },
+        {
+          "@id": "https://identifiers.org/SBO:0000197"
+        }
+      ],
+      "om:hasNumericalValue": "0.1",
+      "om:hasUnit": {
+        "@id": "exa:millimolePerLitre"
+      }
+    },
+    {
+      "@id": "exa:meter",
+      "@type": [
+        "sbol:TopLevel",
+        "om:SingularUnit"
+      ],
+      "sbol:displayId": "meter",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "meter",
+      "om:label": "meter",
+      "om:symbol": "m"
+    },
+    {
+      "@id": "exa:milli",
+      "@type": [
+        "sbol:TopLevel",
+        "om:SIPrefix"
+      ],
+      "sbol:description": "Comment for the milli prefix.",
+      "sbol:displayId": "milli",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "milli",
+      "om:alternativeLabel": [
+        "milli1",
+        "milli2"
+      ],
+      "om:alternativeSymbol": [
+        "m1",
+        "m2"
+      ],
+      "om:comment": "Comment for the milli prefix.",
+      "om:hasFactor": "0.001",
+      "om:label": "milli",
+      "om:longcomment": "This is an example long comment for the milli prefix.",
+      "om:symbol": "m"
+    },
+    {
+      "@id": "exa:millimole",
+      "@type": [
+        "sbol:TopLevel",
+        "om:PrefixedUnit"
+      ],
+      "sbol:displayId": "millimole",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "millimole",
+      "om:hasPrefix": {
+        "@id": "exa:milli"
+      },
+      "om:hasUnit": {
+        "@id": "exa:mole"
+      },
+      "om:label": "millimole",
+      "om:symbol": "mmol"
+    },
+    {
+      "@id": "exa:millimolePerLitre",
+      "@type": [
+        "sbol:TopLevel",
+        "om:UnitDivision"
+      ],
+      "sbol:displayId": "millimolePerLitre",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "millimolar",
+      "om:hasDenominator": {
+        "@id": "exa:litre"
+      },
+      "om:hasNumerator": {
+        "@id": "exa:millimole"
+      },
+      "om:label": "millimolar",
+      "om:symbol": "mmol/l"
+    },
+    {
+      "@id": "exa:mole",
+      "@type": [
+        "sbol:TopLevel",
+        "om:SingularUnit"
+      ],
+      "sbol:displayId": "mole",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "mole",
+      "om:label": "mole",
+      "om:symbol": "mol"
+    }
+  ]
+}

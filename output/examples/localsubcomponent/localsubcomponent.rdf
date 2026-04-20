@@ -1,0 +1,17 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:sbol="http://sbols.org/v3#">
+    <sbol:Component rdf:about="https://sbolstandard.org/examples/i13504_system">
+        <sbol:displayId>i13504_system</sbol:displayId>
+        <sbol:hasFeature rdf:resource="https://sbolstandard.org/examples/i13504_system/LocalSubComponent1"/>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+        <sbol:name>i13504 system</sbol:name>
+        <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+    </sbol:Component>
+    <sbol:LocalSubComponent rdf:about="https://sbolstandard.org/examples/i13504_system/LocalSubComponent1">
+        <sbol:displayId>LocalSubComponent1</sbol:displayId>
+        <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+    </sbol:LocalSubComponent>
+</rdf:RDF>

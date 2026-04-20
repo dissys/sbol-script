@@ -1,0 +1,19 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:sbol="http://sbols.org/v3#">
+    <sbol:Model rdf:about="https://sbolstandard.org/examples/model1">
+        <sbol:displayId>model1</sbol:displayId>
+        <sbol:framework rdf:resource="https://identifiers.org/SBO:0000062"/>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org"/>
+        <sbol:language rdf:resource="https://identifiers.org/edam:format_2585"/>
+        <sbol:source rdf:resource="http://virtualparts.org"/>
+    </sbol:Model>
+    <sbol:Component rdf:about="https://sbolstandard.org/examples/toggle_switch">
+        <sbol:description>Toggle Switch genetic circuit</sbol:description>
+        <sbol:displayId>toggle_switch</sbol:displayId>
+        <sbol:hasModel rdf:resource="https://sbolstandard.org/examples/model1"/>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+        <sbol:name>Toggle Switch</sbol:name>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
+    </sbol:Component>
+</rdf:RDF>

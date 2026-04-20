@@ -1,0 +1,58 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:sbol="http://sbols.org/v3#">
+    <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/BBa_R0040_start_Sequence1">
+        <sbol:description>BBa_R0040_start sequence</sbol:description>
+        <sbol:displayId>BBa_R0040_start_Sequence1</sbol:displayId>
+        <sbol:elements>tccctat</sbol:elements>
+        <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+        <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
+        <sbol:name>Sequence1</sbol:name>
+    </sbol:Sequence>
+    <sbol:Component rdf:about="https://synbiohub.org/public/igem/BBa_R0040_start">
+        <sbol:description>promoter_start</sbol:description>
+        <sbol:displayId>BBa_R0040_start</sbol:displayId>
+        <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
+        <sbol:hasSequence rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_start_Sequence1"/>
+        <sbol:name>pTetR_start</sbol:name>
+        <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+    </sbol:Component>
+    <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/BBa_R0040_Sequence1">
+        <sbol:description>BBa_R0040 sequence</sbol:description>
+        <sbol:displayId>BBa_R0040_Sequence1</sbol:displayId>
+        <sbol:elements>tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcac</sbol:elements>
+        <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+        <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
+        <sbol:name>Sequence1</sbol:name>
+    </sbol:Sequence>
+    <sbol:Component rdf:about="https://synbiohub.org/public/igem/BBa_R0040">
+        <sbol:description>TetR repressible promoter</sbol:description>
+        <sbol:displayId>BBa_R0040</sbol:displayId>
+        <sbol:hasFeature rdf:resource="https://synbiohub.org/public/igem/BBa_R0040/SubComponent1"/>
+        <sbol:hasFeature rdf:resource="https://synbiohub.org/public/igem/BBa_R0040/SubComponent2"/>
+        <sbol:hasFeature rdf:resource="https://synbiohub.org/public/igem/BBa_R0040/SubComponent3"/>
+        <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
+        <sbol:hasSequence rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_Sequence1"/>
+        <sbol:name>pTetR</sbol:name>
+        <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+    </sbol:Component>
+    <sbol:SubComponent rdf:about="https://synbiohub.org/public/igem/BBa_R0040/SubComponent1">
+        <sbol:displayId>SubComponent1</sbol:displayId>
+        <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_start"/>
+    </sbol:SubComponent>
+    <sbol:SubComponent rdf:about="https://synbiohub.org/public/igem/BBa_R0040/SubComponent2">
+        <sbol:displayId>SubComponent2</sbol:displayId>
+        <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_start"/>
+    </sbol:SubComponent>
+    <sbol:SubComponent rdf:about="https://synbiohub.org/public/igem/BBa_R0040/SubComponent3">
+        <sbol:displayId>SubComponent3</sbol:displayId>
+        <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_start"/>
+    </sbol:SubComponent>
+    <sbol:CombinatorialDerivation rdf:about="https://synbiohub.org/public/igem/cs1">
+        <sbol:displayId>cs1</sbol:displayId>
+        <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
+        <sbol:template rdf:resource="https://synbiohub.org/public/igem/BBa_R0040"/>
+    </sbol:CombinatorialDerivation>
+</rdf:RDF>

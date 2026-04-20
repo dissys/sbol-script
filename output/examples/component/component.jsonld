@@ -1,0 +1,21 @@
+{
+  "@context": {
+    "sbol": "http://sbols.org/v3#",
+    "igem": "https://synbiohub.org/public/igem/",
+    "pub": "https://synbiohub.org/public/"
+  },
+  "@id": "igem:BBa_F2620",
+  "@type": "sbol:Component",
+  "sbol:description": "PoPS Receiver",
+  "sbol:displayId": "BBa_F2620",
+  "sbol:hasNamespace": {
+    "@id": "pub:igem"
+  },
+  "sbol:name": "BBa_F2620",
+  "sbol:role": {
+    "@id": "https://identifiers.org/SO:0000704"
+  },
+  "sbol:type": {
+    "@id": "https://identifiers.org/SBO:0000251"
+  }
+}

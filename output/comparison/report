@@ -1,0 +1,320 @@
+
+================================================================================
+TEST:      BBa_F2620_PoPSReceiver
+TIMESTAMP: 2026-04-20T18:17:49.620Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/BBa_F2620_PoPSReceiver/BBa_F2620_PoPSReceiver_ordered.nt
+OUTPUT:    ../../output/examples/BBa_F2620_PoPSReceiver/BBa_F2620_PoPSReceiver_ordered.nt
+LINES:     Generated=284  Reference=284  Total=284
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      activity
+TIMESTAMP: 2026-04-20T18:17:49.624Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/provenance_entity/activity/activity_ordered.nt
+OUTPUT:    ../../output/examples/activity/activity_ordered.nt
+LINES:     Generated=62  Reference=62  Total=62
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      agent
+TIMESTAMP: 2026-04-20T18:17:49.624Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/provenance_entity/agent/agent_ordered.nt
+OUTPUT:    ../../output/examples/agent/agent_ordered.nt
+LINES:     Generated=12  Reference=12  Total=12
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      annotation
+TIMESTAMP: 2026-04-20T18:17:49.625Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/annotation/annotation_ordered.nt
+OUTPUT:    ../../output/examples/annotation/annotation_ordered.nt
+LINES:     Generated=73  Reference=73  Total=73
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      attachment
+TIMESTAMP: 2026-04-20T18:17:49.625Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/attachment/attachment_ordered.nt
+OUTPUT:    ../../output/examples/attachment/attachment_ordered.nt
+LINES:     Generated=28  Reference=28  Total=28
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      collection
+TIMESTAMP: 2026-04-20T18:17:49.625Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/collection/collection_ordered.nt
+OUTPUT:    ../../output/examples/collection/collection_ordered.nt
+LINES:     Generated=19  Reference=19  Total=19
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      combinatorialderivation
+TIMESTAMP: 2026-04-20T18:17:49.626Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/combinatorialderivation/combinatorialderivation_ordered.nt
+OUTPUT:    ../../output/examples/combinatorialderivation/combinatorialderivation_ordered.nt
+LINES:     Generated=46  Reference=46  Total=46
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      combine2020
+TIMESTAMP: 2026-04-20T18:17:49.626Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/combine2020/combine2020_ordered.nt
+OUTPUT:    ../../output/examples/combine2020/combine2020_ordered.nt
+LINES:     Generated=215  Reference=215  Total=215
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      component
+TIMESTAMP: 2026-04-20T18:17:49.626Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/component/component_ordered.nt
+OUTPUT:    ../../output/examples/component/component_ordered.nt
+LINES:     Generated=7  Reference=7  Total=7
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      component_urn_uri
+TIMESTAMP: 2026-04-20T18:17:49.627Z
+STATUS:    FAIL
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/component_urn_uri/component_urn_uri_ordered.nt
+OUTPUT:    ../../output/examples/component_urn_uri/component_urn_uri_ordered.nt
+LINES:     Generated=4  Reference=4  Total=4
+ERRORS:    8 lines with issues  (200.00%)
+
+DIFFERENCES:
+  - (missing)  <urn:uuid:5cc1a915-15e1-469d-91c6-7a4e2f633fef> <http://sbols.org/v3#hasNamespace> <urn:uuid:1832db29-1a27-4fee-97da-f910bdf413b3> .
+  - (missing)  <urn:uuid:5cc1a915-15e1-469d-91c6-7a4e2f633fef> <http://sbols.org/v3#name> "TetR" .
+  - (missing)  <urn:uuid:5cc1a915-15e1-469d-91c6-7a4e2f633fef> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000252> .
+  - (missing)  <urn:uuid:5cc1a915-15e1-469d-91c6-7a4e2f633fef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+  + (extra)    <urn:uuid:71d71541-4282-4bf6-89f2-779814288e52> <http://sbols.org/v3#hasNamespace> <urn:uuid:246d7405-19bb-4722-9f98-939165f6ef00> .
+  + (extra)    <urn:uuid:71d71541-4282-4bf6-89f2-779814288e52> <http://sbols.org/v3#name> "TetR" .
+  + (extra)    <urn:uuid:71d71541-4282-4bf6-89f2-779814288e52> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000252> .
+  + (extra)    <urn:uuid:71d71541-4282-4bf6-89f2-779814288e52> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+================================================================================
+
+================================================================================
+TEST:      componentreference
+TIMESTAMP: 2026-04-20T18:17:49.627Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/componentreference/componentreference_ordered.nt
+OUTPUT:    ../../output/examples/componentreference/componentreference_ordered.nt
+LINES:     Generated=62  Reference=62  Total=62
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      constraint
+TIMESTAMP: 2026-04-20T18:17:49.628Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/constraint/constraint_ordered.nt
+OUTPUT:    ../../output/examples/constraint/constraint_ordered.nt
+LINES:     Generated=46  Reference=46  Total=46
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      cut
+TIMESTAMP: 2026-04-20T18:17:49.628Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/cut/cut_ordered.nt
+OUTPUT:    ../../output/examples/cut/cut_ordered.nt
+LINES:     Generated=23  Reference=23  Total=23
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      experiment
+TIMESTAMP: 2026-04-20T18:17:49.628Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/experiment/experiment_ordered.nt
+OUTPUT:    ../../output/examples/experiment/experiment_ordered.nt
+LINES:     Generated=13  Reference=13  Total=13
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      externallydefined
+TIMESTAMP: 2026-04-20T18:17:49.628Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/externallydefined/externallydefined_ordered.nt
+OUTPUT:    ../../output/examples/externallydefined/externallydefined_ordered.nt
+LINES:     Generated=14  Reference=14  Total=14
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      implementation
+TIMESTAMP: 2026-04-20T18:17:49.629Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/implementation/implementation_ordered.nt
+OUTPUT:    ../../output/examples/implementation/implementation_ordered.nt
+LINES:     Generated=11  Reference=11  Total=11
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      interaction
+TIMESTAMP: 2026-04-20T18:17:49.629Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/interaction/interaction_ordered.nt
+OUTPUT:    ../../output/examples/interaction/interaction_ordered.nt
+LINES:     Generated=10  Reference=10  Total=10
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      interface
+TIMESTAMP: 2026-04-20T18:17:49.629Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/interface/interface_ordered.nt
+OUTPUT:    ../../output/examples/interface/interface_ordered.nt
+LINES:     Generated=47  Reference=47  Total=47
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      localsubcomponent
+TIMESTAMP: 2026-04-20T18:17:49.629Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/localsubcomponent/localsubcomponent_ordered.nt
+OUTPUT:    ../../output/examples/localsubcomponent/localsubcomponent_ordered.nt
+LINES:     Generated=11  Reference=11  Total=11
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      measurement
+TIMESTAMP: 2026-04-20T18:17:49.630Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/measurement_entity/measurement/measurement_ordered.nt
+OUTPUT:    ../../output/examples/measurement/measurement_ordered.nt
+LINES:     Generated=106  Reference=106  Total=106
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      measurement_using_units_From_OM
+TIMESTAMP: 2026-04-20T18:17:49.630Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/measurement_entity/measurement_using_units_From_OM/measurement_using_units_From_OM_ordered.nt
+OUTPUT:    ../../output/examples/measurement_using_units_From_OM/measurement_using_units_From_OM_ordered.nt
+LINES:     Generated=57  Reference=57  Total=57
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      model
+TIMESTAMP: 2026-04-20T18:17:49.630Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/model/model_ordered.nt
+OUTPUT:    ../../output/examples/model/model_ordered.nt
+LINES:     Generated=13  Reference=13  Total=13
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      multicellular
+TIMESTAMP: 2026-04-20T18:17:49.631Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/multicellular/multicellular_ordered.nt
+OUTPUT:    ../../output/examples/multicellular/multicellular_ordered.nt
+LINES:     Generated=409  Reference=409  Total=409
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      multicellular_simple
+TIMESTAMP: 2026-04-20T18:17:49.631Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/multicellular_simple/multicellular_simple_ordered.nt
+OUTPUT:    ../../output/examples/multicellular_simple/multicellular_simple_ordered.nt
+LINES:     Generated=94  Reference=94  Total=94
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      participation
+TIMESTAMP: 2026-04-20T18:17:49.632Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/participation/participation_ordered.nt
+OUTPUT:    ../../output/examples/participation/participation_ordered.nt
+LINES:     Generated=103  Reference=103  Total=103
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      plan
+TIMESTAMP: 2026-04-20T18:17:49.632Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/provenance_entity/plan/plan_ordered.nt
+OUTPUT:    ../../output/examples/plan/plan_ordered.nt
+LINES:     Generated=6  Reference=6  Total=6
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      range
+TIMESTAMP: 2026-04-20T18:17:49.632Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/range/range_ordered.nt
+OUTPUT:    ../../output/examples/range/range_ordered.nt
+LINES:     Generated=41  Reference=41  Total=41
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      sequencefeature
+TIMESTAMP: 2026-04-20T18:17:49.632Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/sequencefeature/sequencefeature_ordered.nt
+OUTPUT:    ../../output/examples/sequencefeature/sequencefeature_ordered.nt
+LINES:     Generated=23  Reference=23  Total=23
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      subcomponent
+TIMESTAMP: 2026-04-20T18:17:49.632Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/subcomponent/subcomponent_ordered.nt
+OUTPUT:    ../../output/examples/subcomponent/subcomponent_ordered.nt
+LINES:     Generated=40  Reference=40  Total=40
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      toggle_switch
+TIMESTAMP: 2026-04-20T18:17:49.633Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/toggle_switch/toggle_switch_ordered.nt
+OUTPUT:    ../../output/examples/toggle_switch/toggle_switch_ordered.nt
+LINES:     Generated=371  Reference=371  Total=371
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      toggle_switch_v2
+TIMESTAMP: 2026-04-20T18:17:49.634Z
+STATUS:    PASS
+INPUT:     ../../../libSBOLj3/libSBOLj3/output/toggle_switch_v2/toggle_switch_v2_ordered.nt
+OUTPUT:    ../../output/examples/toggle_switch_v2/toggle_switch_v2_ordered.nt
+LINES:     Generated=405  Reference=405  Total=405
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================

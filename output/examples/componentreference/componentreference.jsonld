@@ -1,0 +1,173 @@
+{
+  "@context": {
+    "sbol": "http://sbols.org/v3#",
+    "igem": "https://synbiohub.org/public/igem/",
+    "pub": "https://synbiohub.org/public/",
+    "i": "https://synbiohub.org/public/igem/i13504_system/",
+    "int": "https://synbiohub.org/public/igem/interlab16device1/",
+    "sim": "https://synbiohub.org/public/igem/simpleDevice/"
+  },
+  "@graph": [
+    {
+      "@id": "igem:B0015",
+      "@type": "sbol:Component",
+      "sbol:description": "B0015 double terminator",
+      "sbol:displayId": "B0015",
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:hasSequence": {
+        "@id": "igem:B0015_Sequence1"
+      },
+      "sbol:name": "terminator",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000141"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "igem:B0015_Sequence1",
+      "@type": "sbol:Sequence",
+      "sbol:description": "B0015 sequence",
+      "sbol:displayId": "B0015_Sequence1",
+      "sbol:elements": "ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctc",
+      "sbol:encoding": {
+        "@id": "https://identifiers.org/edam:format_1207"
+      },
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:name": "Sequence1"
+    },
+    {
+      "@id": "igem:i13504",
+      "@type": "sbol:Component",
+      "sbol:displayId": "i13504",
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000704"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "igem:i13504_system",
+      "@type": "sbol:Component",
+      "sbol:displayId": "i13504_system",
+      "sbol:hasFeature": {
+        "@id": "i:SubComponent1"
+      },
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:name": "i13504 system",
+      "sbol:role": [
+        {
+          "@id": "https://identifiers.org/SBO:0000289"
+        },
+        {
+          "@id": "https://identifiers.org/SO:0000704"
+        }
+      ],
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "i:SubComponent1",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent1",
+      "sbol:instanceOf": {
+        "@id": "igem:i13504"
+      }
+    },
+    {
+      "@id": "igem:interlab16device1",
+      "@type": "sbol:Component",
+      "sbol:displayId": "interlab16device1",
+      "sbol:hasFeature": [
+        {
+          "@id": "int:ComponentReference1"
+        },
+        {
+          "@id": "int:SubComponent1"
+        }
+      ],
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000704"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "int:ComponentReference1",
+      "@type": "sbol:ComponentReference",
+      "sbol:displayId": "ComponentReference1",
+      "sbol:inChildOf": {
+        "@id": "int:SubComponent1"
+      },
+      "sbol:refersTo": {
+        "@id": "i:SubComponent1"
+      }
+    },
+    {
+      "@id": "int:SubComponent1",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent1",
+      "sbol:instanceOf": {
+        "@id": "igem:i13504_system"
+      }
+    },
+    {
+      "@id": "igem:simpleDevice",
+      "@type": "sbol:Component",
+      "sbol:displayId": "simpleDevice",
+      "sbol:hasFeature": {
+        "@id": "sim:SubComponent1"
+      },
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:hasSequence": {
+        "@id": "igem:simpleDevice_Sequence1"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000704"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "igem:simpleDevice_Sequence1",
+      "@type": "sbol:Sequence",
+      "sbol:description": "simpleDevice sequence",
+      "sbol:displayId": "simpleDevice_Sequence1",
+      "sbol:elements": "",
+      "sbol:encoding": {
+        "@id": "https://identifiers.org/edam:format_1207"
+      },
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:name": "Sequence1"
+    },
+    {
+      "@id": "sim:SubComponent1",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent1",
+      "sbol:instanceOf": {
+        "@id": "igem:B0015"
+      }
+    }
+  ]
+}
