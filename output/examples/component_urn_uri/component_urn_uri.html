@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SBOL3 Component (URN URI)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/rdflib/dist/rdflib.min.js"></script>
+    <script src="../../../sbol-script/dist/sbol-script.js"></script>
+    <style>
+        pre { white-space: pre-wrap; word-wrap: break-word; background: #f8f9fa; padding: 1rem; border-radius: 6px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body class="bg-light">
+<div class="container py-4">
+    <h1 class="mb-4">SBOL3 Component (URN URI)</h1>
+    <p class="text-muted">A Component identified by a URN UUID IRI rather than a standard HTTP IRI.</p>
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">Turtle (text/turtle)</div>
+        <div class="card-body"><pre id="turtleOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-secondary text-white">RDF/XML (application/rdf+xml)</div>
+        <div class="card-body"><pre id="xmlOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-success text-white">N-Triples (application/n-triples)</div>
+        <div class="card-body"><pre id="ntriplesOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-success text-white">N-Triples Ordered</div>
+        <div class="card-body"><pre id="ntriplesOrderedOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-info text-white">JSON-LD (application/ld+json)</div>
+        <div class="card-body"><pre id="jsonldOutput"></pre></div>
+    </div>
+</div>
+<script>
+    const { SBOLDocument, RDFFormat, ComponentType } = window.sbolScript;
+
+    // Namespace and identifier are URN UUIDs
+    const NS_IRI  = 'urn:uuid:246d7405-19bb-4722-9f98-939165f6ef00';
+    const COMP_IRI = 'urn:uuid:71d71541-4282-4bf6-89f2-779814288e52';
+
+    const doc = new SBOLDocument(NS_IRI + '/');
+
+    // ── TetR Component with URN UUID identifier ────────────────────────────
+    const tetr = doc.createComponent(COMP_IRI, NS_IRI, [ComponentType.Protein.iri]);
+    tetr.setName('TetR');
+
+    document.getElementById('turtleOutput').textContent         = doc.toRDF(RDFFormat.TURTLE);
+    document.getElementById('xmlOutput').textContent            = doc.toRDF(RDFFormat.RDF_XML);
+    document.getElementById('ntriplesOutput').textContent       = doc.toRDF(RDFFormat.N_TRIPLES);
+    document.getElementById('ntriplesOrderedOutput').textContent = doc.toRDF(RDFFormat.N_TRIPLES_ORDERED);
+    document.getElementById('jsonldOutput').textContent         = doc.toRDF(RDFFormat.JSON_LD);
+</script>
+</body>
+</html>

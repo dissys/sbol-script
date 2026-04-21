@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SBOL3 Attachment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/rdflib/dist/rdflib.min.js"></script>
+    <script src="../../../sbol-script/dist/sbol-script.js"></script>
+    <style>
+        pre { white-space: pre-wrap; word-wrap: break-word; background: #f8f9fa; padding: 1rem; border-radius: 6px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body class="bg-light">
+<div class="container py-4">
+    <h1 class="mb-4">SBOL3 Attachment</h1>
+    <p class="text-muted">Attachment entities with format, hash, and size; linked to an Implementation via hasAttachment.</p>
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">Turtle (text/turtle)</div>
+        <div class="card-body"><pre id="turtleOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-secondary text-white">RDF/XML (application/rdf+xml)</div>
+        <div class="card-body"><pre id="xmlOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-success text-white">N-Triples (application/n-triples)</div>
+        <div class="card-body"><pre id="ntriplesOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-success text-white">N-Triples Ordered</div>
+        <div class="card-body"><pre id="ntriplesOrderedOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-info text-white">JSON-LD (application/ld+json)</div>
+        <div class="card-body"><pre id="jsonldOutput"></pre></div>
+    </div>
+</div>
+<script>
+    const { SBOLDocument, RDFFormat, ComponentType } = window.sbolScript;
+
+    const NS  = 'https://sbolstandard.org/examples';
+    const doc = new SBOLDocument(NS + '/');
+    const EDAM = 'https://identifiers.org/edam:';
+
+    // ── TetR_protein component ─────────────────────────────────────────────────
+    const tetr_p = doc.createComponent(NS + '/TetR_protein', NS, [ComponentType.Protein.iri]);
+    tetr_p.addRole('https://identifiers.org/GO:0003700');
+    tetr_p.setName('TetR');
+    tetr_p.setDescription('TetR protein');
+
+    // ── Attachments ────────────────────────────────────────────────────────────
+    const att1 = doc.createAttachment(NS + '/attachment1', NS, 'https://sbolstandard.org/attachment1');
+    att1.setFormat(EDAM + 'format_2585');  // SBML
+    att1.setHash('aaa');
+    att1.setHashAlgorithm('sha-256');
+    att1.setSize(1000);
+
+    const att2 = doc.createAttachment(NS + '/attachment2', NS, 'https://sbolstandard.org/attachment2');
+    att2.setFormat(EDAM + 'format_2585');
+    att2.setHash('aaa');
+    att2.setHashAlgorithm('sha-256');
+    att2.setSize(1000);
+
+    // ── Implementation with attachment ─────────────────────────────────────────
+    const impl1 = doc.createImplementation(NS + '/impl1', NS);
+    impl1.setBuilt(tetr_p.getIdentifier());
+    impl1.addAttachmentIRI(att1.getIdentifier());
+
+    document.getElementById('turtleOutput').textContent         = doc.toRDF(RDFFormat.TURTLE);
+    document.getElementById('xmlOutput').textContent            = doc.toRDF(RDFFormat.RDF_XML);
+    document.getElementById('ntriplesOutput').textContent       = doc.toRDF(RDFFormat.N_TRIPLES);
+    document.getElementById('ntriplesOrderedOutput').textContent = doc.toRDF(RDFFormat.N_TRIPLES_ORDERED);
+    document.getElementById('jsonldOutput').textContent         = doc.toRDF(RDFFormat.JSON_LD);
+</script>
+</body>
+</html>
