@@ -1,7 +1,7 @@
 
 ================================================================================
 TEST:       component_urn_uri
-TIMESTAMP:  2026-04-20T18:17:49.627Z
+TIMESTAMP:  2026-04-21T19:18:13.982Z
 ERROR RATE: 200.00% (>10% threshold)
 INPUT:      ../../../libSBOLj3/libSBOLj3/output/entity/component_urn_uri/component_urn_uri_ordered.nt
 OUTPUT:     ../../output/examples/component_urn_uri/component_urn_uri_ordered.nt

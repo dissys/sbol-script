@@ -8,11 +8,19 @@ import {
     DNAComponent
 } from '../core/Component';
 import {
+    Interaction,
     InhibitionInteraction, StimulationInteraction, DegradationInteraction,
     BiochemicalReactionInteraction, NonCovalentBindingInteraction,
     GeneticProductionInteraction, ControlInteraction
 } from '../core/Interaction';
-import { ComponentType, Encoding } from '../core/Vocabulary';
+import { ComponentType, Encoding, Orientation, InteractionType, ParticipationType, SBOLEntity } from '../core/Vocabulary';
+import Feature from '../core/Feature';
+import { SubComponent } from '../core/SubComponent';
+import { Sequence } from '../core/Sequence';
+import { SequenceFeature } from '../core/SequenceFeature';
+import { Participation } from '../core/Participation';
+import { Range } from '../core/Location';
+import Identified from '../core/Identified';
 
 type IRI = string;
 
@@ -240,5 +248,940 @@ export class SBOLAPI {
         interaction.createModifierParticipation(modifierIRI);
         interaction.createModifiedParticipation(modifiedIRI);
         return interaction;
+    }
+
+    // ─── URI / display-ID utilities ────────────────────────────────────────
+
+    /**
+     * Appends an id segment to a URI, inserting '/' if the URI does not already
+     * end with '/' or '#'.
+     */
+    static append(uri: IRI, id: string): IRI {
+        if (uri.endsWith('/') || uri.endsWith('#')) {
+            return `${uri}${id}`;
+        }
+        return `${uri}/${id}`;
+    }
+
+    /** Extracts the local part of a URI (after '#', or after the first '/'). */
+    private static getLocal(uri: IRI): string | null {
+        const hashIdx = uri.indexOf('#');
+        if (hashIdx !== -1 && hashIdx < uri.length - 1) {
+            return uri.substring(hashIdx + 1);
+        }
+        const slashIdx = uri.indexOf('/');
+        if (slashIdx !== -1 && slashIdx < uri.length - 1) {
+            return uri.substring(slashIdx + 1);
+        }
+        return null;
+    }
+
+    /**
+     * Creates a unique local display-id for an entity type within a list of
+     * existing entities, starting the suffix at list.length + 1.
+     */
+    static createLocalName<T extends Identified>(entityType: IRI, items: T[]): string {
+        const localBase = SBOLAPI.getLocal(entityType) ?? 'Entity';
+        let suffix = items ? items.length + 1 : 1;
+        let name: string;
+        let valid = false;
+        while (!valid) {
+            name = `${localBase}${suffix}`;
+            let unique = true;
+            if (items) {
+                for (const item of items) {
+                    if (item.getIdentifier().endsWith(name)) {
+                        suffix++;
+                        unique = false;
+                        break;
+                    }
+                }
+            }
+            if (unique) {
+                valid = true;
+            }
+        }
+        return name!;
+    }
+
+    /**
+     * Creates a unique child URI for an entity by combining the parent URI with
+     * a freshly generated local name.
+     */
+    static createLocalUri(identified: Identified, entityType: IRI, items: any[]): IRI {
+        const displayId = SBOLAPI.createLocalName(entityType, items);
+        return SBOLAPI.append(identified.getIdentifier(), displayId);
+    }
+
+    // ─── SubComponent helpers ──────────────────────────────────────────────
+
+    /**
+     * Returns all SubComponents of `parent` whose instanceOf is `child`.
+     * If none exist, creates a new one.
+     */
+    static getOrCreateSubComponents(parent: Component, child: Component): SubComponent[] {
+        let subComponents = SBOLAPI.getSubComponents(parent, child);
+        if (!subComponents || subComponents.length === 0) {
+            const sc = parent.createSubComponent(child.getIdentifier());
+            subComponents = [sc];
+        }
+        return subComponents;
+    }
+
+    /**
+     * Returns all SubComponents of `parent` whose instanceOf equals `child`'s IRI,
+     * or null if none are found.
+     */
+    static getSubComponents(parent: Component, child: Component): SubComponent[] | null {
+        let found: SubComponent[] | null = null;
+        const features = parent.getSubComponents();
+        if (features) {
+            for (const feature of features) {
+                if (feature.getInstanceOfIRI() === child.getIdentifier()) {
+                    if (!found) found = [];
+                    found.push(feature);
+                }
+            }
+        }
+        return found;
+    }
+
+    // ─── Cartesian product (private) ───────────────────────────────────────
+
+    private static cartesianProduct<T>(lists: T[][]): T[][] {
+        let result: T[][] = [[]];
+        for (const list of lists) {
+            const next: T[][] = [];
+            for (const existing of result) {
+                for (const item of list) {
+                    next.push([...existing, item]);
+                }
+            }
+            result = next;
+        }
+        return result;
+    }
+
+    // ─── Generic Interaction creation (Feature-level) ──────────────────────
+
+    /**
+     * Creates a single Interaction with two participants (each a single Feature).
+     * @param interactionTypes - IRI array for interaction types
+     * @param container - Parent Component containing the interaction
+     * @param participant1 - First participant Feature
+     * @param participant1Roles - Role IRIs for participant1
+     * @param participant2 - Second participant Feature
+     * @param participant2Roles - Role IRIs for participant2
+     */
+    static createInteractionFromFeaturePair(
+        interactionTypes: IRI[],
+        container: Component,
+        participant1: Feature,
+        participant1Roles: IRI[],
+        participant2: Feature,
+        participant2Roles: IRI[]
+    ): Interaction {
+        const interaction = container.createInteraction();
+        interaction.setTypes(interactionTypes);
+        SBOLAPI.createParticipation(interaction, participant1Roles, participant1);
+        SBOLAPI.createParticipation(interaction, participant2Roles, participant2);
+        return interaction;
+    }
+
+    /**
+     * Creates Interactions for every pair of features from two feature lists
+     * (cross-product). Returns all created interactions.
+     */
+    static createInteractionFromFeatureLists(
+        interactionTypes: IRI[],
+        parent: Component,
+        participant1Features: Feature[],
+        participant1Roles: IRI[],
+        participant2Features: Feature[],
+        participant2Roles: IRI[]
+    ): Interaction[] {
+        const interactions: Interaction[] = [];
+        if (participant1Features && participant2Features) {
+            for (const f1 of participant1Features) {
+                for (const f2 of participant2Features) {
+                    interactions.push(
+                        SBOLAPI.createInteractionFromFeaturePair(
+                            interactionTypes, parent, f1, participant1Roles, f2, participant2Roles
+                        )
+                    );
+                }
+            }
+        }
+        return interactions;
+    }
+
+    /**
+     * Creates Interactions between two Components by first resolving (or creating)
+     * their SubComponents within `parent`, then creating a cross-product of interactions.
+     */
+    static createInteractionFromComponents(
+        interactionTypes: IRI[],
+        parent: Component,
+        participant1: Component,
+        participant1Roles: IRI[],
+        participant2: Component,
+        participant2Roles: IRI[]
+    ): Interaction[] {
+        const features1 = SBOLAPI.getOrCreateSubComponents(parent, participant1) as Feature[];
+        const features2 = SBOLAPI.getOrCreateSubComponents(parent, participant2) as Feature[];
+        return SBOLAPI.createInteractionFromFeatureLists(
+            interactionTypes, parent, features1, participant1Roles, features2, participant2Roles
+        );
+    }
+
+    /**
+     * Creates a Participation for a Feature in an Interaction.
+     * @param interaction - The Interaction to add the participation to
+     * @param roles - Role IRIs for this participation
+     * @param feature - The Feature that participates
+     */
+    static createParticipation(interaction: Interaction, roles: IRI[], feature: Feature): Participation {
+        const participation = interaction.createParticipation(roles[0] ?? null, feature.getIdentifier());
+        if (roles.length > 1) {
+            participation.setRoles(roles);
+        }
+        return participation;
+    }
+
+    // ─── Reaction interaction (cartesian product) ──────────────────────────
+
+    /**
+     * Creates Interactions for every combination of source, target, and (optional)
+     * modifier SubComponents resolved from the supplied Component lists.
+     * One interaction is created per combination; all sources, targets, and
+     * modifiers are added as participants to each interaction.
+     *
+     * A + B --> C + D + E [mod M]
+     * where A,B,C,D,E,M are components and A1/A2, B1/B2, … are their SubComponents.
+     */
+    static createReactionInteraction(
+        parent: Component,
+        sources: Component[],
+        sourceParticipantRoles: IRI[],
+        targets: Component[],
+        targetParticipantRoles: IRI[],
+        interactionTypes: IRI[]
+    ): Interaction[];
+    static createReactionInteraction(
+        parent: Component,
+        sources: Component[],
+        sourceParticipantRoles: IRI[],
+        targets: Component[],
+        targetParticipantRoles: IRI[],
+        modifiers: Component[] | null,
+        modifierParticipantRoles: IRI[] | null,
+        interactionTypes: IRI[]
+    ): Interaction[];
+    static createReactionInteraction(
+        parent: Component,
+        sources: Component[],
+        sourceParticipantRoles: IRI[],
+        targets: Component[],
+        targetParticipantRoles: IRI[],
+        modifiersOrTypes: Component[] | IRI[] | null,
+        modifierParticipantRoles?: IRI[] | null,
+        interactionTypes?: IRI[]
+    ): Interaction[] {
+        let modifiers: Component[] | null = null;
+        let modRoles: IRI[] | null = null;
+        let types: IRI[];
+        if (interactionTypes !== undefined) {
+            // 8-arg overload
+            modifiers = modifiersOrTypes as Component[] | null;
+            modRoles = modifierParticipantRoles ?? null;
+            types = interactionTypes;
+        } else {
+            // 6-arg overload — modifiersOrTypes is actually interactionTypes
+            types = modifiersOrTypes as IRI[];
+        }
+        return SBOLAPI._createReactionInteraction(
+            parent, sources, sourceParticipantRoles, targets, targetParticipantRoles,
+            modifiers, modRoles, types
+        );
+    }
+
+    private static _createReactionInteraction(
+        parent: Component,
+        sources: Component[],
+        sourceParticipantRoles: IRI[],
+        targets: Component[],
+        targetParticipantRoles: IRI[],
+        modifiers: Component[] | null,
+        modifierParticipantRoles: IRI[] | null,
+        interactionTypes: IRI[]
+    ): Interaction[] {
+        const interactions: Interaction[] = [];
+
+        // Collect SubComponent lists for each source
+        const sourceFeatureSets: SubComponent[][] = [];
+        for (const source of sources) {
+            const features = SBOLAPI.getOrCreateSubComponents(parent, source);
+            if (!features || features.length === 0) return interactions;
+            sourceFeatureSets.push(features);
+        }
+
+        // Collect SubComponent lists for each target
+        const targetFeatureSets: SubComponent[][] = [];
+        for (const target of targets) {
+            const features = SBOLAPI.getOrCreateSubComponents(parent, target);
+            if (!features || features.length === 0) return interactions;
+            targetFeatureSets.push(features);
+        }
+
+        // Collect SubComponent lists for each modifier
+        const modifierFeatureSets: SubComponent[][] = [];
+        if (modifiers) {
+            for (const modifier of modifiers) {
+                const features = SBOLAPI.getOrCreateSubComponents(parent, modifier);
+                if (!features || features.length === 0) return interactions;
+                modifierFeatureSets.push(features);
+            }
+        }
+
+        const modifierCombos: SubComponent[][] = modifierFeatureSets.length === 0
+            ? [[]]
+            : SBOLAPI.cartesianProduct(modifierFeatureSets);
+
+        for (const sourceCombo of SBOLAPI.cartesianProduct(sourceFeatureSets)) {
+            for (const targetCombo of SBOLAPI.cartesianProduct(targetFeatureSets)) {
+                for (const modifierCombo of modifierCombos) {
+                    const interaction = parent.createInteraction();
+                    interaction.setTypes(interactionTypes);
+                    for (const sf of sourceCombo) {
+                        SBOLAPI.createParticipation(interaction, sourceParticipantRoles, sf);
+                    }
+                    for (const tf of targetCombo) {
+                        SBOLAPI.createParticipation(interaction, targetParticipantRoles, tf);
+                    }
+                    if (modifierParticipantRoles) {
+                        for (const mf of modifierCombo) {
+                            SBOLAPI.createParticipation(interaction, modifierParticipantRoles, mf);
+                        }
+                    }
+                    interactions.push(interaction);
+                }
+            }
+        }
+        return interactions;
+    }
+
+    /**
+     * Creates Interactions for every combination of source, target, and (optional)
+     * modifier feature sets (Feature[][] — each inner array is the set of features
+     * for one logical participant). Modifiers may be null.
+     */
+    static createReactionInteractionFromFeatures(
+        parent: Component,
+        sourceFeatureSets: Feature[][],
+        sourceParticipantRoles: IRI[],
+        targetFeatureSets: Feature[][],
+        targetParticipantRoles: IRI[],
+        interactionTypes: IRI[]
+    ): Interaction[];
+    static createReactionInteractionFromFeatures(
+        parent: Component,
+        sourceFeatureSets: Feature[][],
+        sourceParticipantRoles: IRI[],
+        targetFeatureSets: Feature[][],
+        targetParticipantRoles: IRI[],
+        modifierFeatureSets: Feature[][] | null,
+        modifierParticipantRoles: IRI[] | null,
+        interactionTypes: IRI[]
+    ): Interaction[];
+    static createReactionInteractionFromFeatures(
+        parent: Component,
+        sourceFeatureSets: Feature[][],
+        sourceParticipantRoles: IRI[],
+        targetFeatureSets: Feature[][],
+        targetParticipantRoles: IRI[],
+        modifiersOrTypes: Feature[][] | IRI[] | null,
+        modifierParticipantRoles?: IRI[] | null,
+        interactionTypes?: IRI[]
+    ): Interaction[] {
+        let modifiers: Feature[][] | null = null;
+        let modRoles: IRI[] | null = null;
+        let types: IRI[];
+        if (interactionTypes !== undefined) {
+            modifiers = modifiersOrTypes as Feature[][] | null;
+            modRoles = modifierParticipantRoles ?? null;
+            types = interactionTypes;
+        } else {
+            types = modifiersOrTypes as IRI[];
+        }
+
+        const interactions: Interaction[] = [];
+        const modifierCombos: Feature[][] = !modifiers || modifiers.length === 0
+            ? [[]]
+            : SBOLAPI.cartesianProduct(modifiers);
+
+        for (const sourceCombo of SBOLAPI.cartesianProduct(sourceFeatureSets)) {
+            for (const targetCombo of SBOLAPI.cartesianProduct(targetFeatureSets)) {
+                for (const modifierCombo of modifierCombos) {
+                    const interaction = parent.createInteraction();
+                    interaction.setTypes(types);
+                    for (const sf of sourceCombo) {
+                        SBOLAPI.createParticipation(interaction, sourceParticipantRoles, sf);
+                    }
+                    for (const tf of targetCombo) {
+                        SBOLAPI.createParticipation(interaction, targetParticipantRoles, tf);
+                    }
+                    if (modRoles) {
+                        for (const mf of modifierCombo) {
+                            SBOLAPI.createParticipation(interaction, modRoles, mf);
+                        }
+                    }
+                    interactions.push(interaction);
+                }
+            }
+        }
+        return interactions;
+    }
+
+    // ─── Typed interaction helpers (Component-based) ───────────────────────
+
+    /**
+     * Creates InhibitionInteraction(s) between two Components within `parent`.
+     * Resolves (or creates) their SubComponents and returns one interaction per
+     * SubComponent pair.
+     */
+    static createInhibitionInteractionFromComponents(
+        parent: Component,
+        source: Component,
+        target: Component
+    ): Interaction[] {
+        return SBOLAPI.createInteractionFromComponents(
+            [InteractionType.Inhibition.iri], parent,
+            source, [ParticipationType.Inhibitor.iri],
+            target, [ParticipationType.Inhibited.iri]
+        );
+    }
+
+    /**
+     * Creates InhibitionInteraction(s) from Feature lists (cross-product).
+     */
+    static createInhibitionInteractionFromFeatureList(
+        parent: Component,
+        sourceFeatures: Feature[],
+        targetFeatures: Feature[]
+    ): Interaction[] {
+        return SBOLAPI.createInteractionFromFeatureLists(
+            [InteractionType.Inhibition.iri], parent,
+            sourceFeatures, [ParticipationType.Inhibitor.iri],
+            targetFeatures, [ParticipationType.Inhibited.iri]
+        );
+    }
+
+    /**
+     * Creates StimulationInteraction(s) between two Components within `parent`.
+     */
+    static createStimulationInteractionFromComponents(
+        parent: Component,
+        source: Component,
+        target: Component
+    ): Interaction[] {
+        return SBOLAPI.createInteractionFromComponents(
+            [InteractionType.Stimulation.iri], parent,
+            source, [ParticipationType.Stimulator.iri],
+            target, [ParticipationType.Stimulated.iri]
+        );
+    }
+
+    /**
+     * Creates StimulationInteraction(s) from Feature lists (cross-product).
+     */
+    static createStimulationInteractionFromFeatureList(
+        parent: Component,
+        sourceFeatures: Feature[],
+        targetFeatures: Feature[]
+    ): Interaction[] {
+        return SBOLAPI.createInteractionFromFeatureLists(
+            [InteractionType.Stimulation.iri], parent,
+            sourceFeatures, [ParticipationType.Stimulator.iri],
+            targetFeatures, [ParticipationType.Stimulated.iri]
+        );
+    }
+
+    /**
+     * Creates ControlInteraction(s) between two Components within `parent`.
+     */
+    static createControlInteractionFromComponents(
+        parent: Component,
+        source: Component,
+        target: Component
+    ): Interaction[] {
+        return SBOLAPI.createInteractionFromComponents(
+            [InteractionType.Control.iri], parent,
+            source, [ParticipationType.Modifier.iri],
+            target, [ParticipationType.Modified.iri]
+        );
+    }
+
+    /**
+     * Creates ControlInteraction(s) from Feature lists (cross-product).
+     */
+    static createControlInteractionFromFeatureList(
+        parent: Component,
+        sourceFeatures: Feature[],
+        targetFeatures: Feature[]
+    ): Interaction[] {
+        return SBOLAPI.createInteractionFromFeatureLists(
+            [InteractionType.Control.iri], parent,
+            sourceFeatures, [ParticipationType.Modifier.iri],
+            targetFeatures, [ParticipationType.Modified.iri]
+        );
+    }
+
+    /**
+     * Creates GeneticProductionInteraction(s) between two Components within `parent`.
+     * Source acts as template; target is the product.
+     */
+    static createGeneticProductionInteractionFromComponents(
+        parent: Component,
+        source: Component,
+        target: Component
+    ): Interaction[] {
+        return SBOLAPI.createInteractionFromComponents(
+            [InteractionType.GeneticProduction.iri], parent,
+            source, [ParticipationType.Template.iri],
+            target, [ParticipationType.Product.iri]
+        );
+    }
+
+    /**
+     * Creates GeneticProductionInteraction(s) from Feature lists (cross-product).
+     */
+    static createGeneticProductionInteractionFromFeatureList(
+        parent: Component,
+        sourceFeatures: Feature[],
+        targetFeatures: Feature[]
+    ): Interaction[] {
+        return SBOLAPI.createInteractionFromFeatureLists(
+            [InteractionType.GeneticProduction.iri], parent,
+            sourceFeatures, [ParticipationType.Template.iri],
+            targetFeatures, [ParticipationType.Product.iri]
+        );
+    }
+
+    /**
+     * Creates DegradationInteraction(s) for a single source Component.
+     * One interaction is created per SubComponent of `source` within `parent`.
+     */
+    static createDegradationInteractionFromComponent(
+        parent: Component,
+        source: Component
+    ): Interaction[] {
+        const features = SBOLAPI.getOrCreateSubComponents(parent, source) as Feature[];
+        return SBOLAPI.createDegradationInteractionFromFeatureList(parent, features);
+    }
+
+    /**
+     * Creates a DegradationInteraction for each Feature in the list.
+     */
+    static createDegradationInteractionFromFeatureList(
+        parent: Component,
+        features: Feature[]
+    ): Interaction[] {
+        const interactions: Interaction[] = [];
+        if (features) {
+            for (const feature of features) {
+                const interaction = parent.createInteraction();
+                interaction.setTypes([InteractionType.Degradation.iri]);
+                SBOLAPI.createParticipation(interaction, [ParticipationType.Reactant.iri], feature);
+                interactions.push(interaction);
+            }
+        }
+        return interactions;
+    }
+
+    /**
+     * Creates BiochemicalReactionInteraction(s) for lists of source and target Components.
+     */
+    static createBiochemicalReactionInteractionFromComponents(
+        parent: Component,
+        sources: Component[],
+        targets: Component[]
+    ): Interaction[] {
+        return SBOLAPI.createReactionInteraction(
+            parent, sources, [ParticipationType.Reactant.iri],
+            targets, [ParticipationType.Product.iri],
+            [InteractionType.BiochemicalReaction.iri]
+        );
+    }
+
+    /**
+     * Creates BiochemicalReactionInteraction(s) from Feature set lists (cross-product).
+     */
+    static createBiochemicalReactionInteractionFromFeatureSets(
+        parent: Component,
+        sources: Feature[][],
+        targets: Feature[][]
+    ): Interaction[] {
+        return SBOLAPI.createReactionInteractionFromFeatures(
+            parent, sources, [ParticipationType.Reactant.iri],
+            targets, [ParticipationType.Product.iri],
+            [InteractionType.BiochemicalReaction.iri]
+        );
+    }
+
+    /**
+     * Creates NonCovalentBindingInteraction(s) for lists of source and target Components.
+     */
+    static createNonCovalentBindingInteractionFromComponents(
+        parent: Component,
+        sources: Component[],
+        targets: Component[]
+    ): Interaction[] {
+        return SBOLAPI.createReactionInteraction(
+            parent, sources, [ParticipationType.Reactant.iri],
+            targets, [ParticipationType.Product.iri],
+            [InteractionType.NonCovalentBinding.iri]
+        );
+    }
+
+    /**
+     * Creates NonCovalentBindingInteraction(s) from Feature set lists (cross-product).
+     */
+    static createNonCovalentBindingInteractionFromFeatureSets(
+        parent: Component,
+        sources: Feature[][],
+        targets: Feature[][]
+    ): Interaction[] {
+        return SBOLAPI.createReactionInteractionFromFeatures(
+            parent, sources, [ParticipationType.Reactant.iri],
+            targets, [ParticipationType.Product.iri],
+            [InteractionType.NonCovalentBinding.iri]
+        );
+    }
+
+    // ─── Component factory methods ─────────────────────────────────────────
+
+    /**
+     * Creates a Component with a known URI (full IRI), a type, name, description
+     * and optional role. Uses the document's baseIRI as the namespace.
+     */
+    static createComponentFromUri(
+        doc: SBOLDocument,
+        uri: IRI,
+        type: IRI,
+        name: string,
+        description: string,
+        role: IRI | null
+    ): Component {
+        const component = doc.createComponent(uri, doc.baseIRI, [type]);
+        if (name) component.setName(name);
+        if (description) component.setDescription(description);
+        if (role) component.setRoles([role]);
+        return component;
+    }
+
+    /**
+     * Creates a Component from a displayId (the IRI is constructed by appending
+     * displayId to the document's baseIRI).
+     */
+    static createComponentFromDisplayId(
+        doc: SBOLDocument,
+        displayId: string,
+        type: IRI,
+        name: string,
+        description: string,
+        role: IRI | null
+    ): Component {
+        const uri = SBOLAPI.append(doc.baseIRI, displayId);
+        return SBOLAPI.createComponentFromUri(doc, uri, type, name, description, role);
+    }
+
+    /**
+     * Creates a DNA Component with an optional nucleic-acid sequence.
+     * @param doc - SBOLDocument
+     * @param displayId - Display identifier (appended to baseIRI)
+     * @param name - Human-readable name
+     * @param description - Description
+     * @param role - Role IRI (e.g. a SO term)
+     * @param sequence - Nucleic acid sequence string (or empty/null for none)
+     */
+    static createDnaComponent(
+        doc: SBOLDocument,
+        displayId: string,
+        name: string,
+        description: string,
+        role: IRI,
+        sequence: string
+    ): Component {
+        const dna = SBOLAPI.createComponentFromDisplayId(
+            doc, displayId, ComponentType.DNA.iri, name, description, role
+        );
+        if (sequence && sequence.length > 0) {
+            SBOLAPI.createSequenceForComponent(doc, dna, Encoding.IUPAC_DNA_RNA, sequence);
+        }
+        return dna;
+    }
+
+    /**
+     * Creates a Protein Component with an optional amino-acid sequence.
+     * Optionally places it as a SubComponent inside `container`.
+     * @param doc - SBOLDocument
+     * @param container - Parent Component to add a SubComponent into (or null)
+     * @param displayId - Display identifier
+     * @param name - Human-readable name
+     * @param description - Description
+     * @param role - Role IRI
+     * @param sequence - Amino-acid sequence string (or empty/null for none)
+     */
+    static createProteinComponentInContainer(
+        doc: SBOLDocument,
+        container: Component | null,
+        displayId: string,
+        name: string,
+        description: string,
+        role: IRI,
+        sequence: string
+    ): Component {
+        const protein = SBOLAPI.createComponentFromDisplayId(
+            doc, displayId, ComponentType.Protein.iri, name, description, role
+        );
+        if (container) {
+            container.createSubComponent(protein.getIdentifier());
+        }
+        if (sequence && sequence.length > 0) {
+            SBOLAPI.createSequenceForComponent(doc, protein, Encoding.IUPAC_Protein, sequence);
+        }
+        return protein;
+    }
+
+    /**
+     * Creates a Protein Component without a container.
+     * @param doc - SBOLDocument
+     * @param displayId - Display identifier
+     * @param name - Human-readable name
+     * @param description - Description
+     * @param role - Role IRI
+     * @param sequence - Amino-acid sequence string (or empty/null for none)
+     */
+    static createProteinComponentStandalone(
+        doc: SBOLDocument,
+        displayId: string,
+        name: string,
+        description: string,
+        role: IRI,
+        sequence: string
+    ): Component {
+        return SBOLAPI.createProteinComponentInContainer(
+            doc, null, displayId, name, description, role, sequence
+        );
+    }
+
+    /**
+     * Adds a SubComponent to `parent` pointing at `child`.
+     */
+    static addSubComponent(parent: Component, child: Component): SubComponent {
+        return parent.createSubComponent(child.getIdentifier());
+    }
+
+    // ─── Sequence factory methods ──────────────────────────────────────────
+
+    /**
+     * Creates a new Sequence for a Component and sets it as the component's sequence.
+     * Uses a generated local name derived from the number of existing sequences.
+     * The component's existing sequences are replaced with just this new one.
+     */
+    static createSequenceForComponent(
+        doc: SBOLDocument,
+        component: Component,
+        encoding: typeof Encoding.IUPAC_DNA_RNA,
+        elements: string
+    ): Sequence {
+        const localName = SBOLAPI.createLocalName(SBOLEntity.Sequence.iri, component.getSequences());
+        const seqIdentifier = `${component.getIdentifier()}_${localName}`;
+        const seq = doc.createSequence(seqIdentifier, doc.baseIRI);
+        //seq.setName(`${component.getDisplayId() ?? ''} sequence`);
+        seq.setName(localName);
+        seq.setDescription(`${component.getDisplayId() ?? ''} sequence`);
+        if (elements != null) seq.setElements(elements);
+        seq.setEncoding(encoding);
+        component.setSequences([seqIdentifier]);
+        return seq;
+    }
+
+    /**
+     * Creates a new Sequence for a Component and adds it to the component's sequence list
+     * (preserving any existing sequences).
+     */
+    static addSequenceToComponent(
+        doc: SBOLDocument,
+        component: Component,
+        encoding: typeof Encoding.IUPAC_DNA_RNA,
+        elements: string
+    ): Sequence {
+        const localName = SBOLAPI.createLocalName(SBOLEntity.Sequence.iri, component.getSequences());
+        const seqIdentifier = `${component.getIdentifier()}_${localName}`;
+        const seq = doc.createSequence(seqIdentifier, doc.baseIRI);
+        seq.setName(`${component.getDisplayId() ?? ''} sequence`);
+        if (elements != null) seq.setElements(elements);
+        seq.setEncoding(encoding);
+        const existingIRIs = component.getSequenceIRIs() ?? [];
+        component.setSequences([...existingIRIs, seqIdentifier]);
+        return seq;
+    }
+
+    /**
+     * Creates a new Sequence for a Component with automatically determined encoding
+     * (based on the component's type and the sequence content).
+     */
+    static addSequenceAutoEncoding(
+        doc: SBOLDocument,
+        component: Component,
+        elements: string
+    ): Sequence {
+        const encoding = SBOLAPI.getEncodingType(doc, component, elements);
+        return SBOLAPI.addSequenceToComponent(doc, component, encoding, elements);
+    }
+
+    /**
+     * Determines the appropriate encoding for a sequence string based on the
+     * component's types. Throws if no matching encoding can be determined.
+     */
+    static getEncodingType(
+        doc: SBOLDocument,
+        component: Component,
+        elements: string
+    ): typeof Encoding.IUPAC_DNA_RNA {
+        const types = component.getTypes();
+        if (!types || types.length === 0) {
+            throw new Error('Component must have at least one type to determine encoding.');
+        }
+        for (const typeIRI of types) {
+            if (typeIRI === ComponentType.DNA.iri || typeIRI === ComponentType.RNA.iri) {
+                return Encoding.IUPAC_DNA_RNA;
+            } else if (typeIRI === ComponentType.Protein.iri) {
+                return Encoding.IUPAC_Protein;
+            } else if (typeIRI === ComponentType.SimpleChemical.iri) {
+                return elements.startsWith('InChI=') ? Encoding.InChI : Encoding.SMILES;
+            }
+        }
+        throw new Error('No encoding found for the provided sequence and component types.');
+    }
+
+    // ─── Append (sequence-aware SubComponent / SequenceFeature) ───────────
+
+    /**
+     * Appends `child` as a SubComponent of `parent` (default: inline orientation).
+     * If the child has a sequence, a Range location is created on the subcomponent
+     * pointing to the appropriate region in the parent's sequence.
+     */
+    static appendComponent(
+        doc: SBOLDocument,
+        parent: Component,
+        child: Component,
+        orientation: typeof Orientation.INLINE = Orientation.INLINE
+    ): SubComponent {
+        const subComponent = parent.createSubComponent(child.getIdentifier());
+        subComponent.setOrientation(orientation);
+        const childSequences = child.getSequences();
+        if (childSequences && childSequences.length > 0) {
+            const childElements = childSequences[0].getElements();
+            if (childElements) {
+                SBOLAPI._createRange(doc, parent, subComponent, childElements, orientation);
+            }
+        }
+        return subComponent;
+    }
+
+    /**
+     * Appends a SequenceFeature (inline, default orientation) to `parent` and
+     * extends the parent's sequence by `elements`. Returns the created SequenceFeature.
+     */
+    static appendSequenceFeature(
+        doc: SBOLDocument,
+        parent: Component,
+        elements: string,
+        orientation: typeof Orientation.INLINE
+    ): SequenceFeature | null {
+        if (!elements || elements.length === 0) return null;
+
+        const sequences = parent.getSequences();
+        let sequence: Sequence;
+        let start: number;
+        let end: number;
+
+        if (sequences && sequences.length > 0) {
+            sequence = sequences[0];
+            start = (sequence.getElements() ?? '').length + 1;
+            end = start + elements.length - 1;
+        } else {
+            sequence = SBOLAPI.createSequenceForComponent(doc, parent, Encoding.IUPAC_DNA_RNA, '');
+            start = 1;
+            end = elements.length - 1;
+        }
+
+        if (orientation === Orientation.INLINE) {
+            sequence.setElements((sequence.getElements() ?? '') + elements);
+        } else {
+            throw new Error('Reverse complement sequence addition has not been implemented yet!');
+        }
+
+        const feature = parent.createSequenceFeature();
+        feature.setOrientation(orientation);
+        const range: any = feature.createRange(start, end);
+        if (range && typeof range.setOrientation === 'function') {
+            range.setOrientation(orientation);
+        }
+        return feature;
+    }
+
+    /**
+     * Private helper: creates a Range location on `subComponent` within `parent`,
+     * appending `elements` to the parent sequence (reverse-complementing if needed).
+     */
+    private static _createRange(
+        doc: SBOLDocument,
+        parent: Component,
+        subComponent: SubComponent,
+        elements: string,
+        orientation: typeof Orientation.INLINE
+    ): Range | null {
+        if (!elements || elements.length === 0) return null;
+
+        const sequences = parent.getSequences();
+        let sequence: Sequence;
+        let start: number;
+        let end: number;
+
+        if (sequences && sequences.length > 0) {
+            sequence = sequences[0];
+            start = (sequence.getElements() ?? '').length + 1;
+            end = start + elements.length - 1;
+        } else {
+            sequence = SBOLAPI.createSequenceForComponent(doc, parent, Encoding.IUPAC_DNA_RNA, '');
+            start = 1;
+            end = elements.length;
+        }
+
+        let actualElements = elements;
+        if (orientation === Orientation.REVERSE_COMPLEMENT) {
+            actualElements = SBOLAPI._getReverseComplement(elements);
+        }
+        sequence.setElements((sequence.getElements() ?? '') + actualElements);
+
+        const range: any = subComponent.createRange(start, end);
+        range.setOrientation(orientation);
+        return range as Range;
+    }
+
+    /** Computes the reverse complement of a nucleic acid sequence. */
+    private static _getReverseComplement(elements: string): string {
+        const complement: { [key: string]: string } = {
+            'a': 't', 't': 'a', 'g': 'c', 'c': 'g', 'u': 'a',
+            'A': 'T', 'T': 'A', 'G': 'C', 'C': 'G', 'U': 'A',
+            'n': 'n', 'N': 'N', 'r': 'y', 'R': 'Y', 'y': 'r', 'Y': 'R',
+            'k': 'm', 'K': 'M', 'm': 'k', 'M': 'K', 's': 's', 'S': 'S',
+            'w': 'w', 'W': 'W', 'b': 'v', 'B': 'V', 'v': 'b', 'V': 'B',
+            'd': 'h', 'D': 'H', 'h': 'd', 'H': 'D',
+        };
+        return elements.split('').reverse().map(c => complement[c] ?? c).join('');
     }
 }

@@ -84,7 +84,7 @@ export class Component extends TopLevel {
 
     createSubComponent(instanceOf: IRI, identifier?: string): SubComponent {
         if (!identifier) {
-            identifier = `${SBOLEntity.SubComponent.name}${this.getFeatureIRIs().length + 1}`;
+            identifier = `${SBOLEntity.SubComponent.name}${this.getSubComponentIRIs().length + 1}`;
         }
         const iri = GraphUtil.resolveChildIRI(this.getIdentifier(), identifier);
         const sc = SubComponent.create(this.store, iri);
@@ -95,7 +95,7 @@ export class Component extends TopLevel {
 
     createSequenceFeature(identifier?: string): SequenceFeature {
         if (!identifier) {
-            identifier = `SequenceFeature${this.getFeatureIRIs().length + 1}`;
+            identifier = `SequenceFeature${this.getSequenceFeatureIRIs().length + 1}`;
         }
         const iri = GraphUtil.resolveChildIRI(this.getIdentifier(), identifier);
         const sf = SequenceFeature.create(this.store, iri);
@@ -105,7 +105,7 @@ export class Component extends TopLevel {
 
     createLocalSubComponent(identifier?: string): LocalSubComponent {
         if (!identifier) {
-            identifier = `LocalSubComponent${this.getFeatureIRIs().length + 1}`;
+            identifier = `LocalSubComponent${this.getLocalSubComponentIRIs().length + 1}`;
         }
         const iri = GraphUtil.resolveChildIRI(this.getIdentifier(), identifier);
         const lsc = LocalSubComponent.create(this.store, iri);
@@ -115,7 +115,7 @@ export class Component extends TopLevel {
 
     createComponentReference(identifier?: string): ComponentReference {
         if (!identifier) {
-            identifier = `ComponentReference${this.getFeatureIRIs().length + 1}`;
+            identifier = `ComponentReference${this.getComponentReferenceIRIs().length + 1}`;
         }
         const iri = GraphUtil.resolveChildIRI(this.getIdentifier(), identifier);
         const cr = ComponentReference.create(this.store, iri);
@@ -125,7 +125,7 @@ export class Component extends TopLevel {
 
     createExternallyDefined(identifier?: string): ExternallyDefined {
         if (!identifier) {
-            identifier = `ExternallyDefined${this.getFeatureIRIs().length + 1}`;
+            identifier = `ExternallyDefined${this.getExternallyDefinedIRIs().length + 1}`;
         }
         const iri = GraphUtil.resolveChildIRI(this.getIdentifier(), identifier);
         const ed = ExternallyDefined.create(this.store, iri);
@@ -138,6 +138,54 @@ export class Component extends TopLevel {
             const featureIRIs = this.getFeatureIRIs();
             return featureIRIs.includes(sc.getIdentifier());
         });
+    }
+
+    getSubComponentIRIs(): IRI[] {
+        return this.getSubComponents().map(sc => sc.getIdentifier());
+    }
+
+    getSequenceFeatures(): SequenceFeature[] {
+        return SBOL3Util.loadObjectsByType(this.store, 'SequenceFeature', SequenceFeature.load).filter(sf => {
+            const featureIRIs = this.getFeatureIRIs();
+            return featureIRIs.includes(sf.getIdentifier());
+        });
+    }
+
+    getSequenceFeatureIRIs(): IRI[] {
+        return this.getSequenceFeatures().map(sf => sf.getIdentifier());
+    }
+
+    getLocalSubComponents(): LocalSubComponent[] {
+        return SBOL3Util.loadObjectsByType(this.store, 'LocalSubComponent', LocalSubComponent.load).filter(lsc => {
+            const featureIRIs = this.getFeatureIRIs();
+            return featureIRIs.includes(lsc.getIdentifier());
+        });
+    }
+
+    getLocalSubComponentIRIs(): IRI[] {
+        return this.getLocalSubComponents().map(lsc => lsc.getIdentifier());
+    }
+
+    getComponentReferences(): ComponentReference[] {
+        return SBOL3Util.loadObjectsByType(this.store, 'ComponentReference', ComponentReference.load).filter(cr => {
+            const featureIRIs = this.getFeatureIRIs();
+            return featureIRIs.includes(cr.getIdentifier());
+        });
+    }
+
+    getComponentReferenceIRIs(): IRI[] {
+        return this.getComponentReferences().map(cr => cr.getIdentifier());
+    }
+
+    getExternallyDefinedFeatures(): ExternallyDefined[] {
+        return SBOL3Util.loadObjectsByType(this.store, 'ExternallyDefined', ExternallyDefined.load).filter(ed => {
+            const featureIRIs = this.getFeatureIRIs();
+            return featureIRIs.includes(ed.getIdentifier());
+        });
+    }
+
+    getExternallyDefinedIRIs(): IRI[] {
+        return this.getExternallyDefinedFeatures().map(ed => ed.getIdentifier());
     }
 
     getFeatureIRIs(): IRI[] {
