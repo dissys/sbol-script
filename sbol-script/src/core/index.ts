@@ -79,7 +79,7 @@ import {
 import { Prefix, SIPrefix, BinaryPrefix } from './Prefix';
 
 // High-level API
-import { SBOLAPI } from './SBOLAPI';
+import { SBOLAPI } from '../api/SBOLAPI';
 
 // Vocabulary
 import {

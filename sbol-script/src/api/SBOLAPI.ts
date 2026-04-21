@@ -1,4 +1,4 @@
-import { SBOLDocument } from './SBOLDocument';
+import { SBOLDocument } from '../core/SBOLDocument';
 import {
     Component,
     PromoterDNAComponent, RBSDNAComponent, CDSDNAComponent, TerminatorDNAComponent,
@@ -6,13 +6,13 @@ import {
     RNAComponent, ProteinComponent, SimpleChemicalComponent, NonCovalentComplexComponent,
     FunctionalEntityComponent, TranscriptionFactorProteinComponent, EffectorSimpleChemicalComponent,
     DNAComponent
-} from './Component';
+} from '../core/Component';
 import {
     InhibitionInteraction, StimulationInteraction, DegradationInteraction,
     BiochemicalReactionInteraction, NonCovalentBindingInteraction,
     GeneticProductionInteraction, ControlInteraction
-} from './Interaction';
-import { ComponentType, Encoding } from './Vocabulary';
+} from '../core/Interaction';
+import { ComponentType, Encoding } from '../core/Vocabulary';
 
 type IRI = string;
 
