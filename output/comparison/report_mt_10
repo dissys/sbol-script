@@ -1,9 +1,18 @@
 
 ================================================================================
 TEST:       component_urn_uri
-TIMESTAMP:  2026-04-21T19:18:13.982Z
+TIMESTAMP:  2026-04-22T10:11:21.026Z
 ERROR RATE: 200.00% (>10% threshold)
 INPUT:      ../../../libSBOLj3/libSBOLj3/output/entity/component_urn_uri/component_urn_uri_ordered.nt
 OUTPUT:     ../../output/examples/component_urn_uri/component_urn_uri_ordered.nt
 LINES:      Generated=4  Reference=4  Total=4  Issues=8
+================================================================================
+
+================================================================================
+TEST:       multicellular_simple_entity_vs_usecase
+TIMESTAMP:  2026-04-22T16:58:40.734Z
+ERROR RATE: 12.77% (>10% threshold)
+INPUT:      usecases/MulticellularSimpleTest.js
+OUTPUT:     entity/multicellular_simple.js
+LINES:      Generated=94  Reference=94  Total=94  Issues=12
 ================================================================================

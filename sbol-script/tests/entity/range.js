@@ -28,8 +28,7 @@ function generate() {
 
   const sc1 = i13504.createSubComponent(b0015.getIdentifier(), 'SubComponent1');
   sc1.setOrientation(Orientation.INLINE);
-  const range1 = sc1.createRange(1, 80, 'Range1');
-  range1.setSequenceIRI(seq_i13504.getIdentifier());
+  const range1 = sc1.createRange(seq_i13504.getIdentifier(), 1, 80, 'Range1');
   range1.setOrientation(Orientation.INLINE);
   range1.setOrder(1);
 

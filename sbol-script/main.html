@@ -71,7 +71,7 @@
 
     const sc_promoter = region.createSubComponent(promoter.getIdentifier(), 'sc_promoter');
     sc_promoter.setOrientation(Orientation.INLINE);
-    sc_promoter.createRange(1, 200, 'pRange');
+    sc_promoter.createRange(seq1.getIdentifier(), 1, 200, 'pRange');
 
     const sc_rbs     = region.createSubComponent(rbs.getIdentifier(), 'sc_rbs');
     const sc_cds     = region.createSubComponent(cds.getIdentifier(), 'sc_cds');

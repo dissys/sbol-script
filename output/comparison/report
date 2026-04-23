@@ -1,7 +1,7 @@
 
 ================================================================================
 TEST:      BBa_F2620_PoPSReceiver
-TIMESTAMP: 2026-04-21T19:18:13.976Z
+TIMESTAMP: 2026-04-22T10:11:21.023Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/BBa_F2620_PoPSReceiver/BBa_F2620_PoPSReceiver_ordered.nt
 OUTPUT:    ../../output/examples/BBa_F2620_PoPSReceiver/BBa_F2620_PoPSReceiver_ordered.nt
@@ -11,7 +11,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      activity
-TIMESTAMP: 2026-04-21T19:18:13.979Z
+TIMESTAMP: 2026-04-22T10:11:21.024Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/provenance_entity/activity/activity_ordered.nt
 OUTPUT:    ../../output/examples/activity/activity_ordered.nt
@@ -21,7 +21,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      agent
-TIMESTAMP: 2026-04-21T19:18:13.980Z
+TIMESTAMP: 2026-04-22T10:11:21.024Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/provenance_entity/agent/agent_ordered.nt
 OUTPUT:    ../../output/examples/agent/agent_ordered.nt
@@ -31,7 +31,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      annotation
-TIMESTAMP: 2026-04-21T19:18:13.980Z
+TIMESTAMP: 2026-04-22T10:11:21.024Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/annotation/annotation_ordered.nt
 OUTPUT:    ../../output/examples/annotation/annotation_ordered.nt
@@ -41,7 +41,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      attachment
-TIMESTAMP: 2026-04-21T19:18:13.980Z
+TIMESTAMP: 2026-04-22T10:11:21.024Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/attachment/attachment_ordered.nt
 OUTPUT:    ../../output/examples/attachment/attachment_ordered.nt
@@ -51,7 +51,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      collection
-TIMESTAMP: 2026-04-21T19:18:13.981Z
+TIMESTAMP: 2026-04-22T10:11:21.025Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/collection/collection_ordered.nt
 OUTPUT:    ../../output/examples/collection/collection_ordered.nt
@@ -61,7 +61,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      combinatorialderivation
-TIMESTAMP: 2026-04-21T19:18:13.981Z
+TIMESTAMP: 2026-04-22T10:11:21.025Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/combinatorialderivation/combinatorialderivation_ordered.nt
 OUTPUT:    ../../output/examples/combinatorialderivation/combinatorialderivation_ordered.nt
@@ -71,7 +71,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      combine2020
-TIMESTAMP: 2026-04-21T19:18:13.981Z
+TIMESTAMP: 2026-04-22T10:11:21.025Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/combine2020/combine2020_ordered.nt
 OUTPUT:    ../../output/examples/combine2020/combine2020_ordered.nt
@@ -81,7 +81,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      component
-TIMESTAMP: 2026-04-21T19:18:13.982Z
+TIMESTAMP: 2026-04-22T10:11:21.026Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/component/component_ordered.nt
 OUTPUT:    ../../output/examples/component/component_ordered.nt
@@ -91,7 +91,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      component_urn_uri
-TIMESTAMP: 2026-04-21T19:18:13.982Z
+TIMESTAMP: 2026-04-22T10:11:21.026Z
 STATUS:    FAIL
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/component_urn_uri/component_urn_uri_ordered.nt
 OUTPUT:    ../../output/examples/component_urn_uri/component_urn_uri_ordered.nt
@@ -111,7 +111,7 @@ DIFFERENCES:
 
 ================================================================================
 TEST:      componentreference
-TIMESTAMP: 2026-04-21T19:18:13.982Z
+TIMESTAMP: 2026-04-22T10:11:21.027Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/componentreference/componentreference_ordered.nt
 OUTPUT:    ../../output/examples/componentreference/componentreference_ordered.nt
@@ -121,7 +121,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      constraint
-TIMESTAMP: 2026-04-21T19:18:13.983Z
+TIMESTAMP: 2026-04-22T10:11:21.027Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/constraint/constraint_ordered.nt
 OUTPUT:    ../../output/examples/constraint/constraint_ordered.nt
@@ -131,7 +131,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      cut
-TIMESTAMP: 2026-04-21T19:18:13.983Z
+TIMESTAMP: 2026-04-22T10:11:21.027Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/cut/cut_ordered.nt
 OUTPUT:    ../../output/examples/cut/cut_ordered.nt
@@ -141,7 +141,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      experiment
-TIMESTAMP: 2026-04-21T19:18:13.983Z
+TIMESTAMP: 2026-04-22T10:11:21.027Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/experiment/experiment_ordered.nt
 OUTPUT:    ../../output/examples/experiment/experiment_ordered.nt
@@ -151,7 +151,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      externallydefined
-TIMESTAMP: 2026-04-21T19:18:13.983Z
+TIMESTAMP: 2026-04-22T10:11:21.028Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/externallydefined/externallydefined_ordered.nt
 OUTPUT:    ../../output/examples/externallydefined/externallydefined_ordered.nt
@@ -161,7 +161,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      implementation
-TIMESTAMP: 2026-04-21T19:18:13.983Z
+TIMESTAMP: 2026-04-22T10:11:21.028Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/implementation/implementation_ordered.nt
 OUTPUT:    ../../output/examples/implementation/implementation_ordered.nt
@@ -171,7 +171,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      interaction
-TIMESTAMP: 2026-04-21T19:18:13.984Z
+TIMESTAMP: 2026-04-22T10:11:21.028Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/interaction/interaction_ordered.nt
 OUTPUT:    ../../output/examples/interaction/interaction_ordered.nt
@@ -181,7 +181,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      interface
-TIMESTAMP: 2026-04-21T19:18:13.984Z
+TIMESTAMP: 2026-04-22T10:11:21.028Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/interface/interface_ordered.nt
 OUTPUT:    ../../output/examples/interface/interface_ordered.nt
@@ -191,7 +191,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      localsubcomponent
-TIMESTAMP: 2026-04-21T19:18:13.984Z
+TIMESTAMP: 2026-04-22T10:11:21.029Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/localsubcomponent/localsubcomponent_ordered.nt
 OUTPUT:    ../../output/examples/localsubcomponent/localsubcomponent_ordered.nt
@@ -201,7 +201,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      measurement
-TIMESTAMP: 2026-04-21T19:18:13.984Z
+TIMESTAMP: 2026-04-22T10:11:21.029Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/measurement_entity/measurement/measurement_ordered.nt
 OUTPUT:    ../../output/examples/measurement/measurement_ordered.nt
@@ -211,7 +211,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      measurement_using_units_From_OM
-TIMESTAMP: 2026-04-21T19:18:13.985Z
+TIMESTAMP: 2026-04-22T10:11:21.029Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/measurement_entity/measurement_using_units_From_OM/measurement_using_units_From_OM_ordered.nt
 OUTPUT:    ../../output/examples/measurement_using_units_From_OM/measurement_using_units_From_OM_ordered.nt
@@ -221,7 +221,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      model
-TIMESTAMP: 2026-04-21T19:18:13.985Z
+TIMESTAMP: 2026-04-22T10:11:21.029Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/model/model_ordered.nt
 OUTPUT:    ../../output/examples/model/model_ordered.nt
@@ -231,7 +231,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      multicellular
-TIMESTAMP: 2026-04-21T19:18:13.986Z
+TIMESTAMP: 2026-04-22T10:11:21.030Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/multicellular/multicellular_ordered.nt
 OUTPUT:    ../../output/examples/multicellular/multicellular_ordered.nt
@@ -241,7 +241,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      multicellular_simple
-TIMESTAMP: 2026-04-21T19:18:13.986Z
+TIMESTAMP: 2026-04-22T10:11:21.031Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/multicellular_simple/multicellular_simple_ordered.nt
 OUTPUT:    ../../output/examples/multicellular_simple/multicellular_simple_ordered.nt
@@ -251,7 +251,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      participation
-TIMESTAMP: 2026-04-21T19:18:13.986Z
+TIMESTAMP: 2026-04-22T10:11:21.031Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/participation/participation_ordered.nt
 OUTPUT:    ../../output/examples/participation/participation_ordered.nt
@@ -261,7 +261,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      plan
-TIMESTAMP: 2026-04-21T19:18:13.987Z
+TIMESTAMP: 2026-04-22T10:11:21.031Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/provenance_entity/plan/plan_ordered.nt
 OUTPUT:    ../../output/examples/plan/plan_ordered.nt
@@ -271,7 +271,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      range
-TIMESTAMP: 2026-04-21T19:18:13.987Z
+TIMESTAMP: 2026-04-22T10:11:21.032Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/range/range_ordered.nt
 OUTPUT:    ../../output/examples/range/range_ordered.nt
@@ -281,7 +281,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      sequencefeature
-TIMESTAMP: 2026-04-21T19:18:13.987Z
+TIMESTAMP: 2026-04-22T10:11:21.032Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/sequencefeature/sequencefeature_ordered.nt
 OUTPUT:    ../../output/examples/sequencefeature/sequencefeature_ordered.nt
@@ -291,7 +291,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      subcomponent
-TIMESTAMP: 2026-04-21T19:18:13.987Z
+TIMESTAMP: 2026-04-22T10:11:21.032Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/subcomponent/subcomponent_ordered.nt
 OUTPUT:    ../../output/examples/subcomponent/subcomponent_ordered.nt
@@ -301,7 +301,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      toggle_switch
-TIMESTAMP: 2026-04-21T19:18:13.988Z
+TIMESTAMP: 2026-04-22T10:11:21.033Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/toggle_switch/toggle_switch_ordered.nt
 OUTPUT:    ../../output/examples/toggle_switch/toggle_switch_ordered.nt
@@ -311,10 +311,464 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      toggle_switch_v2
-TIMESTAMP: 2026-04-21T19:18:13.989Z
+TIMESTAMP: 2026-04-22T10:11:21.034Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/toggle_switch_v2/toggle_switch_v2_ordered.nt
 OUTPUT:    ../../output/examples/toggle_switch_v2/toggle_switch_v2_ordered.nt
 LINES:     Generated=405  Reference=405  Total=405
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      combine2020_vs_GettingStartedTutorial_Short
+TIMESTAMP: 2026-04-22T10:12:11.399Z
+STATUS:    PASS
+INPUT:     usecases/GettingStartedTutorial_Short.js
+OUTPUT:    entity/combine2020.js
+LINES:     Generated=215  Reference=215  Total=215
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      combine2020_vs_GettingStartedTutorial
+TIMESTAMP: 2026-04-22T10:25:07.438Z
+STATUS:    PASS
+INPUT:     usecases/GettingStartedTutorial.js
+OUTPUT:    entity/combine2020.js
+LINES:     Generated=215  Reference=215  Total=215
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      combine2020_vs_GettingStartedTutorial
+TIMESTAMP: 2026-04-22T11:06:31.629Z
+STATUS:    PASS
+INPUT:     usecases/GettingStartedTutorial.js
+OUTPUT:    entity/combine2020.js
+LINES:     Generated=215  Reference=215  Total=215
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
+TIMESTAMP: 2026-04-22T11:06:31.659Z
+STATUS:    PASS
+INPUT:     usecases/PoPSReceiverExampleTest.js
+OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
+LINES:     Generated=284  Reference=284  Total=284
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      toggle_switch_entity_vs_usecase
+TIMESTAMP: 2026-04-22T11:06:31.688Z
+STATUS:    PASS
+INPUT:     usecases/ToggleSwitchTest.js
+OUTPUT:    entity/toggle_switch.js
+LINES:     Generated=371  Reference=371  Total=371
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      toggle_switch_v2_entity_vs_usecase
+TIMESTAMP: 2026-04-22T11:06:31.718Z
+STATUS:    PASS
+INPUT:     usecases/ToggleSwitch_v2Test.js
+OUTPUT:    entity/toggle_switch_v2.js
+LINES:     Generated=405  Reference=405  Total=405
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      multicellular_simple_entity_vs_usecase
+TIMESTAMP: 2026-04-22T11:06:31.727Z
+STATUS:    PASS
+INPUT:     usecases/MulticellularSimpleTest.js
+OUTPUT:    entity/multicellular_simple.js
+LINES:     Generated=94  Reference=94  Total=94
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      multicellular_entity_vs_usecase
+TIMESTAMP: 2026-04-22T11:06:31.758Z
+STATUS:    PASS
+INPUT:     usecases/MulticellularTest.js
+OUTPUT:    entity/multicellular.js
+LINES:     Generated=409  Reference=409  Total=409
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      combine2020_vs_GettingStartedTutorial
+TIMESTAMP: 2026-04-22T11:07:12.144Z
+STATUS:    PASS
+INPUT:     usecases/GettingStartedTutorial.js
+OUTPUT:    entity/combine2020.js
+LINES:     Generated=215  Reference=215  Total=215
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
+TIMESTAMP: 2026-04-22T11:07:12.175Z
+STATUS:    PASS
+INPUT:     usecases/PoPSReceiverExampleTest.js
+OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
+LINES:     Generated=284  Reference=284  Total=284
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      toggle_switch_entity_vs_usecase
+TIMESTAMP: 2026-04-22T11:07:12.203Z
+STATUS:    PASS
+INPUT:     usecases/ToggleSwitchTest.js
+OUTPUT:    entity/toggle_switch.js
+LINES:     Generated=371  Reference=371  Total=371
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      toggle_switch_v2_entity_vs_usecase
+TIMESTAMP: 2026-04-22T11:07:12.232Z
+STATUS:    PASS
+INPUT:     usecases/ToggleSwitch_v2Test.js
+OUTPUT:    entity/toggle_switch_v2.js
+LINES:     Generated=405  Reference=405  Total=405
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      multicellular_simple_entity_vs_usecase
+TIMESTAMP: 2026-04-22T11:07:12.242Z
+STATUS:    PASS
+INPUT:     usecases/MulticellularSimpleTest.js
+OUTPUT:    entity/multicellular_simple.js
+LINES:     Generated=94  Reference=94  Total=94
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      multicellular_entity_vs_usecase
+TIMESTAMP: 2026-04-22T11:07:12.271Z
+STATUS:    PASS
+INPUT:     usecases/MulticellularTest.js
+OUTPUT:    entity/multicellular.js
+LINES:     Generated=409  Reference=409  Total=409
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      combine2020_vs_GettingStartedTutorial
+TIMESTAMP: 2026-04-22T11:54:22.595Z
+STATUS:    PASS
+INPUT:     usecases/GettingStartedTutorial.js
+OUTPUT:    entity/combine2020.js
+LINES:     Generated=215  Reference=215  Total=215
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
+TIMESTAMP: 2026-04-22T11:54:22.624Z
+STATUS:    PASS
+INPUT:     usecases/PoPSReceiverExampleTest.js
+OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
+LINES:     Generated=284  Reference=284  Total=284
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      toggle_switch_entity_vs_usecase
+TIMESTAMP: 2026-04-22T11:54:22.655Z
+STATUS:    PASS
+INPUT:     usecases/ToggleSwitchTest.js
+OUTPUT:    entity/toggle_switch.js
+LINES:     Generated=371  Reference=371  Total=371
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      toggle_switch_v2_entity_vs_usecase
+TIMESTAMP: 2026-04-22T11:54:22.689Z
+STATUS:    PASS
+INPUT:     usecases/ToggleSwitch_v2Test.js
+OUTPUT:    entity/toggle_switch_v2.js
+LINES:     Generated=405  Reference=405  Total=405
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      multicellular_simple_entity_vs_usecase
+TIMESTAMP: 2026-04-22T11:54:22.697Z
+STATUS:    PASS
+INPUT:     usecases/MulticellularSimpleTest.js
+OUTPUT:    entity/multicellular_simple.js
+LINES:     Generated=94  Reference=94  Total=94
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      multicellular_entity_vs_usecase
+TIMESTAMP: 2026-04-22T11:54:22.726Z
+STATUS:    PASS
+INPUT:     usecases/MulticellularTest.js
+OUTPUT:    entity/multicellular.js
+LINES:     Generated=409  Reference=409  Total=409
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      combine2020_vs_GettingStartedTutorial
+TIMESTAMP: 2026-04-22T16:58:40.637Z
+STATUS:    PASS
+INPUT:     usecases/GettingStartedTutorial.js
+OUTPUT:    entity/combine2020.js
+LINES:     Generated=215  Reference=215  Total=215
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
+TIMESTAMP: 2026-04-22T16:58:40.664Z
+STATUS:    PASS
+INPUT:     usecases/PoPSReceiverExampleTest.js
+OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
+LINES:     Generated=284  Reference=284  Total=284
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      toggle_switch_entity_vs_usecase
+TIMESTAMP: 2026-04-22T16:58:40.693Z
+STATUS:    PASS
+INPUT:     usecases/ToggleSwitchTest.js
+OUTPUT:    entity/toggle_switch.js
+LINES:     Generated=371  Reference=371  Total=371
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      toggle_switch_v2_entity_vs_usecase
+TIMESTAMP: 2026-04-22T16:58:40.724Z
+STATUS:    PASS
+INPUT:     usecases/ToggleSwitch_v2Test.js
+OUTPUT:    entity/toggle_switch_v2.js
+LINES:     Generated=405  Reference=405  Total=405
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      multicellular_simple_entity_vs_usecase
+TIMESTAMP: 2026-04-22T16:58:40.734Z
+STATUS:    FAIL
+INPUT:     usecases/MulticellularSimpleTest.js
+OUTPUT:    entity/multicellular_simple.js
+LINES:     Generated=94  Reference=94  Total=94
+ERRORS:    12 lines with issues  (12.77%)
+
+DIFFERENCES:
+  - (missing)  <https://sbolstandard.org/examples/AHL> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples> .
+  - (missing)  <https://sbolstandard.org/examples/MulticellularSystem> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples> .
+  - (missing)  <https://sbolstandard.org/examples/OrganismA> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples> .
+  - (missing)  <https://sbolstandard.org/examples/OrganismB> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples> .
+  - (missing)  <https://sbolstandard.org/examples/ReceiverSystem> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples> .
+  - (missing)  <https://sbolstandard.org/examples/SenderSystem> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples> .
+  + (extra)    <https://sbolstandard.org/examples/AHL> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples/> .
+  + (extra)    <https://sbolstandard.org/examples/MulticellularSystem> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples/> .
+  + (extra)    <https://sbolstandard.org/examples/OrganismA> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples/> .
+  + (extra)    <https://sbolstandard.org/examples/OrganismB> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples/> .
+  + (extra)    <https://sbolstandard.org/examples/ReceiverSystem> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples/> .
+  + (extra)    <https://sbolstandard.org/examples/SenderSystem> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples/> .
+================================================================================
+
+================================================================================
+TEST:      multicellular_entity_vs_usecase
+TIMESTAMP: 2026-04-22T16:58:40.765Z
+STATUS:    PASS
+INPUT:     usecases/MulticellularTest.js
+OUTPUT:    entity/multicellular.js
+LINES:     Generated=409  Reference=409  Total=409
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      combine2020_vs_GettingStartedTutorial
+TIMESTAMP: 2026-04-22T17:15:35.135Z
+STATUS:    PASS
+INPUT:     usecases/GettingStartedTutorial.js
+OUTPUT:    entity/combine2020.js
+LINES:     Generated=215  Reference=215  Total=215
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
+TIMESTAMP: 2026-04-22T17:15:35.162Z
+STATUS:    PASS
+INPUT:     usecases/PoPSReceiverExampleTest.js
+OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
+LINES:     Generated=284  Reference=284  Total=284
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      toggle_switch_entity_vs_usecase
+TIMESTAMP: 2026-04-22T17:15:35.190Z
+STATUS:    PASS
+INPUT:     usecases/ToggleSwitchTest.js
+OUTPUT:    entity/toggle_switch.js
+LINES:     Generated=371  Reference=371  Total=371
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      toggle_switch_v2_entity_vs_usecase
+TIMESTAMP: 2026-04-22T17:15:35.217Z
+STATUS:    PASS
+INPUT:     usecases/ToggleSwitch_v2Test.js
+OUTPUT:    entity/toggle_switch_v2.js
+LINES:     Generated=405  Reference=405  Total=405
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      multicellular_simple_entity_vs_usecase
+TIMESTAMP: 2026-04-22T17:15:35.226Z
+STATUS:    PASS
+INPUT:     usecases/MulticellularSimpleTest.js
+OUTPUT:    entity/multicellular_simple.js
+LINES:     Generated=94  Reference=94  Total=94
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      multicellular_entity_vs_usecase
+TIMESTAMP: 2026-04-22T17:15:35.255Z
+STATUS:    PASS
+INPUT:     usecases/MulticellularTest.js
+OUTPUT:    entity/multicellular.js
+LINES:     Generated=409  Reference=409  Total=409
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      combine2020_vs_GettingStartedTutorial
+TIMESTAMP: 2026-04-22T17:15:58.330Z
+STATUS:    PASS
+INPUT:     usecases/GettingStartedTutorial.js
+OUTPUT:    entity/combine2020.js
+LINES:     Generated=215  Reference=215  Total=215
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
+TIMESTAMP: 2026-04-22T17:15:58.358Z
+STATUS:    PASS
+INPUT:     usecases/PoPSReceiverExampleTest.js
+OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
+LINES:     Generated=284  Reference=284  Total=284
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      toggle_switch_entity_vs_usecase
+TIMESTAMP: 2026-04-22T17:15:58.386Z
+STATUS:    PASS
+INPUT:     usecases/ToggleSwitchTest.js
+OUTPUT:    entity/toggle_switch.js
+LINES:     Generated=371  Reference=371  Total=371
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      toggle_switch_v2_entity_vs_usecase
+TIMESTAMP: 2026-04-22T17:15:58.415Z
+STATUS:    PASS
+INPUT:     usecases/ToggleSwitch_v2Test.js
+OUTPUT:    entity/toggle_switch_v2.js
+LINES:     Generated=405  Reference=405  Total=405
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      multicellular_simple_entity_vs_usecase
+TIMESTAMP: 2026-04-22T17:15:58.425Z
+STATUS:    PASS
+INPUT:     usecases/MulticellularSimpleTest.js
+OUTPUT:    entity/multicellular_simple.js
+LINES:     Generated=94  Reference=94  Total=94
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      multicellular_entity_vs_usecase
+TIMESTAMP: 2026-04-22T17:15:58.453Z
+STATUS:    PASS
+INPUT:     usecases/MulticellularTest.js
+OUTPUT:    entity/multicellular.js
+LINES:     Generated=409  Reference=409  Total=409
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      combine2020_vs_GettingStartedTutorial
+TIMESTAMP: 2026-04-23T08:31:15.475Z
+STATUS:    PASS
+INPUT:     usecases/GettingStartedTutorial.js
+OUTPUT:    entity/combine2020.js
+LINES:     Generated=215  Reference=215  Total=215
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
+TIMESTAMP: 2026-04-23T08:31:15.506Z
+STATUS:    PASS
+INPUT:     usecases/PoPSReceiverExampleTest.js
+OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
+LINES:     Generated=284  Reference=284  Total=284
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      toggle_switch_entity_vs_usecase
+TIMESTAMP: 2026-04-23T08:31:15.535Z
+STATUS:    PASS
+INPUT:     usecases/ToggleSwitchTest.js
+OUTPUT:    entity/toggle_switch.js
+LINES:     Generated=371  Reference=371  Total=371
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      toggle_switch_v2_entity_vs_usecase
+TIMESTAMP: 2026-04-23T08:31:15.563Z
+STATUS:    PASS
+INPUT:     usecases/ToggleSwitch_v2Test.js
+OUTPUT:    entity/toggle_switch_v2.js
+LINES:     Generated=405  Reference=405  Total=405
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      multicellular_simple_entity_vs_usecase
+TIMESTAMP: 2026-04-23T08:31:15.573Z
+STATUS:    PASS
+INPUT:     usecases/MulticellularSimpleTest.js
+OUTPUT:    entity/multicellular_simple.js
+LINES:     Generated=94  Reference=94  Total=94
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      multicellular_entity_vs_usecase
+TIMESTAMP: 2026-04-23T08:31:15.611Z
+STATUS:    PASS
+INPUT:     usecases/MulticellularTest.js
+OUTPUT:    entity/multicellular.js
+LINES:     Generated=409  Reference=409  Total=409
 ERRORS:    0 lines with issues  (0.00%)
 ================================================================================

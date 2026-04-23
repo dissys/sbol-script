@@ -1,0 +1,111 @@
+@prefix sbol: <http://sbols.org/v3#>.
+@prefix exa: <https://sbolstandard.org/examples/>.
+@prefix sbo: <https://sbolstandard.org/>.
+@prefix Mul: <https://sbolstandard.org/examples/MulticellularSystem/>.
+@prefix Sen: <https://sbolstandard.org/examples/SenderSystem/>.
+@prefix Rec: <https://sbolstandard.org/examples/ReceiverSystem/>.
+
+exa:AHL
+    a sbol:Component;
+    sbol:description "AHL";
+    sbol:displayId "AHL";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "AHL";
+    sbol:role <https://identifiers.org/CHEBI:35224>;
+    sbol:type <https://identifiers.org/SBO:0000247>.
+exa:MulticellularSystem
+    a sbol:Component;
+    sbol:description "Multicellular System";
+    sbol:displayId "MulticellularSystem";
+    sbol:hasConstraint Mul:Constraint1;
+    sbol:hasFeature
+        Mul:ComponentReference1, Mul:ComponentReference2, Mul:SubComponent1,
+        Mul:SubComponent2;
+    sbol:hasNamespace sbo:examples;
+    sbol:name "MulticellularSystem";
+    sbol:role <https://identifiers.org/SBO:0000289>;
+    sbol:type <https://identifiers.org/SBO:0000241>.
+Mul:ComponentReference1
+    a sbol:ComponentReference;
+    sbol:displayId "ComponentReference1";
+    sbol:inChildOf Mul:SubComponent1;
+    sbol:refersTo Sen:SubComponent2 .
+Mul:ComponentReference2
+    a sbol:ComponentReference;
+    sbol:displayId "ComponentReference2";
+    sbol:inChildOf Mul:SubComponent2;
+    sbol:refersTo Rec:SubComponent2 .
+Mul:Constraint1
+    a sbol:Constraint;
+    sbol:displayId "Constraint1";
+    sbol:object Mul:ComponentReference2;
+    sbol:restriction sbol:verifyIdentical;
+    sbol:subject Mul:ComponentReference1 .
+Mul:SubComponent1
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent1";
+    sbol:instanceOf exa:SenderSystem.
+Mul:SubComponent2
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent2";
+    sbol:instanceOf exa:ReceiverSystem.
+exa:OrganismA
+    a sbol:Component;
+    sbol:description "Organism A";
+    sbol:displayId "OrganismA";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "OrganismA";
+    sbol:role <https://identifiers.org/SBO:0000290>;
+    sbol:type <https://identifiers.org/GO:0005623>.
+exa:OrganismB
+    a sbol:Component;
+    sbol:description "Organism B";
+    sbol:displayId "OrganismB";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "OrganismB";
+    sbol:role <https://identifiers.org/SBO:0000290>;
+    sbol:type <https://identifiers.org/GO:0005623>.
+exa:ReceiverSystem
+    a sbol:Component;
+    sbol:description "Receiver System";
+    sbol:displayId "ReceiverSystem";
+    sbol:hasConstraint Rec:Constraint1;
+    sbol:hasFeature Rec:SubComponent1, Rec:SubComponent2;
+    sbol:hasNamespace sbo:examples;
+    sbol:name "ReceiverSystem";
+    sbol:role <https://identifiers.org/SBO:0000289>;
+    sbol:type <https://identifiers.org/SBO:0000241>.
+Rec:Constraint1
+    a sbol:Constraint;
+    sbol:displayId "Constraint1";
+    sbol:object Rec:SubComponent2;
+    sbol:restriction sbol:contains;
+    sbol:subject Rec:SubComponent1 .
+Rec:SubComponent1
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent1";
+    sbol:instanceOf exa:OrganismB.
+Rec:SubComponent2
+a sbol:SubComponent; sbol:displayId "SubComponent2"; sbol:instanceOf exa:AHL.
+exa:SenderSystem
+    a sbol:Component;
+    sbol:description "Sender System";
+    sbol:displayId "SenderSystem";
+    sbol:hasConstraint Sen:Constraint1;
+    sbol:hasFeature Sen:SubComponent1, Sen:SubComponent2;
+    sbol:hasNamespace sbo:examples;
+    sbol:name "SenderSystem";
+    sbol:role <https://identifiers.org/SBO:0000289>;
+    sbol:type <https://identifiers.org/SBO:0000241>.
+Sen:Constraint1
+    a sbol:Constraint;
+    sbol:displayId "Constraint1";
+    sbol:object Sen:SubComponent2;
+    sbol:restriction sbol:contains;
+    sbol:subject Sen:SubComponent1 .
+Sen:SubComponent1
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent1";
+    sbol:instanceOf exa:OrganismA.
+Sen:SubComponent2
+a sbol:SubComponent; sbol:displayId "SubComponent2"; sbol:instanceOf exa:AHL.

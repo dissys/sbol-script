@@ -6,7 +6,7 @@ export enum RDFFormat {
     TURTLE = 'text/turtle',
     JSON_LD = 'application/ld+json',
     N_TRIPLES = 'application/n-triples',
-    N_TRIPLES_ORDERED = 'application/n-triples-ordered'
+    N_TRIPLES_ORDERED = 'application/n-triples'
 }
 
 export default class RDFUtil {
@@ -96,8 +96,7 @@ export default class RDFUtil {
 
     static toRDF(store: any, format: RDFFormat = RDFFormat.RDF_XML, customPrefixNames?: Set<string>): string {
         let returnResult = '';
-        const serializeFormat = format === RDFFormat.N_TRIPLES_ORDERED ? RDFFormat.N_TRIPLES : format;
-        $rdf.serialize(undefined, store, undefined, serializeFormat, (err: any, result: any) => {
+        $rdf.serialize(undefined, store, undefined, format, (err: any, result: any) => {
             if (err) {
                 console.error('Serialize error:', err);
             } else {

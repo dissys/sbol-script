@@ -287,6 +287,9 @@
       "@type": "sbol:Range",
       "sbol:displayId": "Range1",
       "sbol:end": "18",
+      "sbol:hasSequence": {
+        "@id": "igem:i13504_Sequence1"
+      },
       "sbol:orientation": {
         "@id": "https://identifiers.org/SO:0001030"
       },
@@ -308,6 +311,9 @@
       "@type": "sbol:Range",
       "sbol:displayId": "Range1",
       "sbol:end": "746",
+      "sbol:hasSequence": {
+        "@id": "igem:i13504_Sequence1"
+      },
       "sbol:orientation": {
         "@id": "https://identifiers.org/SO:0001030"
       },
@@ -332,6 +338,9 @@
       "@type": "sbol:Range",
       "sbol:displayId": "Range1",
       "sbol:end": "12",
+      "sbol:hasSequence": {
+        "@id": "igem:i13504_Sequence1"
+      },
       "sbol:orientation": {
         "@id": "https://identifiers.org/SO:0001030"
       },
@@ -356,6 +365,9 @@
       "@type": "sbol:Range",
       "sbol:displayId": "Range1",
       "sbol:end": "738",
+      "sbol:hasSequence": {
+        "@id": "igem:i13504_Sequence1"
+      },
       "sbol:orientation": {
         "@id": "https://identifiers.org/SO:0001030"
       },
@@ -380,6 +392,9 @@
       "@type": "sbol:Range",
       "sbol:displayId": "Range1",
       "sbol:end": "826",
+      "sbol:hasSequence": {
+        "@id": "igem:i13504_Sequence1"
+      },
       "sbol:orientation": {
         "@id": "https://identifiers.org/SO:0001030"
       },

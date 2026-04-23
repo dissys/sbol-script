@@ -17,8 +17,7 @@ function generate() {
   e0040.addSequence(seq_e0040.getIdentifier());
 
   const sf1 = e0040.createSequenceFeature('SequenceFeature1');
-  const range1 = sf1.createRange(1, 3, 'Range1');
-  range1.setSequenceIRI(seq_e0040.getIdentifier());
+  const range1 = sf1.createRange(seq_e0040.getIdentifier(), 1, 3, 'Range1');
 
   return {
     rdfXml:          doc.toRDF(RDFFormat.RDF_XML),

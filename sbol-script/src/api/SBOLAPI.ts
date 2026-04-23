@@ -13,13 +13,15 @@ import {
     BiochemicalReactionInteraction, NonCovalentBindingInteraction,
     GeneticProductionInteraction, ControlInteraction
 } from '../core/Interaction';
-import { ComponentType, Encoding, Orientation, InteractionType, ParticipationType, SBOLEntity } from '../core/Vocabulary';
+import { ComponentType, ConstraintRestriction, Encoding, Orientation, InteractionType, ParticipationType, SBOLEntity } from '../core/Vocabulary';
 import Feature from '../core/Feature';
 import { SubComponent } from '../core/SubComponent';
 import { Sequence } from '../core/Sequence';
 import { SequenceFeature } from '../core/SequenceFeature';
 import { Participation } from '../core/Participation';
 import { Range } from '../core/Location';
+import { Constraint } from '../core/Constraint';
+import { ComponentReference } from '../core/ComponentReference';
 import Identified from '../core/Identified';
 
 type IRI = string;
@@ -114,12 +116,7 @@ export class SBOLAPI {
      * @param inhibitedIRI - IRI of the inhibited Feature
      * @param identifier - Optional identifier for the interaction
      */
-    static createInhibitionInteraction(
-        component: Component,
-        inhibitorIRI: IRI,
-        inhibitedIRI: IRI,
-        identifier?: string
-    ): InhibitionInteraction {
+    static createInhibitionInteraction( component: Component, inhibitorIRI: IRI, inhibitedIRI: IRI, identifier?: string ): InhibitionInteraction {
         const interaction = component.createInhibitionInteraction(identifier);
         interaction.createInhibitorParticipation(inhibitorIRI);
         interaction.createInhibitedParticipation(inhibitedIRI);
@@ -133,12 +130,7 @@ export class SBOLAPI {
      * @param stimulatedIRI - IRI of the stimulated Feature
      * @param identifier - Optional identifier
      */
-    static createStimulationInteraction(
-        component: Component,
-        stimulatorIRI: IRI,
-        stimulatedIRI: IRI,
-        identifier?: string
-    ): StimulationInteraction {
+    static createStimulationInteraction( component: Component, stimulatorIRI: IRI, stimulatedIRI: IRI, identifier?: string ): StimulationInteraction {
         const interaction = component.createStimulationInteraction(identifier);
         interaction.createStimulatorParticipation(stimulatorIRI);
         interaction.createStimulatedParticipation(stimulatedIRI);
@@ -151,11 +143,7 @@ export class SBOLAPI {
      * @param reactantIRIs - IRIs of Feature(s) being degraded
      * @param identifier - Optional identifier
      */
-    static createDegradationInteraction(
-        component: Component,
-        reactantIRIs: IRI[],
-        identifier?: string
-    ): DegradationInteraction {
+    static createDegradationInteraction( component: Component, reactantIRIs: IRI[], identifier?: string ): DegradationInteraction {
         const interaction = component.createDegradationInteraction(identifier);
         reactantIRIs.forEach((iri, i) => {
             interaction.createReactantParticipation(iri, `Reactant${i + 1}`);
@@ -170,12 +158,7 @@ export class SBOLAPI {
      * @param productIRIs - IRIs of product Features
      * @param identifier - Optional identifier
      */
-    static createBiochemicalReactionInteraction(
-        component: Component,
-        reactantIRIs: IRI[],
-        productIRIs: IRI[],
-        identifier?: string
-    ): BiochemicalReactionInteraction {
+    static createBiochemicalReactionInteraction( component: Component, reactantIRIs: IRI[], productIRIs: IRI[], identifier?: string ): BiochemicalReactionInteraction {
         const interaction = component.createBiochemicalReactionInteraction(identifier);
         reactantIRIs.forEach((iri, i) => {
             interaction.createReactantParticipation(iri, `Reactant${i + 1}`);
@@ -193,12 +176,7 @@ export class SBOLAPI {
      * @param productIRI - IRI of the resulting complex Feature
      * @param identifier - Optional identifier
      */
-    static createNonCovalentBindingInteraction(
-        component: Component,
-        reactantIRIs: IRI[],
-        productIRI: IRI,
-        identifier?: string
-    ): NonCovalentBindingInteraction {
+    static createNonCovalentBindingInteraction( component: Component, reactantIRIs: IRI[], productIRI: IRI, identifier?: string ): NonCovalentBindingInteraction {
         const interaction = component.createNonCovalentBindingInteraction(identifier);
         reactantIRIs.forEach((iri, i) => {
             interaction.createReactantParticipation(iri, `Reactant${i + 1}`);
@@ -215,13 +193,7 @@ export class SBOLAPI {
      * @param promoterIRI - Optional IRI of the promoter Feature
      * @param identifier - Optional identifier
      */
-    static createGeneticProductionInteraction(
-        component: Component,
-        templateIRI: IRI,
-        productIRI: IRI,
-        promoterIRI?: IRI,
-        identifier?: string
-    ): GeneticProductionInteraction {
+    static createGeneticProductionInteraction( component: Component, templateIRI: IRI, productIRI: IRI, promoterIRI?: IRI, identifier?: string ): GeneticProductionInteraction {
         const interaction = component.createGeneticProductionInteraction(identifier);
         if (promoterIRI) {
             interaction.createPromoterParticipation(promoterIRI);
@@ -238,12 +210,7 @@ export class SBOLAPI {
      * @param modifiedIRI - IRI of the modified Feature
      * @param identifier - Optional identifier
      */
-    static createControlInteraction(
-        component: Component,
-        modifierIRI: IRI,
-        modifiedIRI: IRI,
-        identifier?: string
-    ): ControlInteraction {
+    static createControlInteraction( component: Component, modifierIRI: IRI, modifiedIRI: IRI, identifier?: string ): ControlInteraction {
         const interaction = component.createControlInteraction(identifier);
         interaction.createModifierParticipation(modifierIRI);
         interaction.createModifiedParticipation(modifiedIRI);
@@ -261,6 +228,11 @@ export class SBOLAPI {
             return `${uri}${id}`;
         }
         return `${uri}/${id}`;
+    }
+
+    /** Strips a trailing '/' from a URI string, matching the Java SBOLAPI.toNameSpace behaviour. */
+    static toNameSpace(uri: IRI): IRI {
+        return uri.endsWith('/') ? uri.slice(0, -1) : uri;
     }
 
     /** Extracts the local part of a URI (after '#', or after the first '/'). */
@@ -373,14 +345,7 @@ export class SBOLAPI {
      * @param participant2 - Second participant Feature
      * @param participant2Roles - Role IRIs for participant2
      */
-    static createInteractionFromFeaturePair(
-        interactionTypes: IRI[],
-        container: Component,
-        participant1: Feature,
-        participant1Roles: IRI[],
-        participant2: Feature,
-        participant2Roles: IRI[]
-    ): Interaction {
+    static createInteractionFromFeaturePair( interactionTypes: IRI[], container: Component, participant1: Feature, participant1Roles: IRI[], participant2: Feature, participant2Roles: IRI[] ): Interaction {
         const interaction = container.createInteraction();
         interaction.setTypes(interactionTypes);
         SBOLAPI.createParticipation(interaction, participant1Roles, participant1);
@@ -392,14 +357,7 @@ export class SBOLAPI {
      * Creates Interactions for every pair of features from two feature lists
      * (cross-product). Returns all created interactions.
      */
-    static createInteractionFromFeatureLists(
-        interactionTypes: IRI[],
-        parent: Component,
-        participant1Features: Feature[],
-        participant1Roles: IRI[],
-        participant2Features: Feature[],
-        participant2Roles: IRI[]
-    ): Interaction[] {
+    static createInteractionFromFeatureLists( interactionTypes: IRI[], parent: Component, participant1Features: Feature[], participant1Roles: IRI[], participant2Features: Feature[], participant2Roles: IRI[] ): Interaction[] {
         const interactions: Interaction[] = [];
         if (participant1Features && participant2Features) {
             for (const f1 of participant1Features) {
@@ -419,14 +377,7 @@ export class SBOLAPI {
      * Creates Interactions between two Components by first resolving (or creating)
      * their SubComponents within `parent`, then creating a cross-product of interactions.
      */
-    static createInteractionFromComponents(
-        interactionTypes: IRI[],
-        parent: Component,
-        participant1: Component,
-        participant1Roles: IRI[],
-        participant2: Component,
-        participant2Roles: IRI[]
-    ): Interaction[] {
+    static createInteractionFromComponents( interactionTypes: IRI[], parent: Component, participant1: Component, participant1Roles: IRI[], participant2: Component, participant2Roles: IRI[] ): Interaction[] {
         const features1 = SBOLAPI.getOrCreateSubComponents(parent, participant1) as Feature[];
         const features2 = SBOLAPI.getOrCreateSubComponents(parent, participant2) as Feature[];
         return SBOLAPI.createInteractionFromFeatureLists(
@@ -459,34 +410,9 @@ export class SBOLAPI {
      * A + B --> C + D + E [mod M]
      * where A,B,C,D,E,M are components and A1/A2, B1/B2, … are their SubComponents.
      */
-    static createReactionInteraction(
-        parent: Component,
-        sources: Component[],
-        sourceParticipantRoles: IRI[],
-        targets: Component[],
-        targetParticipantRoles: IRI[],
-        interactionTypes: IRI[]
-    ): Interaction[];
-    static createReactionInteraction(
-        parent: Component,
-        sources: Component[],
-        sourceParticipantRoles: IRI[],
-        targets: Component[],
-        targetParticipantRoles: IRI[],
-        modifiers: Component[] | null,
-        modifierParticipantRoles: IRI[] | null,
-        interactionTypes: IRI[]
-    ): Interaction[];
-    static createReactionInteraction(
-        parent: Component,
-        sources: Component[],
-        sourceParticipantRoles: IRI[],
-        targets: Component[],
-        targetParticipantRoles: IRI[],
-        modifiersOrTypes: Component[] | IRI[] | null,
-        modifierParticipantRoles?: IRI[] | null,
-        interactionTypes?: IRI[]
-    ): Interaction[] {
+    static createReactionInteraction( parent: Component, sources: Component[], sourceParticipantRoles: IRI[], targets: Component[], targetParticipantRoles: IRI[], interactionTypes: IRI[] ): Interaction[];
+    static createReactionInteraction( parent: Component, sources: Component[], sourceParticipantRoles: IRI[], targets: Component[], targetParticipantRoles: IRI[], modifiers: Component[] | null, modifierParticipantRoles: IRI[] | null, interactionTypes: IRI[] ): Interaction[];
+    static createReactionInteraction( parent: Component, sources: Component[], sourceParticipantRoles: IRI[], targets: Component[], targetParticipantRoles: IRI[], modifiersOrTypes: Component[] | IRI[] | null, modifierParticipantRoles?: IRI[] | null, interactionTypes?: IRI[] ): Interaction[] {
         let modifiers: Component[] | null = null;
         let modRoles: IRI[] | null = null;
         let types: IRI[];
@@ -505,16 +431,7 @@ export class SBOLAPI {
         );
     }
 
-    private static _createReactionInteraction(
-        parent: Component,
-        sources: Component[],
-        sourceParticipantRoles: IRI[],
-        targets: Component[],
-        targetParticipantRoles: IRI[],
-        modifiers: Component[] | null,
-        modifierParticipantRoles: IRI[] | null,
-        interactionTypes: IRI[]
-    ): Interaction[] {
+    private static _createReactionInteraction( parent: Component, sources: Component[], sourceParticipantRoles: IRI[], targets: Component[], targetParticipantRoles: IRI[], modifiers: Component[] | null, modifierParticipantRoles: IRI[] | null, interactionTypes: IRI[] ): Interaction[] {
         const interactions: Interaction[] = [];
 
         // Collect SubComponent lists for each source
@@ -575,34 +492,9 @@ export class SBOLAPI {
      * modifier feature sets (Feature[][] — each inner array is the set of features
      * for one logical participant). Modifiers may be null.
      */
-    static createReactionInteractionFromFeatures(
-        parent: Component,
-        sourceFeatureSets: Feature[][],
-        sourceParticipantRoles: IRI[],
-        targetFeatureSets: Feature[][],
-        targetParticipantRoles: IRI[],
-        interactionTypes: IRI[]
-    ): Interaction[];
-    static createReactionInteractionFromFeatures(
-        parent: Component,
-        sourceFeatureSets: Feature[][],
-        sourceParticipantRoles: IRI[],
-        targetFeatureSets: Feature[][],
-        targetParticipantRoles: IRI[],
-        modifierFeatureSets: Feature[][] | null,
-        modifierParticipantRoles: IRI[] | null,
-        interactionTypes: IRI[]
-    ): Interaction[];
-    static createReactionInteractionFromFeatures(
-        parent: Component,
-        sourceFeatureSets: Feature[][],
-        sourceParticipantRoles: IRI[],
-        targetFeatureSets: Feature[][],
-        targetParticipantRoles: IRI[],
-        modifiersOrTypes: Feature[][] | IRI[] | null,
-        modifierParticipantRoles?: IRI[] | null,
-        interactionTypes?: IRI[]
-    ): Interaction[] {
+    static createReactionInteractionFromFeatures( parent: Component, sourceFeatureSets: Feature[][], sourceParticipantRoles: IRI[], targetFeatureSets: Feature[][], targetParticipantRoles: IRI[], interactionTypes: IRI[] ): Interaction[];
+    static createReactionInteractionFromFeatures( parent: Component, sourceFeatureSets: Feature[][], sourceParticipantRoles: IRI[], targetFeatureSets: Feature[][], targetParticipantRoles: IRI[], modifierFeatureSets: Feature[][] | null, modifierParticipantRoles: IRI[] | null, interactionTypes: IRI[] ): Interaction[];
+    static createReactionInteractionFromFeatures( parent: Component, sourceFeatureSets: Feature[][], sourceParticipantRoles: IRI[], targetFeatureSets: Feature[][], targetParticipantRoles: IRI[], modifiersOrTypes: Feature[][] | IRI[] | null, modifierParticipantRoles?: IRI[] | null, interactionTypes?: IRI[] ): Interaction[] {
         let modifiers: Feature[][] | null = null;
         let modRoles: IRI[] | null = null;
         let types: IRI[];
@@ -649,11 +541,7 @@ export class SBOLAPI {
      * Resolves (or creates) their SubComponents and returns one interaction per
      * SubComponent pair.
      */
-    static createInhibitionInteractionFromComponents(
-        parent: Component,
-        source: Component,
-        target: Component
-    ): Interaction[] {
+    static createInhibitionInteractionFromComponents( parent: Component, source: Component, target: Component ): Interaction[] {
         return SBOLAPI.createInteractionFromComponents(
             [InteractionType.Inhibition.iri], parent,
             source, [ParticipationType.Inhibitor.iri],
@@ -664,11 +552,7 @@ export class SBOLAPI {
     /**
      * Creates InhibitionInteraction(s) from Feature lists (cross-product).
      */
-    static createInhibitionInteractionFromFeatureList(
-        parent: Component,
-        sourceFeatures: Feature[],
-        targetFeatures: Feature[]
-    ): Interaction[] {
+    static createInhibitionInteractionFromFeatureList( parent: Component, sourceFeatures: Feature[], targetFeatures: Feature[] ): Interaction[] {
         return SBOLAPI.createInteractionFromFeatureLists(
             [InteractionType.Inhibition.iri], parent,
             sourceFeatures, [ParticipationType.Inhibitor.iri],
@@ -679,11 +563,7 @@ export class SBOLAPI {
     /**
      * Creates StimulationInteraction(s) between two Components within `parent`.
      */
-    static createStimulationInteractionFromComponents(
-        parent: Component,
-        source: Component,
-        target: Component
-    ): Interaction[] {
+    static createStimulationInteractionFromComponents( parent: Component, source: Component, target: Component ): Interaction[] {
         return SBOLAPI.createInteractionFromComponents(
             [InteractionType.Stimulation.iri], parent,
             source, [ParticipationType.Stimulator.iri],
@@ -694,11 +574,7 @@ export class SBOLAPI {
     /**
      * Creates StimulationInteraction(s) from Feature lists (cross-product).
      */
-    static createStimulationInteractionFromFeatureList(
-        parent: Component,
-        sourceFeatures: Feature[],
-        targetFeatures: Feature[]
-    ): Interaction[] {
+    static createStimulationInteractionFromFeatureList( parent: Component, sourceFeatures: Feature[], targetFeatures: Feature[] ): Interaction[] {
         return SBOLAPI.createInteractionFromFeatureLists(
             [InteractionType.Stimulation.iri], parent,
             sourceFeatures, [ParticipationType.Stimulator.iri],
@@ -709,11 +585,7 @@ export class SBOLAPI {
     /**
      * Creates ControlInteraction(s) between two Components within `parent`.
      */
-    static createControlInteractionFromComponents(
-        parent: Component,
-        source: Component,
-        target: Component
-    ): Interaction[] {
+    static createControlInteractionFromComponents( parent: Component, source: Component, target: Component ): Interaction[] {
         return SBOLAPI.createInteractionFromComponents(
             [InteractionType.Control.iri], parent,
             source, [ParticipationType.Modifier.iri],
@@ -724,11 +596,7 @@ export class SBOLAPI {
     /**
      * Creates ControlInteraction(s) from Feature lists (cross-product).
      */
-    static createControlInteractionFromFeatureList(
-        parent: Component,
-        sourceFeatures: Feature[],
-        targetFeatures: Feature[]
-    ): Interaction[] {
+    static createControlInteractionFromFeatureList( parent: Component, sourceFeatures: Feature[], targetFeatures: Feature[] ): Interaction[] {
         return SBOLAPI.createInteractionFromFeatureLists(
             [InteractionType.Control.iri], parent,
             sourceFeatures, [ParticipationType.Modifier.iri],
@@ -740,11 +608,7 @@ export class SBOLAPI {
      * Creates GeneticProductionInteraction(s) between two Components within `parent`.
      * Source acts as template; target is the product.
      */
-    static createGeneticProductionInteractionFromComponents(
-        parent: Component,
-        source: Component,
-        target: Component
-    ): Interaction[] {
+    static createGeneticProductionInteractionFromComponents( parent: Component, source: Component, target: Component ): Interaction[] {
         return SBOLAPI.createInteractionFromComponents(
             [InteractionType.GeneticProduction.iri], parent,
             source, [ParticipationType.Template.iri],
@@ -755,11 +619,7 @@ export class SBOLAPI {
     /**
      * Creates GeneticProductionInteraction(s) from Feature lists (cross-product).
      */
-    static createGeneticProductionInteractionFromFeatureList(
-        parent: Component,
-        sourceFeatures: Feature[],
-        targetFeatures: Feature[]
-    ): Interaction[] {
+    static createGeneticProductionInteractionFromFeatureList( parent: Component, sourceFeatures: Feature[], targetFeatures: Feature[] ): Interaction[] {
         return SBOLAPI.createInteractionFromFeatureLists(
             [InteractionType.GeneticProduction.iri], parent,
             sourceFeatures, [ParticipationType.Template.iri],
@@ -771,10 +631,7 @@ export class SBOLAPI {
      * Creates DegradationInteraction(s) for a single source Component.
      * One interaction is created per SubComponent of `source` within `parent`.
      */
-    static createDegradationInteractionFromComponent(
-        parent: Component,
-        source: Component
-    ): Interaction[] {
+    static createDegradationInteractionFromComponent( parent: Component, source: Component ): Interaction[] {
         const features = SBOLAPI.getOrCreateSubComponents(parent, source) as Feature[];
         return SBOLAPI.createDegradationInteractionFromFeatureList(parent, features);
     }
@@ -782,10 +639,7 @@ export class SBOLAPI {
     /**
      * Creates a DegradationInteraction for each Feature in the list.
      */
-    static createDegradationInteractionFromFeatureList(
-        parent: Component,
-        features: Feature[]
-    ): Interaction[] {
+    static createDegradationInteractionFromFeatureList( parent: Component, features: Feature[] ): Interaction[] {
         const interactions: Interaction[] = [];
         if (features) {
             for (const feature of features) {
@@ -801,11 +655,7 @@ export class SBOLAPI {
     /**
      * Creates BiochemicalReactionInteraction(s) for lists of source and target Components.
      */
-    static createBiochemicalReactionInteractionFromComponents(
-        parent: Component,
-        sources: Component[],
-        targets: Component[]
-    ): Interaction[] {
+    static createBiochemicalReactionInteractionFromComponents( parent: Component, sources: Component[], targets: Component[] ): Interaction[] {
         return SBOLAPI.createReactionInteraction(
             parent, sources, [ParticipationType.Reactant.iri],
             targets, [ParticipationType.Product.iri],
@@ -816,11 +666,7 @@ export class SBOLAPI {
     /**
      * Creates BiochemicalReactionInteraction(s) from Feature set lists (cross-product).
      */
-    static createBiochemicalReactionInteractionFromFeatureSets(
-        parent: Component,
-        sources: Feature[][],
-        targets: Feature[][]
-    ): Interaction[] {
+    static createBiochemicalReactionInteractionFromFeatureSets( parent: Component, sources: Feature[][], targets: Feature[][] ): Interaction[] {
         return SBOLAPI.createReactionInteractionFromFeatures(
             parent, sources, [ParticipationType.Reactant.iri],
             targets, [ParticipationType.Product.iri],
@@ -831,11 +677,7 @@ export class SBOLAPI {
     /**
      * Creates NonCovalentBindingInteraction(s) for lists of source and target Components.
      */
-    static createNonCovalentBindingInteractionFromComponents(
-        parent: Component,
-        sources: Component[],
-        targets: Component[]
-    ): Interaction[] {
+    static createNonCovalentBindingInteractionFromComponents( parent: Component, sources: Component[], targets: Component[] ): Interaction[] {
         return SBOLAPI.createReactionInteraction(
             parent, sources, [ParticipationType.Reactant.iri],
             targets, [ParticipationType.Product.iri],
@@ -846,11 +688,7 @@ export class SBOLAPI {
     /**
      * Creates NonCovalentBindingInteraction(s) from Feature set lists (cross-product).
      */
-    static createNonCovalentBindingInteractionFromFeatureSets(
-        parent: Component,
-        sources: Feature[][],
-        targets: Feature[][]
-    ): Interaction[] {
+    static createNonCovalentBindingInteractionFromFeatureSets( parent: Component, sources: Feature[][], targets: Feature[][] ): Interaction[] {
         return SBOLAPI.createReactionInteractionFromFeatures(
             parent, sources, [ParticipationType.Reactant.iri],
             targets, [ParticipationType.Product.iri],
@@ -864,15 +702,8 @@ export class SBOLAPI {
      * Creates a Component with a known URI (full IRI), a type, name, description
      * and optional role. Uses the document's baseIRI as the namespace.
      */
-    static createComponentFromUri(
-        doc: SBOLDocument,
-        uri: IRI,
-        type: IRI,
-        name: string,
-        description: string,
-        role: IRI | null
-    ): Component {
-        const component = doc.createComponent(uri, doc.baseIRI, [type]);
+    static createComponentFromUri( doc: SBOLDocument, uri: IRI, type: IRI, name: string, description: string, role: IRI | null ): Component {
+        const component = doc.createComponent(uri, SBOLAPI.toNameSpace(doc.baseIRI), [type]);
         if (name) component.setName(name);
         if (description) component.setDescription(description);
         if (role) component.setRoles([role]);
@@ -883,14 +714,7 @@ export class SBOLAPI {
      * Creates a Component from a displayId (the IRI is constructed by appending
      * displayId to the document's baseIRI).
      */
-    static createComponentFromDisplayId(
-        doc: SBOLDocument,
-        displayId: string,
-        type: IRI,
-        name: string,
-        description: string,
-        role: IRI | null
-    ): Component {
+    static createComponentFromDisplayId( doc: SBOLDocument, displayId: string, type: IRI, name: string, description: string, role: IRI | null ): Component {
         const uri = SBOLAPI.append(doc.baseIRI, displayId);
         return SBOLAPI.createComponentFromUri(doc, uri, type, name, description, role);
     }
@@ -904,14 +728,7 @@ export class SBOLAPI {
      * @param role - Role IRI (e.g. a SO term)
      * @param sequence - Nucleic acid sequence string (or empty/null for none)
      */
-    static createDnaComponent(
-        doc: SBOLDocument,
-        displayId: string,
-        name: string,
-        description: string,
-        role: IRI,
-        sequence: string
-    ): Component {
+    static createDnaComponent( doc: SBOLDocument, displayId: string, name: string, description: string, role: IRI, sequence: string ): Component {
         const dna = SBOLAPI.createComponentFromDisplayId(
             doc, displayId, ComponentType.DNA.iri, name, description, role
         );
@@ -932,15 +749,7 @@ export class SBOLAPI {
      * @param role - Role IRI
      * @param sequence - Amino-acid sequence string (or empty/null for none)
      */
-    static createProteinComponentInContainer(
-        doc: SBOLDocument,
-        container: Component | null,
-        displayId: string,
-        name: string,
-        description: string,
-        role: IRI,
-        sequence: string
-    ): Component {
+    static createProteinComponentInContainer( doc: SBOLDocument, container: Component | null, displayId: string, name: string, description: string, role: IRI, sequence: string ): Component {
         const protein = SBOLAPI.createComponentFromDisplayId(
             doc, displayId, ComponentType.Protein.iri, name, description, role
         );
@@ -962,14 +771,7 @@ export class SBOLAPI {
      * @param role - Role IRI
      * @param sequence - Amino-acid sequence string (or empty/null for none)
      */
-    static createProteinComponentStandalone(
-        doc: SBOLDocument,
-        displayId: string,
-        name: string,
-        description: string,
-        role: IRI,
-        sequence: string
-    ): Component {
+    static createProteinComponentStandalone( doc: SBOLDocument, displayId: string, name: string, description: string, role: IRI, sequence: string ): Component {
         return SBOLAPI.createProteinComponentInContainer(
             doc, null, displayId, name, description, role, sequence
         );
@@ -982,6 +784,113 @@ export class SBOLAPI {
         return parent.createSubComponent(child.getIdentifier());
     }
 
+    /**
+     * Gets or creates SubComponents for `comp1` and `comp2` inside `container`,
+     * then creates a Constraint between them with the given restriction.
+     * Mirrors Java: SBOLAPI.createConstraint(container, comp1, comp2, restriction)
+     */
+    static createConstraint(container: Component, comp1: Component, comp2: Component, restriction: any): Constraint[] {
+        const scs1 = SBOLAPI.getOrCreateSubComponents(container, comp1);
+        const scs2 = SBOLAPI.getOrCreateSubComponents(container, comp2);
+        const result: Constraint[] = [];
+        for (const sc1 of scs1) {
+            for (const sc2 of scs2) {
+                const c = container.createConstraint();
+                c.setRestriction(restriction);
+                c.setSubject(sc1.getIdentifier());
+                c.setObject(sc2.getIdentifier());
+                result.push(c);
+            }
+        }
+        return result;
+    }
+
+    /**
+     * 4-arg overload: creates a ComponentReference for `child` (nested inside `parent`) in `container`,
+     * then creates a VerifyIdentical Constraint between that ComponentReference and the existing
+     * SubComponent of `sibling` in `container`.
+     * Mirrors Java: SBOLAPI.mapTo(container, parent, child, sibling)
+     */
+    static mapTo(container: Component, parent: Component, child: Component, sibling: Component): ComponentReference[];
+    /**
+     * 5-arg overload: creates ComponentReferences for `child1` (inside `parent1`) and `child2` (inside `parent2`)
+     * in `container`, then creates a VerifyIdentical (or Replaces) Constraint between them.
+     * Mirrors Java: SBOLAPI.mapTo(container, parent1, child1, parent2, child2)
+     */
+    static mapTo(container: Component, parent1: Component, child1: Component, parent2: Component, child2: Component): ComponentReference[];
+    static mapTo(container: Component, parent1: Component, child1: Component, parent2OrSibling: Component, child2?: Component): ComponentReference[] {
+        if (child2 === undefined) {
+            // 4-arg: mapTo(container, parent, child, sibling)
+            const parent  = parent1;
+            const child   = child1;
+            const sibling = parent2OrSibling;
+
+            const scsParentInContainer  = container.getSubComponents().filter(sc => sc.getInstanceOfIRI() === parent.getIdentifier());
+            const scsChildInParent      = parent.getSubComponents().filter(sc => sc.getInstanceOfIRI() === child.getIdentifier());
+            const scsSiblingInContainer = container.getSubComponents().filter(sc => sc.getInstanceOfIRI() === sibling.getIdentifier());
+
+            const refs: ComponentReference[] = [];
+            for (const scParent of scsParentInContainer) {
+                for (const scChild of scsChildInParent) {
+                    const cr = container.createComponentReference();
+                    cr.setInChildOf(scParent.getIdentifier());
+                    cr.setRefersTo(scChild.getIdentifier());
+                    refs.push(cr);
+                }
+            }
+            for (const cr of refs) {
+                for (const scSibling of scsSiblingInContainer) {
+                    const c = container.createConstraint();
+                    c.setRestriction(ConstraintRestriction.VerifyIdentical);
+                    c.setSubject(cr.getIdentifier());
+                    c.setObject(scSibling.getIdentifier());
+                }
+            }
+            return refs;
+        }
+
+        // 5-arg: mapTo(container, parent1, child1, parent2, child2)
+        const scsInCont1   = container.getSubComponents().filter(sc => sc.getInstanceOfIRI() === parent1.getIdentifier());
+        const scsInParent1 = parent1.getSubComponents().filter(sc => sc.getInstanceOfIRI() === child1.getIdentifier());
+        const scsInCont2   = container.getSubComponents().filter(sc => sc.getInstanceOfIRI() === parent2OrSibling.getIdentifier());
+        const scsInParent2 = parent2OrSibling.getSubComponents().filter(sc => sc.getInstanceOfIRI() === child2.getIdentifier());
+
+        const refs1: ComponentReference[] = [];
+        const refs2: ComponentReference[] = [];
+
+        for (const scCont of scsInCont1) {
+            for (const scPar of scsInParent1) {
+                const cr = container.createComponentReference();
+                cr.setInChildOf(scCont.getIdentifier());
+                cr.setRefersTo(scPar.getIdentifier());
+                refs1.push(cr);
+            }
+        }
+        for (const scCont of scsInCont2) {
+            for (const scPar of scsInParent2) {
+                const cr = container.createComponentReference();
+                cr.setInChildOf(scCont.getIdentifier());
+                cr.setRefersTo(scPar.getIdentifier());
+                refs2.push(cr);
+            }
+        }
+
+        const restriction = child1.getIdentifier() === child2.getIdentifier()
+            ? ConstraintRestriction.VerifyIdentical
+            : ConstraintRestriction.Replaces;
+
+        for (const cr1 of refs1) {
+            for (const cr2 of refs2) {
+                const c = container.createConstraint();
+                c.setRestriction(restriction);
+                c.setSubject(cr1.getIdentifier());
+                c.setObject(cr2.getIdentifier());
+            }
+        }
+
+        return [...refs1, ...refs2];
+    }
+
     // ─── Sequence factory methods ──────────────────────────────────────────
 
     /**
@@ -989,15 +898,10 @@ export class SBOLAPI {
      * Uses a generated local name derived from the number of existing sequences.
      * The component's existing sequences are replaced with just this new one.
      */
-    static createSequenceForComponent(
-        doc: SBOLDocument,
-        component: Component,
-        encoding: typeof Encoding.IUPAC_DNA_RNA,
-        elements: string
-    ): Sequence {
+    static createSequenceForComponent( doc: SBOLDocument, component: Component, encoding: typeof Encoding.IUPAC_DNA_RNA, elements: string ): Sequence {
         const localName = SBOLAPI.createLocalName(SBOLEntity.Sequence.iri, component.getSequences());
         const seqIdentifier = `${component.getIdentifier()}_${localName}`;
-        const seq = doc.createSequence(seqIdentifier, doc.baseIRI);
+        const seq = doc.createSequence(seqIdentifier, SBOLAPI.toNameSpace(doc.baseIRI));
         //seq.setName(`${component.getDisplayId() ?? ''} sequence`);
         seq.setName(localName);
         seq.setDescription(`${component.getDisplayId() ?? ''} sequence`);
@@ -1011,15 +915,10 @@ export class SBOLAPI {
      * Creates a new Sequence for a Component and adds it to the component's sequence list
      * (preserving any existing sequences).
      */
-    static addSequenceToComponent(
-        doc: SBOLDocument,
-        component: Component,
-        encoding: typeof Encoding.IUPAC_DNA_RNA,
-        elements: string
-    ): Sequence {
+    static addSequenceToComponent( doc: SBOLDocument, component: Component, encoding: typeof Encoding.IUPAC_DNA_RNA, elements: string ): Sequence {
         const localName = SBOLAPI.createLocalName(SBOLEntity.Sequence.iri, component.getSequences());
         const seqIdentifier = `${component.getIdentifier()}_${localName}`;
-        const seq = doc.createSequence(seqIdentifier, doc.baseIRI);
+        const seq = doc.createSequence(seqIdentifier, SBOLAPI.toNameSpace(doc.baseIRI));
         seq.setName(`${component.getDisplayId() ?? ''} sequence`);
         if (elements != null) seq.setElements(elements);
         seq.setEncoding(encoding);
@@ -1032,11 +931,7 @@ export class SBOLAPI {
      * Creates a new Sequence for a Component with automatically determined encoding
      * (based on the component's type and the sequence content).
      */
-    static addSequenceAutoEncoding(
-        doc: SBOLDocument,
-        component: Component,
-        elements: string
-    ): Sequence {
+    static addSequenceAutoEncoding( doc: SBOLDocument, component: Component, elements: string ): Sequence {
         const encoding = SBOLAPI.getEncodingType(doc, component, elements);
         return SBOLAPI.addSequenceToComponent(doc, component, encoding, elements);
     }
@@ -1045,11 +940,7 @@ export class SBOLAPI {
      * Determines the appropriate encoding for a sequence string based on the
      * component's types. Throws if no matching encoding can be determined.
      */
-    static getEncodingType(
-        doc: SBOLDocument,
-        component: Component,
-        elements: string
-    ): typeof Encoding.IUPAC_DNA_RNA {
+    static getEncodingType( doc: SBOLDocument, component: Component, elements: string ): typeof Encoding.IUPAC_DNA_RNA {
         const types = component.getTypes();
         if (!types || types.length === 0) {
             throw new Error('Component must have at least one type to determine encoding.');
@@ -1073,12 +964,7 @@ export class SBOLAPI {
      * If the child has a sequence, a Range location is created on the subcomponent
      * pointing to the appropriate region in the parent's sequence.
      */
-    static appendComponent(
-        doc: SBOLDocument,
-        parent: Component,
-        child: Component,
-        orientation: typeof Orientation.INLINE = Orientation.INLINE
-    ): SubComponent {
+    static appendComponent( doc: SBOLDocument, parent: Component, child: Component, orientation: typeof Orientation.INLINE = Orientation.INLINE ): SubComponent {
         const subComponent = parent.createSubComponent(child.getIdentifier());
         subComponent.setOrientation(orientation);
         const childSequences = child.getSequences();
@@ -1095,12 +981,7 @@ export class SBOLAPI {
      * Appends a SequenceFeature (inline, default orientation) to `parent` and
      * extends the parent's sequence by `elements`. Returns the created SequenceFeature.
      */
-    static appendSequenceFeature(
-        doc: SBOLDocument,
-        parent: Component,
-        elements: string,
-        orientation: typeof Orientation.INLINE
-    ): SequenceFeature | null {
+    static appendSequenceFeature( doc: SBOLDocument, parent: Component, elements: string, orientation: typeof Orientation.INLINE ): SequenceFeature | null {
         if (!elements || elements.length === 0) return null;
 
         const sequences = parent.getSequences();
@@ -1126,7 +1007,7 @@ export class SBOLAPI {
 
         const feature = parent.createSequenceFeature();
         feature.setOrientation(orientation);
-        const range: any = feature.createRange(start, end);
+        const range: any = feature.createRange(sequence.getIdentifier(), start, end);
         if (range && typeof range.setOrientation === 'function') {
             range.setOrientation(orientation);
         }
@@ -1137,13 +1018,7 @@ export class SBOLAPI {
      * Private helper: creates a Range location on `subComponent` within `parent`,
      * appending `elements` to the parent sequence (reverse-complementing if needed).
      */
-    private static _createRange(
-        doc: SBOLDocument,
-        parent: Component,
-        subComponent: SubComponent,
-        elements: string,
-        orientation: typeof Orientation.INLINE
-    ): Range | null {
+    private static _createRange( doc: SBOLDocument, parent: Component, subComponent: SubComponent, elements: string, orientation: typeof Orientation.INLINE ): Range | null {
         if (!elements || elements.length === 0) return null;
 
         const sequences = parent.getSequences();
@@ -1167,7 +1042,7 @@ export class SBOLAPI {
         }
         sequence.setElements((sequence.getElements() ?? '') + actualElements);
 
-        const range: any = subComponent.createRange(start, end);
+        const range: any = subComponent.createRange(sequence.getIdentifier(), start, end);
         range.setOrientation(orientation);
         return range as Range;
     }

@@ -18,8 +18,7 @@ function generate() {
   bba_r0040.addSequence(seq_r0040.getIdentifier());
 
   const sf1 = bba_r0040.createSequenceFeature('SequenceFeature1');
-  const cut1 = sf1.createCut(5, 'Cut1');
-  cut1.setSequenceIRI(seq_r0040.getIdentifier());
+  const cut1 = sf1.createCut(seq_r0040.getIdentifier(), 5, 'Cut1');
 
   return {
     rdfXml:          doc.toRDF(RDFFormat.RDF_XML),

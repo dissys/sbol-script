@@ -46,7 +46,7 @@ export default abstract class Feature extends Identified {
     // ── hasLocation factory methods ────────────────────────────────────────
     // These create Location child entities on this Feature.
 
-    createRange(start: number, end: number, identifier?: string): any {
+    createRange(sequenceIRI: IRI, start: number, end: number, identifier?: string): any {
         // Import lazily to avoid circular deps
         const { Range } = require('./Location');
         if (!identifier) {
@@ -54,31 +54,39 @@ export default abstract class Feature extends Identified {
         }
         const iri = GraphUtil.resolveChildIRI(this.getIdentifier(), identifier);
         const range = Range.create(this.store, iri);
+        range.setSequenceIRI(sequenceIRI);
         range.setStart(start);
         range.setEnd(end);
         RDFUtil.addProperty(this.store, this.resource, SBOLEntity.Feature.properties.hasLocation, [iri]);
+        
+        
+        
+        
+        
         return range;
     }
 
-    createCut(at: number, identifier?: string): any {
+    createCut(sequenceIRI: IRI, at: number, identifier?: string): any {
         const { Cut } = require('./Location');
         if (!identifier) {
             identifier = `Cut${this.getLocationIRIs().length + 1}`;
         }
         const iri = GraphUtil.resolveChildIRI(this.getIdentifier(), identifier);
         const cut = Cut.create(this.store, iri);
+        cut.setSequenceIRI(sequenceIRI);
         cut.setAt(at);
         RDFUtil.addProperty(this.store, this.resource, SBOLEntity.Feature.properties.hasLocation, [iri]);
         return cut;
     }
 
-    createEntireSequence(identifier?: string): any {
+    createEntireSequence(sequenceIRI: IRI, identifier?: string): any {
         const { EntireSequence } = require('./Location');
         if (!identifier) {
             identifier = `EntireSequence${this.getLocationIRIs().length + 1}`;
         }
         const iri = GraphUtil.resolveChildIRI(this.getIdentifier(), identifier);
         const es = EntireSequence.create(this.store, iri);
+        es.setSequenceIRI(sequenceIRI);
         RDFUtil.addProperty(this.store, this.resource, SBOLEntity.Feature.properties.hasLocation, [iri]);
         return es;
     }

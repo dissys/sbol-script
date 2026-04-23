@@ -1,0 +1,1105 @@
+{
+  "@context": {
+    "sbol": "http://sbols.org/v3#",
+    "exa": "https://sbolstandard.org/examples/",
+    "sbo": "https://sbolstandard.org/",
+    "AHL": "https://sbolstandard.org/examples/AHL_producer/",
+    "Int": "https://sbolstandard.org/examples/AHL_producer/Interaction1/",
+    "AH": "https://sbolstandard.org/examples/AHL_receiver/",
+    "In": "https://sbolstandard.org/examples/AHL_receiver/Interaction1/",
+    "Inte": "https://sbolstandard.org/examples/AHL_receiver/Interaction2/",
+    "I": "https://sbolstandard.org/examples/AHL_receiver/Interaction3/",
+    "Inter": "https://sbolstandard.org/examples/AHL_receiver/Interaction4/",
+    "Mul": "https://sbolstandard.org/examples/MulticellularSystem/",
+    "Sen": "https://sbolstandard.org/examples/SenderSystem/",
+    "Rec": "https://sbolstandard.org/examples/ReceiverSystem/"
+  },
+  "@graph": [
+    {
+      "@id": "exa:AHL",
+      "@type": "sbol:Component",
+      "sbol:description": "AHL",
+      "sbol:displayId": "AHL",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "AHL",
+      "sbol:role": {
+        "@id": "https://identifiers.org/CHEBI:35224"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000247"
+      }
+    },
+    {
+      "@id": "exa:AHL_producer",
+      "@type": "sbol:Component",
+      "sbol:description": "AHL producer",
+      "sbol:displayId": "AHL_producer",
+      "sbol:hasFeature": [
+        {
+          "@id": "AHL:SubComponent1"
+        },
+        {
+          "@id": "AHL:SubComponent2"
+        },
+        {
+          "@id": "AHL:SubComponent3"
+        },
+        {
+          "@id": "AHL:SubComponent4"
+        },
+        {
+          "@id": "AHL:SubComponent5"
+        }
+      ],
+      "sbol:hasInteraction": {
+        "@id": "AHL:Interaction1"
+      },
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "AHL producer",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000704"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "AHL:Interaction1",
+      "@type": "sbol:Interaction",
+      "sbol:displayId": "Interaction1",
+      "sbol:hasParticipation": [
+        {
+          "@id": "Int:Participation1"
+        },
+        {
+          "@id": "Int:Participation2"
+        }
+      ],
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000589"
+      }
+    },
+    {
+      "@id": "Int:Participation1",
+      "@type": "sbol:Participation",
+      "sbol:displayId": "Participation1",
+      "sbol:participant": {
+        "@id": "AHL:SubComponent3"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000645"
+      }
+    },
+    {
+      "@id": "Int:Participation2",
+      "@type": "sbol:Participation",
+      "sbol:displayId": "Participation2",
+      "sbol:participant": {
+        "@id": "AHL:SubComponent5"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000011"
+      }
+    },
+    {
+      "@id": "AHL:SubComponent1",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent1",
+      "sbol:instanceOf": {
+        "@id": "exa:pConstLuxI"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "AHL:SubComponent2",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent2",
+      "sbol:instanceOf": {
+        "@id": "exa:rbs_luxI"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "AHL:SubComponent3",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent3",
+      "sbol:instanceOf": {
+        "@id": "exa:luxI"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "AHL:SubComponent4",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent4",
+      "sbol:instanceOf": {
+        "@id": "exa:ter_luxI"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "AHL:SubComponent5",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent5",
+      "sbol:instanceOf": {
+        "@id": "exa:AHL"
+      }
+    },
+    {
+      "@id": "exa:AHL_receiver",
+      "@type": "sbol:Component",
+      "sbol:description": "AHL receiver",
+      "sbol:displayId": "AHL_receiver",
+      "sbol:hasFeature": [
+        {
+          "@id": "AH:SubComponent1"
+        },
+        {
+          "@id": "AH:SubComponent10"
+        },
+        {
+          "@id": "AH:SubComponent11"
+        },
+        {
+          "@id": "AH:SubComponent12"
+        },
+        {
+          "@id": "AH:SubComponent2"
+        },
+        {
+          "@id": "AH:SubComponent3"
+        },
+        {
+          "@id": "AH:SubComponent4"
+        },
+        {
+          "@id": "AH:SubComponent5"
+        },
+        {
+          "@id": "AH:SubComponent6"
+        },
+        {
+          "@id": "AH:SubComponent7"
+        },
+        {
+          "@id": "AH:SubComponent8"
+        },
+        {
+          "@id": "AH:SubComponent9"
+        }
+      ],
+      "sbol:hasInteraction": [
+        {
+          "@id": "AH:Interaction1"
+        },
+        {
+          "@id": "AH:Interaction2"
+        },
+        {
+          "@id": "AH:Interaction3"
+        },
+        {
+          "@id": "AH:Interaction4"
+        }
+      ],
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "AHL receiver",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000704"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "AH:Interaction1",
+      "@type": "sbol:Interaction",
+      "sbol:displayId": "Interaction1",
+      "sbol:hasParticipation": [
+        {
+          "@id": "In:Participation1"
+        },
+        {
+          "@id": "In:Participation2"
+        }
+      ],
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000589"
+      }
+    },
+    {
+      "@id": "In:Participation1",
+      "@type": "sbol:Participation",
+      "sbol:displayId": "Participation1",
+      "sbol:participant": {
+        "@id": "AH:SubComponent3"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000645"
+      }
+    },
+    {
+      "@id": "In:Participation2",
+      "@type": "sbol:Participation",
+      "sbol:displayId": "Participation2",
+      "sbol:participant": {
+        "@id": "AH:SubComponent10"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000011"
+      }
+    },
+    {
+      "@id": "AH:Interaction2",
+      "@type": "sbol:Interaction",
+      "sbol:displayId": "Interaction2",
+      "sbol:hasParticipation": [
+        {
+          "@id": "Inte:Participation1"
+        },
+        {
+          "@id": "Inte:Participation2"
+        }
+      ],
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000589"
+      }
+    },
+    {
+      "@id": "Inte:Participation1",
+      "@type": "sbol:Participation",
+      "sbol:displayId": "Participation1",
+      "sbol:participant": {
+        "@id": "AH:SubComponent7"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000645"
+      }
+    },
+    {
+      "@id": "Inte:Participation2",
+      "@type": "sbol:Participation",
+      "sbol:displayId": "Participation2",
+      "sbol:participant": {
+        "@id": "AH:SubComponent11"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000011"
+      }
+    },
+    {
+      "@id": "AH:Interaction3",
+      "@type": "sbol:Interaction",
+      "sbol:displayId": "Interaction3",
+      "sbol:hasParticipation": [
+        {
+          "@id": "I:Participation1"
+        },
+        {
+          "@id": "I:Participation2"
+        }
+      ],
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000170"
+      }
+    },
+    {
+      "@id": "I:Participation1",
+      "@type": "sbol:Participation",
+      "sbol:displayId": "Participation1",
+      "sbol:participant": {
+        "@id": "AH:SubComponent5"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000643"
+      }
+    },
+    {
+      "@id": "I:Participation2",
+      "@type": "sbol:Participation",
+      "sbol:displayId": "Participation2",
+      "sbol:participant": {
+        "@id": "AH:SubComponent12"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000459"
+      }
+    },
+    {
+      "@id": "AH:Interaction4",
+      "@type": "sbol:Interaction",
+      "sbol:displayId": "Interaction4",
+      "sbol:hasParticipation": [
+        {
+          "@id": "Inter:Participation1"
+        },
+        {
+          "@id": "Inter:Participation2"
+        },
+        {
+          "@id": "Inter:Participation3"
+        }
+      ],
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000177"
+      }
+    },
+    {
+      "@id": "Inter:Participation1",
+      "@type": "sbol:Participation",
+      "sbol:displayId": "Participation1",
+      "sbol:participant": {
+        "@id": "AH:SubComponent10"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000010"
+      }
+    },
+    {
+      "@id": "Inter:Participation2",
+      "@type": "sbol:Participation",
+      "sbol:displayId": "Participation2",
+      "sbol:participant": {
+        "@id": "AH:SubComponent9"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000010"
+      }
+    },
+    {
+      "@id": "Inter:Participation3",
+      "@type": "sbol:Participation",
+      "sbol:displayId": "Participation3",
+      "sbol:participant": {
+        "@id": "AH:SubComponent12"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000011"
+      }
+    },
+    {
+      "@id": "AH:SubComponent1",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent1",
+      "sbol:instanceOf": {
+        "@id": "exa:pConstLuxR"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "AH:SubComponent10",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent10",
+      "sbol:instanceOf": {
+        "@id": "exa:LuxR_protein"
+      }
+    },
+    {
+      "@id": "AH:SubComponent11",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent11",
+      "sbol:instanceOf": {
+        "@id": "exa:GFP_protein"
+      }
+    },
+    {
+      "@id": "AH:SubComponent12",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent12",
+      "sbol:instanceOf": {
+        "@id": "exa:LuxR_AHL"
+      }
+    },
+    {
+      "@id": "AH:SubComponent2",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent2",
+      "sbol:instanceOf": {
+        "@id": "exa:rbs_luxR"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "AH:SubComponent3",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent3",
+      "sbol:instanceOf": {
+        "@id": "exa:luxR"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "AH:SubComponent4",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent4",
+      "sbol:instanceOf": {
+        "@id": "exa:ter_luxR"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "AH:SubComponent5",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent5",
+      "sbol:instanceOf": {
+        "@id": "exa:pLuxR"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "AH:SubComponent6",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent6",
+      "sbol:instanceOf": {
+        "@id": "exa:rbs_gfp"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "AH:SubComponent7",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent7",
+      "sbol:instanceOf": {
+        "@id": "exa:gfp"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "AH:SubComponent8",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent8",
+      "sbol:instanceOf": {
+        "@id": "exa:ter_gfp"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "AH:SubComponent9",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent9",
+      "sbol:instanceOf": {
+        "@id": "exa:AHL"
+      }
+    },
+    {
+      "@id": "exa:gfp",
+      "@type": "sbol:Component",
+      "sbol:description": "gfp coding sequence",
+      "sbol:displayId": "gfp",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "gfp",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000316"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "exa:GFP_protein",
+      "@type": "sbol:Component",
+      "sbol:description": "GFP",
+      "sbol:displayId": "GFP_protein",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "GFP",
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000252"
+      }
+    },
+    {
+      "@id": "exa:luxI",
+      "@type": "sbol:Component",
+      "sbol:description": "luxI coding sequence",
+      "sbol:displayId": "luxI",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "luxI",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000316"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "exa:luxR",
+      "@type": "sbol:Component",
+      "sbol:description": "luxR coding sequence",
+      "sbol:displayId": "luxR",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "luxR",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000316"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "exa:LuxR_AHL",
+      "@type": "sbol:Component",
+      "sbol:description": "LuxR_AHL complex",
+      "sbol:displayId": "LuxR_AHL",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "LuxR_AHL",
+      "sbol:role": {
+        "@id": "https://identifiers.org/GO:0003700"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000252"
+      }
+    },
+    {
+      "@id": "exa:LuxR_protein",
+      "@type": "sbol:Component",
+      "sbol:description": "LuxR",
+      "sbol:displayId": "LuxR_protein",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "LuxR_protein",
+      "sbol:role": {
+        "@id": "https://identifiers.org/GO:0003700"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000252"
+      }
+    },
+    {
+      "@id": "exa:MulticellularSystem",
+      "@type": "sbol:Component",
+      "sbol:description": "Multicellular System",
+      "sbol:displayId": "MulticellularSystem",
+      "sbol:hasConstraint": {
+        "@id": "Mul:Constraint1"
+      },
+      "sbol:hasFeature": [
+        {
+          "@id": "Mul:ComponentReference1"
+        },
+        {
+          "@id": "Mul:ComponentReference2"
+        },
+        {
+          "@id": "Mul:SubComponent1"
+        },
+        {
+          "@id": "Mul:SubComponent2"
+        }
+      ],
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "MulticellularSystem",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000289"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000241"
+      }
+    },
+    {
+      "@id": "Mul:ComponentReference1",
+      "@type": "sbol:ComponentReference",
+      "sbol:displayId": "ComponentReference1",
+      "sbol:inChildOf": {
+        "@id": "Mul:SubComponent1"
+      },
+      "sbol:refersTo": {
+        "@id": "Sen:SubComponent2"
+      }
+    },
+    {
+      "@id": "Mul:ComponentReference2",
+      "@type": "sbol:ComponentReference",
+      "sbol:displayId": "ComponentReference2",
+      "sbol:inChildOf": {
+        "@id": "Mul:SubComponent2"
+      },
+      "sbol:refersTo": {
+        "@id": "Rec:SubComponent2"
+      }
+    },
+    {
+      "@id": "Mul:Constraint1",
+      "@type": "sbol:Constraint",
+      "sbol:displayId": "Constraint1",
+      "sbol:object": {
+        "@id": "Mul:ComponentReference2"
+      },
+      "sbol:restriction": {
+        "@id": "sbol:verifyIdentical"
+      },
+      "sbol:subject": {
+        "@id": "Mul:ComponentReference1"
+      }
+    },
+    {
+      "@id": "Mul:SubComponent1",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent1",
+      "sbol:instanceOf": {
+        "@id": "exa:SenderSystem"
+      }
+    },
+    {
+      "@id": "Mul:SubComponent2",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent2",
+      "sbol:instanceOf": {
+        "@id": "exa:ReceiverSystem"
+      }
+    },
+    {
+      "@id": "exa:OrganismA",
+      "@type": "sbol:Component",
+      "sbol:description": "Organism A",
+      "sbol:displayId": "OrganismA",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "OrganismA",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000290"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/GO:0005623"
+      }
+    },
+    {
+      "@id": "exa:OrganismB",
+      "@type": "sbol:Component",
+      "sbol:description": "Organism B",
+      "sbol:displayId": "OrganismB",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "OrganismB",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000290"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/GO:0005623"
+      }
+    },
+    {
+      "@id": "exa:pConstLuxI",
+      "@type": "sbol:Component",
+      "sbol:description": "Constitutive promoter",
+      "sbol:displayId": "pConstLuxI",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "pConstLuxI",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000167"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "exa:pConstLuxR",
+      "@type": "sbol:Component",
+      "sbol:description": "Constituve promoter",
+      "sbol:displayId": "pConstLuxR",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "pLuxR",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000167"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "exa:pLuxR",
+      "@type": "sbol:Component",
+      "sbol:description": "LuxR inducible promoter",
+      "sbol:displayId": "pLuxR",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "pLuxR",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000167"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "exa:rbs_gfp",
+      "@type": "sbol:Component",
+      "sbol:description": "RBS",
+      "sbol:displayId": "rbs_gfp",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "rbs",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000139"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "exa:rbs_luxI",
+      "@type": "sbol:Component",
+      "sbol:description": "RBS",
+      "sbol:displayId": "rbs_luxI",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "rbs",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000139"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "exa:rbs_luxR",
+      "@type": "sbol:Component",
+      "sbol:description": "RBS",
+      "sbol:displayId": "rbs_luxR",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "rbs",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000139"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "exa:ReceiverSystem",
+      "@type": "sbol:Component",
+      "sbol:description": "Receiver System",
+      "sbol:displayId": "ReceiverSystem",
+      "sbol:hasConstraint": [
+        {
+          "@id": "Rec:Constraint1"
+        },
+        {
+          "@id": "Rec:Constraint2"
+        },
+        {
+          "@id": "Rec:Constraint3"
+        }
+      ],
+      "sbol:hasFeature": [
+        {
+          "@id": "Rec:ComponentReference1"
+        },
+        {
+          "@id": "Rec:SubComponent1"
+        },
+        {
+          "@id": "Rec:SubComponent2"
+        },
+        {
+          "@id": "Rec:SubComponent3"
+        }
+      ],
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "ReceiverSystem",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000289"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000241"
+      }
+    },
+    {
+      "@id": "Rec:ComponentReference1",
+      "@type": "sbol:ComponentReference",
+      "sbol:displayId": "ComponentReference1",
+      "sbol:inChildOf": {
+        "@id": "Rec:SubComponent3"
+      },
+      "sbol:refersTo": {
+        "@id": "AH:SubComponent9"
+      }
+    },
+    {
+      "@id": "Rec:Constraint1",
+      "@type": "sbol:Constraint",
+      "sbol:displayId": "Constraint1",
+      "sbol:object": {
+        "@id": "Rec:SubComponent2"
+      },
+      "sbol:restriction": {
+        "@id": "sbol:contains"
+      },
+      "sbol:subject": {
+        "@id": "Rec:SubComponent1"
+      }
+    },
+    {
+      "@id": "Rec:Constraint2",
+      "@type": "sbol:Constraint",
+      "sbol:displayId": "Constraint2",
+      "sbol:object": {
+        "@id": "Rec:SubComponent3"
+      },
+      "sbol:restriction": {
+        "@id": "sbol:contains"
+      },
+      "sbol:subject": {
+        "@id": "Rec:SubComponent1"
+      }
+    },
+    {
+      "@id": "Rec:Constraint3",
+      "@type": "sbol:Constraint",
+      "sbol:displayId": "Constraint3",
+      "sbol:object": {
+        "@id": "Rec:SubComponent2"
+      },
+      "sbol:restriction": {
+        "@id": "sbol:verifyIdentical"
+      },
+      "sbol:subject": {
+        "@id": "Rec:ComponentReference1"
+      }
+    },
+    {
+      "@id": "Rec:SubComponent1",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent1",
+      "sbol:instanceOf": {
+        "@id": "exa:OrganismB"
+      }
+    },
+    {
+      "@id": "Rec:SubComponent2",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent2",
+      "sbol:instanceOf": {
+        "@id": "exa:AHL"
+      }
+    },
+    {
+      "@id": "Rec:SubComponent3",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent3",
+      "sbol:instanceOf": {
+        "@id": "exa:AHL_receiver"
+      }
+    },
+    {
+      "@id": "exa:SenderSystem",
+      "@type": "sbol:Component",
+      "sbol:description": "Sender System",
+      "sbol:displayId": "SenderSystem",
+      "sbol:hasConstraint": [
+        {
+          "@id": "Sen:Constraint1"
+        },
+        {
+          "@id": "Sen:Constraint2"
+        },
+        {
+          "@id": "Sen:Constraint3"
+        }
+      ],
+      "sbol:hasFeature": [
+        {
+          "@id": "Sen:ComponentReference1"
+        },
+        {
+          "@id": "Sen:SubComponent1"
+        },
+        {
+          "@id": "Sen:SubComponent2"
+        },
+        {
+          "@id": "Sen:SubComponent3"
+        }
+      ],
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "SenderSystem",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000289"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000241"
+      }
+    },
+    {
+      "@id": "Sen:ComponentReference1",
+      "@type": "sbol:ComponentReference",
+      "sbol:displayId": "ComponentReference1",
+      "sbol:inChildOf": {
+        "@id": "Sen:SubComponent3"
+      },
+      "sbol:refersTo": {
+        "@id": "AHL:SubComponent5"
+      }
+    },
+    {
+      "@id": "Sen:Constraint1",
+      "@type": "sbol:Constraint",
+      "sbol:displayId": "Constraint1",
+      "sbol:object": {
+        "@id": "Sen:SubComponent2"
+      },
+      "sbol:restriction": {
+        "@id": "sbol:contains"
+      },
+      "sbol:subject": {
+        "@id": "Sen:SubComponent1"
+      }
+    },
+    {
+      "@id": "Sen:Constraint2",
+      "@type": "sbol:Constraint",
+      "sbol:displayId": "Constraint2",
+      "sbol:object": {
+        "@id": "Sen:SubComponent3"
+      },
+      "sbol:restriction": {
+        "@id": "sbol:contains"
+      },
+      "sbol:subject": {
+        "@id": "Sen:SubComponent1"
+      }
+    },
+    {
+      "@id": "Sen:Constraint3",
+      "@type": "sbol:Constraint",
+      "sbol:displayId": "Constraint3",
+      "sbol:object": {
+        "@id": "Sen:SubComponent2"
+      },
+      "sbol:restriction": {
+        "@id": "sbol:verifyIdentical"
+      },
+      "sbol:subject": {
+        "@id": "Sen:ComponentReference1"
+      }
+    },
+    {
+      "@id": "Sen:SubComponent1",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent1",
+      "sbol:instanceOf": {
+        "@id": "exa:OrganismA"
+      }
+    },
+    {
+      "@id": "Sen:SubComponent2",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent2",
+      "sbol:instanceOf": {
+        "@id": "exa:AHL"
+      }
+    },
+    {
+      "@id": "Sen:SubComponent3",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent3",
+      "sbol:instanceOf": {
+        "@id": "exa:AHL_producer"
+      }
+    },
+    {
+      "@id": "exa:ter_gfp",
+      "@type": "sbol:Component",
+      "sbol:description": "Terminator",
+      "sbol:displayId": "ter_gfp",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "gfp terminator",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000141"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "exa:ter_luxI",
+      "@type": "sbol:Component",
+      "sbol:description": "Terminator",
+      "sbol:displayId": "ter_luxI",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "luxI terminator",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000141"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "exa:ter_luxR",
+      "@type": "sbol:Component",
+      "sbol:description": "Terminator",
+      "sbol:displayId": "ter_luxR",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "luxR terminator",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000141"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    }
+  ]
+}

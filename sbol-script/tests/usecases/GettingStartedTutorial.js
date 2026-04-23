@@ -39,7 +39,7 @@ function generate() {
   const SBO = 'https://identifiers.org/SBO:';
 
   // Create a new SBOL document
-  const doc = new SBOLDocument(NS);
+  const doc = new SBOLDocument(NS + '/');
 
   // ── Slide 26: GFP expression cassette ────────────────────────────────────
   // Component
@@ -151,7 +151,7 @@ function generate() {
     nTriplesOrdered: doc.toRDF(RDFFormat.N_TRIPLES_ORDERED),
   };
 
-  saveOutputs('GettingStartedTutorial_Short', result);
+  saveOutputs('GettingStartedTutorial', result);
 
   return result;
 }

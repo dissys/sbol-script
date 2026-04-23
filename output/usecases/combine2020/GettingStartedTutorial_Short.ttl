@@ -139,6 +139,7 @@ Seq:Range1
     a sbol:Range;
     sbol:displayId "Range1";
     sbol:end "18";
+    sbol:hasSequence igem:i13504_Sequence1;
     sbol:orientation <https://identifiers.org/SO:0001030>;
     sbol:start "13".
 i:SequenceFeature2
@@ -150,6 +151,7 @@ Se:Range1
     a sbol:Range;
     sbol:displayId "Range1";
     sbol:end "746";
+    sbol:hasSequence igem:i13504_Sequence1;
     sbol:orientation <https://identifiers.org/SO:0001030>;
     sbol:start "739".
 i:SubComponent1
@@ -162,6 +164,7 @@ Sub:Range1
     a sbol:Range;
     sbol:displayId "Range1";
     sbol:end "12";
+    sbol:hasSequence igem:i13504_Sequence1;
     sbol:orientation <https://identifiers.org/SO:0001030>;
     sbol:start "1".
 i:SubComponent2
@@ -174,6 +177,7 @@ Su:Range1
     a sbol:Range;
     sbol:displayId "Range1";
     sbol:end "738";
+    sbol:hasSequence igem:i13504_Sequence1;
     sbol:orientation <https://identifiers.org/SO:0001030>;
     sbol:start "19".
 i:SubComponent3
@@ -186,6 +190,7 @@ SubC:Range1
     a sbol:Range;
     sbol:displayId "Range1";
     sbol:end "826";
+    sbol:hasSequence igem:i13504_Sequence1;
     sbol:orientation <https://identifiers.org/SO:0001030>;
     sbol:start "747".
 igem:interlab16device1

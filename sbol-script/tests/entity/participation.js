@@ -24,8 +24,7 @@ function generate() {
   const gfp_start = doc.createSequence(NS + '/gfp_start', NS);
 
   const sf1_e0040 = e0040.createSequenceFeature('SequenceFeature1');
-  const es1 = sf1_e0040.createEntireSequence('EntireSequence1');
-  es1.setSequenceIRI(gfp_start.getIdentifier());
+  const es1 = sf1_e0040.createEntireSequence(gfp_start.getIdentifier(), 'EntireSequence1');
 
   const gfp_p = doc.createComponent(NS + '/GFP_protein', NS, [ComponentType.Protein.iri]);
   gfp_p.setName('GFP');
@@ -42,8 +41,7 @@ function generate() {
 
   const sc_i13504 = i13504.createSubComponent(e0040.getIdentifier(), 'SubComponent1');
   sc_i13504.setOrientation(Orientation.INLINE);
-  const range1 = sc_i13504.createRange(1, 720, 'Range1');
-  range1.setSequenceIRI(i13504_seq.getIdentifier());
+  const range1 = sc_i13504.createRange(i13504_seq.getIdentifier(), 1, 720, 'Range1');
   range1.setOrientation(Orientation.INLINE);
 
   const i13504_system = doc.createComponent(NS + '/i13504_system', NS, [ComponentType.DNA.iri]);
