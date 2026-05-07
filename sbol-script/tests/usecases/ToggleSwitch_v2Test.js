@@ -3,7 +3,12 @@
 const fs   = require('fs');
 const path = require('path');
 
-const { SBOLDocument, RDFFormat, ComponentType, Orientation, ConstraintRestriction } = require('../sbolLib');
+const {
+  SBOLDocument, RDFFormat, ComponentType, Orientation, ConstraintRestriction,
+  InteractionType, ParticipationType,
+  DNARole, SmallMoleculeRole,
+  SBOLAPI, SBOLNamespaces,
+} = require('../sbolLib');
 
 const OUTPUT_DIR = path.resolve(__dirname, '../../../output/usecases/toggle_switch_v2');
 
@@ -23,205 +28,87 @@ function saveOutputs(name, result) {
 
 function generate() {
   const NS  = 'https://sbolstandard.org/examples';
-  const SBO = 'https://identifiers.org/SBO:';
-  const SO  = 'https://identifiers.org/SO:';
-  const GO  = 'https://identifiers.org/GO:';
   const doc = new SBOLDocument(NS + '/');
 
-  const laci_p = doc.createComponent(NS + '/LacI_protein', NS, [ComponentType.Protein.iri]);
-  laci_p.setName('LacI'); laci_p.setDescription('LacI protein');
-  laci_p.addRole(GO + '0003700');
+  // Standalone non-DNA components
+  const tetr_p    = SBOLAPI.createComponentFromUri(doc, SBOLAPI.append(NS, 'TetR_protein'), ComponentType.Protein.iri, 'TetR', 'TetR protein', SBOLNamespaces.GO('0003700').value);
+  const laci_p    = SBOLAPI.createComponentFromUri(doc, SBOLAPI.append(NS, 'LacI_protein'), ComponentType.Protein.iri, 'LacI', 'LacI protein', SBOLNamespaces.GO('0003700').value);
+  const iptg      = SBOLAPI.createComponentFromUri(doc, SBOLAPI.append(NS, 'IPTG'),          ComponentType.SimpleChemical.iri, 'IPTG', 'IPTG', SmallMoleculeRole.Effector.iri);
+  const atc       = SBOLAPI.createComponentFromUri(doc, SBOLAPI.append(NS, 'aTC'),           ComponentType.SimpleChemical.iri, 'aTC',  'aTC',  SmallMoleculeRole.Effector.iri);
+  const iptg_laci = SBOLAPI.createComponentFromUri(doc, SBOLAPI.append(NS, 'IPTG_LacI'),     ComponentType.NonCovalentComplex.iri, 'IPTG_LacI', 'IPTG_LacI complex', null);
+  const atc_tetr  = SBOLAPI.createComponentFromUri(doc, SBOLAPI.append(NS, 'atC_TetR'),      ComponentType.NonCovalentComplex.iri, 'atC_TetR',  'atC_TetR complex',  null);
+  const gfp_p     = SBOLAPI.createComponentFromUri(doc, SBOLAPI.append(NS, 'GFP_protein'),   ComponentType.Protein.iri, 'GFP', 'GFP', null);
+  const mol1      = SBOLAPI.createComponentFromUri(doc, SBOLAPI.append(NS, 'molecule1'),      ComponentType.Protein.iri, 'Signalling Molecule 1', 'Signalling Molecule 1', SBOLNamespaces.GO('0003700').value);
+  const mol2      = SBOLAPI.createComponentFromUri(doc, SBOLAPI.append(NS, 'molecule2'),      ComponentType.Protein.iri, 'Signalling Molecule 2', 'Signalling Molecule 2', SBOLNamespaces.GO('0003700').value);
 
-  const tetr_p = doc.createComponent(NS + '/TetR_protein', NS, [ComponentType.Protein.iri]);
-  tetr_p.setName('TetR'); tetr_p.setDescription('TetR protein');
-  tetr_p.addRole(GO + '0003700');
+  // TetR_producer DNA parts
+  const tetr_prod = SBOLAPI.createDnaComponent(doc, 'TetR_producer', 'TetR device',    'TetR producer', DNARole.Gene.iri, null);
+  const pLacI     = SBOLAPI.createDnaComponent(doc, 'pLacI',         'pLacI promoter', 'LacI repressible promoter', DNARole.PROMOTER.iri, null);
+  const rbs_tetr  = SBOLAPI.createDnaComponent(doc, 'rbs_tetR',      'rbs',            'tetR RBS',    DNARole.RBS.iri, null);
+  const tetR      = SBOLAPI.createDnaComponent(doc, 'tetR',          'tetR',           'tetR coding sequence', DNARole.CDS.iri, null);
+  const ter_tetr  = SBOLAPI.createDnaComponent(doc, 'ter_tetR',      'tetR terminator','Terminator',  DNARole.Terminator.iri, null);
 
-  const gfp_p = doc.createComponent(NS + '/GFP_protein', NS, [ComponentType.Protein.iri]);
-  gfp_p.setName('GFP'); gfp_p.setDescription('GFP');
+  // TetR_producer assembly (SC1-SC4 DNA, SC5-SC8 non-DNA)
+  SBOLAPI.appendComponent(doc, tetr_prod, pLacI);
+  SBOLAPI.appendComponent(doc, tetr_prod, rbs_tetr);
+  SBOLAPI.appendComponent(doc, tetr_prod, tetR);
+  SBOLAPI.appendComponent(doc, tetr_prod, ter_tetr);
+  SBOLAPI.addSubComponent(tetr_prod, tetr_p);
+  const tp_laci_sc     = SBOLAPI.addSubComponent(tetr_prod, laci_p);
+  const tp_iptg_sc     = SBOLAPI.addSubComponent(tetr_prod, iptg);
+  const tp_iptglaci_sc = SBOLAPI.addSubComponent(tetr_prod, iptg_laci);
 
-  const iptg = doc.createComponent(NS + '/IPTG', NS, [ComponentType.SimpleChemical.iri]);
-  iptg.setName('IPTG'); iptg.setDescription('IPTG');
-  iptg.addRole('https://identifiers.org/CHEBI:35224');
+  // TetR_producer interactions
+  SBOLAPI.createInteractionFromComponents([InteractionType.GeneticProduction.iri], tetr_prod, tetR,  [ParticipationType.Template.iri],  tetr_p, [ParticipationType.Product.iri]);
+  SBOLAPI.createInteractionFromComponents([InteractionType.Inhibition.iri],        tetr_prod, pLacI, [ParticipationType.Inhibited.iri], laci_p, [ParticipationType.Inhibitor.iri]);
+  const iptg_laci_binding = tetr_prod.createInteraction([InteractionType.NonCovalentBinding.iri]);
+  SBOLAPI.createParticipation(iptg_laci_binding, [ParticipationType.Reactant.iri], tp_laci_sc);
+  SBOLAPI.createParticipation(iptg_laci_binding, [ParticipationType.Reactant.iri], tp_iptg_sc);
+  SBOLAPI.createParticipation(iptg_laci_binding, [ParticipationType.Product.iri],  tp_iptglaci_sc);
 
-  const atc = doc.createComponent(NS + '/aTC', NS, [ComponentType.SimpleChemical.iri]);
-  atc.setName('aTC'); atc.setDescription('aTC');
-  atc.addRole('https://identifiers.org/CHEBI:35224');
+  // LacI_producer DNA parts
+  const laci_prod = SBOLAPI.createDnaComponent(doc, 'LacI_producer', 'LacI producer', 'LacI producer', DNARole.Gene.iri, null);
+  const pTetR     = SBOLAPI.createDnaComponent(doc, 'pTetR',         'pTetR',         'TetR repressible promoter', DNARole.PROMOTER.iri, null);
+  const rbs_laci  = SBOLAPI.createDnaComponent(doc, 'rbs_lacI',      'rbs',           'RBS',           DNARole.RBS.iri, null);
+  const lacI      = SBOLAPI.createDnaComponent(doc, 'lacI',          'lacI',          'lacI coding sequence', DNARole.CDS.iri, null);
+  const rbs_gfp   = SBOLAPI.createDnaComponent(doc, 'rbs_gfp',       'rbs',           'RBS',           DNARole.RBS.iri, null);
+  const gfp       = SBOLAPI.createDnaComponent(doc, 'gfp',           'gfp',           'gfp coding sequence', DNARole.CDS.iri, null);
+  const ter_laci  = SBOLAPI.createDnaComponent(doc, 'ter_lacI',      'lacI terminator','Terminator',   DNARole.Terminator.iri, null);
 
-  const iptg_laci = doc.createComponent(NS + '/IPTG_LacI', NS, [ComponentType.NonCovalentComplex.iri]);
-  iptg_laci.setName('IPTG_LacI'); iptg_laci.setDescription('IPTG_LacI complex');
+  // LacI_producer assembly (SC1-SC6 DNA, SC7-SC11 non-DNA)
+  SBOLAPI.appendComponent(doc, laci_prod, pTetR);
+  SBOLAPI.appendComponent(doc, laci_prod, rbs_laci);
+  SBOLAPI.appendComponent(doc, laci_prod, lacI);
+  SBOLAPI.appendComponent(doc, laci_prod, rbs_gfp);
+  SBOLAPI.appendComponent(doc, laci_prod, gfp);
+  SBOLAPI.appendComponent(doc, laci_prod, ter_laci);
+  SBOLAPI.addSubComponent(laci_prod, laci_p);
+  SBOLAPI.addSubComponent(laci_prod, gfp_p);
+  const lp_tetr_sc    = SBOLAPI.addSubComponent(laci_prod, tetr_p);
+  const lp_atc_sc     = SBOLAPI.addSubComponent(laci_prod, atc);
+  const lp_atctetr_sc = SBOLAPI.addSubComponent(laci_prod, atc_tetr);
 
-  const atc_tetr = doc.createComponent(NS + '/atC_TetR', NS, [ComponentType.NonCovalentComplex.iri]);
-  atc_tetr.setName('atC_TetR'); atc_tetr.setDescription('atC_TetR complex');
+  // LacI_producer interactions
+  SBOLAPI.createInteractionFromComponents([InteractionType.GeneticProduction.iri], laci_prod, lacI,  [ParticipationType.Template.iri],  laci_p, [ParticipationType.Product.iri]);
+  SBOLAPI.createInteractionFromComponents([InteractionType.GeneticProduction.iri], laci_prod, gfp,   [ParticipationType.Template.iri],  gfp_p,  [ParticipationType.Product.iri]);
+  SBOLAPI.createInteractionFromComponents([InteractionType.Inhibition.iri],        laci_prod, pTetR, [ParticipationType.Inhibited.iri], tetr_p, [ParticipationType.Inhibitor.iri]);
+  const atc_tetr_binding = laci_prod.createInteraction([InteractionType.NonCovalentBinding.iri]);
+  SBOLAPI.createParticipation(atc_tetr_binding, [ParticipationType.Reactant.iri], lp_tetr_sc);
+  SBOLAPI.createParticipation(atc_tetr_binding, [ParticipationType.Reactant.iri], lp_atc_sc);
+  SBOLAPI.createParticipation(atc_tetr_binding, [ParticipationType.Product.iri],  lp_atctetr_sc);
 
-  const mol1 = doc.createComponent(NS + '/molecule1', NS, [ComponentType.Protein.iri]);
-  mol1.setName('Signalling Molecule 1'); mol1.setDescription('Signalling Molecule 1');
-  mol1.addRole(GO + '0003700');
+  // Toggle switch container (v2: molecule1/molecule2 as abstract signalling proteins)
+  const toggle = SBOLAPI.createComponentFromDisplayId(doc, 'toggle_switch', ComponentType.DNA.iri, 'Toggle Switch', 'Toggle Switch genetic circuit', DNARole.Gene.iri);
 
-  const mol2 = doc.createComponent(NS + '/molecule2', NS, [ComponentType.Protein.iri]);
-  mol2.setName('Signalling Molecule 2'); mol2.setDescription('Signalling Molecule 2');
-  mol2.addRole(GO + '0003700');
+  SBOLAPI.addSubComponent(toggle, mol1);      // SC1 - for LacI
+  SBOLAPI.addSubComponent(toggle, mol2);      // SC2 - for TetR
+  SBOLAPI.addSubComponent(toggle, laci_prod); // SC3
+  SBOLAPI.addSubComponent(toggle, tetr_prod); // SC4
 
-  const pTetR = doc.createComponent(NS + '/pTetR', NS, [ComponentType.DNA.iri]);
-  pTetR.setName('pTetR'); pTetR.setDescription('TetR repressible promoter');
-  pTetR.addRole(SO + '0000167');
-
-  const pLacI = doc.createComponent(NS + '/pLacI', NS, [ComponentType.DNA.iri]);
-  pLacI.setName('pLacI promoter'); pLacI.setDescription('LacI repressible promoter');
-  pLacI.addRole(SO + '0000167');
-
-  const rbs_laci = doc.createComponent(NS + '/rbs_lacI', NS, [ComponentType.DNA.iri]);
-  rbs_laci.setName('rbs'); rbs_laci.setDescription('RBS');
-  rbs_laci.addRole(SO + '0000139');
-
-  const rbs_gfp = doc.createComponent(NS + '/rbs_gfp', NS, [ComponentType.DNA.iri]);
-  rbs_gfp.setName('rbs'); rbs_gfp.setDescription('RBS');
-  rbs_gfp.addRole(SO + '0000139');
-
-  const rbs_tetr = doc.createComponent(NS + '/rbs_tetR', NS, [ComponentType.DNA.iri]);
-  rbs_tetr.setName('rbs'); rbs_tetr.setDescription('tetR RBS');
-  rbs_tetr.addRole(SO + '0000139');
-
-  const lacI = doc.createComponent(NS + '/lacI', NS, [ComponentType.DNA.iri]);
-  lacI.setName('lacI'); lacI.setDescription('lacI coding sequence');
-  lacI.addRole(SO + '0000316');
-
-  const gfp = doc.createComponent(NS + '/gfp', NS, [ComponentType.DNA.iri]);
-  gfp.setName('gfp'); gfp.setDescription('gfp coding sequence');
-  gfp.addRole(SO + '0000316');
-
-  const tetR = doc.createComponent(NS + '/tetR', NS, [ComponentType.DNA.iri]);
-  tetR.setName('tetR'); tetR.setDescription('tetR coding sequence');
-  tetR.addRole(SO + '0000316');
-
-  const ter_laci = doc.createComponent(NS + '/ter_lacI', NS, [ComponentType.DNA.iri]);
-  ter_laci.setName('lacI terminator'); ter_laci.setDescription('Terminator');
-  ter_laci.addRole(SO + '0000141');
-
-  const ter_tetr = doc.createComponent(NS + '/ter_tetR', NS, [ComponentType.DNA.iri]);
-  ter_tetr.setName('tetR terminator'); ter_tetr.setDescription('Terminator');
-  ter_tetr.addRole(SO + '0000141');
-
-  const laci_prod = doc.createComponent(NS + '/LacI_producer', NS, [ComponentType.DNA.iri]);
-  laci_prod.setName('LacI producer'); laci_prod.setDescription('LacI producer');
-  laci_prod.addRole(SO + '0000704');
-
-  const lp_sc1  = laci_prod.createSubComponent(pTetR.getIdentifier(), 'SubComponent1');
-  lp_sc1.setOrientation(Orientation.INLINE);
-  const lp_sc2  = laci_prod.createSubComponent(rbs_laci.getIdentifier(), 'SubComponent2');
-  lp_sc2.setOrientation(Orientation.INLINE);
-  const lp_sc3  = laci_prod.createSubComponent(lacI.getIdentifier(), 'SubComponent3');
-  lp_sc3.setOrientation(Orientation.INLINE);
-  const lp_sc4  = laci_prod.createSubComponent(rbs_gfp.getIdentifier(), 'SubComponent4');
-  lp_sc4.setOrientation(Orientation.INLINE);
-  const lp_sc5  = laci_prod.createSubComponent(gfp.getIdentifier(), 'SubComponent5');
-  lp_sc5.setOrientation(Orientation.INLINE);
-  const lp_sc6  = laci_prod.createSubComponent(ter_laci.getIdentifier(), 'SubComponent6');
-  lp_sc6.setOrientation(Orientation.INLINE);
-  const lp_sc7  = laci_prod.createSubComponent(laci_p.getIdentifier(), 'SubComponent7');
-  const lp_sc8  = laci_prod.createSubComponent(gfp_p.getIdentifier(), 'SubComponent8');
-  const lp_sc9  = laci_prod.createSubComponent(tetr_p.getIdentifier(), 'SubComponent9');
-  const lp_sc10 = laci_prod.createSubComponent(atc.getIdentifier(), 'SubComponent10');
-  const lp_sc11 = laci_prod.createSubComponent(atc_tetr.getIdentifier(), 'SubComponent11');
-
-  const lp_int1 = laci_prod.createInteraction('Interaction1');
-  lp_int1.setType({ iri: SBO + '0000589' });
-  lp_int1.createParticipation({ iri: SBO + '0000645' }, lp_sc3.getIdentifier(), 'Participation1');
-  lp_int1.createParticipation({ iri: SBO + '0000011' }, lp_sc7.getIdentifier(), 'Participation2');
-
-  const lp_int2 = laci_prod.createInteraction('Interaction2');
-  lp_int2.setType({ iri: SBO + '0000589' });
-  lp_int2.createParticipation({ iri: SBO + '0000645' }, lp_sc5.getIdentifier(), 'Participation1');
-  lp_int2.createParticipation({ iri: SBO + '0000011' }, lp_sc8.getIdentifier(), 'Participation2');
-
-  const lp_int3 = laci_prod.createInteraction('Interaction3');
-  lp_int3.setType({ iri: SBO + '0000169' });
-  lp_int3.createParticipation({ iri: SBO + '0000642' }, lp_sc1.getIdentifier(), 'Participation1');
-  lp_int3.createParticipation({ iri: SBO + '0000020' }, lp_sc9.getIdentifier(), 'Participation2');
-
-  const lp_int4 = laci_prod.createInteraction('Interaction4');
-  lp_int4.setType({ iri: SBO + '0000177' });
-  lp_int4.createParticipation({ iri: SBO + '0000010' }, lp_sc9.getIdentifier(), 'Participation1');
-  lp_int4.createParticipation({ iri: SBO + '0000010' }, lp_sc10.getIdentifier(), 'Participation2');
-  lp_int4.createParticipation({ iri: SBO + '0000011' }, lp_sc11.getIdentifier(), 'Participation3');
-
-  const tetr_prod = doc.createComponent(NS + '/TetR_producer', NS, [ComponentType.DNA.iri]);
-  tetr_prod.setName('TetR device'); tetr_prod.setDescription('TetR producer');
-  tetr_prod.addRole(SO + '0000704');
-
-  const tp_sc1 = tetr_prod.createSubComponent(pLacI.getIdentifier(), 'SubComponent1');
-  tp_sc1.setOrientation(Orientation.INLINE);
-  const tp_sc2 = tetr_prod.createSubComponent(rbs_tetr.getIdentifier(), 'SubComponent2');
-  tp_sc2.setOrientation(Orientation.INLINE);
-  const tp_sc3 = tetr_prod.createSubComponent(tetR.getIdentifier(), 'SubComponent3');
-  tp_sc3.setOrientation(Orientation.INLINE);
-  const tp_sc4 = tetr_prod.createSubComponent(ter_tetr.getIdentifier(), 'SubComponent4');
-  tp_sc4.setOrientation(Orientation.INLINE);
-  const tp_sc5 = tetr_prod.createSubComponent(tetr_p.getIdentifier(), 'SubComponent5');
-  const tp_sc6 = tetr_prod.createSubComponent(laci_p.getIdentifier(), 'SubComponent6');
-  const tp_sc7 = tetr_prod.createSubComponent(iptg.getIdentifier(), 'SubComponent7');
-  const tp_sc8 = tetr_prod.createSubComponent(iptg_laci.getIdentifier(), 'SubComponent8');
-
-  const tp_int1 = tetr_prod.createInteraction('Interaction1');
-  tp_int1.setType({ iri: SBO + '0000589' });
-  tp_int1.createParticipation({ iri: SBO + '0000645' }, tp_sc3.getIdentifier(), 'Participation1');
-  tp_int1.createParticipation({ iri: SBO + '0000011' }, tp_sc5.getIdentifier(), 'Participation2');
-
-  const tp_int2 = tetr_prod.createInteraction('Interaction2');
-  tp_int2.setType({ iri: SBO + '0000169' });
-  tp_int2.createParticipation({ iri: SBO + '0000642' }, tp_sc1.getIdentifier(), 'Participation1');
-  tp_int2.createParticipation({ iri: SBO + '0000020' }, tp_sc6.getIdentifier(), 'Participation2');
-
-  const tp_int3 = tetr_prod.createInteraction('Interaction3');
-  tp_int3.setType({ iri: SBO + '0000177' });
-  tp_int3.createParticipation({ iri: SBO + '0000010' }, tp_sc6.getIdentifier(), 'Participation1');
-  tp_int3.createParticipation({ iri: SBO + '0000010' }, tp_sc7.getIdentifier(), 'Participation2');
-  tp_int3.createParticipation({ iri: SBO + '0000011' }, tp_sc8.getIdentifier(), 'Participation3');
-
-  // toggle_switch (v2)
-  const toggle = doc.createComponent(NS + '/toggle_switch', NS, [ComponentType.DNA.iri]);
-  toggle.setName('Toggle Switch'); toggle.setDescription('Toggle Switch genetic circuit');
-  toggle.addRole(SO + '0000704');
-
-  const ts_sc1 = toggle.createSubComponent(mol1.getIdentifier(), 'SubComponent1');
-  const ts_sc2 = toggle.createSubComponent(mol2.getIdentifier(), 'SubComponent2');
-  const ts_sc3 = toggle.createSubComponent(laci_prod.getIdentifier(), 'SubComponent3');
-  const ts_sc4 = toggle.createSubComponent(tetr_prod.getIdentifier(), 'SubComponent4');
-
-  const ts_cr1 = toggle.createComponentReference('ComponentReference1');
-  ts_cr1.setInChildOf(ts_sc3.getIdentifier());
-  ts_cr1.setRefersTo(lp_sc7.getIdentifier());
-
-  const ts_cr2 = toggle.createComponentReference('ComponentReference2');
-  ts_cr2.setInChildOf(ts_sc4.getIdentifier());
-  ts_cr2.setRefersTo(tp_sc6.getIdentifier());
-
-  const ts_cr3 = toggle.createComponentReference('ComponentReference3');
-  ts_cr3.setInChildOf(ts_sc3.getIdentifier());
-  ts_cr3.setRefersTo(lp_sc9.getIdentifier());
-
-  const ts_cr4 = toggle.createComponentReference('ComponentReference4');
-  ts_cr4.setInChildOf(ts_sc4.getIdentifier());
-  ts_cr4.setRefersTo(tp_sc5.getIdentifier());
-
-  const ts_c1 = toggle.createConstraint('Constraint1');
-  ts_c1.setRestriction(ConstraintRestriction.Replaces);
-  ts_c1.setSubject(ts_cr1.getIdentifier());
-  ts_c1.setObject(ts_sc1.getIdentifier());
-
-  const ts_c2 = toggle.createConstraint('Constraint2');
-  ts_c2.setRestriction(ConstraintRestriction.Replaces);
-  ts_c2.setSubject(ts_cr2.getIdentifier());
-  ts_c2.setObject(ts_sc1.getIdentifier());
-
-  const ts_c3 = toggle.createConstraint('Constraint3');
-  ts_c3.setRestriction(ConstraintRestriction.Replaces);
-  ts_c3.setSubject(ts_cr3.getIdentifier());
-  ts_c3.setObject(ts_sc2.getIdentifier());
-
-  const ts_c4 = toggle.createConstraint('Constraint4');
-  ts_c4.setRestriction(ConstraintRestriction.Replaces);
-  ts_c4.setSubject(ts_cr4.getIdentifier());
-  ts_c4.setObject(ts_sc2.getIdentifier());
+  SBOLAPI.mapToChildSubComponent(toggle, laci_prod, laci_p, mol1);
+  SBOLAPI.mapToChildSubComponent(toggle, tetr_prod, laci_p, mol1);
+  SBOLAPI.mapToChildSubComponent(toggle, laci_prod, tetr_p, mol2);
+  SBOLAPI.mapToChildSubComponent(toggle, tetr_prod, tetr_p, mol2);
 
   const result = {
     rdfXml:          doc.toRDF(RDFFormat.RDF_XML),

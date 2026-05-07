@@ -52,17 +52,13 @@ function generate() {
   const sc1 = i13504_system.createSubComponent(i13504.getIdentifier(), 'SubComponent1');
   const sc2 = i13504_system.createSubComponent(gfp_p.getIdentifier(), 'SubComponent2');
 
-  const cr1 = i13504_system.createComponentReference('ComponentReference1');
-  cr1.setInChildOf(sc1.getIdentifier());
-  cr1.setRefersTo(sc_i13504.getIdentifier());
+  const cr1 = i13504_system.createComponentReference(sc1.getIdentifier(), sc_i13504.getIdentifier(), 'ComponentReference1');
 
-  const int1 = i13504_system.createInteraction('Interaction1');
-  int1.setType(InteractionType.GeneticProduction);
+  const int1 = i13504_system.createInteraction(InteractionType.GeneticProduction, 'Interaction1');
   const p1_1 = int1.createParticipation(ParticipationType.Template, cr1.getIdentifier(), 'Participation1');
   const p1_2 = int1.createParticipation(ParticipationType.Product, sc2.getIdentifier(), 'Participation2');
 
-  const int2 = i13504_system.createInteraction('Interaction2');
-  int2.setType(SBO + '0000169');
+  const int2 = i13504_system.createInteraction(SBO + '0000169', 'Interaction2');
   const p2_1 = int2.createParticipation(SBO + '0000020', null, 'Participation1');
   p2_1.setHigherOrderParticipant(int1.getIdentifier());
 

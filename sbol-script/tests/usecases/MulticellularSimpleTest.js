@@ -12,7 +12,7 @@ const path = require('path');
 const {
   SBOLDocument, RDFFormat,
   ComponentType, ConstraintRestriction,
-  SBOLAPI
+  SBOLAPI, SBOLNamespaces
 } = require('../sbolLib');
 
 const OUTPUT_DIR = path.resolve(__dirname, '../../../output/usecases/multicellular_simple');
@@ -33,20 +33,16 @@ function saveOutputs(name, result) {
 
 function generate() {
   const NS   = 'https://sbolstandard.org/examples';
-  const SBO  = 'https://identifiers.org/SBO:';
-  const GO   = 'https://identifiers.org/GO:';
-  const CHEBI = 'https://identifiers.org/CHEBI:';
-
   const doc = new SBOLDocument(NS + '/');
 
   // ── Top-level component definitions ──────────────────────────────────────
 
-  const multicellularSystem = SBOLAPI.createComponentFromDisplayId( doc, 'MulticellularSystem', ComponentType.FunctionalEntity.iri, 'MulticellularSystem', 'Multicellular System', SBO + '0000289');
-  const senderSystem = SBOLAPI.createComponentFromDisplayId(doc, 'SenderSystem', ComponentType.FunctionalEntity.iri, 'SenderSystem', 'Sender System', SBO + '0000289');
-  const receiverSystem = SBOLAPI.createComponentFromDisplayId(doc, 'ReceiverSystem', ComponentType.FunctionalEntity.iri, 'ReceiverSystem', 'Receiver System', SBO + '0000289');
-  const senderCell = SBOLAPI.createComponentFromDisplayId( doc, 'OrganismA', GO + '0005623', 'OrganismA', 'Organism A', SBO + '0000290');
-  const receiverCell = SBOLAPI.createComponentFromDisplayId(doc, 'OrganismB', GO + '0005623', 'OrganismB', 'Organism B', SBO + '0000290');
-  const ahl = SBOLAPI.createComponentFromDisplayId( doc, 'AHL', ComponentType.SimpleChemical.iri, 'AHL', 'AHL', CHEBI + '35224');
+  const multicellularSystem = SBOLAPI.createComponentFromDisplayId( doc, 'MulticellularSystem', ComponentType.FunctionalEntity, 'MulticellularSystem', 'Multicellular System', SBOLNamespaces.SBO('0000289'));
+  const senderSystem = SBOLAPI.createComponentFromDisplayId(doc, 'SenderSystem', ComponentType.FunctionalEntity, 'SenderSystem', 'Sender System', SBOLNamespaces.SBO('0000289'));
+  const receiverSystem = SBOLAPI.createComponentFromDisplayId(doc, 'ReceiverSystem', ComponentType.FunctionalEntity, 'ReceiverSystem', 'Receiver System', SBOLNamespaces.SBO('0000289'));
+  const senderCell = SBOLAPI.createComponentFromDisplayId( doc, 'OrganismA', ComponentType.Cell, 'OrganismA', 'Organism A', SBOLNamespaces.SBO('0000290'));
+  const receiverCell = SBOLAPI.createComponentFromDisplayId(doc, 'OrganismB', ComponentType.Cell, 'OrganismB', 'Organism B', SBOLNamespaces.SBO('0000290'));
+  const ahl = SBOLAPI.createComponentFromDisplayId( doc, 'AHL', ComponentType.SimpleChemical, 'AHL', 'AHL', SBOLNamespaces.CHEBI('35224'));
 
   // ── Wire sender/receiver systems: cell contains AHL ───────────────────────
 
@@ -58,7 +54,7 @@ function generate() {
   SBOLAPI.addSubComponent(multicellularSystem, receiverSystem);
   
   // Map AHL in sender to AHL in receiver → VerifyIdentical constraint
-  SBOLAPI.mapTo(multicellularSystem, senderSystem, ahl, receiverSystem, ahl);
+  SBOLAPI.mapToChildren(multicellularSystem, senderSystem, ahl, receiverSystem, ahl);
   
   const result = {
     rdfXml:          doc.toRDF(RDFFormat.RDF_XML),

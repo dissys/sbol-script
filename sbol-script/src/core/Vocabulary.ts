@@ -301,6 +301,7 @@ export const DNARole = {
   Gene:       { iri: SBOLNamespaces.SO('0000704').value, label: "Gene" },
   Operator:   { iri: SBOLNamespaces.SO('0000057').value, label: "Operator" },
   EngineeredRegion: { iri: SBOLNamespaces.SO('0000804').value, label: "Engineered Region" },
+  PhysicalCompartment: { iri: SBOLNamespaces.SBO('0000290').value, label: "Physical Compartment" },
   isRoleIRI: (iri: any) => /^https?:\/\/identifiers\.org\/SO:\d{7}$/.test(iri)
 };
 
@@ -329,6 +330,7 @@ export const ComponentType = {
   SimpleChemical:    { iri: SBOLNamespaces.SBO('0000247').value, label: "Simple Chemical" },
   NonCovalentComplex: { iri: SBOLNamespaces.SBO('0000253').value, label: "Non-covalent complex" },
   FunctionalEntity:  { iri: SBOLNamespaces.SBO('0000241').value, label: "Functional Entity" },
+  Cell:               { iri: SBOLNamespaces.GO('0005623').value, label: "Cell" },
   isTypeIRI: (iri: any) => /^https?:\/\/identifiers\.org\/SBO:\d{7}$/.test(iri)
 };
 
@@ -372,7 +374,7 @@ export const ParticipationType = {
   Product:     { iri: SBOLNamespaces.SBO('0000011').value, label: "Product" },
   Promoter:    { iri: SBOLNamespaces.SBO('0000598').value, label: "Promoter" },
   Modifier:    { iri: SBOLNamespaces.SBO('0000019').value, label: "Modifier" },
-  Modified:    { iri: SBOLNamespaces.SBO('0000645').value, label: "Modified" },
+  Modified:    { iri: SBOLNamespaces.SBO('0000644').value, label: "Modified" },
   Template:    { iri: SBOLNamespaces.SBO('0000645').value, label: "Template" },
 };
 

@@ -1,3 +1,4 @@
+import { NamedNode, term } from 'rdflib';
 import RDFUtil from './RDFUtil';
 
 type IRI = string;
@@ -8,11 +9,14 @@ export default class GraphUtil {
         if (IRI_or_objectWithIRI && typeof IRI_or_objectWithIRI === "object" && IRI_or_objectWithIRI.iri) {
             iri = IRI_or_objectWithIRI.iri;
         }
+        else if (IRI_or_objectWithIRI.termType === "NamedNode") {
+            return (IRI_or_objectWithIRI as NamedNode).value;
+        }
         else if (typeof IRI_or_objectWithIRI === "string") {
             iri = IRI_or_objectWithIRI;
         }
         else {
-            throw new Error("Requires an object with an iri property or a IRI string.");
+            throw new Error("Requires an object with an iri property, NamedNode with a value, or a IRI string. ");
         }
         return iri;
     }

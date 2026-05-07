@@ -18,7 +18,7 @@ import { Interface } from './Interface';
 import { Sequence } from './Sequence';
 import {
     DNARole, RNARole, ProteinRole, SmallMoleculeRole,
-    ComponentType, SBOLEntity
+    ComponentType, ConstraintRestriction, SBOLEntity
 } from './Vocabulary';
 
 declare const $rdf: any;
@@ -113,12 +113,14 @@ export class Component extends TopLevel {
         return lsc;
     }
 
-    createComponentReference(identifier?: string): ComponentReference {
+    createComponentReference(inChildOf: IRI, refersTo: IRI, identifier?: string): ComponentReference {
         if (!identifier) {
             identifier = `ComponentReference${this.getComponentReferenceIRIs().length + 1}`;
         }
         const iri = GraphUtil.resolveChildIRI(this.getIdentifier(), identifier);
         const cr = ComponentReference.create(this.store, iri);
+        cr.setInChildOf(inChildOf);
+        cr.setRefersTo(refersTo);
         RDFUtil.addProperty(this.store, this.resource, SBOLEntity.Component.properties.hasFeature, [iri]);
         return cr;
     }
@@ -194,12 +196,14 @@ export class Component extends TopLevel {
 
     // ── Interaction factory methods ────────────────────────────────────────
 
-    createInteraction(identifier?: string): Interaction {
+    createInteraction(types: any | any[], identifier?: string): Interaction {
+        const typeArr = Array.isArray(types) ? types : [types];
         if (!identifier) {
             identifier = `Interaction${this.getInteractionIRIs().length + 1}`;
         }
         const iri = GraphUtil.resolveChildIRI(this.getIdentifier(), identifier);
         const interaction = Interaction.create(this.store, iri);
+        interaction.setTypes(typeArr);
         RDFUtil.addProperty(this.store, this.resource, SBOLEntity.Component.properties.hasInteraction, [iri]);
         return interaction;
     }
@@ -280,12 +284,15 @@ export class Component extends TopLevel {
 
     // ── Constraint factory ─────────────────────────────────────────────────
 
-    createConstraint(identifier?: string): Constraint {
+    createConstraint(subject: IRI, restriction: ConstraintRestriction | IRI, object: IRI, identifier?: string): Constraint {
         if (!identifier) {
             identifier = `Constraint${this.getConstraintIRIs().length + 1}`;
         }
         const iri = GraphUtil.resolveChildIRI(this.getIdentifier(), identifier);
         const constraint = Constraint.create(this.store, iri);
+        constraint.setSubject(subject);
+        constraint.setRestriction(restriction);
+        constraint.setObject(object);
         RDFUtil.addProperty(this.store, this.resource, SBOLEntity.Component.properties.hasConstraint, [iri]);
         return constraint;
     }

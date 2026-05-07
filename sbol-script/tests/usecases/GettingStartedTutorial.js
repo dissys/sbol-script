@@ -13,7 +13,7 @@ const path = require('path');
 const {
   SBOLDocument, RDFFormat,
   ComponentType, Orientation, InteractionType, ParticipationType, ConstraintRestriction,
-  SBOLAPI
+  SBOLAPI, SBOLNamespaces, DNARole
 } = require('../sbolLib');
 
 // Output directory: <workspace>/output/usecases/combine2020/
@@ -35,10 +35,6 @@ function saveOutputs(name, result) {
 
 function generate() {
   const NS  = 'https://synbiohub.org/public/igem';
-  const SO  = 'https://identifiers.org/SO:';
-  const SBO = 'https://identifiers.org/SBO:';
-
-  // Create a new SBOL document
   const doc = new SBOLDocument(NS + '/');
 
   // ── Slide 26: GFP expression cassette ────────────────────────────────────
@@ -49,13 +45,13 @@ function generate() {
   //   type: SBO:0000251 (DNA)
   //   role: SO:0000804 (Engineered Region)
   console.log('Creating GFP expression cassette');
-  const device = SBOLAPI.createDnaComponent(doc, 'i13504', 'i13504', 'Screening plasmid intermediate', SO + '0000804', null);
+  const device = SBOLAPI.createDnaComponent(doc, 'i13504', 'i13504', 'Screening plasmid intermediate', SBOLNamespaces.SO('0000804'), null);
   console.log(`Created GFP expression cassette component: ${device.getIdentifier()}`);
 
   // ── Slide 28: expression cassette parts ──────────────────────────────────
 
   // Create the RBS component
-  const rbs = SBOLAPI.createDnaComponent(doc, 'B0034', 'rbs', 'RBS (Elowitz 1999)', SO + '0000139', 'aaagaggagaaa');
+  const rbs = SBOLAPI.createDnaComponent(doc, 'B0034', 'rbs', 'RBS (Elowitz 1999)', SBOLNamespaces.SO('0000139'), 'aaagaggagaaa');
 
   // Start assembling the i13504 device's sequence by adding the RBS component.
   SBOLAPI.appendComponent(doc, device, rbs, Orientation.INLINE);
@@ -67,7 +63,7 @@ function generate() {
 
   // Create the GFP component and add it as a subcomponent to continue assembling the i13504 device.
   const gfp_na = 'atgcgtaaaggagaagaacttttcactggagttgtcccaattcttgttgaattagatggtgatgttaatgggcacaaattttctgtcagtggagagggtgaaggtgatgcaacatacggaaaacttacccttaaatttatttgcactactggaaaactacctgttccatggccaacacttgtcactactttcggttatggtgttcaatgctttgcgagatacccagatcatatgaaacagcatgactttttcaagagtgccatgcccgaaggttatgtacaggaaagaactatatttttcaaagatgacgggaactacaagacacgtgctgaagtcaagtttgaaggtgatacccttgttaatagaatcgagttaaaaggtattgattttaaagaagatggaaacattcttggacacaaattggaatacaactataactcacacaatgtatacatcatggcagacaaacaaaagaatggaatcaaagttaacttcaaaattagacacaacattgaagatggaagcgttcaactagcagaccattatcaacaaaatactccaattggcgatggccctgtccttttaccagacaaccattacctgtccacacaatctgccctttcgaaagatcccaacgaaaagagagaccacatggtccttcttgagtttgtaacagctgctgggattacacatggcatggatgaactatacaaataataa';
-  const gfp = SBOLAPI.createDnaComponent(doc, 'E0040', 'gfp', 'gfp coding sequence', SO + '0000316', gfp_na);
+  const gfp = SBOLAPI.createDnaComponent(doc, 'E0040', 'gfp', 'gfp coding sequence', SBOLNamespaces.SO('0000316'), gfp_na);
   const gfpSubComponent = SBOLAPI.appendComponent(doc, device, gfp, Orientation.INLINE);
   console.log(`Added the GFP subcomponent ${gfp.getIdentifier()}`);
 
@@ -77,71 +73,59 @@ function generate() {
 
   // Create the terminator component
   const term_na = 'ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctc';
-  const term = SBOLAPI.createDnaComponent(doc, 'B0015', 'terminator', 'B0015 double terminator', SO + '0000141', term_na);
+  const term = SBOLAPI.createDnaComponent(doc, 'B0015', 'terminator', 'B0015 double terminator', SBOLNamespaces.SO('0000141'), term_na);
 
   // Add the terminator as a subcomponent.
   SBOLAPI.appendComponent(doc, device, term, Orientation.INLINE);
   console.log(`Added the terminator subcomponent ${term.getIdentifier()}`);
 
   // ── Slide 32: GFP production from expression cassette ────────────────────
-  const i13504_system = SBOLAPI.createComponentFromDisplayId(doc, 'i13504_system', ComponentType.FunctionalEntity.iri, 'i13504 system', null, SBO + '0000289');
-  const GFP = SBOLAPI.createComponentFromDisplayId(doc, 'GFP_protein', ComponentType.Protein.iri, 'GFP', 'GFP', null);
+  const i13504_system = SBOLAPI.createComponentFromDisplayId(doc, 'i13504_system', ComponentType.FunctionalEntity, 'i13504 system', null, SBOLNamespaces.SBO('0000289'));
+  const GFP = SBOLAPI.createComponentFromDisplayId(doc, 'GFP_protein', ComponentType.Protein, 'GFP', 'GFP', null);
 
   const i13504SubComponent = SBOLAPI.addSubComponent(i13504_system, device);
   const gfpProteinSubComponent = SBOLAPI.addSubComponent(i13504_system, GFP);
 
   // Create a ComponentReference so the GFP CDS feature inside device can be referenced
   // from i13504_system: refersTo=gfpSubComponent (feature in device), inChildOf=i13504SubComponent
-  const gfpCDSReference = i13504_system.createComponentReference('ComponentReference1');
-  gfpCDSReference.setInChildOf(i13504SubComponent.getIdentifier());
-  gfpCDSReference.setRefersTo(gfpSubComponent.getIdentifier());
+  const gfpCDSReference = i13504_system.createComponentReference(i13504SubComponent.getIdentifier(), gfpSubComponent.getIdentifier());
 
-  const interaction = i13504_system.createInteraction('Interaction1');
-  interaction.setTypes([InteractionType.GeneticProduction]);
-  interaction.createParticipation(ParticipationType.Template, gfpCDSReference.getIdentifier(), 'Participation1');
-  interaction.createParticipation(ParticipationType.Product, gfpProteinSubComponent.getIdentifier(), 'Participation2');
+  //const interaction = SBOLAPI. createGeneticProductionInteraction(i13504_system, gfpCDSReference.iri, gfpProteinSubComponent.iri);
+  // Alternative way to create the same interaction using the more general SBOLAPI.createInteractionFromComponents() method:
+  // const interaction = SBOLAPI.createInteractionFromComponents([InteractionType.GeneticProduction.iri], i13504_system, null, [ParticipationType.Template.iri], gfpCDSReference, [ParticipationType.Product.iri], gfpProteinSubComponent);
+
+  const interaction = i13504_system.createInteraction([InteractionType.GeneticProduction]);
+  interaction.createParticipation(ParticipationType.Template, gfpCDSReference.getIdentifier());
+  interaction.createParticipation(ParticipationType.Product, gfpProteinSubComponent.getIdentifier());
 
   // ── Slide 34: Example: concatenating & reusing components ─────────────────
 
   // Left hand side of slide: interlab16device1
-  const ilab16_dev1 = doc.createComponent(NS + '/interlab16device1', NS, [ComponentType.DNA.iri]);
-  ilab16_dev1.setRoles([SO + '0000704']);
-
-  const j23101 = doc.createComponent(NS + '/j23101', NS, [ComponentType.DNA.iri]);
-  j23101.setRoles([SO + '0000704']);
+  const ilab16_dev1 = SBOLAPI.createDnaComponent(doc, 'interlab16device1', null, null, DNARole.Gene, null);
+  
+  const j23101 = SBOLAPI.createDnaComponent(doc, 'j23101', null, null, DNARole.Gene, null);
 
   const sc_j23101 = SBOLAPI.addSubComponent(ilab16_dev1, j23101);
   const sc_i13504_system = SBOLAPI.addSubComponent(ilab16_dev1, i13504_system);
 
-  // ComponentReference: refersTo=i13504SubComponent (device sc inside i13504_system),
-  //                     inChildOf=sc_i13504_system (i13504_system sc inside ilab16_dev1)
-  const compRef_i13504_dev1 = ilab16_dev1.createComponentReference('ComponentReference1');
-  compRef_i13504_dev1.setInChildOf(sc_i13504_system.getIdentifier());
-  compRef_i13504_dev1.setRefersTo(i13504SubComponent.getIdentifier());
+  // ComponentReference: 
+  //   refersTo=i13504SubComponent (device sc inside i13504_system),
+  //   inChildOf=sc_i13504_system (i13504_system sc inside ilab16_dev1)
+  const compRef_i13504_dev1 = ilab16_dev1.createComponentReference(sc_i13504_system.getIdentifier(), i13504SubComponent.getIdentifier());
 
-  const c1 = ilab16_dev1.createConstraint('Constraint1');
-  c1.setRestriction(ConstraintRestriction.Meets);
-  c1.setSubject(sc_j23101.getIdentifier());
-  c1.setObject(compRef_i13504_dev1.getIdentifier());
+  const c1 = ilab16_dev1.createConstraint(sc_j23101.getIdentifier(), ConstraintRestriction.Meets, compRef_i13504_dev1.getIdentifier());
 
   // Right hand side of slide: interlab16device2
-  const ilab16_dev2 = doc.createComponent(NS + '/interlab16device2', NS, [ComponentType.DNA.iri]);
-  ilab16_dev2.setRoles([SO + '0000704']);
+  const ilab16_dev2 = SBOLAPI.createDnaComponent(doc, 'interlab16device2', null, null, DNARole.Gene, null);
 
-  const j23106 = doc.createComponent(NS + '/j23106', NS, [ComponentType.DNA.iri]);
-  j23106.setRoles([SO + '0000704']);
+  const j23106 = SBOLAPI.createDnaComponent(doc, 'j23106', null, null, DNARole.Gene, null);
 
   const sc_j23106 = SBOLAPI.addSubComponent(ilab16_dev2, j23106);
   const sc_i13504_system_dev2 = SBOLAPI.addSubComponent(ilab16_dev2, i13504_system);
 
-  const compRef_i13504_dev2 = ilab16_dev2.createComponentReference('ComponentReference1');
-  compRef_i13504_dev2.setInChildOf(sc_i13504_system_dev2.getIdentifier());
-  compRef_i13504_dev2.setRefersTo(i13504SubComponent.getIdentifier());
+  const compRef_i13504_dev2 = ilab16_dev2.createComponentReference(sc_i13504_system_dev2.getIdentifier(), i13504SubComponent.getIdentifier());
 
-  const c2 = ilab16_dev2.createConstraint('Constraint1');
-  c2.setRestriction(ConstraintRestriction.Meets);
-  c2.setSubject(sc_j23106.getIdentifier());
-  c2.setObject(compRef_i13504_dev2.getIdentifier());
+  const c2 = ilab16_dev2.createConstraint(sc_j23106.getIdentifier(), ConstraintRestriction.Meets, compRef_i13504_dev2.getIdentifier());
 
   const result = {
     rdfXml:          doc.toRDF(RDFFormat.RDF_XML),

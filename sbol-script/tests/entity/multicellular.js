@@ -95,8 +95,7 @@ function generate() {
   ap_sc4.setOrientation(Orientation.INLINE);
   const ap_sc5 = ahl_prod.createSubComponent(ahl.getIdentifier(), 'SubComponent5');
 
-  const ap_int1 = ahl_prod.createInteraction('Interaction1');
-  ap_int1.setType({ iri: SBO + '0000589' });
+  const ap_int1 = ahl_prod.createInteraction({ iri: SBO + '0000589' }, 'Interaction1');
   ap_int1.createParticipation({ iri: SBO + '0000645' }, ap_sc3.getIdentifier(), 'Participation1');
   ap_int1.createParticipation({ iri: SBO + '0000011' }, ap_sc5.getIdentifier(), 'Participation2');
 
@@ -126,23 +125,19 @@ function generate() {
   const ar_sc11 = ahl_recv.createSubComponent(gfp_p.getIdentifier(), 'SubComponent11');
   const ar_sc12 = ahl_recv.createSubComponent(luxr_ahl.getIdentifier(), 'SubComponent12');
 
-  const ar_int1 = ahl_recv.createInteraction('Interaction1');
-  ar_int1.setType({ iri: SBO + '0000589' });
+  const ar_int1 = ahl_recv.createInteraction({ iri: SBO + '0000589' }, 'Interaction1');
   ar_int1.createParticipation({ iri: SBO + '0000645' }, ar_sc3.getIdentifier(), 'Participation1');
   ar_int1.createParticipation({ iri: SBO + '0000011' }, ar_sc10.getIdentifier(), 'Participation2');
 
-  const ar_int2 = ahl_recv.createInteraction('Interaction2');
-  ar_int2.setType({ iri: SBO + '0000589' });
+  const ar_int2 = ahl_recv.createInteraction({ iri: SBO + '0000589' }, 'Interaction2');
   ar_int2.createParticipation({ iri: SBO + '0000645' }, ar_sc7.getIdentifier(), 'Participation1');
   ar_int2.createParticipation({ iri: SBO + '0000011' }, ar_sc11.getIdentifier(), 'Participation2');
 
-  const ar_int3 = ahl_recv.createInteraction('Interaction3');
-  ar_int3.setType({ iri: SBO + '0000170' });
+  const ar_int3 = ahl_recv.createInteraction({ iri: SBO + '0000170' }, 'Interaction3');
   ar_int3.createParticipation({ iri: SBO + '0000643' }, ar_sc5.getIdentifier(), 'Participation1');
   ar_int3.createParticipation({ iri: SBO + '0000459' }, ar_sc12.getIdentifier(), 'Participation2');
 
-  const ar_int4 = ahl_recv.createInteraction('Interaction4');
-  ar_int4.setType({ iri: SBO + '0000177' });
+  const ar_int4 = ahl_recv.createInteraction({ iri: SBO + '0000177' }, 'Interaction4');
   ar_int4.createParticipation({ iri: SBO + '0000010' }, ar_sc10.getIdentifier(), 'Participation1');
   ar_int4.createParticipation({ iri: SBO + '0000010' }, ar_sc9.getIdentifier(), 'Participation2');
   ar_int4.createParticipation({ iri: SBO + '0000011' }, ar_sc12.getIdentifier(), 'Participation3');
@@ -156,24 +151,13 @@ function generate() {
   const s_sc2 = sender.createSubComponent(ahl.getIdentifier(), 'SubComponent2');
   const s_sc3 = sender.createSubComponent(ahl_prod.getIdentifier(), 'SubComponent3');
 
-  const s_cr1 = sender.createComponentReference('ComponentReference1');
-  s_cr1.setInChildOf(s_sc3.getIdentifier());
-  s_cr1.setRefersTo(ap_sc5.getIdentifier());
+  const s_cr1 = sender.createComponentReference(s_sc3.getIdentifier(), ap_sc5.getIdentifier(), 'ComponentReference1');
 
-  const s_c1 = sender.createConstraint('Constraint1');
-  s_c1.setRestriction(ConstraintRestriction.Contains);
-  s_c1.setSubject(s_sc1.getIdentifier());
-  s_c1.setObject(s_sc2.getIdentifier());
+  const s_c1 = sender.createConstraint(s_sc1.getIdentifier(), ConstraintRestriction.Contains, s_sc2.getIdentifier(), 'Constraint1');
 
-  const s_c2 = sender.createConstraint('Constraint2');
-  s_c2.setRestriction(ConstraintRestriction.Contains);
-  s_c2.setSubject(s_sc1.getIdentifier());
-  s_c2.setObject(s_sc3.getIdentifier());
+  const s_c2 = sender.createConstraint(s_sc1.getIdentifier(), ConstraintRestriction.Contains, s_sc3.getIdentifier(), 'Constraint2');
 
-  const s_c3 = sender.createConstraint('Constraint3');
-  s_c3.setRestriction(ConstraintRestriction.VerifyIdentical);
-  s_c3.setSubject(s_cr1.getIdentifier());
-  s_c3.setObject(s_sc2.getIdentifier());
+  const s_c3 = sender.createConstraint(s_cr1.getIdentifier(), ConstraintRestriction.VerifyIdentical, s_sc2.getIdentifier(), 'Constraint3');
 
   // ReceiverSystem
   const receiver = doc.createComponent(NS + '/ReceiverSystem', NS, [ComponentType.FunctionalEntity.iri]);
@@ -184,24 +168,13 @@ function generate() {
   const r_sc2 = receiver.createSubComponent(ahl.getIdentifier(), 'SubComponent2');
   const r_sc3 = receiver.createSubComponent(ahl_recv.getIdentifier(), 'SubComponent3');
 
-  const r_cr1 = receiver.createComponentReference('ComponentReference1');
-  r_cr1.setInChildOf(r_sc3.getIdentifier());
-  r_cr1.setRefersTo(ar_sc9.getIdentifier());
+  const r_cr1 = receiver.createComponentReference(r_sc3.getIdentifier(), ar_sc9.getIdentifier(), 'ComponentReference1');
 
-  const r_c1 = receiver.createConstraint('Constraint1');
-  r_c1.setRestriction(ConstraintRestriction.Contains);
-  r_c1.setSubject(r_sc1.getIdentifier());
-  r_c1.setObject(r_sc2.getIdentifier());
+  const r_c1 = receiver.createConstraint(r_sc1.getIdentifier(), ConstraintRestriction.Contains, r_sc2.getIdentifier(), 'Constraint1');
 
-  const r_c2 = receiver.createConstraint('Constraint2');
-  r_c2.setRestriction(ConstraintRestriction.Contains);
-  r_c2.setSubject(r_sc1.getIdentifier());
-  r_c2.setObject(r_sc3.getIdentifier());
+  const r_c2 = receiver.createConstraint(r_sc1.getIdentifier(), ConstraintRestriction.Contains, r_sc3.getIdentifier(), 'Constraint2');
 
-  const r_c3 = receiver.createConstraint('Constraint3');
-  r_c3.setRestriction(ConstraintRestriction.VerifyIdentical);
-  r_c3.setSubject(r_cr1.getIdentifier());
-  r_c3.setObject(r_sc2.getIdentifier());
+  const r_c3 = receiver.createConstraint(r_cr1.getIdentifier(), ConstraintRestriction.VerifyIdentical, r_sc2.getIdentifier(), 'Constraint3');
 
   // MulticellularSystem
   const multi = doc.createComponent(NS + '/MulticellularSystem', NS, [ComponentType.FunctionalEntity.iri]);
@@ -211,18 +184,11 @@ function generate() {
   const m_sc1 = multi.createSubComponent(sender.getIdentifier(), 'SubComponent1');
   const m_sc2 = multi.createSubComponent(receiver.getIdentifier(), 'SubComponent2');
 
-  const m_cr1 = multi.createComponentReference('ComponentReference1');
-  m_cr1.setInChildOf(m_sc1.getIdentifier());
-  m_cr1.setRefersTo(s_sc2.getIdentifier());
+  const m_cr1 = multi.createComponentReference(m_sc1.getIdentifier(), s_sc2.getIdentifier(), 'ComponentReference1');
 
-  const m_cr2 = multi.createComponentReference('ComponentReference2');
-  m_cr2.setInChildOf(m_sc2.getIdentifier());
-  m_cr2.setRefersTo(r_sc2.getIdentifier());
+  const m_cr2 = multi.createComponentReference(m_sc2.getIdentifier(), r_sc2.getIdentifier(), 'ComponentReference2');
 
-  const m_c1 = multi.createConstraint('Constraint1');
-  m_c1.setRestriction(ConstraintRestriction.VerifyIdentical);
-  m_c1.setSubject(m_cr1.getIdentifier());
-  m_c1.setObject(m_cr2.getIdentifier());
+  const m_c1 = multi.createConstraint(m_cr1.getIdentifier(), ConstraintRestriction.VerifyIdentical, m_cr2.getIdentifier(), 'Constraint1');
 
   return {
     rdfXml:          doc.toRDF(RDFFormat.RDF_XML),

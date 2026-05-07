@@ -27,10 +27,7 @@ function generate() {
   const sender_sc1 = sender.createSubComponent(orgA.getIdentifier(), 'SubComponent1');
   const sender_sc2 = sender.createSubComponent(ahl.getIdentifier(), 'SubComponent2');
 
-  const sender_c1 = sender.createConstraint('Constraint1');
-  sender_c1.setRestriction(ConstraintRestriction.Contains);
-  sender_c1.setSubject(sender_sc1.getIdentifier());
-  sender_c1.setObject(sender_sc2.getIdentifier());
+  const sender_c1 = sender.createConstraint(sender_sc1.getIdentifier(), ConstraintRestriction.Contains, sender_sc2.getIdentifier(), 'Constraint1');
 
   const receiver = doc.createComponent(NS + '/ReceiverSystem', NS, [ComponentType.FunctionalEntity.iri]);
   receiver.setName('ReceiverSystem'); receiver.setDescription('Receiver System');
@@ -39,10 +36,7 @@ function generate() {
   const recv_sc1 = receiver.createSubComponent(orgB.getIdentifier(), 'SubComponent1');
   const recv_sc2 = receiver.createSubComponent(ahl.getIdentifier(), 'SubComponent2');
 
-  const recv_c1 = receiver.createConstraint('Constraint1');
-  recv_c1.setRestriction(ConstraintRestriction.Contains);
-  recv_c1.setSubject(recv_sc1.getIdentifier());
-  recv_c1.setObject(recv_sc2.getIdentifier());
+  const recv_c1 = receiver.createConstraint(recv_sc1.getIdentifier(), ConstraintRestriction.Contains, recv_sc2.getIdentifier(), 'Constraint1');
 
   const multi = doc.createComponent(NS + '/MulticellularSystem', NS, [ComponentType.FunctionalEntity.iri]);
   multi.setName('MulticellularSystem'); multi.setDescription('Multicellular System');
@@ -51,18 +45,11 @@ function generate() {
   const multi_sc1 = multi.createSubComponent(sender.getIdentifier(), 'SubComponent1');
   const multi_sc2 = multi.createSubComponent(receiver.getIdentifier(), 'SubComponent2');
 
-  const cr1 = multi.createComponentReference('ComponentReference1');
-  cr1.setInChildOf(multi_sc1.getIdentifier());
-  cr1.setRefersTo(sender_sc2.getIdentifier());
+  const cr1 = multi.createComponentReference(multi_sc1.getIdentifier(), sender_sc2.getIdentifier(), 'ComponentReference1');
 
-  const cr2 = multi.createComponentReference('ComponentReference2');
-  cr2.setInChildOf(multi_sc2.getIdentifier());
-  cr2.setRefersTo(recv_sc2.getIdentifier());
+  const cr2 = multi.createComponentReference(multi_sc2.getIdentifier(), recv_sc2.getIdentifier(), 'ComponentReference2');
 
-  const multi_c1 = multi.createConstraint('Constraint1');
-  multi_c1.setRestriction(ConstraintRestriction.VerifyIdentical);
-  multi_c1.setSubject(cr1.getIdentifier());
-  multi_c1.setObject(cr2.getIdentifier());
+  const multi_c1 = multi.createConstraint(cr1.getIdentifier(), ConstraintRestriction.VerifyIdentical, cr2.getIdentifier(), 'Constraint1');
 
   return {
     rdfXml:          doc.toRDF(RDFFormat.RDF_XML),

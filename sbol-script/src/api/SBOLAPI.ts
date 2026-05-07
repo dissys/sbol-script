@@ -346,8 +346,7 @@ export class SBOLAPI {
      * @param participant2Roles - Role IRIs for participant2
      */
     static createInteractionFromFeaturePair( interactionTypes: IRI[], container: Component, participant1: Feature, participant1Roles: IRI[], participant2: Feature, participant2Roles: IRI[] ): Interaction {
-        const interaction = container.createInteraction();
-        interaction.setTypes(interactionTypes);
+        const interaction = container.createInteraction(interactionTypes);
         SBOLAPI.createParticipation(interaction, participant1Roles, participant1);
         SBOLAPI.createParticipation(interaction, participant2Roles, participant2);
         return interaction;
@@ -467,8 +466,7 @@ export class SBOLAPI {
         for (const sourceCombo of SBOLAPI.cartesianProduct(sourceFeatureSets)) {
             for (const targetCombo of SBOLAPI.cartesianProduct(targetFeatureSets)) {
                 for (const modifierCombo of modifierCombos) {
-                    const interaction = parent.createInteraction();
-                    interaction.setTypes(interactionTypes);
+                    const interaction = parent.createInteraction(interactionTypes);
                     for (const sf of sourceCombo) {
                         SBOLAPI.createParticipation(interaction, sourceParticipantRoles, sf);
                     }
@@ -514,8 +512,7 @@ export class SBOLAPI {
         for (const sourceCombo of SBOLAPI.cartesianProduct(sourceFeatureSets)) {
             for (const targetCombo of SBOLAPI.cartesianProduct(targetFeatureSets)) {
                 for (const modifierCombo of modifierCombos) {
-                    const interaction = parent.createInteraction();
-                    interaction.setTypes(types);
+                    const interaction = parent.createInteraction(types);
                     for (const sf of sourceCombo) {
                         SBOLAPI.createParticipation(interaction, sourceParticipantRoles, sf);
                     }
@@ -643,8 +640,7 @@ export class SBOLAPI {
         const interactions: Interaction[] = [];
         if (features) {
             for (const feature of features) {
-                const interaction = parent.createInteraction();
-                interaction.setTypes([InteractionType.Degradation.iri]);
+                const interaction = parent.createInteraction([InteractionType.Degradation.iri]);
                 SBOLAPI.createParticipation(interaction, [ParticipationType.Reactant.iri], feature);
                 interactions.push(interaction);
             }
@@ -795,10 +791,7 @@ export class SBOLAPI {
         const result: Constraint[] = [];
         for (const sc1 of scs1) {
             for (const sc2 of scs2) {
-                const c = container.createConstraint();
-                c.setRestriction(restriction);
-                c.setSubject(sc1.getIdentifier());
-                c.setObject(sc2.getIdentifier());
+                const c = container.createConstraint(sc1.getIdentifier(), restriction, sc2.getIdentifier());
                 result.push(c);
             }
         }
@@ -806,85 +799,87 @@ export class SBOLAPI {
     }
 
     /**
-     * 4-arg overload: creates a ComponentReference for `child` (nested inside `parent`) in `container`,
-     * then creates a VerifyIdentical Constraint between that ComponentReference and the existing
-     * SubComponent of `sibling` in `container`.
-     * Mirrors Java: SBOLAPI.mapTo(container, parent, child, sibling)
+     * Mirrors Java: SBOLAPI.mapTo(container, toContainer, toEntity)
+     * Creates a ComponentReference for `child` (nested inside `parent`) in `container`. No constraint.
      */
-    static mapTo(container: Component, parent: Component, child: Component, sibling: Component): ComponentReference[];
-    /**
-     * 5-arg overload: creates ComponentReferences for `child1` (inside `parent1`) and `child2` (inside `parent2`)
-     * in `container`, then creates a VerifyIdentical (or Replaces) Constraint between them.
-     * Mirrors Java: SBOLAPI.mapTo(container, parent1, child1, parent2, child2)
-     */
-    static mapTo(container: Component, parent1: Component, child1: Component, parent2: Component, child2: Component): ComponentReference[];
-    static mapTo(container: Component, parent1: Component, child1: Component, parent2OrSibling: Component, child2?: Component): ComponentReference[] {
-        if (child2 === undefined) {
-            // 4-arg: mapTo(container, parent, child, sibling)
-            const parent  = parent1;
-            const child   = child1;
-            const sibling = parent2OrSibling;
-
-            const scsParentInContainer  = container.getSubComponents().filter(sc => sc.getInstanceOfIRI() === parent.getIdentifier());
-            const scsChildInParent      = parent.getSubComponents().filter(sc => sc.getInstanceOfIRI() === child.getIdentifier());
-            const scsSiblingInContainer = container.getSubComponents().filter(sc => sc.getInstanceOfIRI() === sibling.getIdentifier());
-
-            const refs: ComponentReference[] = [];
-            for (const scParent of scsParentInContainer) {
-                for (const scChild of scsChildInParent) {
-                    const cr = container.createComponentReference();
-                    cr.setInChildOf(scParent.getIdentifier());
-                    cr.setRefersTo(scChild.getIdentifier());
-                    refs.push(cr);
-                }
+    static mapToRef(container: Component, parent: Component, child: Component): ComponentReference[] {
+        const scsParentInContainer = container.getSubComponents().filter(sc => sc.getInstanceOfIRI() === parent.getIdentifier());
+        const scsChildInParent     = parent.getSubComponents().filter(sc => sc.getInstanceOfIRI() === child.getIdentifier());
+        const refs: ComponentReference[] = [];
+        for (const scParent of scsParentInContainer) {
+            for (const scChild of scsChildInParent) {
+                const cr = container.createComponentReference(scParent.getIdentifier(), scChild.getIdentifier());
+                refs.push(cr);
             }
-            for (const cr of refs) {
-                for (const scSibling of scsSiblingInContainer) {
-                    const c = container.createConstraint();
-                    c.setRestriction(ConstraintRestriction.VerifyIdentical);
-                    c.setSubject(cr.getIdentifier());
-                    c.setObject(scSibling.getIdentifier());
-                }
-            }
-            return refs;
         }
+        return refs;
+    }
 
-        // 5-arg: mapTo(container, parent1, child1, parent2, child2)
+    /**
+     * Mirrors Java: SBOLAPI.mapTo(container, parent, child, containerChild)
+     * Creates a ComponentReference for `child` (nested inside `parent`) in `container`, then creates
+     * a Constraint between that ComponentReference and the SubComponent of `sibling` in `container`.
+     * Restriction: VerifyIdentical if child.uri === sibling.uri, else Replaces.
+     */
+    static mapToChildSubComponent(container: Component, parent: Component, child: Component, sibling: Component): ComponentReference[] {
+        const scsParentInContainer  = container.getSubComponents().filter(sc => sc.getInstanceOfIRI() === parent.getIdentifier());
+        const scsChildInParent      = parent.getSubComponents().filter(sc => sc.getInstanceOfIRI() === child.getIdentifier());
+        const scsSiblingInContainer = container.getSubComponents().filter(sc => sc.getInstanceOfIRI() === sibling.getIdentifier());
+
+        const restriction = child.getIdentifier() === sibling.getIdentifier()
+            ? ConstraintRestriction.VerifyIdentical
+            : ConstraintRestriction.Replaces;
+
+        const refs: ComponentReference[] = [];
+        for (const scParent of scsParentInContainer) {
+            for (const scChild of scsChildInParent) {
+                const cr = container.createComponentReference(scParent.getIdentifier(), scChild.getIdentifier());
+                refs.push(cr);
+            }
+        }
+        for (const cr of refs) {
+            for (const scSibling of scsSiblingInContainer) {
+                container.createConstraint(cr.getIdentifier(), restriction, scSibling.getIdentifier());
+            }
+        }
+        return refs;
+    }
+
+    /**
+     * Mirrors Java: SBOLAPI.mapTo(container, parent1, child1, parent2, child2)
+     * Creates ComponentReferences for `child1` (inside `parent1`) and `child2` (inside `parent2`)
+     * in `container`, then creates a Constraint between them.
+     * Restriction: VerifyIdentical if child1.uri === child2.uri, else Replaces.
+     */
+    static mapToChildren(container: Component, parent1: Component, child1: Component, parent2: Component, child2: Component): ComponentReference[] {
         const scsInCont1   = container.getSubComponents().filter(sc => sc.getInstanceOfIRI() === parent1.getIdentifier());
         const scsInParent1 = parent1.getSubComponents().filter(sc => sc.getInstanceOfIRI() === child1.getIdentifier());
-        const scsInCont2   = container.getSubComponents().filter(sc => sc.getInstanceOfIRI() === parent2OrSibling.getIdentifier());
-        const scsInParent2 = parent2OrSibling.getSubComponents().filter(sc => sc.getInstanceOfIRI() === child2.getIdentifier());
+        const scsInCont2   = container.getSubComponents().filter(sc => sc.getInstanceOfIRI() === parent2.getIdentifier());
+        const scsInParent2 = parent2.getSubComponents().filter(sc => sc.getInstanceOfIRI() === child2.getIdentifier());
+
+        const restriction = child1.getIdentifier() === child2.getIdentifier()
+            ? ConstraintRestriction.VerifyIdentical
+            : ConstraintRestriction.Replaces;
 
         const refs1: ComponentReference[] = [];
         const refs2: ComponentReference[] = [];
 
         for (const scCont of scsInCont1) {
             for (const scPar of scsInParent1) {
-                const cr = container.createComponentReference();
-                cr.setInChildOf(scCont.getIdentifier());
-                cr.setRefersTo(scPar.getIdentifier());
+                const cr = container.createComponentReference(scCont.getIdentifier(), scPar.getIdentifier());
                 refs1.push(cr);
             }
         }
         for (const scCont of scsInCont2) {
             for (const scPar of scsInParent2) {
-                const cr = container.createComponentReference();
-                cr.setInChildOf(scCont.getIdentifier());
-                cr.setRefersTo(scPar.getIdentifier());
+                const cr = container.createComponentReference(scCont.getIdentifier(), scPar.getIdentifier());
                 refs2.push(cr);
             }
         }
 
-        const restriction = child1.getIdentifier() === child2.getIdentifier()
-            ? ConstraintRestriction.VerifyIdentical
-            : ConstraintRestriction.Replaces;
-
         for (const cr1 of refs1) {
             for (const cr2 of refs2) {
-                const c = container.createConstraint();
-                c.setRestriction(restriction);
-                c.setSubject(cr1.getIdentifier());
-                c.setObject(cr2.getIdentifier());
+                container.createConstraint(cr1.getIdentifier(), restriction, cr2.getIdentifier());
             }
         }
 

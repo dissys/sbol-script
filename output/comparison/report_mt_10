@@ -16,3 +16,12 @@ INPUT:      usecases/MulticellularSimpleTest.js
 OUTPUT:     entity/multicellular_simple.js
 LINES:      Generated=94  Reference=94  Total=94  Issues=12
 ================================================================================
+
+================================================================================
+TEST:       combine2020_vs_GettingStartedTutorial
+TIMESTAMP:  2026-04-23T10:12:10.535Z
+ERROR RATE: 13.02% (>10% threshold)
+INPUT:      usecases/GettingStartedTutorial.js
+OUTPUT:     entity/combine2020.js
+LINES:      Generated=215  Reference=215  Total=215  Issues=28
+================================================================================

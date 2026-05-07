@@ -10,8 +10,7 @@ function generate() {
   i13504_system.setName('i13504 system');
   i13504_system.addRole('https://identifiers.org/SO:0000704');
 
-  const int1 = i13504_system.createInteraction('Interaction1');
-  int1.setType(InteractionType.GeneticProduction);
+  const int1 = i13504_system.createInteraction(InteractionType.GeneticProduction, 'Interaction1');
 
   return {
     rdfXml:          doc.toRDF(RDFFormat.RDF_XML),

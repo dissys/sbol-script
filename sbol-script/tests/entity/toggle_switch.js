@@ -97,23 +97,19 @@ function generate() {
   const lp_sc10 = laci_prod.createSubComponent(atc.getIdentifier(), 'SubComponent10');
   const lp_sc11 = laci_prod.createSubComponent(atc_tetr.getIdentifier(), 'SubComponent11');
 
-  const lp_int1 = laci_prod.createInteraction('Interaction1');
-  lp_int1.setType({ iri: SBO + '0000589' });
+  const lp_int1 = laci_prod.createInteraction({ iri: SBO + '0000589' }, 'Interaction1');
   lp_int1.createParticipation({ iri: SBO + '0000645' }, lp_sc3.getIdentifier(), 'Participation1');
   lp_int1.createParticipation({ iri: SBO + '0000011' }, lp_sc7.getIdentifier(), 'Participation2');
 
-  const lp_int2 = laci_prod.createInteraction('Interaction2');
-  lp_int2.setType({ iri: SBO + '0000589' });
+  const lp_int2 = laci_prod.createInteraction({ iri: SBO + '0000589' }, 'Interaction2');
   lp_int2.createParticipation({ iri: SBO + '0000645' }, lp_sc5.getIdentifier(), 'Participation1');
   lp_int2.createParticipation({ iri: SBO + '0000011' }, lp_sc8.getIdentifier(), 'Participation2');
 
-  const lp_int3 = laci_prod.createInteraction('Interaction3');
-  lp_int3.setType({ iri: SBO + '0000169' });
+  const lp_int3 = laci_prod.createInteraction({ iri: SBO + '0000169' }, 'Interaction3');
   lp_int3.createParticipation({ iri: SBO + '0000642' }, lp_sc1.getIdentifier(), 'Participation1');
   lp_int3.createParticipation({ iri: SBO + '0000020' }, lp_sc9.getIdentifier(), 'Participation2');
 
-  const lp_int4 = laci_prod.createInteraction('Interaction4');
-  lp_int4.setType({ iri: SBO + '0000177' });
+  const lp_int4 = laci_prod.createInteraction({ iri: SBO + '0000177' }, 'Interaction4');
   lp_int4.createParticipation({ iri: SBO + '0000010' }, lp_sc9.getIdentifier(), 'Participation1');
   lp_int4.createParticipation({ iri: SBO + '0000010' }, lp_sc10.getIdentifier(), 'Participation2');
   lp_int4.createParticipation({ iri: SBO + '0000011' }, lp_sc11.getIdentifier(), 'Participation3');
@@ -136,18 +132,15 @@ function generate() {
   const tp_sc7 = tetr_prod.createSubComponent(iptg.getIdentifier(), 'SubComponent7');
   const tp_sc8 = tetr_prod.createSubComponent(iptg_laci.getIdentifier(), 'SubComponent8');
 
-  const tp_int1 = tetr_prod.createInteraction('Interaction1');
-  tp_int1.setType({ iri: SBO + '0000589' });
+  const tp_int1 = tetr_prod.createInteraction({ iri: SBO + '0000589' }, 'Interaction1');
   tp_int1.createParticipation({ iri: SBO + '0000645' }, tp_sc3.getIdentifier(), 'Participation1');
   tp_int1.createParticipation({ iri: SBO + '0000011' }, tp_sc5.getIdentifier(), 'Participation2');
 
-  const tp_int2 = tetr_prod.createInteraction('Interaction2');
-  tp_int2.setType({ iri: SBO + '0000169' });
+  const tp_int2 = tetr_prod.createInteraction({ iri: SBO + '0000169' }, 'Interaction2');
   tp_int2.createParticipation({ iri: SBO + '0000642' }, tp_sc1.getIdentifier(), 'Participation1');
   tp_int2.createParticipation({ iri: SBO + '0000020' }, tp_sc6.getIdentifier(), 'Participation2');
 
-  const tp_int3 = tetr_prod.createInteraction('Interaction3');
-  tp_int3.setType({ iri: SBO + '0000177' });
+  const tp_int3 = tetr_prod.createInteraction({ iri: SBO + '0000177' }, 'Interaction3');
   tp_int3.createParticipation({ iri: SBO + '0000010' }, tp_sc6.getIdentifier(), 'Participation1');
   tp_int3.createParticipation({ iri: SBO + '0000010' }, tp_sc7.getIdentifier(), 'Participation2');
   tp_int3.createParticipation({ iri: SBO + '0000011' }, tp_sc8.getIdentifier(), 'Participation3');
@@ -176,15 +169,9 @@ function generate() {
   ts_cr4.setInChildOf(ts_sc2.getIdentifier());
   ts_cr4.setRefersTo(tp_sc5.getIdentifier());
 
-  const ts_c1 = toggle.createConstraint('Constraint1');
-  ts_c1.setRestriction(ConstraintRestriction.VerifyIdentical);
-  ts_c1.setSubject(ts_cr1.getIdentifier());
-  ts_c1.setObject(ts_cr2.getIdentifier());
+  const ts_c1 = toggle.createConstraint(ts_cr1.getIdentifier(), ConstraintRestriction.VerifyIdentical, ts_cr2.getIdentifier(), 'Constraint1');
 
-  const ts_c2 = toggle.createConstraint('Constraint2');
-  ts_c2.setRestriction(ConstraintRestriction.VerifyIdentical);
-  ts_c2.setSubject(ts_cr3.getIdentifier());
-  ts_c2.setObject(ts_cr4.getIdentifier());
+  const ts_c2 = toggle.createConstraint(ts_cr3.getIdentifier(), ConstraintRestriction.VerifyIdentical, ts_cr4.getIdentifier(), 'Constraint2');
 
   return {
     rdfXml:          doc.toRDF(RDFFormat.RDF_XML),

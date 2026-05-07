@@ -1,6 +1,7 @@
 import { SBOLDocument } from './SBOLDocument';
 import { GraphDocument } from '../otol/GraphDocument';
 import { RDFFormat } from '../otol/RDFUtil';
+import SBOLNamespaces from './SBOLNamespaces';
 
 // Core hierarchy
 import Identified from './Identified';
@@ -157,5 +158,6 @@ export {
     ComponentType, Encoding, Orientation, NucleicAcidTopology,
     InteractionType, ParticipationType,
     CombinatorialDerivationStrategy, Cardinality, RoleIntegration,
-    ConstraintRestriction, ModelLanguage, ModelFramework
+    ConstraintRestriction, ModelLanguage, ModelFramework,
+    SBOLNamespaces
 };

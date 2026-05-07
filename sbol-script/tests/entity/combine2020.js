@@ -80,12 +80,9 @@ function generate() {
   const sys_sc1 = i13504_sys.createSubComponent(i13504.getIdentifier(), 'SubComponent1');
   const sys_sc2 = i13504_sys.createSubComponent(gfp_p.getIdentifier(), 'SubComponent2');
 
-  const sys_cr1 = i13504_sys.createComponentReference('ComponentReference1');
-  sys_cr1.setInChildOf(sys_sc1.getIdentifier());
-  sys_cr1.setRefersTo(i_sc2.getIdentifier());
+  const sys_cr1 = i13504_sys.createComponentReference(sys_sc1.getIdentifier(), i_sc2.getIdentifier(), 'ComponentReference1');
 
-  const sys_int1 = i13504_sys.createInteraction('Interaction1');
-  sys_int1.setType({ iri: SBO + '0000589' });
+  const sys_int1 = i13504_sys.createInteraction({ iri: SBO + '0000589' }, 'Interaction1');
   sys_int1.createParticipation({ iri: SBO + '0000645' }, sys_cr1.getIdentifier(), 'Participation1');
   sys_int1.createParticipation({ iri: SBO + '0000011' }, sys_sc2.getIdentifier(), 'Participation2');
 
@@ -95,14 +92,9 @@ function generate() {
   const d1_sc1 = dev1.createSubComponent(j23101.getIdentifier(), 'SubComponent1');
   const d1_sc2 = dev1.createSubComponent(i13504_sys.getIdentifier(), 'SubComponent2');
 
-  const d1_cr1 = dev1.createComponentReference('ComponentReference1');
-  d1_cr1.setInChildOf(d1_sc2.getIdentifier());
-  d1_cr1.setRefersTo(sys_sc1.getIdentifier());
+  const d1_cr1 = dev1.createComponentReference(d1_sc2.getIdentifier(), sys_sc1.getIdentifier(), 'ComponentReference1');
 
-  const d1_c1 = dev1.createConstraint('Constraint1');
-  d1_c1.setRestriction(ConstraintRestriction.Meets);
-  d1_c1.setSubject(d1_sc1.getIdentifier());
-  d1_c1.setObject(d1_cr1.getIdentifier());
+  const d1_c1 = dev1.createConstraint(d1_sc1.getIdentifier(), ConstraintRestriction.Meets, d1_cr1.getIdentifier(), 'Constraint1');
 
   const dev2 = doc.createComponent(NS + '/interlab16device2', NS, [ComponentType.DNA.iri]);
   dev2.addRole(SO + '0000704');
@@ -110,14 +102,9 @@ function generate() {
   const d2_sc1 = dev2.createSubComponent(j23106.getIdentifier(), 'SubComponent1');
   const d2_sc2 = dev2.createSubComponent(i13504_sys.getIdentifier(), 'SubComponent2');
 
-  const d2_cr1 = dev2.createComponentReference('ComponentReference1');
-  d2_cr1.setInChildOf(d2_sc2.getIdentifier());
-  d2_cr1.setRefersTo(sys_sc1.getIdentifier());
+  const d2_cr1 = dev2.createComponentReference(d2_sc2.getIdentifier(), sys_sc1.getIdentifier(), 'ComponentReference1');
 
-  const d2_c1 = dev2.createConstraint('Constraint1');
-  d2_c1.setRestriction(ConstraintRestriction.Meets);
-  d2_c1.setSubject(d2_sc1.getIdentifier());
-  d2_c1.setObject(d2_cr1.getIdentifier());
+  const d2_c1 = dev2.createConstraint(d2_sc1.getIdentifier(), ConstraintRestriction.Meets, d2_cr1.getIdentifier(), 'Constraint1');
 
   return {
     rdfXml:          doc.toRDF(RDFFormat.RDF_XML),

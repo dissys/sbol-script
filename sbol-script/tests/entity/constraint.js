@@ -27,9 +27,7 @@ function generate() {
   const sc1 = device.createSubComponent(i13504_system.getIdentifier(), 'SubComponent1');
   const sc2 = device.createSubComponent(j23101.getIdentifier(), 'SubComponent2');
 
-  const cr1 = device.createComponentReference('ComponentReference1');
-  cr1.setInChildOf(sc1.getIdentifier());
-  cr1.setRefersTo(sc1_sys.getIdentifier());
+  const cr1 = device.createComponentReference(sc1.getIdentifier(), sc1_sys.getIdentifier(), 'ComponentReference1');
 
   const c1 = device.createConstraint('Constraint1');
   c1.setRestriction(ConstraintRestriction.Meets);

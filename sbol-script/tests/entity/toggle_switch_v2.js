@@ -104,23 +104,19 @@ function generate() {
   const lp_sc10 = laci_prod.createSubComponent(atc.getIdentifier(), 'SubComponent10');
   const lp_sc11 = laci_prod.createSubComponent(atc_tetr.getIdentifier(), 'SubComponent11');
 
-  const lp_int1 = laci_prod.createInteraction('Interaction1');
-  lp_int1.setType({ iri: SBO + '0000589' });
+  const lp_int1 = laci_prod.createInteraction({ iri: SBO + '0000589' }, 'Interaction1');
   lp_int1.createParticipation({ iri: SBO + '0000645' }, lp_sc3.getIdentifier(), 'Participation1');
   lp_int1.createParticipation({ iri: SBO + '0000011' }, lp_sc7.getIdentifier(), 'Participation2');
 
-  const lp_int2 = laci_prod.createInteraction('Interaction2');
-  lp_int2.setType({ iri: SBO + '0000589' });
+  const lp_int2 = laci_prod.createInteraction({ iri: SBO + '0000589' }, 'Interaction2');
   lp_int2.createParticipation({ iri: SBO + '0000645' }, lp_sc5.getIdentifier(), 'Participation1');
   lp_int2.createParticipation({ iri: SBO + '0000011' }, lp_sc8.getIdentifier(), 'Participation2');
 
-  const lp_int3 = laci_prod.createInteraction('Interaction3');
-  lp_int3.setType({ iri: SBO + '0000169' });
+  const lp_int3 = laci_prod.createInteraction({ iri: SBO + '0000169' }, 'Interaction3');
   lp_int3.createParticipation({ iri: SBO + '0000642' }, lp_sc1.getIdentifier(), 'Participation1');
   lp_int3.createParticipation({ iri: SBO + '0000020' }, lp_sc9.getIdentifier(), 'Participation2');
 
-  const lp_int4 = laci_prod.createInteraction('Interaction4');
-  lp_int4.setType({ iri: SBO + '0000177' });
+  const lp_int4 = laci_prod.createInteraction({ iri: SBO + '0000177' }, 'Interaction4');
   lp_int4.createParticipation({ iri: SBO + '0000010' }, lp_sc9.getIdentifier(), 'Participation1');
   lp_int4.createParticipation({ iri: SBO + '0000010' }, lp_sc10.getIdentifier(), 'Participation2');
   lp_int4.createParticipation({ iri: SBO + '0000011' }, lp_sc11.getIdentifier(), 'Participation3');
@@ -142,18 +138,15 @@ function generate() {
   const tp_sc7 = tetr_prod.createSubComponent(iptg.getIdentifier(), 'SubComponent7');
   const tp_sc8 = tetr_prod.createSubComponent(iptg_laci.getIdentifier(), 'SubComponent8');
 
-  const tp_int1 = tetr_prod.createInteraction('Interaction1');
-  tp_int1.setType({ iri: SBO + '0000589' });
+  const tp_int1 = tetr_prod.createInteraction({ iri: SBO + '0000589' }, 'Interaction1');
   tp_int1.createParticipation({ iri: SBO + '0000645' }, tp_sc3.getIdentifier(), 'Participation1');
   tp_int1.createParticipation({ iri: SBO + '0000011' }, tp_sc5.getIdentifier(), 'Participation2');
 
-  const tp_int2 = tetr_prod.createInteraction('Interaction2');
-  tp_int2.setType({ iri: SBO + '0000169' });
+  const tp_int2 = tetr_prod.createInteraction({ iri: SBO + '0000169' }, 'Interaction2');
   tp_int2.createParticipation({ iri: SBO + '0000642' }, tp_sc1.getIdentifier(), 'Participation1');
   tp_int2.createParticipation({ iri: SBO + '0000020' }, tp_sc6.getIdentifier(), 'Participation2');
 
-  const tp_int3 = tetr_prod.createInteraction('Interaction3');
-  tp_int3.setType({ iri: SBO + '0000177' });
+  const tp_int3 = tetr_prod.createInteraction({ iri: SBO + '0000177' }, 'Interaction3');
   tp_int3.createParticipation({ iri: SBO + '0000010' }, tp_sc6.getIdentifier(), 'Participation1');
   tp_int3.createParticipation({ iri: SBO + '0000010' }, tp_sc7.getIdentifier(), 'Participation2');
   tp_int3.createParticipation({ iri: SBO + '0000011' }, tp_sc8.getIdentifier(), 'Participation3');
@@ -168,50 +161,30 @@ function generate() {
   const ts_sc3 = toggle.createSubComponent(laci_prod.getIdentifier(), 'SubComponent3');
   const ts_sc4 = toggle.createSubComponent(tetr_prod.getIdentifier(), 'SubComponent4');
 
-  const ts_cr1 = toggle.createComponentReference('ComponentReference1');
-  ts_cr1.setInChildOf(ts_sc3.getIdentifier());
-  ts_cr1.setRefersTo(lp_sc7.getIdentifier());
+  const ts_cr1 = toggle.createComponentReference(ts_sc3.getIdentifier(), lp_sc7.getIdentifier(), 'ComponentReference1');
 
-  const ts_cr2 = toggle.createComponentReference('ComponentReference2');
-  ts_cr2.setInChildOf(ts_sc4.getIdentifier());
-  ts_cr2.setRefersTo(tp_sc6.getIdentifier());
+  const ts_cr2 = toggle.createComponentReference(ts_sc4.getIdentifier(), tp_sc6.getIdentifier(), 'ComponentReference2');
 
-  const ts_cr3 = toggle.createComponentReference('ComponentReference3');
-  ts_cr3.setInChildOf(ts_sc3.getIdentifier());
-  ts_cr3.setRefersTo(lp_sc9.getIdentifier());
+  const ts_cr3 = toggle.createComponentReference(ts_sc3.getIdentifier(), lp_sc9.getIdentifier(), 'ComponentReference3');
 
-  const ts_cr4 = toggle.createComponentReference('ComponentReference4');
-  ts_cr4.setInChildOf(ts_sc4.getIdentifier());
-  ts_cr4.setRefersTo(tp_sc5.getIdentifier());
+  const ts_cr4 = toggle.createComponentReference(ts_sc4.getIdentifier(), tp_sc5.getIdentifier(), 'ComponentReference4');
 
-  const ts_c1 = toggle.createConstraint('Constraint1');
-  ts_c1.setRestriction(ConstraintRestriction.Replaces);
-  ts_c1.setSubject(ts_cr1.getIdentifier());
-  ts_c1.setObject(ts_sc1.getIdentifier());
+  const ts_c1 = toggle.createConstraint(ts_cr1.getIdentifier(), ConstraintRestriction.Replaces, ts_sc1.getIdentifier(), 'Constraint1');
 
   /* The above replaced the following. 
   ts_c1.setRestriction(ConstraintRestriction.VerifyIdentical);
   ts_c1.setSubject(ts_cr1.getIdentifier());
   ts_c1.setObject(ts_cr2.getIdentifier());*/
 
-  const ts_c2 = toggle.createConstraint('Constraint2');
-  ts_c2.setRestriction(ConstraintRestriction.Replaces);
-  ts_c2.setSubject(ts_cr2.getIdentifier());
-  ts_c2.setObject(ts_sc1.getIdentifier());
+  const ts_c2 = toggle.createConstraint(ts_cr2.getIdentifier(), ConstraintRestriction.Replaces, ts_sc1.getIdentifier(), 'Constraint2');
   /* The above replaced the following.
   ts_c2.setRestriction(ConstraintRestriction.VerifyIdentical);//TODO
   ts_c2.setSubject(ts_cr3.getIdentifier());//TODO
   ts_c2.setObject(ts_cr4.getIdentifier());//TODO*/
 
-  const ts_c3 = toggle.createConstraint('Constraint3');
-  ts_c3.setRestriction(ConstraintRestriction.Replaces);
-  ts_c3.setSubject(ts_cr3.getIdentifier());
-  ts_c3.setObject(ts_sc2.getIdentifier());
+  const ts_c3 = toggle.createConstraint(ts_cr3.getIdentifier(), ConstraintRestriction.Replaces, ts_sc2.getIdentifier(), 'Constraint3');
 
-  const ts_c4 = toggle.createConstraint('Constraint4');
-  ts_c4.setRestriction(ConstraintRestriction.Replaces);
-  ts_c4.setSubject(ts_cr4.getIdentifier());
-  ts_c4.setObject(ts_sc2.getIdentifier());
+  const ts_c4 = toggle.createConstraint(ts_cr4.getIdentifier(), ConstraintRestriction.Replaces, ts_sc2.getIdentifier(), 'Constraint4');
 
   return {
     rdfXml:          doc.toRDF(RDFFormat.RDF_XML),

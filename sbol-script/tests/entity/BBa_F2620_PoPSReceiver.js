@@ -124,18 +124,15 @@ function generate() {
   const f_r7 = f_sc7.createRange(seq_f2620.getIdentifier(), 969, 1023, 'Range1');
   f_r7.setOrientation(Orientation.INLINE);
 
-  const f_int1 = f2620.createInteraction('Interaction1');
-  f_int1.setType({ iri: SBO + '0000589' });
+  const f_int1 = f2620.createInteraction({ iri: SBO + '0000589' }, 'Interaction1');
   f_int1.createParticipation({ iri: SBO + '0000645' }, f_sc5.getIdentifier(), 'Participation1');
   f_int1.createParticipation({ iri: SBO + '0000011' }, f_sc1.getIdentifier(), 'Participation2');
 
-  const f_int2 = f2620.createInteraction('Interaction2');
-  f_int2.setType({ iri: SBO + '0000170' });
+  const f_int2 = f2620.createInteraction({ iri: SBO + '0000170' }, 'Interaction2');
   f_int2.createParticipation({ iri: SBO + '0000643' }, f_sc7.getIdentifier(), 'Participation1');
   f_int2.createParticipation({ iri: SBO + '0000459' }, f_sc1.getIdentifier(), 'Participation2');
 
-  const f_int3 = f2620.createInteraction('Interaction3');
-  f_int3.setType({ iri: SBO + '0000170' });
+  const f_int3 = f2620.createInteraction({ iri: SBO + '0000170' }, 'Interaction3');
   f_int3.createParticipation({ iri: SBO + '0000643' }, f_sc3.getIdentifier(), 'Participation1');
   f_int3.createParticipation({ iri: SBO + '0000459' }, f_sc2.getIdentifier(), 'Participation2');
 
