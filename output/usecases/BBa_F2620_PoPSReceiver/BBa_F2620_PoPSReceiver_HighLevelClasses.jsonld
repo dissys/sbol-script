@@ -1,0 +1,712 @@
+{
+  "@context": {
+    "sbol": "http://sbols.org/v3#",
+    "igem": "https://synbiohub.org/public/igem/",
+    "pub": "https://synbiohub.org/public/",
+    "BBa": "https://synbiohub.org/public/igem/BBa_B0015/",
+    "Sub": "https://synbiohub.org/public/igem/BBa_B0015/SubComponent1/",
+    "Su": "https://synbiohub.org/public/igem/BBa_B0015/SubComponent2/",
+    "BB": "https://synbiohub.org/public/igem/BBa_F2620/",
+    "Int": "https://synbiohub.org/public/igem/BBa_F2620/Interaction1/",
+    "In": "https://synbiohub.org/public/igem/BBa_F2620/Interaction2/",
+    "Inte": "https://synbiohub.org/public/igem/BBa_F2620/Interaction3/",
+    "SubC": "https://synbiohub.org/public/igem/BBa_F2620/SubComponent3/",
+    "S": "https://synbiohub.org/public/igem/BBa_F2620/SubComponent4/",
+    "SubCo": "https://synbiohub.org/public/igem/BBa_F2620/SubComponent5/",
+    "Sub0": "https://synbiohub.org/public/igem/BBa_F2620/SubComponent6/",
+    "Sub1": "https://synbiohub.org/public/igem/BBa_F2620/SubComponent7/"
+  },
+  "@graph": [
+    {
+      "@id": "igem:BBa_B0010",
+      "@type": "sbol:Component",
+      "sbol:description": "Transcriptional terminator consisting of a 64 bp stem-loop",
+      "sbol:displayId": "BBa_B0010",
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:hasSequence": {
+        "@id": "igem:BBa_B0010_Sequence1"
+      },
+      "sbol:name": "BBa_B0010",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000141"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "igem:BBa_B0010_Sequence1",
+      "@type": "sbol:Sequence",
+      "sbol:description": "BBa_B0010 sequence",
+      "sbol:displayId": "BBa_B0010_Sequence1",
+      "sbol:elements": "ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctc",
+      "sbol:encoding": {
+        "@id": "https://identifiers.org/edam:format_1207"
+      },
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:name": "Sequence1"
+    },
+    {
+      "@id": "igem:BBa_B0012",
+      "@type": "sbol:Component",
+      "sbol:description": "Double terminator consisting of BBa_B0010 and BBa_B0012",
+      "sbol:displayId": "BBa_B0012",
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:hasSequence": {
+        "@id": "igem:BBa_B0012_Sequence1"
+      },
+      "sbol:name": "BBa_B0012",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000141"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "igem:BBa_B0012_Sequence1",
+      "@type": "sbol:Sequence",
+      "sbol:description": "BBa_B0012 sequence",
+      "sbol:displayId": "BBa_B0012_Sequence1",
+      "sbol:elements": "tcacactggctcaccttcgggtgggcctttctgcgtttata",
+      "sbol:encoding": {
+        "@id": "https://identifiers.org/edam:format_1207"
+      },
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:name": "Sequence1"
+    },
+    {
+      "@id": "igem:BBa_B0015",
+      "@type": "sbol:Component",
+      "sbol:description": "Double terminator consisting of BBa_B0010 and BBa_B0012",
+      "sbol:displayId": "BBa_B0015",
+      "sbol:hasFeature": [
+        {
+          "@id": "BBa:SubComponent1"
+        },
+        {
+          "@id": "BBa:SubComponent2"
+        }
+      ],
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:hasSequence": {
+        "@id": "igem:BBa_B0015_Sequence1"
+      },
+      "sbol:name": "BBa_B0015",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000141"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "igem:BBa_B0015_Sequence1",
+      "@type": "sbol:Sequence",
+      "sbol:description": "BBa_B0015 sequence",
+      "sbol:displayId": "BBa_B0015_Sequence1",
+      "sbol:elements": "ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctcacactggctcaccttcgggtgggcctttctgcgtttata",
+      "sbol:encoding": {
+        "@id": "https://identifiers.org/edam:format_1207"
+      },
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:name": "Sequence1"
+    },
+    {
+      "@id": "BBa:SubComponent1",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent1",
+      "sbol:hasLocation": {
+        "@id": "Sub:Range1"
+      },
+      "sbol:instanceOf": {
+        "@id": "igem:BBa_B0010"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "Sub:Range1",
+      "@type": "sbol:Range",
+      "sbol:displayId": "Range1",
+      "sbol:end": "80",
+      "sbol:hasSequence": {
+        "@id": "igem:BBa_B0015_Sequence1"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      },
+      "sbol:start": "1"
+    },
+    {
+      "@id": "BBa:SubComponent2",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent2",
+      "sbol:hasLocation": {
+        "@id": "Su:Range1"
+      },
+      "sbol:instanceOf": {
+        "@id": "igem:BBa_B0012"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "Su:Range1",
+      "@type": "sbol:Range",
+      "sbol:displayId": "Range1",
+      "sbol:end": "121",
+      "sbol:hasSequence": {
+        "@id": "igem:BBa_B0015_Sequence1"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      },
+      "sbol:start": "81"
+    },
+    {
+      "@id": "igem:BBa_B0034",
+      "@type": "sbol:Component",
+      "sbol:description": "RBS based on Elowitz repressilator",
+      "sbol:displayId": "BBa_B0034",
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:hasSequence": {
+        "@id": "igem:BBa_B0034_Sequence1"
+      },
+      "sbol:name": "BBa_B0034",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000139"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "igem:BBa_B0034_Sequence1",
+      "@type": "sbol:Sequence",
+      "sbol:description": "BBa_B0034 sequence",
+      "sbol:displayId": "BBa_B0034_Sequence1",
+      "sbol:elements": "aaagaggagaaa",
+      "sbol:encoding": {
+        "@id": "https://identifiers.org/edam:format_1207"
+      },
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:name": "Sequence1"
+    },
+    {
+      "@id": "igem:BBa_C0062",
+      "@type": "sbol:Component",
+      "sbol:description": "luxR repressor/activator,  (no LVA?)",
+      "sbol:displayId": "BBa_C0062",
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:hasSequence": {
+        "@id": "igem:BBa_C0062_Sequence1"
+      },
+      "sbol:name": "luxR",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000316"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "igem:BBa_C0062_protein",
+      "@type": "sbol:Component",
+      "sbol:description": "LuxR protein",
+      "sbol:displayId": "BBa_C0062_protein",
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:hasSequence": {
+        "@id": "igem:BBa_C0062_protein_Sequence1"
+      },
+      "sbol:name": "LuxR",
+      "sbol:role": {
+        "@id": "https://identifiers.org/GO:0003700"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000252"
+      }
+    },
+    {
+      "@id": "igem:BBa_C0062_protein_Sequence1",
+      "@type": "sbol:Sequence",
+      "sbol:description": "BBa_C0062_protein sequence",
+      "sbol:displayId": "BBa_C0062_protein_Sequence1",
+      "sbol:elements": "NNNNNNNNNNN",
+      "sbol:encoding": {
+        "@id": "https://identifiers.org/edam:format_1208"
+      },
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:name": "Sequence1"
+    },
+    {
+      "@id": "igem:BBa_C0062_Sequence1",
+      "@type": "sbol:Sequence",
+      "sbol:description": "BBa_C0062 sequence",
+      "sbol:displayId": "BBa_C0062_Sequence1",
+      "sbol:elements": "atgaaaaacataaatgccgacgacacatacagaataattaataaaattaaagcttgtagaagcaataatgatattaatcaatgcttatctgatatgactaaaatggtacattgtgaatattatttactcgcgatcatttatcctcattctatggttaaatctgatatttcaatcctagataattaccctaaaaaatggaggcaatattatgatgacgctaatttaataaaatatgatcctatagtagattattctaactccaatcattcaccaattaattggaatatatttgaaaacaatgctgtaaataaaaaatctccaaatgtaattaaagaagcgaaaacatcaggtcttatcactgggtttagtttccctattcatacggctaacaatggcttcggaatgcttagttttgcacattcagaaaaagacaactatatagatagtttatttttacatgcgtgtatgaacataccattaattgttccttctctagttgataattatcgaaaaataaatatagcaaataataaatcaaacaacgatttaaccaaaagagaaaaagaatgtttagcgtgggcatgcgaaggaaaaagctcttgggatatttcaaaaatattaggttgcagtgagcgtactgtcactttccatttaaccaatgcgcaaatgaaactcaatacaacaaaccgctgccaaagtatttctaaagcaattttaacaggagcaattgattgcccatactttaaaaattaataacactgatagtgctagtgtagatcac",
+      "sbol:encoding": {
+        "@id": "https://identifiers.org/edam:format_1207"
+      },
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:name": "Sequence1"
+    },
+    {
+      "@id": "igem:BBa_F2620",
+      "@type": "sbol:Component",
+      "sbol:description": "PoPS Receiver",
+      "sbol:displayId": "BBa_F2620",
+      "sbol:hasFeature": [
+        {
+          "@id": "BB:SubComponent1"
+        },
+        {
+          "@id": "BB:SubComponent2"
+        },
+        {
+          "@id": "BB:SubComponent3"
+        },
+        {
+          "@id": "BB:SubComponent4"
+        },
+        {
+          "@id": "BB:SubComponent5"
+        },
+        {
+          "@id": "BB:SubComponent6"
+        },
+        {
+          "@id": "BB:SubComponent7"
+        }
+      ],
+      "sbol:hasInteraction": [
+        {
+          "@id": "BB:Interaction1"
+        },
+        {
+          "@id": "BB:Interaction2"
+        },
+        {
+          "@id": "BB:Interaction3"
+        }
+      ],
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:hasSequence": {
+        "@id": "igem:BBa_F2620_Sequence1"
+      },
+      "sbol:name": "BBa_F2620",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000704"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "igem:BBa_F2620_Sequence1",
+      "@type": "sbol:Sequence",
+      "sbol:description": "BBa_F2620 sequence",
+      "sbol:displayId": "BBa_F2620_Sequence1",
+      "sbol:elements": "tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcacaaagaggagaaaatgaaaaacataaatgccgacgacacatacagaataattaataaaattaaagcttgtagaagcaataatgatattaatcaatgcttatctgatatgactaaaatggtacattgtgaatattatttactcgcgatcatttatcctcattctatggttaaatctgatatttcaatcctagataattaccctaaaaaatggaggcaatattatgatgacgctaatttaataaaatatgatcctatagtagattattctaactccaatcattcaccaattaattggaatatatttgaaaacaatgctgtaaataaaaaatctccaaatgtaattaaagaagcgaaaacatcaggtcttatcactgggtttagtttccctattcatacggctaacaatggcttcggaatgcttagttttgcacattcagaaaaagacaactatatagatagtttatttttacatgcgtgtatgaacataccattaattgttccttctctagttgataattatcgaaaaataaatatagcaaataataaatcaaacaacgatttaaccaaaagagaaaaagaatgtttagcgtgggcatgcgaaggaaaaagctcttgggatatttcaaaaatattaggttgcagtgagcgtactgtcactttccatttaaccaatgcgcaaatgaaactcaatacaacaaaccgctgccaaagtatttctaaagcaattttaacaggagcaattgattgcccatactttaaaaattaataacactgatagtgctagtgtagatcacccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctcacactggctcaccttcgggtgggcctttctgcgtttataacctgtaggatcgtacaggtttacgcaagaaaatggtttgttatagtcgaataaa",
+      "sbol:encoding": {
+        "@id": "https://identifiers.org/edam:format_1207"
+      },
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:name": "Sequence1"
+    },
+    {
+      "@id": "BB:Interaction1",
+      "@type": "sbol:Interaction",
+      "sbol:displayId": "Interaction1",
+      "sbol:hasParticipation": [
+        {
+          "@id": "Int:Participation1"
+        },
+        {
+          "@id": "Int:Participation2"
+        }
+      ],
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000589"
+      }
+    },
+    {
+      "@id": "Int:Participation1",
+      "@type": "sbol:Participation",
+      "sbol:displayId": "Participation1",
+      "sbol:participant": {
+        "@id": "BB:SubComponent5"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000645"
+      }
+    },
+    {
+      "@id": "Int:Participation2",
+      "@type": "sbol:Participation",
+      "sbol:displayId": "Participation2",
+      "sbol:participant": {
+        "@id": "BB:SubComponent1"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000011"
+      }
+    },
+    {
+      "@id": "BB:Interaction2",
+      "@type": "sbol:Interaction",
+      "sbol:displayId": "Interaction2",
+      "sbol:hasParticipation": [
+        {
+          "@id": "In:Participation1"
+        },
+        {
+          "@id": "In:Participation2"
+        }
+      ],
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000170"
+      }
+    },
+    {
+      "@id": "In:Participation1",
+      "@type": "sbol:Participation",
+      "sbol:displayId": "Participation1",
+      "sbol:participant": {
+        "@id": "BB:SubComponent7"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000643"
+      }
+    },
+    {
+      "@id": "In:Participation2",
+      "@type": "sbol:Participation",
+      "sbol:displayId": "Participation2",
+      "sbol:participant": {
+        "@id": "BB:SubComponent1"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000459"
+      }
+    },
+    {
+      "@id": "BB:Interaction3",
+      "@type": "sbol:Interaction",
+      "sbol:displayId": "Interaction3",
+      "sbol:hasParticipation": [
+        {
+          "@id": "Inte:Participation1"
+        },
+        {
+          "@id": "Inte:Participation2"
+        }
+      ],
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000170"
+      }
+    },
+    {
+      "@id": "Inte:Participation1",
+      "@type": "sbol:Participation",
+      "sbol:displayId": "Participation1",
+      "sbol:participant": {
+        "@id": "BB:SubComponent3"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000643"
+      }
+    },
+    {
+      "@id": "Inte:Participation2",
+      "@type": "sbol:Participation",
+      "sbol:displayId": "Participation2",
+      "sbol:participant": {
+        "@id": "BB:SubComponent2"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000459"
+      }
+    },
+    {
+      "@id": "BB:SubComponent1",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent1",
+      "sbol:instanceOf": {
+        "@id": "igem:BBa_C0062_protein"
+      }
+    },
+    {
+      "@id": "BB:SubComponent2",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent2",
+      "sbol:instanceOf": {
+        "@id": "igem:TetR_protein"
+      }
+    },
+    {
+      "@id": "BB:SubComponent3",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent3",
+      "sbol:hasLocation": {
+        "@id": "SubC:Range1"
+      },
+      "sbol:instanceOf": {
+        "@id": "igem:BBa_R0040"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "SubC:Range1",
+      "@type": "sbol:Range",
+      "sbol:displayId": "Range1",
+      "sbol:end": "54",
+      "sbol:hasSequence": {
+        "@id": "igem:BBa_F2620_Sequence1"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      },
+      "sbol:start": "1"
+    },
+    {
+      "@id": "BB:SubComponent4",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent4",
+      "sbol:hasLocation": {
+        "@id": "S:Range1"
+      },
+      "sbol:instanceOf": {
+        "@id": "igem:BBa_B0034"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "S:Range1",
+      "@type": "sbol:Range",
+      "sbol:displayId": "Range1",
+      "sbol:end": "66",
+      "sbol:hasSequence": {
+        "@id": "igem:BBa_F2620_Sequence1"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      },
+      "sbol:start": "55"
+    },
+    {
+      "@id": "BB:SubComponent5",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent5",
+      "sbol:hasLocation": {
+        "@id": "SubCo:Range1"
+      },
+      "sbol:instanceOf": {
+        "@id": "igem:BBa_C0062"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "SubCo:Range1",
+      "@type": "sbol:Range",
+      "sbol:displayId": "Range1",
+      "sbol:end": "847",
+      "sbol:hasSequence": {
+        "@id": "igem:BBa_F2620_Sequence1"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      },
+      "sbol:start": "67"
+    },
+    {
+      "@id": "BB:SubComponent6",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent6",
+      "sbol:hasLocation": {
+        "@id": "Sub0:Range1"
+      },
+      "sbol:instanceOf": {
+        "@id": "igem:BBa_B0015"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "Sub0:Range1",
+      "@type": "sbol:Range",
+      "sbol:displayId": "Range1",
+      "sbol:end": "968",
+      "sbol:hasSequence": {
+        "@id": "igem:BBa_F2620_Sequence1"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      },
+      "sbol:start": "848"
+    },
+    {
+      "@id": "BB:SubComponent7",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent7",
+      "sbol:hasLocation": {
+        "@id": "Sub1:Range1"
+      },
+      "sbol:instanceOf": {
+        "@id": "igem:BBa_R0062"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      }
+    },
+    {
+      "@id": "Sub1:Range1",
+      "@type": "sbol:Range",
+      "sbol:displayId": "Range1",
+      "sbol:end": "1023",
+      "sbol:hasSequence": {
+        "@id": "igem:BBa_F2620_Sequence1"
+      },
+      "sbol:orientation": {
+        "@id": "https://identifiers.org/SO:0001030"
+      },
+      "sbol:start": "969"
+    },
+    {
+      "@id": "igem:BBa_R0040",
+      "@type": "sbol:Component",
+      "sbol:description": "TetR repressible promoter",
+      "sbol:displayId": "BBa_R0040",
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:hasSequence": {
+        "@id": "igem:BBa_R0040_Sequence1"
+      },
+      "sbol:name": "pTetR",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000167"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "igem:BBa_R0040_Sequence1",
+      "@type": "sbol:Sequence",
+      "sbol:description": "BBa_R0040 sequence",
+      "sbol:displayId": "BBa_R0040_Sequence1",
+      "sbol:elements": "tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcac",
+      "sbol:encoding": {
+        "@id": "https://identifiers.org/edam:format_1207"
+      },
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:name": "Sequence1"
+    },
+    {
+      "@id": "igem:BBa_R0062",
+      "@type": "sbol:Component",
+      "sbol:description": "Promoter (luxR &amp; HSL regulated -- lux pR)",
+      "sbol:displayId": "BBa_R0062",
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:hasSequence": {
+        "@id": "igem:BBa_R0062_Sequence1"
+      },
+      "sbol:name": "lux pR",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000167"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "igem:BBa_R0062_Sequence1",
+      "@type": "sbol:Sequence",
+      "sbol:description": "BBa_R0062 sequence",
+      "sbol:displayId": "BBa_R0062_Sequence1",
+      "sbol:elements": "acctgtaggatcgtacaggtttacgcaagaaaatggtttgttatagtcgaataaa",
+      "sbol:encoding": {
+        "@id": "https://identifiers.org/edam:format_1207"
+      },
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:name": "Sequence1"
+    },
+    {
+      "@id": "igem:TetR_protein",
+      "@type": "sbol:Component",
+      "sbol:description": "TetR protein",
+      "sbol:displayId": "TetR_protein",
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:hasSequence": {
+        "@id": "igem:TetR_protein_Sequence1"
+      },
+      "sbol:name": "TetR",
+      "sbol:role": {
+        "@id": "https://identifiers.org/GO:0003700"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000252"
+      }
+    },
+    {
+      "@id": "igem:TetR_protein_Sequence1",
+      "@type": "sbol:Sequence",
+      "sbol:description": "TetR_protein sequence",
+      "sbol:displayId": "TetR_protein_Sequence1",
+      "sbol:elements": "NNNNNNNNNNN",
+      "sbol:encoding": {
+        "@id": "https://identifiers.org/edam:format_1208"
+      },
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:name": "Sequence1"
+    }
+  ]
+}

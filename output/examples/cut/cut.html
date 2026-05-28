@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SBOL3 Cut</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/rdflib/dist/rdflib.min.js"></script>
+    <script src="../../../sbol-script/dist/sbol-script.js"></script>
+    <style>
+        pre { white-space: pre-wrap; word-wrap: break-word; background: #f8f9fa; padding: 1rem; border-radius: 6px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body class="bg-light">
+<div class="container py-4">
+    <h1 class="mb-4">SBOL3 Cut</h1>
+    <p class="text-muted">A Cut location (at position 5) on a SequenceFeature within BBa_R0040 (pTetR promoter).</p>
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">Turtle (text/turtle)</div>
+        <div class="card-body"><pre id="turtleOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-secondary text-white">RDF/XML (application/rdf+xml)</div>
+        <div class="card-body"><pre id="xmlOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-success text-white">N-Triples (application/n-triples)</div>
+        <div class="card-body"><pre id="ntriplesOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-success text-white">N-Triples Ordered</div>
+        <div class="card-body"><pre id="ntriplesOrderedOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-info text-white">JSON-LD (application/ld+json)</div>
+        <div class="card-body"><pre id="jsonldOutput"></pre></div>
+    </div>
+</div>
+<script>
+    const { SBOLDocument, RDFFormat } = window.sbolScript;
+
+    const NS  = 'https://synbiohub.org/public/igem';
+    const doc = new SBOLDocument(NS + '/');
+
+    // ── BBa_R0040 Sequence ─────────────────────────────────────────────────────
+    const seq_r0040 = doc.createDNASequence(NS + '/BBa_R0040_Sequence1', NS,
+        'tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcac');
+    seq_r0040.setName('Sequence1');
+    seq_r0040.setDescription('BBa_R0040 sequence');
+
+    // ── BBa_R0040 — promoter with SequenceFeature containing a Cut ─────────────
+    const bba_r0040 = doc.createDNAComponent(NS + '/BBa_R0040', NS);
+    bba_r0040.addRole('https://identifiers.org/SO:0000167');  // Promoter
+    bba_r0040.setName('pTetR');
+    bba_r0040.setDescription('TetR repressible promoter');
+    bba_r0040.addSequence(seq_r0040.getIdentifier());
+
+    // ── SequenceFeature with Cut ───────────────────────────────────────────────
+    const sf1 = bba_r0040.createSequenceFeature('SequenceFeature1');
+    const cut1 = sf1.createCut(5, 'Cut1');
+    cut1.setSequenceIRI(seq_r0040.getIdentifier());
+
+    document.getElementById('turtleOutput').textContent         = doc.toRDF(RDFFormat.TURTLE);
+    document.getElementById('xmlOutput').textContent            = doc.toRDF(RDFFormat.RDF_XML);
+    document.getElementById('ntriplesOutput').textContent       = doc.toRDF(RDFFormat.N_TRIPLES);
+    document.getElementById('ntriplesOrderedOutput').textContent = doc.toRDF(RDFFormat.N_TRIPLES_ORDERED);
+    document.getElementById('jsonldOutput').textContent         = doc.toRDF(RDFFormat.JSON_LD);
+</script>
+</body>
+</html>

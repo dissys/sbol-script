@@ -1,0 +1,36 @@
+{
+  "@context": {
+    "sbol": "http://sbols.org/v3#",
+    "exa": "https://sbolstandard.org/examples/",
+    "i": "https://sbolstandard.org/examples/i13504_system/",
+    "sbo": "https://sbolstandard.org/"
+  },
+  "@graph": [
+    {
+      "@id": "exa:i13504_system",
+      "@type": "sbol:Component",
+      "sbol:displayId": "i13504_system",
+      "sbol:hasInteraction": {
+        "@id": "i:Interaction1"
+      },
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "i13504 system",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000704"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "i:Interaction1",
+      "@type": "sbol:Interaction",
+      "sbol:displayId": "Interaction1",
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000589"
+      }
+    }
+  ]
+}

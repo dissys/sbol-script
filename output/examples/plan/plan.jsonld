@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "prov": "http://www.w3.org/ns/prov#",
+    "sbol": "http://sbols.org/v3#",
+    "exa": "https://sbolstandard.org/examples/",
+    "sbo": "https://sbolstandard.org/"
+  },
+  "@id": "exa:CodonOptimisationProtocol",
+  "@type": [
+    "sbol:TopLevel",
+    "prov:Plan"
+  ],
+  "sbol:description": "Optimisation protocol to improve the translation of mRNAs.",
+  "sbol:displayId": "CodonOptimisationProtocol",
+  "sbol:hasNamespace": {
+    "@id": "sbo:examples"
+  },
+  "sbol:name": "Codon Optimisation Protocol"
+}

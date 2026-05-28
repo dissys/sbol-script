@@ -1,0 +1,12 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:sbol="http://sbols.org/v3#"
+ xmlns:prov="http://www.w3.org/ns/prov#">
+    <prov:Plan rdf:about="https://sbolstandard.org/examples/CodonOptimisationProtocol">
+        <sbol:description>Optimisation protocol to improve the translation of mRNAs.</sbol:description>
+        <sbol:displayId>CodonOptimisationProtocol</sbol:displayId>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+        <sbol:name>Codon Optimisation Protocol</sbol:name>
+        <rdf:type rdf:resource="http://sbols.org/v3#TopLevel"/>
+    </prov:Plan>
+</rdf:RDF>

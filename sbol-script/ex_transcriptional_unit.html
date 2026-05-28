@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>SBOL3 Library Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/rdflib/dist/rdflib.min.js"></script>
+    <script src="./dist/sbol-script.js"></script>
+    <style>
+        pre { white-space: pre-wrap; word-wrap: break-word; background: #f8f9fa; padding: 1rem; border-radius: 6px; border: 1px solid #ddd; }
+    </style>
+</head>
+
+<body class="bg-light">
+<div class="container py-4">
+    <h1 class="mb-4">SBOL3 Document Output</h1>
+
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">Turtle (text/turtle)</div>
+        <div class="card-body"><pre id="turtleOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-secondary text-white">RDF/XML (application/rdf+xml)</div>
+        <div class="card-body"><pre id="xmlOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-success text-white">N-Triples (application/n-triples)</div>
+        <div class="card-body"><pre id="ntriplesOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-success text-white">N-Triples Ordered</div>
+        <div class="card-body"><pre id="ntriplesOrderedOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-info text-white">JSON-LD (application/ld+json)</div>
+        <div class="card-body"><pre id="jsonldOutput"></pre></div>
+    </div>
+</div>
+
+<script>
+    const {
+        SBOLDocument, SBOLAPI,
+        RDFFormat, DNARole, RNARole, ProteinRole, ComponentType, Encoding, Orientation,
+        InteractionType, ParticipationType,
+        PromoterDNAComponent, RBSDNAComponent, CDSDNAComponent, TerminatorDNAComponent,
+        Cardinality, CombinatorialDerivationStrategy
+    } = window.sbolScript;
+
+    const NS = 'http://keele.ac.uk/scm';
+    const doc = new SBOLDocument(NS + '/');
+
+    // ── Sequences ──────────────────────────────────────────────────────────
+    const seq1 = doc.createDNASequence(NS + '/seq1', NS, 'ATCGATCGATCG');
+
+    // ── Components ─────────────────────────────────────────────────────────
+    const promoter = SBOLAPI.createPromoterDNAComponent(doc, NS + '/promoter1', NS);
+    promoter.setName('Promoter 1');
+
+    const rbs = SBOLAPI.createRBSDNAComponent(doc, NS + '/rbs1', NS);
+    const cds = SBOLAPI.createCDSDNAComponent(doc, NS + '/cds1', NS);
+    const terminator = SBOLAPI.createTerminatorDNAComponent(doc, NS + '/term1', NS);
+
+    const protein = SBOLAPI.createProteinComponent(doc, NS + '/protein1', NS);
+    protein.setName('MyProtein');
+
+    // ── Engineered region with sub-components ──────────────────────────────
+    const region = doc.createDNAComponent(NS + '/region1', NS);
+    region.addRole(DNARole.EngineeredRegion);
+    region.addSequence(seq1.getIdentifier());
+
+    const sc_promoter = region.createSubComponent(promoter.getIdentifier(), 'sc_promoter');
+    sc_promoter.setOrientation(Orientation.INLINE);
+    sc_promoter.createRange(seq1.getIdentifier(), 1, 200, 'pRange');
+
+    const sc_rbs     = region.createSubComponent(rbs.getIdentifier(), 'sc_rbs');
+    const sc_cds     = region.createSubComponent(cds.getIdentifier(), 'sc_cds');
+    const sc_term    = region.createSubComponent(terminator.getIdentifier(), 'sc_term');
+    const sc_protein = region.createSubComponent(protein.getIdentifier(), 'sc_protein');
+
+    // ── Interactions ────────────────────────────────────────────────────────
+    // Genetic production: promoter drives CDS -> protein
+    SBOLAPI.createGeneticProductionInteraction(
+        region,
+        sc_cds.getIdentifier(),
+        sc_protein.getIdentifier(),
+        sc_promoter.getIdentifier(),
+        'GeneticProduction1'
+    );
+
+    // Degradation of the protein
+    SBOLAPI.createDegradationInteraction(
+        region,
+        [sc_protein.getIdentifier()],
+        'Degradation1'
+    );
+
+    // ── Constraint: promoter precedes rbs ──────────────────────────────────
+    const { ConstraintRestriction } = window.sbolScript;
+    const c1 = region.createConstraint(
+        sc_promoter.getIdentifier(),
+        ConstraintRestriction.Precedes,
+        sc_rbs.getIdentifier(),
+        'c_precedes'
+    );
+
+    // ── Serialise ──────────────────────────────────────────────────────────
+    document.getElementById("turtleOutput").textContent      = doc.toRDF(RDFFormat.TURTLE);
+    document.getElementById("xmlOutput").textContent         = doc.toRDF(RDFFormat.RDF_XML);
+    document.getElementById("ntriplesOutput").textContent    = doc.toRDF(RDFFormat.N_TRIPLES);
+    document.getElementById("ntriplesOrderedOutput").textContent = doc.toRDF(RDFFormat.N_TRIPLES_ORDERED);
+    document.getElementById("jsonldOutput").textContent      = doc.toRDF(RDFFormat.JSON_LD);
+
+    console.log(doc.toString());
+    console.log('Validation:', doc.validate());
+    console.log('Components:', doc.getComponents().map(c => c.getIdentifier()));
+    console.log('Sequences:', doc.getSequences().map(s => s.getIdentifier()));
+</script>
+</body>
+</html>

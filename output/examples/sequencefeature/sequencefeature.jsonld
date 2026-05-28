@@ -1,0 +1,64 @@
+{
+  "@context": {
+    "sbol": "http://sbols.org/v3#",
+    "exa": "https://sbolstandard.org/examples/",
+    "E": "https://sbolstandard.org/examples/E0040/",
+    "sbo": "https://sbolstandard.org/",
+    "Seq": "https://sbolstandard.org/examples/E0040/SequenceFeature1/"
+  },
+  "@graph": [
+    {
+      "@id": "exa:E0040",
+      "@type": "sbol:Component",
+      "sbol:displayId": "E0040",
+      "sbol:hasFeature": {
+        "@id": "E:SequenceFeature1"
+      },
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:hasSequence": {
+        "@id": "exa:E0040_Sequence1"
+      },
+      "sbol:name": "E0040",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000316"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "exa:E0040_Sequence1",
+      "@type": "sbol:Sequence",
+      "sbol:description": "E0040 sequence",
+      "sbol:displayId": "E0040_Sequence1",
+      "sbol:elements": "atgcgtaaaggagaagaacttttcactggagttgtcccaattcttgttgaattagatggtgatgttaatgggcacaaattttctgtcagtggagagggtgaaggtgatgcaacatacggaaaacttacccttaaatttatttgcactactggaaaactacctgttccatggccaacacttgtcactactttcggttatggtgttcaatgctttgcgagatacccagatcatatgaaacagcatgactttttcaagagtgccatgcccgaaggttatgtacaggaaagaactatatttttcaaagatgacgggaactacaagacacgtgctgaagtcaagtttgaaggtgatacccttgttaatagaatcgagttaaaaggtattgattttaaagaagatggaaacattcttggacacaaattggaatacaactataactcacacaatgtatacatcatggcagacaaacaaaagaatggaatcaaagttaacttcaaaattagacacaacattgaagatggaagcgttcaactagcagaccattatcaacaaaatactccaattggcgatggccctgtccttttaccagacaaccattacctgtccacacaatctgccctttcgaaagatcccaacgaaaagagagaccacatggtccttcttgagtttgtaacagctgctgggattacacatggcatggatgaactatacaaataataa",
+      "sbol:encoding": {
+        "@id": "https://identifiers.org/edam:format_1207"
+      },
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "Sequence1"
+    },
+    {
+      "@id": "E:SequenceFeature1",
+      "@type": "sbol:SequenceFeature",
+      "sbol:displayId": "SequenceFeature1",
+      "sbol:hasLocation": {
+        "@id": "Seq:Range1"
+      }
+    },
+    {
+      "@id": "Seq:Range1",
+      "@type": "sbol:Range",
+      "sbol:displayId": "Range1",
+      "sbol:end": "3",
+      "sbol:hasSequence": {
+        "@id": "exa:E0040_Sequence1"
+      },
+      "sbol:start": "1"
+    }
+  ]
+}

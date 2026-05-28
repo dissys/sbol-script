@@ -1,0 +1,340 @@
+@prefix sbol: <http://sbols.org/v3#>.
+@prefix igem: <https://synbiohub.org/public/igem/>.
+@prefix pub: <https://synbiohub.org/public/>.
+@prefix BBa: <https://synbiohub.org/public/igem/BBa_B0015/>.
+@prefix Sub: <https://synbiohub.org/public/igem/BBa_B0015/SubComponent1/>.
+@prefix Su: <https://synbiohub.org/public/igem/BBa_B0015/SubComponent2/>.
+@prefix BB: <https://synbiohub.org/public/igem/BBa_F2620/>.
+@prefix Int: <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/>.
+@prefix In: <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/>.
+@prefix Inte: <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/>.
+@prefix SubC: <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3/>.
+@prefix S: <https://synbiohub.org/public/igem/BBa_F2620/SubComponent4/>.
+@prefix SubCo: <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5/>.
+@prefix Sub0: <https://synbiohub.org/public/igem/BBa_F2620/SubComponent6/>.
+@prefix Sub1: <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7/>.
+
+igem:BBa_B0010
+    a sbol:Component;
+    sbol:description
+    "Transcriptional terminator consisting of a 64 bp stem-loop";
+    sbol:displayId "BBa_B0010";
+    sbol:hasNamespace pub:igem;
+    sbol:hasSequence igem:BBa_B0010_Sequence1;
+    sbol:name "BBa_B0010";
+    sbol:role <https://identifiers.org/SO:0000141>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+igem:BBa_B0010_Sequence1
+    a sbol:Sequence;
+    sbol:description "BBa_B0010 sequence";
+    sbol:displayId "BBa_B0010_Sequence1";
+    sbol:elements
+        "ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctc";
+    sbol:encoding <https://identifiers.org/edam:format_1207>;
+    sbol:hasNamespace pub:igem;
+    sbol:name "Sequence1".
+igem:BBa_B0012
+    a sbol:Component;
+    sbol:description "Double terminator consisting of BBa_B0010 and BBa_B0012";
+    sbol:displayId "BBa_B0012";
+    sbol:hasNamespace pub:igem;
+    sbol:hasSequence igem:BBa_B0012_Sequence1;
+    sbol:name "BBa_B0012";
+    sbol:role <https://identifiers.org/SO:0000141>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+igem:BBa_B0012_Sequence1
+    a sbol:Sequence;
+    sbol:description "BBa_B0012 sequence";
+    sbol:displayId "BBa_B0012_Sequence1";
+    sbol:elements "tcacactggctcaccttcgggtgggcctttctgcgtttata";
+    sbol:encoding <https://identifiers.org/edam:format_1207>;
+    sbol:hasNamespace pub:igem;
+    sbol:name "Sequence1".
+igem:BBa_B0015
+    a sbol:Component;
+    sbol:description "Double terminator consisting of BBa_B0010 and BBa_B0012";
+    sbol:displayId "BBa_B0015";
+    sbol:hasFeature BBa:SubComponent1, BBa:SubComponent2;
+    sbol:hasNamespace pub:igem;
+    sbol:hasSequence igem:BBa_B0015_Sequence1;
+    sbol:name "BBa_B0015";
+    sbol:role <https://identifiers.org/SO:0000141>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+igem:BBa_B0015_Sequence1
+    a sbol:Sequence;
+    sbol:description "BBa_B0015 sequence";
+    sbol:displayId "BBa_B0015_Sequence1";
+    sbol:elements
+        "ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctcacactggctcaccttcgggtgggcctttctgcgtttata";
+    sbol:encoding <https://identifiers.org/edam:format_1207>;
+    sbol:hasNamespace pub:igem;
+    sbol:name "Sequence1".
+BBa:SubComponent1
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent1";
+    sbol:hasLocation Sub:Range1;
+    sbol:instanceOf igem:BBa_B0010;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+Sub:Range1
+    a sbol:Range;
+    sbol:displayId "Range1";
+    sbol:end "80";
+    sbol:hasSequence igem:BBa_B0015_Sequence1;
+    sbol:orientation <https://identifiers.org/SO:0001030>;
+    sbol:start "1".
+BBa:SubComponent2
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent2";
+    sbol:hasLocation Su:Range1;
+    sbol:instanceOf igem:BBa_B0012;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+Su:Range1
+    a sbol:Range;
+    sbol:displayId "Range1";
+    sbol:end "121";
+    sbol:hasSequence igem:BBa_B0015_Sequence1;
+    sbol:orientation <https://identifiers.org/SO:0001030>;
+    sbol:start "81".
+igem:BBa_B0034
+    a sbol:Component;
+    sbol:description "RBS based on Elowitz repressilator";
+    sbol:displayId "BBa_B0034";
+    sbol:hasNamespace pub:igem;
+    sbol:hasSequence igem:BBa_B0034_Sequence1;
+    sbol:name "BBa_B0034";
+    sbol:role <https://identifiers.org/SO:0000139>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+igem:BBa_B0034_Sequence1
+    a sbol:Sequence;
+    sbol:description "BBa_B0034 sequence";
+    sbol:displayId "BBa_B0034_Sequence1";
+    sbol:elements "aaagaggagaaa";
+    sbol:encoding <https://identifiers.org/edam:format_1207>;
+    sbol:hasNamespace pub:igem;
+    sbol:name "Sequence1".
+igem:BBa_C0062
+    a sbol:Component;
+    sbol:description "luxR repressor/activator,  (no LVA?)";
+    sbol:displayId "BBa_C0062";
+    sbol:hasNamespace pub:igem;
+    sbol:hasSequence igem:BBa_C0062_Sequence1;
+    sbol:name "luxR";
+    sbol:role <https://identifiers.org/SO:0000316>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+igem:BBa_C0062_protein
+    a sbol:Component;
+    sbol:description "LuxR protein";
+    sbol:displayId "BBa_C0062_protein";
+    sbol:hasNamespace pub:igem;
+    sbol:hasSequence igem:BBa_C0062_protein_Sequence1;
+    sbol:name "LuxR";
+    sbol:role <https://identifiers.org/GO:0003700>;
+    sbol:type <https://identifiers.org/SBO:0000252>.
+igem:BBa_C0062_protein_Sequence1
+    a sbol:Sequence;
+    sbol:description "BBa_C0062_protein sequence";
+    sbol:displayId "BBa_C0062_protein_Sequence1";
+    sbol:elements "NNNNNNNNNNN";
+    sbol:encoding <https://identifiers.org/edam:format_1208>;
+    sbol:hasNamespace pub:igem;
+    sbol:name "Sequence1".
+igem:BBa_C0062_Sequence1
+    a sbol:Sequence;
+    sbol:description "BBa_C0062 sequence";
+    sbol:displayId "BBa_C0062_Sequence1";
+    sbol:elements
+        "atgaaaaacataaatgccgacgacacatacagaataattaataaaattaaagcttgtagaagcaataatgatattaatcaatgcttatctgatatgactaaaatggtacattgtgaatattatttactcgcgatcatttatcctcattctatggttaaatctgatatttcaatcctagataattaccctaaaaaatggaggcaatattatgatgacgctaatttaataaaatatgatcctatagtagattattctaactccaatcattcaccaattaattggaatatatttgaaaacaatgctgtaaataaaaaatctccaaatgtaattaaagaagcgaaaacatcaggtcttatcactgggtttagtttccctattcatacggctaacaatggcttcggaatgcttagttttgcacattcagaaaaagacaactatatagatagtttatttttacatgcgtgtatgaacataccattaattgttccttctctagttgataattatcgaaaaataaatatagcaaataataaatcaaacaacgatttaaccaaaagagaaaaagaatgtttagcgtgggcatgcgaaggaaaaagctcttgggatatttcaaaaatattaggttgcagtgagcgtactgtcactttccatttaaccaatgcgcaaatgaaactcaatacaacaaaccgctgccaaagtatttctaaagcaattttaacaggagcaattgattgcccatactttaaaaattaataacactgatagtgctagtgtagatcac";
+    sbol:encoding <https://identifiers.org/edam:format_1207>;
+    sbol:hasNamespace pub:igem;
+    sbol:name "Sequence1".
+igem:BBa_F2620
+    a sbol:Component;
+    sbol:description "PoPS Receiver";
+    sbol:displayId "BBa_F2620";
+    sbol:hasFeature
+        BB:SubComponent1, BB:SubComponent2, BB:SubComponent3, BB:SubComponent4,
+        BB:SubComponent5, BB:SubComponent6, BB:SubComponent7;
+    sbol:hasInteraction BB:Interaction1, BB:Interaction2, BB:Interaction3;
+    sbol:hasNamespace pub:igem;
+    sbol:hasSequence igem:BBa_F2620_Sequence1;
+    sbol:name "BBa_F2620";
+    sbol:role <https://identifiers.org/SO:0000704>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+igem:BBa_F2620_Sequence1
+    a sbol:Sequence;
+    sbol:description "BBa_F2620 sequence";
+    sbol:displayId "BBa_F2620_Sequence1";
+    sbol:elements
+        "tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcacaaagaggagaaaatgaaaaacataaatgccgacgacacatacagaataattaataaaattaaagcttgtagaagcaataatgatattaatcaatgcttatctgatatgactaaaatggtacattgtgaatattatttactcgcgatcatttatcctcattctatggttaaatctgatatttcaatcctagataattaccctaaaaaatggaggcaatattatgatgacgctaatttaataaaatatgatcctatagtagattattctaactccaatcattcaccaattaattggaatatatttgaaaacaatgctgtaaataaaaaatctccaaatgtaattaaagaagcgaaaacatcaggtcttatcactgggtttagtttccctattcatacggctaacaatggcttcggaatgcttagttttgcacattcagaaaaagacaactatatagatagtttatttttacatgcgtgtatgaacataccattaattgttccttctctagttgataattatcgaaaaataaatatagcaaataataaatcaaacaacgatttaaccaaaagagaaaaagaatgtttagcgtgggcatgcgaaggaaaaagctcttgggatatttcaaaaatattaggttgcagtgagcgtactgtcactttccatttaaccaatgcgcaaatgaaactcaatacaacaaaccgctgccaaagtatttctaaagcaattttaacaggagcaattgattgcccatactttaaaaattaataacactgatagtgctagtgtagatcacccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctcacactggctcaccttcgggtgggcctttctgcgtttataacctgtaggatcgtacaggtttacgcaagaaaatggtttgttatagtcgaataaa";
+    sbol:encoding <https://identifiers.org/edam:format_1207>;
+    sbol:hasNamespace pub:igem;
+    sbol:name "Sequence1".
+BB:Interaction1
+    a sbol:Interaction;
+    sbol:displayId "Interaction1";
+    sbol:hasParticipation Int:Participation1, Int:Participation2;
+    sbol:type <https://identifiers.org/SBO:0000589>.
+Int:Participation1
+    a sbol:Participation;
+    sbol:displayId "Participation1";
+    sbol:participant BB:SubComponent5;
+    sbol:role <https://identifiers.org/SBO:0000645>.
+Int:Participation2
+    a sbol:Participation;
+    sbol:displayId "Participation2";
+    sbol:participant BB:SubComponent1;
+    sbol:role <https://identifiers.org/SBO:0000011>.
+BB:Interaction2
+    a sbol:Interaction;
+    sbol:displayId "Interaction2";
+    sbol:hasParticipation In:Participation1, In:Participation2;
+    sbol:type <https://identifiers.org/SBO:0000170>.
+In:Participation1
+    a sbol:Participation;
+    sbol:displayId "Participation1";
+    sbol:participant BB:SubComponent7;
+    sbol:role <https://identifiers.org/SBO:0000643>.
+In:Participation2
+    a sbol:Participation;
+    sbol:displayId "Participation2";
+    sbol:participant BB:SubComponent1;
+    sbol:role <https://identifiers.org/SBO:0000459>.
+BB:Interaction3
+    a sbol:Interaction;
+    sbol:displayId "Interaction3";
+    sbol:hasParticipation Inte:Participation1, Inte:Participation2;
+    sbol:type <https://identifiers.org/SBO:0000170>.
+Inte:Participation1
+    a sbol:Participation;
+    sbol:displayId "Participation1";
+    sbol:participant BB:SubComponent3;
+    sbol:role <https://identifiers.org/SBO:0000643>.
+Inte:Participation2
+    a sbol:Participation;
+    sbol:displayId "Participation2";
+    sbol:participant BB:SubComponent2;
+    sbol:role <https://identifiers.org/SBO:0000459>.
+BB:SubComponent1
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent1";
+    sbol:instanceOf igem:BBa_C0062_protein.
+BB:SubComponent2
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent2";
+    sbol:instanceOf igem:TetR_protein.
+BB:SubComponent3
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent3";
+    sbol:hasLocation SubC:Range1;
+    sbol:instanceOf igem:BBa_R0040;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+SubC:Range1
+    a sbol:Range;
+    sbol:displayId "Range1";
+    sbol:end "54";
+    sbol:hasSequence igem:BBa_F2620_Sequence1;
+    sbol:orientation <https://identifiers.org/SO:0001030>;
+    sbol:start "1".
+BB:SubComponent4
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent4";
+    sbol:hasLocation S:Range1;
+    sbol:instanceOf igem:BBa_B0034;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+S:Range1
+    a sbol:Range;
+    sbol:displayId "Range1";
+    sbol:end "66";
+    sbol:hasSequence igem:BBa_F2620_Sequence1;
+    sbol:orientation <https://identifiers.org/SO:0001030>;
+    sbol:start "55".
+BB:SubComponent5
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent5";
+    sbol:hasLocation SubCo:Range1;
+    sbol:instanceOf igem:BBa_C0062;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+SubCo:Range1
+    a sbol:Range;
+    sbol:displayId "Range1";
+    sbol:end "847";
+    sbol:hasSequence igem:BBa_F2620_Sequence1;
+    sbol:orientation <https://identifiers.org/SO:0001030>;
+    sbol:start "67".
+BB:SubComponent6
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent6";
+    sbol:hasLocation Sub0:Range1;
+    sbol:instanceOf igem:BBa_B0015;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+Sub0:Range1
+    a sbol:Range;
+    sbol:displayId "Range1";
+    sbol:end "968";
+    sbol:hasSequence igem:BBa_F2620_Sequence1;
+    sbol:orientation <https://identifiers.org/SO:0001030>;
+    sbol:start "848".
+BB:SubComponent7
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent7";
+    sbol:hasLocation Sub1:Range1;
+    sbol:instanceOf igem:BBa_R0062;
+    sbol:orientation <https://identifiers.org/SO:0001030>.
+Sub1:Range1
+    a sbol:Range;
+    sbol:displayId "Range1";
+    sbol:end "1023";
+    sbol:hasSequence igem:BBa_F2620_Sequence1;
+    sbol:orientation <https://identifiers.org/SO:0001030>;
+    sbol:start "969".
+igem:BBa_R0040
+    a sbol:Component;
+    sbol:description "TetR repressible promoter";
+    sbol:displayId "BBa_R0040";
+    sbol:hasNamespace pub:igem;
+    sbol:hasSequence igem:BBa_R0040_Sequence1;
+    sbol:name "pTetR";
+    sbol:role <https://identifiers.org/SO:0000167>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+igem:BBa_R0040_Sequence1
+    a sbol:Sequence;
+    sbol:description "BBa_R0040 sequence";
+    sbol:displayId "BBa_R0040_Sequence1";
+    sbol:elements "tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcac";
+    sbol:encoding <https://identifiers.org/edam:format_1207>;
+    sbol:hasNamespace pub:igem;
+    sbol:name "Sequence1".
+igem:BBa_R0062
+    a sbol:Component;
+    sbol:description "Promoter (luxR &amp; HSL regulated -- lux pR)";
+    sbol:displayId "BBa_R0062";
+    sbol:hasNamespace pub:igem;
+    sbol:hasSequence igem:BBa_R0062_Sequence1;
+    sbol:name "lux pR";
+    sbol:role <https://identifiers.org/SO:0000167>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+igem:BBa_R0062_Sequence1
+    a sbol:Sequence;
+    sbol:description "BBa_R0062 sequence";
+    sbol:displayId "BBa_R0062_Sequence1";
+    sbol:elements "acctgtaggatcgtacaggtttacgcaagaaaatggtttgttatagtcgaataaa";
+    sbol:encoding <https://identifiers.org/edam:format_1207>;
+    sbol:hasNamespace pub:igem;
+    sbol:name "Sequence1".
+igem:TetR_protein
+    a sbol:Component;
+    sbol:description "TetR protein";
+    sbol:displayId "TetR_protein";
+    sbol:hasNamespace pub:igem;
+    sbol:hasSequence igem:TetR_protein_Sequence1;
+    sbol:name "TetR";
+    sbol:role <https://identifiers.org/GO:0003700>;
+    sbol:type <https://identifiers.org/SBO:0000252>.
+igem:TetR_protein_Sequence1
+    a sbol:Sequence;
+    sbol:description "TetR_protein sequence";
+    sbol:displayId "TetR_protein_Sequence1";
+    sbol:elements "NNNNNNNNNNN";
+    sbol:encoding <https://identifiers.org/edam:format_1208>;
+    sbol:hasNamespace pub:igem;
+    sbol:name "Sequence1".

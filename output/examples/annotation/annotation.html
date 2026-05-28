@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SBOL3 Annotation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/rdflib/dist/rdflib.min.js"></script>
+    <script src="../../../sbol-script/dist/sbol-script.js"></script>
+    <style>
+        pre { white-space: pre-wrap; word-wrap: break-word; background: #f8f9fa; padding: 1rem; border-radius: 6px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body class="bg-light">
+<div class="container py-4">
+    <h1 class="mb-4">SBOL3 Annotation</h1>
+    <p class="text-muted">BBa_J23119 Component with custom iGEM annotations: information and usage child objects using parts.igem.org types.</p>
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">Turtle (text/turtle)</div>
+        <div class="card-body"><pre id="turtleOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-secondary text-white">RDF/XML (application/rdf+xml)</div>
+        <div class="card-body"><pre id="xmlOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-success text-white">N-Triples (application/n-triples)</div>
+        <div class="card-body"><pre id="ntriplesOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-success text-white">N-Triples Ordered</div>
+        <div class="card-body"><pre id="ntriplesOrderedOutput"></pre></div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header bg-info text-white">JSON-LD (application/ld+json)</div>
+        <div class="card-body"><pre id="jsonldOutput"></pre></div>
+    </div>
+</div>
+<script>
+    const { SBOLDocument, RDFFormat, ComponentType } = window.sbolScript;
+
+    const NS    = 'https://sbolstandard.org/examples';
+    const SBOL  = 'http://sbols.org/v3#';
+    const RDF   = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#';
+    const IGEM  = 'http://parts.igem.org/';
+    const doc   = new SBOLDocument(NS + '/');
+    const store = doc.store;
+    const DG    = $rdf.defaultGraph();
+
+    // Helper to add a triple
+    function add(s, p, o) { store.add($rdf.sym(s), $rdf.sym(p), o, DG); }
+    function addLit(s, p, v) { store.add($rdf.sym(s), $rdf.sym(p), $rdf.literal(v), DG); }
+
+    // ── SynBioHubRepository — TopLevel (parts.igem.org/Repository) ─────────
+    const sbhRepo = NS + '/SynBioHubRepository';
+    add(sbhRepo, RDF + 'type', $rdf.sym(IGEM + 'Repository'));
+    add(sbhRepo, RDF + 'type', $rdf.sym(SBOL + 'TopLevel'));
+    add(sbhRepo, SBOL + 'hasNamespace', $rdf.sym(NS));
+    addLit(sbhRepo, SBOL + 'displayId', 'SynBioHubRepository');
+    addLit(sbhRepo, SBOL + 'name', 'SynBioHub');
+
+    // ── iGEMRepository — TopLevel (parts.igem.org/Repository) ─────────────
+    const igemRepo = NS + '/iGEMRepository';
+    add(igemRepo, RDF + 'type', $rdf.sym(IGEM + 'Repository'));
+    add(igemRepo, RDF + 'type', $rdf.sym(SBOL + 'TopLevel'));
+    add(igemRepo, SBOL + 'hasNamespace', $rdf.sym(NS));
+    addLit(igemRepo, SBOL + 'displayId', 'iGEMRepository');
+    addLit(igemRepo, SBOL + 'name', 'iGEM Registry');
+    addLit(igemRepo, SBOL + 'description', 'Registry of Standard Biological Parts');
+    add(igemRepo, IGEM + 'website', $rdf.sym('http://parts.igem.org/Main_Page'));
+
+    // ── BBa_J23119 — Component ─────────────────────────────────────────────
+    const bba = doc.createComponent(NS + '/BBa_J23119', NS, [ComponentType.DNA.iri]);
+    bba.setName('BBa_J23119 part');
+    bba.setDescription('Parts J23100 through J23119 are a family of constitutive promoter parts isolated from a small combinatorial library.');
+    bba.addRole('https://identifiers.org/SO:0000167');
+    // iGEM custom annotations on the component
+    add(bba.getIdentifier(), IGEM + 'group', $rdf.literal('iGEM2006_Berkeley'));
+    add(bba.getIdentifier(), IGEM + 'belongsTo', $rdf.sym(sbhRepo));
+    add(bba.getIdentifier(), IGEM + 'belongsTo', $rdf.sym(igemRepo));
+    add(bba.getIdentifier(), IGEM + 'experienceURL', $rdf.sym('http://parts.igem.org/Part:BBa_J23119:Experience'));
+
+    // ── information1 — Identified child (parts.igem.org/Information) ───────
+    const info1 = NS + '/BBa_J23119/information1';
+    add(info1, RDF + 'type', $rdf.sym(IGEM + 'Information'));
+    add(info1, RDF + 'type', $rdf.sym(SBOL + 'Identified'));
+    addLit(info1, SBOL + 'displayId', 'information1');
+    addLit(info1, SBOL + 'name', 'BBa_J23119_experience');
+    addLit(info1, SBOL + 'description', 'The experience page captures users\' experience using the BBa_J23119 part');
+    add(info1, IGEM + 'source', $rdf.sym(bba.getIdentifier()));
+    addLit(info1, IGEM + 'sigmaFactor', '//rnap/prokaryote/ecoli/sigma70');
+    addLit(info1, IGEM + 'regulation', '//regulation/constitutive');
+    addLit(info1, IGEM + 'regulation', '//regulation/second_regulation');
+    add(bba.getIdentifier(), IGEM + 'hasInformation', $rdf.sym(info1));
+
+    // ── information2 — Identified child (parts.igem.org/A_Information) ─────
+    const info2 = NS + '/BBa_J23119/information2';
+    add(info2, RDF + 'type', $rdf.sym(IGEM + 'A_Information'));
+    add(info2, RDF + 'type', $rdf.sym(SBOL + 'Identified'));
+    addLit(info2, SBOL + 'displayId', 'information2');
+    addLit(info2, SBOL + 'name', 'BBa_J23119_experience2');
+    add(bba.getIdentifier(), IGEM + 'hasInformation', $rdf.sym(info2));
+
+    // ── information3 — Identified child (parts.igem.org/Z_Information) ─────
+    const info3 = NS + '/BBa_J23119/information3';
+    add(info3, RDF + 'type', $rdf.sym(IGEM + 'Z_Information'));
+    add(info3, RDF + 'type', $rdf.sym(SBOL + 'Identified'));
+    addLit(info3, SBOL + 'displayId', 'information3');
+    addLit(info3, SBOL + 'name', 'BBa_J23119_experience3');
+    add(bba.getIdentifier(), IGEM + 'hasInformation', $rdf.sym(info3));
+
+    // ── usage1/twinParts — nested Identified (parts.igem.org/TwinPartUsage) ─
+    const twinParts = NS + '/BBa_J23119/usage1/twinParts';
+    add(twinParts, RDF + 'type', $rdf.sym(IGEM + 'TwinPartUsage'));
+    add(twinParts, RDF + 'type', $rdf.sym(SBOL + 'Identified'));
+    addLit(twinParts, SBOL + 'displayId', 'twinParts');
+    addLit(twinParts, SBOL + 'name', 'twin parts');
+    add(twinParts, IGEM + 'twinURL', $rdf.sym('http://parts.igem.org/wiki/index.php?title=Part:BBa_J72073'));
+    add(twinParts, IGEM + 'twinURL', $rdf.sym('http://parts.igem.org/wiki/index.php?title=Part:BBa_M1638'));
+    add(twinParts, IGEM + 'twinURL', $rdf.sym('http://parts.igem.org/wiki/index.php?title=Part:BBa_M36800'));
+
+    // ── usage1 — Identified child (parts.igem.org/iGEMUsage) ─────────────
+    const usage1 = NS + '/BBa_J23119/usage1';
+    add(usage1, RDF + 'type', $rdf.sym(IGEM + 'iGEMUsage'));
+    add(usage1, RDF + 'type', $rdf.sym(SBOL + 'Identified'));
+    addLit(usage1, SBOL + 'displayId', 'usage1');
+    addLit(usage1, SBOL + 'name', 'BBa_J23119_usage');
+    addLit(usage1, SBOL + 'description', 'BBa_J23119 usage statistics');
+    addLit(usage1, IGEM + 'uses', '442');
+    store.add($rdf.sym(usage1), $rdf.sym(IGEM + 'uses2'),
+        $rdf.literal('442', $rdf.sym('http://www.w3.org/2001/XMLSchema#int')), DG);
+    addLit(usage1, IGEM + 'twins', '7');
+    addLit(usage1, IGEM + 'registryStar', '1');
+    addLit(usage1, IGEM + 'inStock', 'true');
+    add(usage1, IGEM + 'twinURLs', $rdf.sym(twinParts));
+    add(bba.getIdentifier(), IGEM + 'hasUsage', $rdf.sym(usage1));
+
+    // ── usage2 — Identified child (parts.igem.org/A_iGEMUsage) ───────────
+    const usage2 = NS + '/BBa_J23119/usage2';
+    add(usage2, RDF + 'type', $rdf.sym(IGEM + 'A_iGEMUsage'));
+    add(usage2, RDF + 'type', $rdf.sym(SBOL + 'Identified'));
+    addLit(usage2, SBOL + 'displayId', 'usage2');
+    addLit(usage2, SBOL + 'name', 'BBa_J23119_usage_2');
+    addLit(usage2, IGEM + 'twins', '7');
+    add(bba.getIdentifier(), IGEM + 'hasUsage', $rdf.sym(usage2));
+
+    // ── usage3 — Identified child (parts.igem.org/Z_iGEMUsage) ───────────
+    const usage3 = NS + '/BBa_J23119/usage3';
+    add(usage3, RDF + 'type', $rdf.sym(IGEM + 'Z_iGEMUsage'));
+    add(usage3, RDF + 'type', $rdf.sym(SBOL + 'Identified'));
+    addLit(usage3, SBOL + 'displayId', 'usage3');
+    addLit(usage3, SBOL + 'name', 'BBa_J23119_usage_3');
+    add(bba.getIdentifier(), IGEM + 'hasUsage', $rdf.sym(usage3));
+
+    document.getElementById('turtleOutput').textContent         = doc.toRDF(RDFFormat.TURTLE);
+    document.getElementById('xmlOutput').textContent            = doc.toRDF(RDFFormat.RDF_XML);
+    document.getElementById('ntriplesOutput').textContent       = doc.toRDF(RDFFormat.N_TRIPLES);
+    document.getElementById('ntriplesOrderedOutput').textContent = doc.toRDF(RDFFormat.N_TRIPLES_ORDERED);
+    document.getElementById('jsonldOutput').textContent         = doc.toRDF(RDFFormat.JSON_LD);
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix sbol: <http://sbols.org/v3#>.
+@prefix exa: <https://sbolstandard.org/examples/>.
+@prefix sbo: <https://sbolstandard.org/>.
+
+exa:CodonOptimisationProtocol
+    a sbol:TopLevel, prov:Plan;
+    sbol:description
+    "Optimisation protocol to improve the translation of mRNAs.";
+    sbol:displayId "CodonOptimisationProtocol";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "Codon Optimisation Protocol".

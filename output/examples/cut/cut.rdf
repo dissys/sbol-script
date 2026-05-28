@@ -1,0 +1,31 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:sbol="http://sbols.org/v3#">
+    <sbol:Sequence rdf:about="https://synbiohub.org/public/igem/BBa_R0040_Sequence1">
+        <sbol:description>BBa_R0040 sequence</sbol:description>
+        <sbol:displayId>BBa_R0040_Sequence1</sbol:displayId>
+        <sbol:elements>tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcac</sbol:elements>
+        <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+        <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
+        <sbol:name>Sequence1</sbol:name>
+    </sbol:Sequence>
+    <sbol:Component rdf:about="https://synbiohub.org/public/igem/BBa_R0040">
+        <sbol:description>TetR repressible promoter</sbol:description>
+        <sbol:displayId>BBa_R0040</sbol:displayId>
+        <sbol:hasFeature rdf:resource="https://synbiohub.org/public/igem/BBa_R0040/SequenceFeature1"/>
+        <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
+        <sbol:hasSequence rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_Sequence1"/>
+        <sbol:name>pTetR</sbol:name>
+        <sbol:role rdf:resource="https://identifiers.org/SO:0000167"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+    </sbol:Component>
+    <sbol:SequenceFeature rdf:about="https://synbiohub.org/public/igem/BBa_R0040/SequenceFeature1">
+        <sbol:displayId>SequenceFeature1</sbol:displayId>
+        <sbol:hasLocation rdf:resource="https://synbiohub.org/public/igem/BBa_R0040/SequenceFeature1/Cut1"/>
+    </sbol:SequenceFeature>
+    <sbol:Cut rdf:about="https://synbiohub.org/public/igem/BBa_R0040/SequenceFeature1/Cut1">
+        <sbol:at>5</sbol:at>
+        <sbol:displayId>Cut1</sbol:displayId>
+        <sbol:hasSequence rdf:resource="https://synbiohub.org/public/igem/BBa_R0040_Sequence1"/>
+    </sbol:Cut>
+</rdf:RDF>

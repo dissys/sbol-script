@@ -1,0 +1,33 @@
+@prefix sbol: <http://sbols.org/v3#>.
+@prefix igem: <https://synbiohub.org/public/igem/>.
+@prefix BBa: <https://synbiohub.org/public/igem/BBa_R0040/>.
+@prefix pub: <https://synbiohub.org/public/>.
+@prefix Seq: <https://synbiohub.org/public/igem/BBa_R0040/SequenceFeature1/>.
+
+igem:BBa_R0040
+    a sbol:Component;
+    sbol:description "TetR repressible promoter";
+    sbol:displayId "BBa_R0040";
+    sbol:hasFeature BBa:SequenceFeature1;
+    sbol:hasNamespace pub:igem;
+    sbol:hasSequence igem:BBa_R0040_Sequence1;
+    sbol:name "pTetR";
+    sbol:role <https://identifiers.org/SO:0000167>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+igem:BBa_R0040_Sequence1
+    a sbol:Sequence;
+    sbol:description "BBa_R0040 sequence";
+    sbol:displayId "BBa_R0040_Sequence1";
+    sbol:elements "tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcac";
+    sbol:encoding <https://identifiers.org/edam:format_1207>;
+    sbol:hasNamespace pub:igem;
+    sbol:name "Sequence1".
+BBa:SequenceFeature1
+    a sbol:SequenceFeature;
+    sbol:displayId "SequenceFeature1";
+    sbol:hasLocation Seq:Cut1 .
+Seq:Cut1
+    a sbol:Cut;
+    sbol:at "5";
+    sbol:displayId "Cut1";
+    sbol:hasSequence igem:BBa_R0040_Sequence1 .

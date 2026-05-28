@@ -1,0 +1,122 @@
+{
+  "@context": {
+    "sbol": "http://sbols.org/v3#",
+    "igem": "https://synbiohub.org/public/igem/",
+    "BBa": "https://synbiohub.org/public/igem/BBa_R0040/",
+    "pub": "https://synbiohub.org/public/"
+  },
+  "@graph": [
+    {
+      "@id": "igem:BBa_R0040",
+      "@type": "sbol:Component",
+      "sbol:description": "TetR repressible promoter",
+      "sbol:displayId": "BBa_R0040",
+      "sbol:hasFeature": [
+        {
+          "@id": "BBa:SubComponent1"
+        },
+        {
+          "@id": "BBa:SubComponent2"
+        },
+        {
+          "@id": "BBa:SubComponent3"
+        }
+      ],
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:hasSequence": {
+        "@id": "igem:BBa_R0040_Sequence1"
+      },
+      "sbol:name": "pTetR",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000167"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "igem:BBa_R0040_Sequence1",
+      "@type": "sbol:Sequence",
+      "sbol:description": "BBa_R0040 sequence",
+      "sbol:displayId": "BBa_R0040_Sequence1",
+      "sbol:elements": "tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcac",
+      "sbol:encoding": {
+        "@id": "https://identifiers.org/edam:format_1207"
+      },
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:name": "Sequence1"
+    },
+    {
+      "@id": "igem:BBa_R0040_start",
+      "@type": "sbol:Component",
+      "sbol:description": "promoter_start",
+      "sbol:displayId": "BBa_R0040_start",
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:hasSequence": {
+        "@id": "igem:BBa_R0040_start_Sequence1"
+      },
+      "sbol:name": "pTetR_start",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000804"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "igem:BBa_R0040_start_Sequence1",
+      "@type": "sbol:Sequence",
+      "sbol:description": "BBa_R0040_start sequence",
+      "sbol:displayId": "BBa_R0040_start_Sequence1",
+      "sbol:elements": "tccctat",
+      "sbol:encoding": {
+        "@id": "https://identifiers.org/edam:format_1207"
+      },
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:name": "Sequence1"
+    },
+    {
+      "@id": "BBa:SubComponent1",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent1",
+      "sbol:instanceOf": {
+        "@id": "igem:BBa_R0040_start"
+      }
+    },
+    {
+      "@id": "BBa:SubComponent2",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent2",
+      "sbol:instanceOf": {
+        "@id": "igem:BBa_R0040_start"
+      }
+    },
+    {
+      "@id": "BBa:SubComponent3",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent3",
+      "sbol:instanceOf": {
+        "@id": "igem:BBa_R0040_start"
+      }
+    },
+    {
+      "@id": "igem:cs1",
+      "@type": "sbol:CombinatorialDerivation",
+      "sbol:displayId": "cs1",
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:template": {
+        "@id": "igem:BBa_R0040"
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+@prefix sbol: <http://sbols.org/v3#>.
+@prefix exa: <https://sbolstandard.org/examples/>.
+@prefix sbo: <https://sbolstandard.org/>.
+@prefix LacI: <https://sbolstandard.org/examples/LacI_producer/>.
+
+exa:aTC
+    a sbol:Component;
+    sbol:description "aTC";
+    sbol:displayId "aTC";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "aTC";
+    sbol:role <https://identifiers.org/CHEBI:35224>;
+    sbol:type <https://identifiers.org/SBO:0000247>.
+exa:LacI_producer
+    a sbol:Component;
+    sbol:description "LacI producer";
+    sbol:displayId "LacI_producer";
+    sbol:hasFeature LacI:SubComponent1, LacI:SubComponent2, LacI:SubComponent3;
+    sbol:hasInterface LacI:Interface1;
+    sbol:hasNamespace sbo:examples;
+    sbol:name "LacI produce";
+    sbol:role <https://identifiers.org/SO:0000704>;
+    sbol:type <https://identifiers.org/SBO:0000251>.
+LacI:Interface1
+    a sbol:Interface;
+    sbol:displayId "Interface1";
+    sbol:input LacI:SubComponent1, LacI:SubComponent2;
+    sbol:nondirectional LacI:SubComponent3;
+    sbol:output LacI:SubComponent1 .
+LacI:SubComponent1
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent1";
+    sbol:instanceOf exa:LacI_protein.
+LacI:SubComponent2
+    a sbol:SubComponent;
+    sbol:displayId "SubComponent2";
+    sbol:instanceOf exa:TetR_protein.
+LacI:SubComponent3
+a sbol:SubComponent; sbol:displayId "SubComponent3"; sbol:instanceOf exa:aTC.
+exa:LacI_protein
+    a sbol:Component;
+    sbol:description "LacI protein";
+    sbol:displayId "LacI_protein";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "LacI";
+    sbol:role <https://identifiers.org/GO:0003700>;
+    sbol:type <https://identifiers.org/SBO:0000252>.
+exa:TetR_protein
+    a sbol:Component;
+    sbol:description "TetR protein";
+    sbol:displayId "TetR_protein";
+    sbol:hasNamespace sbo:examples;
+    sbol:name "TetR";
+    sbol:role <https://identifiers.org/GO:0003700>;
+    sbol:type <https://identifiers.org/SBO:0000252>.

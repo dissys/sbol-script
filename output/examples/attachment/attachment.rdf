@@ -1,0 +1,36 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:sbol="http://sbols.org/v3#">
+    <sbol:Component rdf:about="https://sbolstandard.org/examples/TetR_protein">
+        <sbol:description>TetR protein</sbol:description>
+        <sbol:displayId>TetR_protein</sbol:displayId>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+        <sbol:name>TetR</sbol:name>
+        <sbol:role rdf:resource="https://identifiers.org/GO:0003700"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000252"/>
+    </sbol:Component>
+    <sbol:Attachment rdf:about="https://sbolstandard.org/examples/attachment1">
+        <sbol:displayId>attachment1</sbol:displayId>
+        <sbol:format rdf:resource="https://identifiers.org/edam:format_2585"/>
+        <sbol:hash>aaa</sbol:hash>
+        <sbol:hashAlgorithm>sha-256</sbol:hashAlgorithm>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+        <sbol:size>1000</sbol:size>
+        <sbol:source rdf:resource="https://sbolstandard.org/attachment1"/>
+    </sbol:Attachment>
+    <sbol:Attachment rdf:about="https://sbolstandard.org/examples/attachment2">
+        <sbol:displayId>attachment2</sbol:displayId>
+        <sbol:format rdf:resource="https://identifiers.org/edam:format_2585"/>
+        <sbol:hash>aaa</sbol:hash>
+        <sbol:hashAlgorithm>sha-256</sbol:hashAlgorithm>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+        <sbol:size>1000</sbol:size>
+        <sbol:source rdf:resource="https://sbolstandard.org/attachment2"/>
+    </sbol:Attachment>
+    <sbol:Implementation rdf:about="https://sbolstandard.org/examples/impl1">
+        <sbol:built rdf:resource="https://sbolstandard.org/examples/TetR_protein"/>
+        <sbol:displayId>impl1</sbol:displayId>
+        <sbol:hasAttachment rdf:resource="https://sbolstandard.org/examples/attachment1"/>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+    </sbol:Implementation>
+</rdf:RDF>

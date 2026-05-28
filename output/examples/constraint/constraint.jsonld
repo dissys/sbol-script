@@ -1,0 +1,136 @@
+{
+  "@context": {
+    "sbol": "http://sbols.org/v3#",
+    "igem": "https://synbiohub.org/public/igem/",
+    "pub": "https://synbiohub.org/public/",
+    "i": "https://synbiohub.org/public/igem/i13504_system/",
+    "int": "https://synbiohub.org/public/igem/interlab16device1/"
+  },
+  "@graph": [
+    {
+      "@id": "igem:i13504",
+      "@type": "sbol:Component",
+      "sbol:description": "Screening plasmid intermediate",
+      "sbol:displayId": "i13504",
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:name": "i13504",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000704"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "igem:i13504_system",
+      "@type": "sbol:Component",
+      "sbol:displayId": "i13504_system",
+      "sbol:hasFeature": {
+        "@id": "i:SubComponent1"
+      },
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:name": "i13504 system",
+      "sbol:role": {
+        "@id": "https://identifiers.org/SBO:0000289"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000241"
+      }
+    },
+    {
+      "@id": "i:SubComponent1",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent1",
+      "sbol:instanceOf": {
+        "@id": "igem:i13504"
+      }
+    },
+    {
+      "@id": "igem:interlab16device1",
+      "@type": "sbol:Component",
+      "sbol:displayId": "interlab16device1",
+      "sbol:hasConstraint": {
+        "@id": "int:Constraint1"
+      },
+      "sbol:hasFeature": [
+        {
+          "@id": "int:ComponentReference1"
+        },
+        {
+          "@id": "int:SubComponent1"
+        },
+        {
+          "@id": "int:SubComponent2"
+        }
+      ],
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000704"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    },
+    {
+      "@id": "int:ComponentReference1",
+      "@type": "sbol:ComponentReference",
+      "sbol:displayId": "ComponentReference1",
+      "sbol:inChildOf": {
+        "@id": "int:SubComponent1"
+      },
+      "sbol:refersTo": {
+        "@id": "i:SubComponent1"
+      }
+    },
+    {
+      "@id": "int:Constraint1",
+      "@type": "sbol:Constraint",
+      "sbol:displayId": "Constraint1",
+      "sbol:object": {
+        "@id": "int:ComponentReference1"
+      },
+      "sbol:restriction": {
+        "@id": "sbol:meets"
+      },
+      "sbol:subject": {
+        "@id": "int:SubComponent2"
+      }
+    },
+    {
+      "@id": "int:SubComponent1",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent1",
+      "sbol:instanceOf": {
+        "@id": "igem:i13504_system"
+      }
+    },
+    {
+      "@id": "int:SubComponent2",
+      "@type": "sbol:SubComponent",
+      "sbol:displayId": "SubComponent2",
+      "sbol:instanceOf": {
+        "@id": "igem:j23101"
+      }
+    },
+    {
+      "@id": "igem:j23101",
+      "@type": "sbol:Component",
+      "sbol:displayId": "j23101",
+      "sbol:hasNamespace": {
+        "@id": "pub:igem"
+      },
+      "sbol:role": {
+        "@id": "https://identifiers.org/SO:0000704"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000251"
+      }
+    }
+  ]
+}

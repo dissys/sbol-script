@@ -1,0 +1,57 @@
+{
+  "@context": {
+    "sbol": "http://sbols.org/v3#",
+    "exa": "https://sbolstandard.org/examples/",
+    "sbo": "https://sbolstandard.org/"
+  },
+  "@graph": [
+    {
+      "@id": "exa:col1",
+      "@type": "sbol:Collection",
+      "sbol:displayId": "col1",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:member": [
+        {
+          "@id": "exa:LacI_protein"
+        },
+        {
+          "@id": "exa:TetR_protein"
+        }
+      ]
+    },
+    {
+      "@id": "exa:LacI_protein",
+      "@type": "sbol:Component",
+      "sbol:description": "LacI protein",
+      "sbol:displayId": "LacI_protein",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "LacI",
+      "sbol:role": {
+        "@id": "https://identifiers.org/GO:0003700"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000252"
+      }
+    },
+    {
+      "@id": "exa:TetR_protein",
+      "@type": "sbol:Component",
+      "sbol:description": "TetR protein",
+      "sbol:displayId": "TetR_protein",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "TetR",
+      "sbol:role": {
+        "@id": "https://identifiers.org/GO:0003700"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000252"
+      }
+    }
+  ]
+}

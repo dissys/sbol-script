@@ -1,0 +1,70 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:sbol="http://sbols.org/v3#"
+ xmlns:om="http://www.ontology-of-units-of-measure.org/resource/om-2/">
+    <sbol:TopLevel rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/mole">
+        <sbol:displayId>mole</sbol:displayId>
+        <sbol:hasNamespace rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2"/>
+        <sbol:name>mole</sbol:name>
+        <om:label>mole</om:label>
+        <om:symbol>mol</om:symbol>
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/SingularUnit"/>
+    </sbol:TopLevel>
+    <sbol:TopLevel rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/litre">
+        <sbol:displayId>litre</sbol:displayId>
+        <sbol:hasNamespace rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2"/>
+        <sbol:name>liter</sbol:name>
+        <om:label>liter</om:label>
+        <om:symbol>l</om:symbol>
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/SingularUnit"/>
+    </sbol:TopLevel>
+    <sbol:TopLevel rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/milli">
+        <sbol:displayId>milli</sbol:displayId>
+        <sbol:hasNamespace rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2"/>
+        <sbol:name>milli</sbol:name>
+        <om:hasFactor>0.001</om:hasFactor>
+        <om:label>milli</om:label>
+        <om:symbol>m</om:symbol>
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/SIPrefix"/>
+    </sbol:TopLevel>
+    <sbol:TopLevel rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/millimole">
+        <sbol:displayId>millimole</sbol:displayId>
+        <sbol:hasNamespace rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2"/>
+        <sbol:name>millimole</sbol:name>
+        <om:hasPrefix rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/milli"/>
+        <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/mole"/>
+        <om:label>millimole</om:label>
+        <om:symbol>mmol</om:symbol>
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/PrefixedUnit"/>
+    </sbol:TopLevel>
+    <sbol:TopLevel rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/millimolePerLitre">
+        <sbol:displayId>millimolePerLitre</sbol:displayId>
+        <sbol:hasNamespace rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2"/>
+        <sbol:name>millimolar</sbol:name>
+        <om:hasDenominator rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/litre"/>
+        <om:hasNumerator rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/millimole"/>
+        <om:label>millimolar</om:label>
+        <om:symbol>mmol/l</om:symbol>
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/UnitDivision"/>
+    </sbol:TopLevel>
+    <sbol:Component rdf:about="https://sbolstandard.org/examples/M9_Glucose_CAA">
+        <sbol:description>M9 Glucose CAA growth media</sbol:description>
+        <sbol:displayId>M9_Glucose_CAA</sbol:displayId>
+        <sbol:hasFeature rdf:resource="https://sbolstandard.org/examples/M9_Glucose_CAA/ExternallyDefined1"/>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+        <sbol:name>M9 Glucose CAA</sbol:name>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
+    </sbol:Component>
+    <sbol:ExternallyDefined rdf:about="https://sbolstandard.org/examples/M9_Glucose_CAA/ExternallyDefined1">
+        <sbol:definition rdf:resource="https://identifiers.org/CHEBI:3312"/>
+        <sbol:displayId>ExternallyDefined1</sbol:displayId>
+        <sbol:hasMeasure rdf:resource="https://sbolstandard.org/examples/M9_Glucose_CAA/ExternallyDefined1/measure1"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000247"/>
+    </sbol:ExternallyDefined>
+    <om:Measure rdf:about="https://sbolstandard.org/examples/M9_Glucose_CAA/ExternallyDefined1/measure1">
+        <sbol:displayId>measure1</sbol:displayId>
+        <om:hasNumericalValue>0.1</om:hasNumericalValue>
+        <om:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/millimolePerLitre"/>
+        <rdf:type rdf:resource="http://sbols.org/v3#Identified"/>
+    </om:Measure>
+</rdf:RDF>

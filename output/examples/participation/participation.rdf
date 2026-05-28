@@ -1,0 +1,127 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:sbol="http://sbols.org/v3#">
+    <sbol:Sequence rdf:about="https://sbolstandard.org/examples/E0040_Sequence1">
+        <sbol:description>E0040 sequence</sbol:description>
+        <sbol:displayId>E0040_Sequence1</sbol:displayId>
+        <sbol:elements>atgcgtaaaggagaagaacttttcactggagttgtcccaattcttgttgaattagatggtgatgttaatgggcacaaattttctgtcagtggagagggtgaaggtgatgcaacatacggaaaacttacccttaaatttatttgcactactggaaaactacctgttccatggccaacacttgtcactactttcggttatggtgttcaatgctttgcgagatacccagatcatatgaaacagcatgactttttcaagagtgccatgcccgaaggttatgtacaggaaagaactatatttttcaaagatgacgggaactacaagacacgtgctgaagtcaagtttgaaggtgatacccttgttaatagaatcgagttaaaaggtattgattttaaagaagatggaaacattcttggacacaaattggaatacaactataactcacacaatgtatacatcatggcagacaaacaaaagaatggaatcaaagttaacttcaaaattagacacaacattgaagatggaagcgttcaactagcagaccattatcaacaaaatactccaattggcgatggccctgtccttttaccagacaaccattacctgtccacacaatctgccctttcgaaagatcccaacgaaaagagagaccacatggtccttcttgagtttgtaacagctgctgggattacacatggcatggatgaactatacaaataataa</sbol:elements>
+        <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+        <sbol:name>Sequence1</sbol:name>
+    </sbol:Sequence>
+    <sbol:Component rdf:about="https://sbolstandard.org/examples/E0040">
+        <sbol:description>gfp coding sequence</sbol:description>
+        <sbol:displayId>E0040</sbol:displayId>
+        <sbol:hasFeature rdf:resource="https://sbolstandard.org/examples/E0040/SequenceFeature1"/>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+        <sbol:hasSequence rdf:resource="https://sbolstandard.org/examples/E0040_Sequence1"/>
+        <sbol:name>gfp</sbol:name>
+        <sbol:role rdf:resource="https://identifiers.org/SO:0000316"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+    </sbol:Component>
+    <sbol:Component rdf:about="https://sbolstandard.org/examples/TetR">
+        <sbol:displayId>TetR</sbol:displayId>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000252"/>
+    </sbol:Component>
+    <sbol:Sequence rdf:about="https://sbolstandard.org/examples/gfp_start">
+        <sbol:displayId>gfp_start</sbol:displayId>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+    </sbol:Sequence>
+    <sbol:SequenceFeature rdf:about="https://sbolstandard.org/examples/E0040/SequenceFeature1">
+        <sbol:displayId>SequenceFeature1</sbol:displayId>
+        <sbol:hasLocation rdf:resource="https://sbolstandard.org/examples/E0040/SequenceFeature1/EntireSequence1"/>
+    </sbol:SequenceFeature>
+    <sbol:EntireSequence rdf:about="https://sbolstandard.org/examples/E0040/SequenceFeature1/EntireSequence1">
+        <sbol:displayId>EntireSequence1</sbol:displayId>
+        <sbol:hasSequence rdf:resource="https://sbolstandard.org/examples/gfp_start"/>
+    </sbol:EntireSequence>
+    <sbol:Component rdf:about="https://sbolstandard.org/examples/GFP_protein">
+        <sbol:description>GFP</sbol:description>
+        <sbol:displayId>GFP_protein</sbol:displayId>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+        <sbol:name>GFP</sbol:name>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000252"/>
+    </sbol:Component>
+    <sbol:Sequence rdf:about="https://sbolstandard.org/examples/i13504_Sequence1">
+        <sbol:description>i13504 sequence</sbol:description>
+        <sbol:displayId>i13504_Sequence1</sbol:displayId>
+        <sbol:elements>atgcgtaaaggagaagaacttttcactggagttgtcccaattcttgttgaattagatggtgatgttaatgggcacaaattttctgtcagtggagagggtgaaggtgatgcaacatacggaaaacttacccttaaatttatttgcactactggaaaactacctgttccatggccaacacttgtcactactttcggttatggtgttcaatgctttgcgagatacccagatcatatgaaacagcatgactttttcaagagtgccatgcccgaaggttatgtacaggaaagaactatatttttcaaagatgacgggaactacaagacacgtgctgaagtcaagtttgaaggtgatacccttgttaatagaatcgagttaaaaggtattgattttaaagaagatggaaacattcttggacacaaattggaatacaactataactcacacaatgtatacatcatggcagacaaacaaaagaatggaatcaaagttaacttcaaaattagacacaacattgaagatggaagcgttcaactagcagaccattatcaacaaaatactccaattggcgatggccctgtccttttaccagacaaccattacctgtccacacaatctgccctttcgaaagatcccaacgaaaagagagaccacatggtccttcttgagtttgtaacagctgctgggattacacatggcatggatgaactatacaaataataa</sbol:elements>
+        <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+        <sbol:name>Sequence1</sbol:name>
+    </sbol:Sequence>
+    <sbol:Component rdf:about="https://sbolstandard.org/examples/i13504">
+        <sbol:displayId>i13504</sbol:displayId>
+        <sbol:hasFeature rdf:resource="https://sbolstandard.org/examples/i13504/SubComponent1"/>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+        <sbol:hasSequence rdf:resource="https://sbolstandard.org/examples/i13504_Sequence1"/>
+        <sbol:role rdf:resource="https://identifiers.org/SO:0000704"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+    </sbol:Component>
+    <sbol:SubComponent rdf:about="https://sbolstandard.org/examples/i13504/SubComponent1">
+        <sbol:displayId>SubComponent1</sbol:displayId>
+        <sbol:hasLocation rdf:resource="https://sbolstandard.org/examples/i13504/SubComponent1/Range1"/>
+        <sbol:instanceOf rdf:resource="https://sbolstandard.org/examples/E0040"/>
+        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+    </sbol:SubComponent>
+    <sbol:Range rdf:about="https://sbolstandard.org/examples/i13504/SubComponent1/Range1">
+        <sbol:displayId>Range1</sbol:displayId>
+        <sbol:end>720</sbol:end>
+        <sbol:hasSequence rdf:resource="https://sbolstandard.org/examples/i13504_Sequence1"/>
+        <sbol:orientation rdf:resource="https://identifiers.org/SO:0001030"/>
+        <sbol:start>1</sbol:start>
+    </sbol:Range>
+    <sbol:Component rdf:about="https://sbolstandard.org/examples/i13504_system">
+        <sbol:displayId>i13504_system</sbol:displayId>
+        <sbol:hasFeature rdf:resource="https://sbolstandard.org/examples/i13504_system/SubComponent1"/>
+        <sbol:hasFeature rdf:resource="https://sbolstandard.org/examples/i13504_system/SubComponent2"/>
+        <sbol:hasFeature rdf:resource="https://sbolstandard.org/examples/i13504_system/ComponentReference1"/>
+        <sbol:hasInteraction rdf:resource="https://sbolstandard.org/examples/i13504_system/Interaction1"/>
+        <sbol:hasInteraction rdf:resource="https://sbolstandard.org/examples/i13504_system/Interaction2"/>
+        <sbol:hasNamespace rdf:resource="https://sbolstandard.org/examples"/>
+        <sbol:name>i13504 system</sbol:name>
+        <sbol:role rdf:resource="https://identifiers.org/SBO:0000289"/>
+        <sbol:role rdf:resource="https://identifiers.org/SO:0000704"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+    </sbol:Component>
+    <sbol:SubComponent rdf:about="https://sbolstandard.org/examples/i13504_system/SubComponent1">
+        <sbol:displayId>SubComponent1</sbol:displayId>
+        <sbol:instanceOf rdf:resource="https://sbolstandard.org/examples/i13504"/>
+    </sbol:SubComponent>
+    <sbol:SubComponent rdf:about="https://sbolstandard.org/examples/i13504_system/SubComponent2">
+        <sbol:displayId>SubComponent2</sbol:displayId>
+        <sbol:instanceOf rdf:resource="https://sbolstandard.org/examples/GFP_protein"/>
+    </sbol:SubComponent>
+    <sbol:ComponentReference rdf:about="https://sbolstandard.org/examples/i13504_system/ComponentReference1">
+        <sbol:displayId>ComponentReference1</sbol:displayId>
+        <sbol:inChildOf rdf:resource="https://sbolstandard.org/examples/i13504_system/SubComponent1"/>
+        <sbol:refersTo rdf:resource="https://sbolstandard.org/examples/i13504/SubComponent1"/>
+    </sbol:ComponentReference>
+    <sbol:Interaction rdf:about="https://sbolstandard.org/examples/i13504_system/Interaction1">
+        <sbol:displayId>Interaction1</sbol:displayId>
+        <sbol:hasParticipation rdf:resource="https://sbolstandard.org/examples/i13504_system/Interaction1/Participation1"/>
+        <sbol:hasParticipation rdf:resource="https://sbolstandard.org/examples/i13504_system/Interaction1/Participation2"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000589"/>
+    </sbol:Interaction>
+    <sbol:Participation rdf:about="https://sbolstandard.org/examples/i13504_system/Interaction1/Participation1">
+        <sbol:displayId>Participation1</sbol:displayId>
+        <sbol:participant rdf:resource="https://sbolstandard.org/examples/i13504_system/ComponentReference1"/>
+        <sbol:role rdf:resource="https://identifiers.org/SBO:0000645"/>
+    </sbol:Participation>
+    <sbol:Participation rdf:about="https://sbolstandard.org/examples/i13504_system/Interaction1/Participation2">
+        <sbol:displayId>Participation2</sbol:displayId>
+        <sbol:participant rdf:resource="https://sbolstandard.org/examples/i13504_system/SubComponent2"/>
+        <sbol:role rdf:resource="https://identifiers.org/SBO:0000011"/>
+    </sbol:Participation>
+    <sbol:Interaction rdf:about="https://sbolstandard.org/examples/i13504_system/Interaction2">
+        <sbol:displayId>Interaction2</sbol:displayId>
+        <sbol:hasParticipation rdf:resource="https://sbolstandard.org/examples/i13504_system/Interaction2/Participation1"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000169"/>
+    </sbol:Interaction>
+    <sbol:Participation rdf:about="https://sbolstandard.org/examples/i13504_system/Interaction2/Participation1">
+        <sbol:displayId>Participation1</sbol:displayId>
+        <sbol:higherOrderParticipant rdf:resource="https://sbolstandard.org/examples/i13504_system/Interaction1"/>
+        <sbol:role rdf:resource="https://identifiers.org/SBO:0000020"/>
+    </sbol:Participation>
+</rdf:RDF>

@@ -1,0 +1,12 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:sbol="http://sbols.org/v3#">
+    <sbol:Component rdf:about="https://synbiohub.org/public/igem/BBa_F2620">
+        <sbol:description>PoPS Receiver</sbol:description>
+        <sbol:displayId>BBa_F2620</sbol:displayId>
+        <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
+        <sbol:name>BBa_F2620</sbol:name>
+        <sbol:role rdf:resource="https://identifiers.org/SO:0000704"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+    </sbol:Component>
+</rdf:RDF>

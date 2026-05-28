@@ -1,0 +1,162 @@
+{
+  "@context": {
+    "prov": "http://www.w3.org/ns/prov#",
+    "sbol": "http://sbols.org/v3#",
+    "exa": "https://sbolstandard.org/examples/",
+    "sbo": "https://sbolstandard.org/",
+    "codon": "https://sbolstandard.org/examples/codon_optimization_activity/"
+  },
+  "@graph": [
+    {
+      "@id": "exa:codon_optimization_activity",
+      "@type": [
+        "sbol:TopLevel",
+        "prov:Activity"
+      ],
+      "sbol:description": "An activity that is used to optimise codons",
+      "sbol:displayId": "codon_optimization_activity",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "Codon optimization activity",
+      "sbol:type": {
+        "@id": "sbol:design"
+      },
+      "prov:endedAtTime": "2019-08-30T00:00:00Z",
+      "prov:qualifiedAssociation": {
+        "@id": "codon:Association1"
+      },
+      "prov:qualifiedUsage": [
+        {
+          "@id": "codon:Usage1"
+        },
+        {
+          "@id": "codon:Usage2"
+        }
+      ],
+      "prov:startedAtTime": "2019-07-29T16:50:59Z"
+    },
+    {
+      "@id": "codon:Association1",
+      "@type": [
+        "sbol:Identified",
+        "prov:Association"
+      ],
+      "sbol:displayId": "Association1",
+      "prov:agent": {
+        "@id": "exa:CodonOptimiserSoftware"
+      },
+      "prov:hadPlan": {
+        "@id": "exa:CodonOptimisationProtocol"
+      },
+      "prov:hadRole": {
+        "@id": "sbol:design"
+      }
+    },
+    {
+      "@id": "codon:Usage1",
+      "@type": [
+        "sbol:Identified",
+        "prov:Usage"
+      ],
+      "sbol:displayId": "Usage1",
+      "prov:entity": {
+        "@id": "exa:toggle_switch"
+      },
+      "prov:hadRole": {
+        "@id": "sbol:learn"
+      }
+    },
+    {
+      "@id": "codon:Usage2",
+      "@type": [
+        "sbol:Identified",
+        "prov:Usage"
+      ],
+      "sbol:displayId": "Usage2",
+      "prov:entity": {
+        "@id": "exa:toggle_switch_optimised"
+      },
+      "prov:hadRole": {
+        "@id": "sbol:design"
+      }
+    },
+    {
+      "@id": "exa:CodonOptimisationProtocol",
+      "@type": [
+        "sbol:TopLevel",
+        "prov:Plan"
+      ],
+      "sbol:description": "Optimisation protocol to improve the translation of mRNAs.",
+      "sbol:displayId": "CodonOptimisationProtocol",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "Codon Optimisation Protocol"
+    },
+    {
+      "@id": "exa:CodonOptimiserSoftware",
+      "@type": [
+        "sbol:TopLevel",
+        "prov:Agent"
+      ],
+      "sbol:description": "Used to optimise bacterial DNA sequences.",
+      "sbol:displayId": "CodonOptimiserSoftware",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "Codon Optimiser Software"
+    },
+    {
+      "@id": "exa:RBS_optimisation_activity",
+      "@type": [
+        "sbol:TopLevel",
+        "prov:Activity"
+      ],
+      "sbol:description": "An activity that is used to RBSs",
+      "sbol:displayId": "RBS_optimisation_activity",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "RBS optimization activity",
+      "sbol:type": {
+        "@id": "sbol:design"
+      },
+      "prov:wasInformedBy": {
+        "@id": "exa:codon_optimization_activity"
+      }
+    },
+    {
+      "@id": "exa:toggle_switch",
+      "@type": "sbol:Component",
+      "sbol:description": "Toggle Switch genetic circuit",
+      "sbol:displayId": "toggle_switch",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "Toggle Switch",
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000241"
+      }
+    },
+    {
+      "@id": "exa:toggle_switch_optimised",
+      "@type": "sbol:Component",
+      "sbol:description": "Toggle Switch genetic circuit - codon optimised",
+      "sbol:displayId": "toggle_switch_optimised",
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "Toggle Switch Optimised",
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000241"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "exa:toggle_switch"
+      },
+      "prov:wasGeneratedBy": {
+        "@id": "exa:codon_optimization_activity"
+      }
+    }
+  ]
+}

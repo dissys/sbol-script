@@ -1,0 +1,59 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:sbol="http://sbols.org/v3#">
+    <sbol:Component rdf:about="https://synbiohub.org/public/igem/i13504">
+        <sbol:description>Screening plasmid intermediate</sbol:description>
+        <sbol:displayId>i13504</sbol:displayId>
+        <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
+        <sbol:name>i13504</sbol:name>
+        <sbol:role rdf:resource="https://identifiers.org/SO:0000704"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+    </sbol:Component>
+    <sbol:Component rdf:about="https://synbiohub.org/public/igem/i13504_system">
+        <sbol:displayId>i13504_system</sbol:displayId>
+        <sbol:hasFeature rdf:resource="https://synbiohub.org/public/igem/i13504_system/SubComponent1"/>
+        <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
+        <sbol:name>i13504 system</sbol:name>
+        <sbol:role rdf:resource="https://identifiers.org/SBO:0000289"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
+    </sbol:Component>
+    <sbol:SubComponent rdf:about="https://synbiohub.org/public/igem/i13504_system/SubComponent1">
+        <sbol:displayId>SubComponent1</sbol:displayId>
+        <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/i13504"/>
+    </sbol:SubComponent>
+    <sbol:Component rdf:about="https://synbiohub.org/public/igem/j23101">
+        <sbol:displayId>j23101</sbol:displayId>
+        <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
+        <sbol:role rdf:resource="https://identifiers.org/SO:0000704"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+    </sbol:Component>
+    <sbol:Component rdf:about="https://synbiohub.org/public/igem/interlab16device1">
+        <sbol:displayId>interlab16device1</sbol:displayId>
+        <sbol:hasConstraint rdf:resource="https://synbiohub.org/public/igem/interlab16device1/Constraint1"/>
+        <sbol:hasFeature rdf:resource="https://synbiohub.org/public/igem/interlab16device1/SubComponent1"/>
+        <sbol:hasFeature rdf:resource="https://synbiohub.org/public/igem/interlab16device1/SubComponent2"/>
+        <sbol:hasFeature rdf:resource="https://synbiohub.org/public/igem/interlab16device1/ComponentReference1"/>
+        <sbol:hasNamespace rdf:resource="https://synbiohub.org/public/igem"/>
+        <sbol:role rdf:resource="https://identifiers.org/SO:0000704"/>
+        <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+    </sbol:Component>
+    <sbol:SubComponent rdf:about="https://synbiohub.org/public/igem/interlab16device1/SubComponent1">
+        <sbol:displayId>SubComponent1</sbol:displayId>
+        <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/i13504_system"/>
+    </sbol:SubComponent>
+    <sbol:SubComponent rdf:about="https://synbiohub.org/public/igem/interlab16device1/SubComponent2">
+        <sbol:displayId>SubComponent2</sbol:displayId>
+        <sbol:instanceOf rdf:resource="https://synbiohub.org/public/igem/j23101"/>
+    </sbol:SubComponent>
+    <sbol:ComponentReference rdf:about="https://synbiohub.org/public/igem/interlab16device1/ComponentReference1">
+        <sbol:displayId>ComponentReference1</sbol:displayId>
+        <sbol:inChildOf rdf:resource="https://synbiohub.org/public/igem/interlab16device1/SubComponent1"/>
+        <sbol:refersTo rdf:resource="https://synbiohub.org/public/igem/i13504_system/SubComponent1"/>
+    </sbol:ComponentReference>
+    <sbol:Constraint rdf:about="https://synbiohub.org/public/igem/interlab16device1/Constraint1">
+        <sbol:displayId>Constraint1</sbol:displayId>
+        <sbol:object rdf:resource="https://synbiohub.org/public/igem/interlab16device1/ComponentReference1"/>
+        <sbol:restriction rdf:resource="http://sbols.org/v3#meets"/>
+        <sbol:subject rdf:resource="https://synbiohub.org/public/igem/interlab16device1/SubComponent2"/>
+    </sbol:Constraint>
+</rdf:RDF>

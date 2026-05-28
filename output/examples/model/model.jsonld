@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "sbol": "http://sbols.org/v3#",
+    "exa": "https://sbolstandard.org/examples/",
+    "sbo": "https://sbolstandard.org/"
+  },
+  "@graph": [
+    {
+      "@id": "exa:model1",
+      "@type": "sbol:Model",
+      "sbol:displayId": "model1",
+      "sbol:framework": {
+        "@id": "https://identifiers.org/SBO:0000062"
+      },
+      "sbol:hasNamespace": {
+        "@id": "https://sbolstandard.org"
+      },
+      "sbol:language": {
+        "@id": "https://identifiers.org/edam:format_2585"
+      },
+      "sbol:source": {
+        "@id": "http://virtualparts.org"
+      }
+    },
+    {
+      "@id": "exa:toggle_switch",
+      "@type": "sbol:Component",
+      "sbol:description": "Toggle Switch genetic circuit",
+      "sbol:displayId": "toggle_switch",
+      "sbol:hasModel": {
+        "@id": "exa:model1"
+      },
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:name": "Toggle Switch",
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000241"
+      }
+    }
+  ]
+}

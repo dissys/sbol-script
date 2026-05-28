@@ -1,0 +1,52 @@
+{
+  "@context": {
+    "sbol": "http://sbols.org/v3#",
+    "exa": "https://sbolstandard.org/examples/",
+    "int": "https://sbolstandard.org/examples/interlab16device1/",
+    "sbo": "https://sbolstandard.org/",
+    "uni": "http://uniprot.org/"
+  },
+  "@graph": [
+    {
+      "@id": "exa:interlab16device1",
+      "@type": "sbol:Component",
+      "sbol:displayId": "interlab16device1",
+      "sbol:hasFeature": [
+        {
+          "@id": "int:ExternallyDefined1"
+        },
+        {
+          "@id": "int:ExternallyDefined2"
+        }
+      ],
+      "sbol:hasNamespace": {
+        "@id": "sbo:examples"
+      },
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000241"
+      }
+    },
+    {
+      "@id": "int:ExternallyDefined1",
+      "@type": "sbol:ExternallyDefined",
+      "sbol:definition": {
+        "@id": "uni:gfp"
+      },
+      "sbol:displayId": "ExternallyDefined1",
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000252"
+      }
+    },
+    {
+      "@id": "int:ExternallyDefined2",
+      "@type": "sbol:ExternallyDefined",
+      "sbol:definition": {
+        "@id": "uni:rfp"
+      },
+      "sbol:displayId": "ExternallyDefined2",
+      "sbol:type": {
+        "@id": "https://identifiers.org/SBO:0000252"
+      }
+    }
+  ]
+}
