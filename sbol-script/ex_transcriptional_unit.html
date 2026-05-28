@@ -97,10 +97,12 @@
 
     // ── Constraint: promoter precedes rbs ──────────────────────────────────
     const { ConstraintRestriction } = window.sbolScript;
-    const c1 = region.createConstraint('c_precedes');
-    c1.setRestriction(ConstraintRestriction.Precedes);
-    c1.setSubject(sc_promoter.getIdentifier());
-    c1.setObject(sc_rbs.getIdentifier());
+    const c1 = region.createConstraint(
+        sc_promoter.getIdentifier(),
+        ConstraintRestriction.Precedes,
+        sc_rbs.getIdentifier(),
+        'c_precedes'
+    );
 
     // ── Serialise ──────────────────────────────────────────────────────────
     document.getElementById("turtleOutput").textContent      = doc.toRDF(RDFFormat.TURTLE);

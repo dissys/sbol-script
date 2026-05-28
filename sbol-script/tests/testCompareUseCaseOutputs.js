@@ -7,6 +7,7 @@
  * Pairs compared:
  *   entity/combine2020            vs  usecases/GettingStartedTutorial
  *   entity/BBa_F2620_PoPSReceiver vs  usecases/PoPSReceiverExampleTest
+ *   entity/BBa_F2620_PoPSReceiver vs  usecases/PoPSReceiverExampleUsingHighLevelEntitiesTest
  *   entity/toggle_switch          vs  usecases/ToggleSwitchTest
  *   entity/toggle_switch_v2       vs  usecases/ToggleSwitch_v2Test
  *   entity/multicellular_simple   vs  usecases/MulticellularSimpleTest
@@ -29,6 +30,7 @@ const multicellularEntity    = require('./entity/multicellular');
 // ── Usecase generators ──────────────────────────────────────────────────────
 const gettingStarted         = require('./usecases/GettingStartedTutorial');
 const popsReceiverUC         = require('./usecases/PoPSReceiverExampleTest');
+const popsReceiverHighLevelUC = require('./usecases/PoPSReceiverExampleUsingHighLevelEntitiesTest');
 const toggleSwitchUC         = require('./usecases/ToggleSwitchTest');
 const toggleSwitchV2UC       = require('./usecases/ToggleSwitch_v2Test');
 const multicellularSimpleUC  = require('./usecases/MulticellularSimpleTest');
@@ -49,6 +51,13 @@ const PAIRS = [
     ucFile:  path.join(__dirname, 'usecases', 'PoPSReceiverExampleTest.js'),
     entMod:  popsReceiverEntity,
     ucMod:   popsReceiverUC,
+  },
+  {
+    name:    'BBa_F2620_PoPSReceiver_entity_vs_highlevel',
+    entFile: path.join(__dirname, 'entity', 'BBa_F2620_PoPSReceiver.js'),
+    ucFile:  path.join(__dirname, 'usecases', 'PoPSReceiverExampleUsingHighLevelEntitiesTest.js'),
+    entMod:  popsReceiverEntity,
+    ucMod:   popsReceiverHighLevelUC,
   },
   {
     name:    'toggle_switch_entity_vs_usecase',

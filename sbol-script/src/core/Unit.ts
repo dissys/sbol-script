@@ -39,15 +39,6 @@ export class Unit extends TopLevel {
         return vals && vals.length > 0 ? vals[0] : null;
     }
 
-    setHasUnit(unitIRI: IRI): void {
-        RDFUtil.setProperty(this.store, this.resource, SBOLEntity.Unit.properties.hasUnit, [unitIRI]);
-    }
-
-    getHasUnit(): IRI | null {
-        const vals = RDFUtil.getProperty(this.store, this.resource, SBOLEntity.Unit.properties.hasUnit);
-        return vals && vals.length > 0 ? vals[0] : null;
-    }
-
     setLabel(label: string): void {
         RDFUtil.setProperty(this.store, this.resource, SBOLEntity.Unit.properties.label, [$rdf.literal(label)]);
     }
@@ -108,6 +99,15 @@ export class SingularUnit extends Unit {
         return vals && vals.length > 0 ? parseFloat(vals[0]) : null;
     }
 
+    setHasUnit(unitIRI: IRI): void {
+        RDFUtil.setProperty(this.store, this.resource, SBOLEntity.SingularUnit.properties.hasUnit, [unitIRI]);
+    }
+
+    getHasUnit(): IRI | null {
+        const vals = RDFUtil.getProperty(this.store, this.resource, SBOLEntity.SingularUnit.properties.hasUnit);
+        return vals && vals.length > 0 ? vals[0] : null;
+    }
+
     static create(store: any, identifier: IRI): SingularUnit {
         return new SingularUnit(store, identifier);
     }
@@ -134,6 +134,15 @@ export class PrefixedUnit extends Unit {
 
     getHasPrefix(): IRI | null {
         const vals = RDFUtil.getProperty(this.store, this.resource, SBOLEntity.PrefixedUnit.properties.hasPrefix);
+        return vals && vals.length > 0 ? vals[0] : null;
+    }
+
+    setHasUnit(unitIRI: IRI): void {
+        RDFUtil.setProperty(this.store, this.resource, SBOLEntity.PrefixedUnit.properties.hasUnit, [unitIRI]);
+    }
+
+    getHasUnit(): IRI | null {
+        const vals = RDFUtil.getProperty(this.store, this.resource, SBOLEntity.PrefixedUnit.properties.hasUnit);
         return vals && vals.length > 0 ? vals[0] : null;
     }
 

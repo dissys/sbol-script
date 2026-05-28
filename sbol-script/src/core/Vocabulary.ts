@@ -240,18 +240,23 @@ export const SBOLEntity = {
       alternativeSymbol: SBOLNamespaces.OM('alternativeSymbol').value,
       alternativeLabel:  SBOLNamespaces.OM('alternativeLabel').value,
       longComment:       SBOLNamespaces.OM('longcomment').value,
-      hasUnit:           SBOLNamespaces.OM('hasUnit').value,
       label:             SBOLNamespaces.OM('label').value,
       comment:           SBOLNamespaces.OM('comment').value,
     }
   },
   SingularUnit: {
     ...omEntity("SingularUnit"),
-    properties: { hasFactor: SBOLNamespaces.OM('hasFactor').value }
+    properties: {
+      hasFactor: SBOLNamespaces.OM('hasFactor').value,
+      hasUnit:   SBOLNamespaces.OM('hasUnit').value,
+    }
   },
   PrefixedUnit: {
     ...omEntity("PrefixedUnit"),
-    properties: { hasPrefix: SBOLNamespaces.OM('hasPrefix').value }
+    properties: {
+      hasPrefix: SBOLNamespaces.OM('hasPrefix').value,
+      hasUnit:   SBOLNamespaces.OM('hasUnit').value,
+    }
   },
   UnitMultiplication: {
     ...omEntity("UnitMultiplication"),

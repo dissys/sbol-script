@@ -1,7 +1,7 @@
 
 ================================================================================
 TEST:      BBa_F2620_PoPSReceiver
-TIMESTAMP: 2026-04-22T10:11:21.023Z
+TIMESTAMP: 2026-05-07T18:26:20.970Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/BBa_F2620_PoPSReceiver/BBa_F2620_PoPSReceiver_ordered.nt
 OUTPUT:    ../../output/examples/BBa_F2620_PoPSReceiver/BBa_F2620_PoPSReceiver_ordered.nt
@@ -11,7 +11,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      activity
-TIMESTAMP: 2026-04-22T10:11:21.024Z
+TIMESTAMP: 2026-05-07T18:26:20.971Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/provenance_entity/activity/activity_ordered.nt
 OUTPUT:    ../../output/examples/activity/activity_ordered.nt
@@ -21,7 +21,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      agent
-TIMESTAMP: 2026-04-22T10:11:21.024Z
+TIMESTAMP: 2026-05-07T18:26:20.971Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/provenance_entity/agent/agent_ordered.nt
 OUTPUT:    ../../output/examples/agent/agent_ordered.nt
@@ -31,7 +31,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      annotation
-TIMESTAMP: 2026-04-22T10:11:21.024Z
+TIMESTAMP: 2026-05-07T18:26:20.972Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/annotation/annotation_ordered.nt
 OUTPUT:    ../../output/examples/annotation/annotation_ordered.nt
@@ -41,7 +41,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      attachment
-TIMESTAMP: 2026-04-22T10:11:21.024Z
+TIMESTAMP: 2026-05-07T18:26:20.972Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/attachment/attachment_ordered.nt
 OUTPUT:    ../../output/examples/attachment/attachment_ordered.nt
@@ -51,7 +51,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      collection
-TIMESTAMP: 2026-04-22T10:11:21.025Z
+TIMESTAMP: 2026-05-07T18:26:20.972Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/collection/collection_ordered.nt
 OUTPUT:    ../../output/examples/collection/collection_ordered.nt
@@ -61,7 +61,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      combinatorialderivation
-TIMESTAMP: 2026-04-22T10:11:21.025Z
+TIMESTAMP: 2026-05-07T18:26:20.972Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/combinatorialderivation/combinatorialderivation_ordered.nt
 OUTPUT:    ../../output/examples/combinatorialderivation/combinatorialderivation_ordered.nt
@@ -71,7 +71,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      combine2020
-TIMESTAMP: 2026-04-22T10:11:21.025Z
+TIMESTAMP: 2026-05-07T18:26:20.973Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/combine2020/combine2020_ordered.nt
 OUTPUT:    ../../output/examples/combine2020/combine2020_ordered.nt
@@ -81,7 +81,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      component
-TIMESTAMP: 2026-04-22T10:11:21.026Z
+TIMESTAMP: 2026-05-07T18:26:20.973Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/component/component_ordered.nt
 OUTPUT:    ../../output/examples/component/component_ordered.nt
@@ -91,7 +91,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      component_urn_uri
-TIMESTAMP: 2026-04-22T10:11:21.026Z
+TIMESTAMP: 2026-05-07T18:26:20.974Z
 STATUS:    FAIL
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/component_urn_uri/component_urn_uri_ordered.nt
 OUTPUT:    ../../output/examples/component_urn_uri/component_urn_uri_ordered.nt
@@ -111,7 +111,7 @@ DIFFERENCES:
 
 ================================================================================
 TEST:      componentreference
-TIMESTAMP: 2026-04-22T10:11:21.027Z
+TIMESTAMP: 2026-05-07T18:26:20.974Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/componentreference/componentreference_ordered.nt
 OUTPUT:    ../../output/examples/componentreference/componentreference_ordered.nt
@@ -121,7 +121,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      constraint
-TIMESTAMP: 2026-04-22T10:11:21.027Z
+TIMESTAMP: 2026-05-07T18:26:20.975Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/constraint/constraint_ordered.nt
 OUTPUT:    ../../output/examples/constraint/constraint_ordered.nt
@@ -131,7 +131,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      cut
-TIMESTAMP: 2026-04-22T10:11:21.027Z
+TIMESTAMP: 2026-05-07T18:26:20.975Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/cut/cut_ordered.nt
 OUTPUT:    ../../output/examples/cut/cut_ordered.nt
@@ -141,7 +141,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      experiment
-TIMESTAMP: 2026-04-22T10:11:21.027Z
+TIMESTAMP: 2026-05-07T18:26:20.975Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/experiment/experiment_ordered.nt
 OUTPUT:    ../../output/examples/experiment/experiment_ordered.nt
@@ -151,7 +151,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      externallydefined
-TIMESTAMP: 2026-04-22T10:11:21.028Z
+TIMESTAMP: 2026-05-07T18:26:20.975Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/externallydefined/externallydefined_ordered.nt
 OUTPUT:    ../../output/examples/externallydefined/externallydefined_ordered.nt
@@ -161,7 +161,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      implementation
-TIMESTAMP: 2026-04-22T10:11:21.028Z
+TIMESTAMP: 2026-05-07T18:26:20.975Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/implementation/implementation_ordered.nt
 OUTPUT:    ../../output/examples/implementation/implementation_ordered.nt
@@ -171,7 +171,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      interaction
-TIMESTAMP: 2026-04-22T10:11:21.028Z
+TIMESTAMP: 2026-05-07T18:26:20.976Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/interaction/interaction_ordered.nt
 OUTPUT:    ../../output/examples/interaction/interaction_ordered.nt
@@ -181,7 +181,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      interface
-TIMESTAMP: 2026-04-22T10:11:21.028Z
+TIMESTAMP: 2026-05-07T18:26:20.976Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/interface/interface_ordered.nt
 OUTPUT:    ../../output/examples/interface/interface_ordered.nt
@@ -191,7 +191,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      localsubcomponent
-TIMESTAMP: 2026-04-22T10:11:21.029Z
+TIMESTAMP: 2026-05-07T18:26:20.976Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/localsubcomponent/localsubcomponent_ordered.nt
 OUTPUT:    ../../output/examples/localsubcomponent/localsubcomponent_ordered.nt
@@ -201,7 +201,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      measurement
-TIMESTAMP: 2026-04-22T10:11:21.029Z
+TIMESTAMP: 2026-05-07T18:26:20.976Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/measurement_entity/measurement/measurement_ordered.nt
 OUTPUT:    ../../output/examples/measurement/measurement_ordered.nt
@@ -211,7 +211,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      measurement_using_units_From_OM
-TIMESTAMP: 2026-04-22T10:11:21.029Z
+TIMESTAMP: 2026-05-07T18:26:20.977Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/measurement_entity/measurement_using_units_From_OM/measurement_using_units_From_OM_ordered.nt
 OUTPUT:    ../../output/examples/measurement_using_units_From_OM/measurement_using_units_From_OM_ordered.nt
@@ -221,7 +221,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      model
-TIMESTAMP: 2026-04-22T10:11:21.029Z
+TIMESTAMP: 2026-05-07T18:26:20.977Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/model/model_ordered.nt
 OUTPUT:    ../../output/examples/model/model_ordered.nt
@@ -231,7 +231,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      multicellular
-TIMESTAMP: 2026-04-22T10:11:21.030Z
+TIMESTAMP: 2026-05-07T18:26:20.978Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/multicellular/multicellular_ordered.nt
 OUTPUT:    ../../output/examples/multicellular/multicellular_ordered.nt
@@ -241,7 +241,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      multicellular_simple
-TIMESTAMP: 2026-04-22T10:11:21.031Z
+TIMESTAMP: 2026-05-07T18:26:20.978Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/multicellular_simple/multicellular_simple_ordered.nt
 OUTPUT:    ../../output/examples/multicellular_simple/multicellular_simple_ordered.nt
@@ -251,7 +251,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      participation
-TIMESTAMP: 2026-04-22T10:11:21.031Z
+TIMESTAMP: 2026-05-07T18:26:20.979Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/participation/participation_ordered.nt
 OUTPUT:    ../../output/examples/participation/participation_ordered.nt
@@ -261,7 +261,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      plan
-TIMESTAMP: 2026-04-22T10:11:21.031Z
+TIMESTAMP: 2026-05-07T18:26:20.979Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/provenance_entity/plan/plan_ordered.nt
 OUTPUT:    ../../output/examples/plan/plan_ordered.nt
@@ -271,7 +271,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      range
-TIMESTAMP: 2026-04-22T10:11:21.032Z
+TIMESTAMP: 2026-05-07T18:26:20.979Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/range/range_ordered.nt
 OUTPUT:    ../../output/examples/range/range_ordered.nt
@@ -281,7 +281,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      sequencefeature
-TIMESTAMP: 2026-04-22T10:11:21.032Z
+TIMESTAMP: 2026-05-07T18:26:20.979Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/sequencefeature/sequencefeature_ordered.nt
 OUTPUT:    ../../output/examples/sequencefeature/sequencefeature_ordered.nt
@@ -291,7 +291,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      subcomponent
-TIMESTAMP: 2026-04-22T10:11:21.032Z
+TIMESTAMP: 2026-05-07T18:26:20.980Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/subcomponent/subcomponent_ordered.nt
 OUTPUT:    ../../output/examples/subcomponent/subcomponent_ordered.nt
@@ -301,7 +301,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      toggle_switch
-TIMESTAMP: 2026-04-22T10:11:21.033Z
+TIMESTAMP: 2026-05-07T18:26:20.980Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/toggle_switch/toggle_switch_ordered.nt
 OUTPUT:    ../../output/examples/toggle_switch/toggle_switch_ordered.nt
@@ -311,7 +311,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      toggle_switch_v2
-TIMESTAMP: 2026-04-22T10:11:21.034Z
+TIMESTAMP: 2026-05-07T18:26:20.982Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/toggle_switch_v2/toggle_switch_v2_ordered.nt
 OUTPUT:    ../../output/examples/toggle_switch_v2/toggle_switch_v2_ordered.nt
@@ -320,28 +320,8 @@ ERRORS:    0 lines with issues  (0.00%)
 ================================================================================
 
 ================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial_Short
-TIMESTAMP: 2026-04-22T10:12:11.399Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial_Short.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
 TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-22T10:25:07.438Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-22T11:06:31.629Z
+TIMESTAMP: 2026-05-07T18:32:53.316Z
 STATUS:    PASS
 INPUT:     usecases/GettingStartedTutorial.js
 OUTPUT:    entity/combine2020.js
@@ -351,7 +331,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-22T11:06:31.659Z
+TIMESTAMP: 2026-05-07T18:32:53.354Z
 STATUS:    PASS
 INPUT:     usecases/PoPSReceiverExampleTest.js
 OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
@@ -361,7 +341,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-22T11:06:31.688Z
+TIMESTAMP: 2026-05-07T18:32:53.391Z
 STATUS:    PASS
 INPUT:     usecases/ToggleSwitchTest.js
 OUTPUT:    entity/toggle_switch.js
@@ -371,7 +351,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-22T11:06:31.718Z
+TIMESTAMP: 2026-05-07T18:32:53.429Z
 STATUS:    PASS
 INPUT:     usecases/ToggleSwitch_v2Test.js
 OUTPUT:    entity/toggle_switch_v2.js
@@ -381,7 +361,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-22T11:06:31.727Z
+TIMESTAMP: 2026-05-07T18:32:53.439Z
 STATUS:    PASS
 INPUT:     usecases/MulticellularSimpleTest.js
 OUTPUT:    entity/multicellular_simple.js
@@ -391,7 +371,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-22T11:06:31.758Z
+TIMESTAMP: 2026-05-07T18:32:53.488Z
 STATUS:    PASS
 INPUT:     usecases/MulticellularTest.js
 OUTPUT:    entity/multicellular.js
@@ -401,7 +381,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-22T11:07:12.144Z
+TIMESTAMP: 2026-05-20T14:50:34.971Z
 STATUS:    PASS
 INPUT:     usecases/GettingStartedTutorial.js
 OUTPUT:    entity/combine2020.js
@@ -411,7 +391,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-22T11:07:12.175Z
+TIMESTAMP: 2026-05-20T14:50:35.002Z
 STATUS:    PASS
 INPUT:     usecases/PoPSReceiverExampleTest.js
 OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
@@ -420,172 +400,201 @@ ERRORS:    0 lines with issues  (0.00%)
 ================================================================================
 
 ================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-22T11:07:12.203Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-22T11:07:12.232Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-22T11:07:12.242Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-22T11:07:12.271Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-22T11:54:22.595Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-22T11:54:22.624Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-22T11:54:22.655Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-22T11:54:22.689Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-22T11:54:22.697Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-22T11:54:22.726Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-22T16:58:40.637Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-22T16:58:40.664Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-22T16:58:40.693Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-22T16:58:40.724Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-22T16:58:40.734Z
+TEST:      BBa_F2620_PoPSReceiver_entity_vs_highlevel
+TIMESTAMP: 2026-05-20T14:50:35.024Z
 STATUS:    FAIL
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    12 lines with issues  (12.77%)
+INPUT:     usecases/PoPSReceiverExampleUsingHighLevelEntitiesTest.js
+OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
+LINES:     Generated=219  Reference=284  Total=284
+ERRORS:    151 lines with issues  (53.17%)
 
 DIFFERENCES:
-  - (missing)  <https://sbolstandard.org/examples/AHL> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples> .
-  - (missing)  <https://sbolstandard.org/examples/MulticellularSystem> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples> .
-  - (missing)  <https://sbolstandard.org/examples/OrganismA> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples> .
-  - (missing)  <https://sbolstandard.org/examples/OrganismB> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples> .
-  - (missing)  <https://sbolstandard.org/examples/ReceiverSystem> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples> .
-  - (missing)  <https://sbolstandard.org/examples/SenderSystem> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples> .
-  + (extra)    <https://sbolstandard.org/examples/AHL> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples/> .
-  + (extra)    <https://sbolstandard.org/examples/MulticellularSystem> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples/> .
-  + (extra)    <https://sbolstandard.org/examples/OrganismA> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples/> .
-  + (extra)    <https://sbolstandard.org/examples/OrganismB> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples/> .
-  + (extra)    <https://sbolstandard.org/examples/ReceiverSystem> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples/> .
-  + (extra)    <https://sbolstandard.org/examples/SenderSystem> <http://sbols.org/v3#hasNamespace> <https://sbolstandard.org/examples/> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent1/Range1> <http://sbols.org/v3#displayId> "Range1" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent1/Range1> <http://sbols.org/v3#end> "80" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent1/Range1> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent1/Range1> <http://sbols.org/v3#orientation> <https://identifiers.org/SO:0001030> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent1/Range1> <http://sbols.org/v3#start> "1" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent1/Range1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Range> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent1> <http://sbols.org/v3#hasLocation> <https://synbiohub.org/public/igem/BBa_B0015/SubComponent1/Range1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent2/Range1> <http://sbols.org/v3#displayId> "Range1" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent2/Range1> <http://sbols.org/v3#end> "121" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent2/Range1> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent2/Range1> <http://sbols.org/v3#orientation> <https://identifiers.org/SO:0001030> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent2/Range1> <http://sbols.org/v3#start> "81" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent2/Range1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Range> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent2> <http://sbols.org/v3#hasLocation> <https://synbiohub.org/public/igem/BBa_B0015/SubComponent2/Range1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> <http://sbols.org/v3#description> "BBa_B0015 sequence" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> <http://sbols.org/v3#displayId> "BBa_B0015_Sequence1" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> <http://sbols.org/v3#elements> "ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctcacactggctcaccttcgggtgggcctttctgcgtttata" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> <http://sbols.org/v3#encoding> <https://identifiers.org/edam:format_1207> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> <http://sbols.org/v3#name> "Sequence1" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Sequence> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation1> <http://sbols.org/v3#displayId> "Participation1" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation1> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000645> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation2> <http://sbols.org/v3#displayId> "Participation2" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation2> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation2> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000011> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1> <http://sbols.org/v3#displayId> "Interaction1" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation2> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000589> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Interaction> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation1> <http://sbols.org/v3#displayId> "Participation1" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation1> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000643> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation2> <http://sbols.org/v3#displayId> "Participation2" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation2> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation2> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000459> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2> <http://sbols.org/v3#displayId> "Interaction2" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation2> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000170> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Interaction> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation1> <http://sbols.org/v3#displayId> "Participation1" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation1> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000643> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation2> <http://sbols.org/v3#displayId> "Participation2" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation2> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent2> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation2> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000459> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3> <http://sbols.org/v3#displayId> "Interaction3" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation2> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000170> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Interaction> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3/Range1> <http://sbols.org/v3#displayId> "Range1" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3/Range1> <http://sbols.org/v3#end> "54" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3/Range1> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3/Range1> <http://sbols.org/v3#orientation> <https://identifiers.org/SO:0001030> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3/Range1> <http://sbols.org/v3#start> "1" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3/Range1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Range> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3> <http://sbols.org/v3#hasLocation> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3/Range1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent4/Range1> <http://sbols.org/v3#displayId> "Range1" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent4/Range1> <http://sbols.org/v3#end> "66" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent4/Range1> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent4/Range1> <http://sbols.org/v3#orientation> <https://identifiers.org/SO:0001030> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent4/Range1> <http://sbols.org/v3#start> "55" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent4/Range1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Range> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent4> <http://sbols.org/v3#hasLocation> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent4/Range1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5/Range1> <http://sbols.org/v3#displayId> "Range1" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5/Range1> <http://sbols.org/v3#end> "847" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5/Range1> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5/Range1> <http://sbols.org/v3#orientation> <https://identifiers.org/SO:0001030> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5/Range1> <http://sbols.org/v3#start> "67" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5/Range1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Range> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5> <http://sbols.org/v3#hasLocation> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5/Range1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent6/Range1> <http://sbols.org/v3#displayId> "Range1" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent6/Range1> <http://sbols.org/v3#end> "968" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent6/Range1> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent6/Range1> <http://sbols.org/v3#orientation> <https://identifiers.org/SO:0001030> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent6/Range1> <http://sbols.org/v3#start> "848" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent6/Range1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Range> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent6> <http://sbols.org/v3#hasLocation> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent6/Range1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7/Range1> <http://sbols.org/v3#displayId> "Range1" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7/Range1> <http://sbols.org/v3#end> "1023" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7/Range1> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7/Range1> <http://sbols.org/v3#orientation> <https://identifiers.org/SO:0001030> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7/Range1> <http://sbols.org/v3#start> "969" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7/Range1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Range> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7> <http://sbols.org/v3#hasLocation> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7/Range1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620> <http://sbols.org/v3#hasInteraction> <https://synbiohub.org/public/igem/BBa_F2620/Interaction1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620> <http://sbols.org/v3#hasInteraction> <https://synbiohub.org/public/igem/BBa_F2620/Interaction2> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620> <http://sbols.org/v3#hasInteraction> <https://synbiohub.org/public/igem/BBa_F2620/Interaction3> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> <http://sbols.org/v3#description> "BBa_F2620 sequence" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> <http://sbols.org/v3#displayId> "BBa_F2620_Sequence1" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> <http://sbols.org/v3#elements> "tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcacaaagaggagaaaatgaaaaacataaatgccgacgacacatacagaataattaataaaattaaagcttgtagaagcaataatgatattaatcaatgcttatctgatatgactaaaatggtacattgtgaatattatttactcgcgatcatttatcctcattctatggttaaatctgatatttcaatcctagataattaccctaaaaaatggaggcaatattatgatgacgctaatttaataaaatatgatcctatagtagattattctaactccaatcattcaccaattaattggaatatatttgaaaacaatgctgtaaataaaaaatctccaaatgtaattaaagaagcgaaaacatcaggtcttatcactgggtttagtttccctattcatacggctaacaatggcttcggaatgcttagttttgcacattcagaaaaagacaactatatagatagtttatttttacatgcgtgtatgaacataccattaattgttccttctctagttgataattatcgaaaaataaatatagcaaataataaatcaaacaacgatttaaccaaaagagaaaaagaatgtttagcgtgggcatgcgaaggaaaaagctcttgggatatttcaaaaatattaggttgcagtgagcgtactgtcactttccatttaaccaatgcgcaaatgaaactcaatacaacaaaccgctgccaaagtatttctaaagcaattttaacaggagcaattgattgcccatactttaaaaattaataacactgatagtgctagtgtagatcacccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctcacactggctcaccttcgggtgggcctttctgcgtttataacctgtaggatcgtacaggtttacgcaagaaaatggtttgttatagtcgaataaa" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> <http://sbols.org/v3#encoding> <https://identifiers.org/edam:format_1207> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> <http://sbols.org/v3#name> "Sequence1" .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Sequence> .
+  - (missing)  <https://synbiohub.org/public/igem/BBa_R0062> <http://sbols.org/v3#description> "Promoter (luxR &amp; HSL regulated -- lux pR)" .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Product2> <http://sbols.org/v3#displayId> "Product2" .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Product2> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent1> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Product2> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000011> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Product2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Template1> <http://sbols.org/v3#displayId> "Template1" .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Template1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Template1> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000645> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Template1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1> <http://sbols.org/v3#displayId> "GeneticProduction1" .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Product2> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Template1> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000589> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Interaction> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulated1> <http://sbols.org/v3#displayId> "Stimulated1" .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulated1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulated1> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000643> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulated1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulator1> <http://sbols.org/v3#displayId> "Stimulator1" .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulator1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent1> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulator1> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000459> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulator1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2> <http://sbols.org/v3#displayId> "StimulationInteraction2" .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulated1> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulator1> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000170> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Interaction> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulated1> <http://sbols.org/v3#displayId> "Stimulated1" .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulated1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulated1> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000643> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulated1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulator1> <http://sbols.org/v3#displayId> "Stimulator1" .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulator1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent2> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulator1> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000459> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulator1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3> <http://sbols.org/v3#displayId> "StimulationInteraction3" .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulated1> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulator1> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000170> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Interaction> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620> <http://sbols.org/v3#hasInteraction> <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620> <http://sbols.org/v3#hasInteraction> <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620> <http://sbols.org/v3#hasInteraction> <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3> .
+  + (extra)    <https://synbiohub.org/public/igem/BBa_R0062> <http://sbols.org/v3#description> "Promoter (luxR & HSL regulated -- lux pR)" .
+================================================================================
+
+================================================================================
+TEST:      toggle_switch_entity_vs_usecase
+TIMESTAMP: 2026-05-20T14:50:35.058Z
+STATUS:    PASS
+INPUT:     usecases/ToggleSwitchTest.js
+OUTPUT:    entity/toggle_switch.js
+LINES:     Generated=371  Reference=371  Total=371
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      toggle_switch_v2_entity_vs_usecase
+TIMESTAMP: 2026-05-20T14:50:35.093Z
+STATUS:    PASS
+INPUT:     usecases/ToggleSwitch_v2Test.js
+OUTPUT:    entity/toggle_switch_v2.js
+LINES:     Generated=405  Reference=405  Total=405
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
+TEST:      multicellular_simple_entity_vs_usecase
+TIMESTAMP: 2026-05-20T14:50:35.102Z
+STATUS:    PASS
+INPUT:     usecases/MulticellularSimpleTest.js
+OUTPUT:    entity/multicellular_simple.js
+LINES:     Generated=94  Reference=94  Total=94
+ERRORS:    0 lines with issues  (0.00%)
 ================================================================================
 
 ================================================================================
 TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-22T16:58:40.765Z
+TIMESTAMP: 2026-05-20T14:50:35.138Z
 STATUS:    PASS
 INPUT:     usecases/MulticellularTest.js
 OUTPUT:    entity/multicellular.js
@@ -595,7 +604,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-22T17:15:35.135Z
+TIMESTAMP: 2026-05-20T14:56:11.138Z
 STATUS:    PASS
 INPUT:     usecases/GettingStartedTutorial.js
 OUTPUT:    entity/combine2020.js
@@ -605,7 +614,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-22T17:15:35.162Z
+TIMESTAMP: 2026-05-20T14:56:11.168Z
 STATUS:    PASS
 INPUT:     usecases/PoPSReceiverExampleTest.js
 OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
@@ -614,8 +623,18 @@ ERRORS:    0 lines with issues  (0.00%)
 ================================================================================
 
 ================================================================================
+TEST:      BBa_F2620_PoPSReceiver_entity_vs_highlevel
+TIMESTAMP: 2026-05-20T14:56:11.190Z
+STATUS:    PASS
+INPUT:     usecases/PoPSReceiverExampleUsingHighLevelEntitiesTest.js
+OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
+LINES:     Generated=284  Reference=284  Total=284
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
 TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-22T17:15:35.190Z
+TIMESTAMP: 2026-05-20T14:56:11.226Z
 STATUS:    PASS
 INPUT:     usecases/ToggleSwitchTest.js
 OUTPUT:    entity/toggle_switch.js
@@ -625,7 +644,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-22T17:15:35.217Z
+TIMESTAMP: 2026-05-20T14:56:11.263Z
 STATUS:    PASS
 INPUT:     usecases/ToggleSwitch_v2Test.js
 OUTPUT:    entity/toggle_switch_v2.js
@@ -635,7 +654,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-22T17:15:35.226Z
+TIMESTAMP: 2026-05-20T14:56:11.273Z
 STATUS:    PASS
 INPUT:     usecases/MulticellularSimpleTest.js
 OUTPUT:    entity/multicellular_simple.js
@@ -645,7 +664,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-22T17:15:35.255Z
+TIMESTAMP: 2026-05-20T14:56:11.311Z
 STATUS:    PASS
 INPUT:     usecases/MulticellularTest.js
 OUTPUT:    entity/multicellular.js
@@ -655,7 +674,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-22T17:15:58.330Z
+TIMESTAMP: 2026-05-20T14:56:59.230Z
 STATUS:    PASS
 INPUT:     usecases/GettingStartedTutorial.js
 OUTPUT:    entity/combine2020.js
@@ -665,7 +684,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-22T17:15:58.358Z
+TIMESTAMP: 2026-05-20T14:56:59.259Z
 STATUS:    PASS
 INPUT:     usecases/PoPSReceiverExampleTest.js
 OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
@@ -674,8 +693,18 @@ ERRORS:    0 lines with issues  (0.00%)
 ================================================================================
 
 ================================================================================
+TEST:      BBa_F2620_PoPSReceiver_entity_vs_highlevel
+TIMESTAMP: 2026-05-20T14:56:59.283Z
+STATUS:    PASS
+INPUT:     usecases/PoPSReceiverExampleUsingHighLevelEntitiesTest.js
+OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
+LINES:     Generated=284  Reference=284  Total=284
+ERRORS:    0 lines with issues  (0.00%)
+================================================================================
+
+================================================================================
 TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-22T17:15:58.386Z
+TIMESTAMP: 2026-05-20T14:56:59.320Z
 STATUS:    PASS
 INPUT:     usecases/ToggleSwitchTest.js
 OUTPUT:    entity/toggle_switch.js
@@ -685,7 +714,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-22T17:15:58.415Z
+TIMESTAMP: 2026-05-20T14:56:59.358Z
 STATUS:    PASS
 INPUT:     usecases/ToggleSwitch_v2Test.js
 OUTPUT:    entity/toggle_switch_v2.js
@@ -695,7 +724,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-22T17:15:58.425Z
+TIMESTAMP: 2026-05-20T14:56:59.367Z
 STATUS:    PASS
 INPUT:     usecases/MulticellularSimpleTest.js
 OUTPUT:    entity/multicellular_simple.js
@@ -705,2788 +734,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-22T17:15:58.453Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T08:31:15.475Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T08:31:15.506Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T08:31:15.535Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T08:31:15.563Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T08:31:15.573Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T08:31:15.611Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:12:23.892Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:12:23.923Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:12:23.953Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:12:23.963Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:12:23.999Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:14:20.328Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:14:20.359Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:14:20.389Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:14:20.398Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:14:20.435Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T09:14:56.756Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:14:56.784Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:14:56.813Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:14:56.841Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:14:56.850Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:14:56.887Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T09:20:16.740Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:20:16.768Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:20:16.796Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:20:16.828Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:20:16.839Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:20:16.876Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:27:24.849Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:27:24.906Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T09:35:02.735Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:35:02.763Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:35:02.792Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:35:02.821Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:35:02.831Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:35:02.869Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:38:49.769Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T09:39:12.242Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:39:12.270Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:39:12.299Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:39:12.329Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:39:12.339Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:39:12.376Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T09:40:53.221Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:40:53.251Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:40:53.281Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:40:53.310Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:40:53.320Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:40:53.357Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T09:41:01.157Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:41:01.185Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:41:01.217Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:41:01.247Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:41:01.256Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:41:01.293Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T09:44:23.505Z
-STATUS:    FAIL
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=216  Reference=215  Total=216
-ERRORS:    1 lines with issues  (0.46%)
-
-DIFFERENCES:
-  + (extra)    <https://synbiohub.org/public/igem/j23101> <http://sbols.org/v3#name> "j23101" .
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:44:23.534Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:44:23.565Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:44:23.595Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:44:23.604Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:44:23.641Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T09:46:12.299Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:46:12.329Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:46:12.359Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:46:12.392Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:46:12.401Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:46:12.442Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T09:46:27.574Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:46:27.602Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:46:27.633Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:46:27.662Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:46:27.672Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:46:27.708Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T09:47:25.542Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:47:25.571Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:47:25.601Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:47:25.631Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:47:25.640Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T09:47:25.678Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:00:16.621Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T10:00:25.483Z
-STATUS:    FAIL
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=223  Reference=215  Total=223
-ERRORS:    12 lines with issues  (5.38%)
-
-DIFFERENCES:
-  - (missing)  <https://synbiohub.org/public/igem/i13504_system/Interaction1/Participation1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/i13504_system/ComponentReference1> .
-  - (missing)  <https://synbiohub.org/public/igem/i13504_system/Interaction1/Participation2> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/i13504_system/SubComponent2> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/Interaction1/Participation1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/i13504_system/SubComponent3> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/Interaction1/Participation2> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/i13504_system/SubComponent4> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/SubComponent3> <http://sbols.org/v3#displayId> "SubComponent3" .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/SubComponent3> <http://sbols.org/v3#instanceOf> <https://synbiohub.org/public/igem/i13504_system/ComponentReference1> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/SubComponent3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#SubComponent> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/SubComponent4> <http://sbols.org/v3#displayId> "SubComponent4" .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/SubComponent4> <http://sbols.org/v3#instanceOf> <https://synbiohub.org/public/igem/i13504_system/SubComponent2> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/SubComponent4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#SubComponent> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system> <http://sbols.org/v3#hasFeature> <https://synbiohub.org/public/igem/i13504_system/SubComponent3> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system> <http://sbols.org/v3#hasFeature> <https://synbiohub.org/public/igem/i13504_system/SubComponent4> .
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:00:25.511Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:00:25.541Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:00:25.570Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:00:25.579Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:00:25.618Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:01:55.796Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:01:55.828Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:01:55.860Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:01:55.869Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:01:55.905Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:02:05.867Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:02:05.915Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:02:05.945Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:02:05.954Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:02:05.990Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:02:25.993Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:02:26.023Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:02:26.055Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:02:26.064Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:02:26.103Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T10:02:43.952Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:02:43.979Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:02:44.007Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:02:44.039Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:02:44.048Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:02:44.087Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T10:03:49.998Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:03:50.028Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:03:50.058Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:03:50.088Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:03:50.098Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:03:50.137Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T10:04:42.812Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:04:42.839Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:04:42.868Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:04:42.897Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:04:42.906Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:04:42.944Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T10:06:10.975Z
-STATUS:    FAIL
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=223  Reference=215  Total=223
-ERRORS:    12 lines with issues  (5.38%)
-
-DIFFERENCES:
-  - (missing)  <https://synbiohub.org/public/igem/i13504_system/Interaction1/Participation1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/i13504_system/ComponentReference1> .
-  - (missing)  <https://synbiohub.org/public/igem/i13504_system/Interaction1/Participation2> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/i13504_system/SubComponent2> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/Interaction1/Participation1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/i13504_system/SubComponent3> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/Interaction1/Participation2> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/i13504_system/SubComponent4> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/SubComponent3> <http://sbols.org/v3#displayId> "SubComponent3" .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/SubComponent3> <http://sbols.org/v3#instanceOf> <https://synbiohub.org/public/igem/i13504_system/ComponentReference1> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/SubComponent3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#SubComponent> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/SubComponent4> <http://sbols.org/v3#displayId> "SubComponent4" .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/SubComponent4> <http://sbols.org/v3#instanceOf> <https://synbiohub.org/public/igem/i13504_system/SubComponent2> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/SubComponent4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#SubComponent> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system> <http://sbols.org/v3#hasFeature> <https://synbiohub.org/public/igem/i13504_system/SubComponent3> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system> <http://sbols.org/v3#hasFeature> <https://synbiohub.org/public/igem/i13504_system/SubComponent4> .
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:06:11.002Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:06:11.031Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:06:11.061Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:06:11.070Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:06:11.107Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T10:12:10.535Z
-STATUS:    FAIL
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    28 lines with issues  (13.02%)
-
-DIFFERENCES:
-  - (missing)  <https://synbiohub.org/public/igem/i13504_system/Interaction1/Participation1> <http://sbols.org/v3#displayId> "Participation1" .
-  - (missing)  <https://synbiohub.org/public/igem/i13504_system/Interaction1/Participation1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/i13504_system/ComponentReference1> .
-  - (missing)  <https://synbiohub.org/public/igem/i13504_system/Interaction1/Participation1> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000645> .
-  - (missing)  <https://synbiohub.org/public/igem/i13504_system/Interaction1/Participation1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
-  - (missing)  <https://synbiohub.org/public/igem/i13504_system/Interaction1/Participation2> <http://sbols.org/v3#displayId> "Participation2" .
-  - (missing)  <https://synbiohub.org/public/igem/i13504_system/Interaction1/Participation2> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/i13504_system/SubComponent2> .
-  - (missing)  <https://synbiohub.org/public/igem/i13504_system/Interaction1/Participation2> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000011> .
-  - (missing)  <https://synbiohub.org/public/igem/i13504_system/Interaction1/Participation2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
-  - (missing)  <https://synbiohub.org/public/igem/i13504_system/Interaction1> <http://sbols.org/v3#displayId> "Interaction1" .
-  - (missing)  <https://synbiohub.org/public/igem/i13504_system/Interaction1> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/i13504_system/Interaction1/Participation1> .
-  - (missing)  <https://synbiohub.org/public/igem/i13504_system/Interaction1> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/i13504_system/Interaction1/Participation2> .
-  - (missing)  <https://synbiohub.org/public/igem/i13504_system/Interaction1> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000589> .
-  - (missing)  <https://synbiohub.org/public/igem/i13504_system/Interaction1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Interaction> .
-  - (missing)  <https://synbiohub.org/public/igem/i13504_system> <http://sbols.org/v3#hasInteraction> <https://synbiohub.org/public/igem/i13504_system/Interaction1> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/GeneticProduction1/Product2> <http://sbols.org/v3#displayId> "Product2" .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/GeneticProduction1/Product2> <http://sbols.org/v3#participant> "undefined" .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/GeneticProduction1/Product2> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000011> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/GeneticProduction1/Product2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/GeneticProduction1/Template1> <http://sbols.org/v3#displayId> "Template1" .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/GeneticProduction1/Template1> <http://sbols.org/v3#participant> "undefined" .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/GeneticProduction1/Template1> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000645> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/GeneticProduction1/Template1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/GeneticProduction1> <http://sbols.org/v3#displayId> "GeneticProduction1" .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/GeneticProduction1> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/i13504_system/GeneticProduction1/Product2> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/GeneticProduction1> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/i13504_system/GeneticProduction1/Template1> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/GeneticProduction1> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000589> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system/GeneticProduction1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Interaction> .
-  + (extra)    <https://synbiohub.org/public/igem/i13504_system> <http://sbols.org/v3#hasInteraction> <https://synbiohub.org/public/igem/i13504_system/GeneticProduction1> .
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:12:10.566Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:12:10.594Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:12:10.626Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:12:10.636Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:12:10.672Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T10:13:14.025Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:13:14.057Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:13:14.088Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:13:14.120Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:13:14.130Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:13:14.167Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T10:13:54.169Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:13:54.196Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:13:54.224Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:13:54.254Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:13:54.264Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:13:54.302Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T10:14:05.879Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:14:05.907Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:14:05.937Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:14:05.965Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:14:05.975Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:14:06.013Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T10:18:43.201Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:18:43.233Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:18:43.266Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:18:43.295Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:18:43.337Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T10:18:56.963Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:18:56.992Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:18:57.022Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:18:57.052Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:18:57.060Z
-STATUS:    FAIL
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    8 lines with issues  (8.51%)
-
-DIFFERENCES:
-  - (missing)  <https://sbolstandard.org/examples/OrganismA> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000290> .
-  - (missing)  <https://sbolstandard.org/examples/OrganismA> <http://sbols.org/v3#type> <https://identifiers.org/GO:0005623> .
-  - (missing)  <https://sbolstandard.org/examples/OrganismB> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000290> .
-  - (missing)  <https://sbolstandard.org/examples/OrganismB> <http://sbols.org/v3#type> <https://identifiers.org/GO:0005623> .
-  + (extra)    <https://sbolstandard.org/examples/OrganismA> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000290> .
-  + (extra)    <https://sbolstandard.org/examples/OrganismA> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000241> .
-  + (extra)    <https://sbolstandard.org/examples/OrganismB> <http://sbols.org/v3#role> <https://identifiers.org/SO:0000290> .
-  + (extra)    <https://sbolstandard.org/examples/OrganismB> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000241> .
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:18:57.098Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T10:20:29.571Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:20:29.601Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:20:29.631Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:20:29.660Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:20:29.670Z
-STATUS:    FAIL
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    4 lines with issues  (4.26%)
-
-DIFFERENCES:
-  - (missing)  <https://sbolstandard.org/examples/OrganismA> <http://sbols.org/v3#type> <https://identifiers.org/GO:0005623> .
-  - (missing)  <https://sbolstandard.org/examples/OrganismB> <http://sbols.org/v3#type> <https://identifiers.org/GO:0005623> .
-  + (extra)    <https://sbolstandard.org/examples/OrganismA> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000241> .
-  + (extra)    <https://sbolstandard.org/examples/OrganismB> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000241> .
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:20:29.708Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T10:20:53.706Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:20:53.735Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:20:53.763Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:20:53.793Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:20:53.802Z
-STATUS:    FAIL
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    4 lines with issues  (4.26%)
-
-DIFFERENCES:
-  - (missing)  <https://sbolstandard.org/examples/OrganismA> <http://sbols.org/v3#type> <https://identifiers.org/GO:0005623> .
-  - (missing)  <https://sbolstandard.org/examples/OrganismB> <http://sbols.org/v3#type> <https://identifiers.org/GO:0005623> .
-  + (extra)    <https://sbolstandard.org/examples/OrganismA> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000241> .
-  + (extra)    <https://sbolstandard.org/examples/OrganismB> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000241> .
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:20:53.842Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T10:21:07.906Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:21:07.934Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:21:07.962Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:21:07.992Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:21:08.002Z
-STATUS:    FAIL
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    4 lines with issues  (4.26%)
-
-DIFFERENCES:
-  - (missing)  <https://sbolstandard.org/examples/OrganismA> <http://sbols.org/v3#type> <https://identifiers.org/GO:0005623> .
-  - (missing)  <https://sbolstandard.org/examples/OrganismB> <http://sbols.org/v3#type> <https://identifiers.org/GO:0005623> .
-  + (extra)    <https://sbolstandard.org/examples/OrganismA> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000241> .
-  + (extra)    <https://sbolstandard.org/examples/OrganismB> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000241> .
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:21:08.038Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T10:26:22.269Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:26:22.296Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:26:22.326Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:26:22.355Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:26:22.364Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T10:26:22.402Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T11:58:15.479Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T11:58:15.509Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T11:58:15.537Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T11:58:15.566Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T11:58:15.575Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T11:58:15.612Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T11:58:59.941Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T11:58:59.970Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T11:58:59.997Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T11:59:00.026Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T11:59:00.035Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T11:59:00.073Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T12:00:02.460Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T12:00:02.489Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T12:00:02.517Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T12:00:02.548Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T12:00:02.557Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T12:00:02.595Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T12:00:37.452Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T12:00:37.481Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T12:00:37.511Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T12:00:37.542Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T12:00:37.551Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T12:00:37.588Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T12:02:11.103Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T12:02:11.132Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T12:02:11.161Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T12:02:11.190Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T12:02:11.200Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T12:02:11.237Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T14:53:37.319Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T14:53:37.367Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T14:53:37.404Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T14:53:37.434Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T14:53:37.443Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T14:53:37.481Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-23T14:53:51.260Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-23T14:53:51.293Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-23T14:53:51.327Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-23T14:53:51.357Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-23T14:53:51.366Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-23T14:53:51.403Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-24T10:02:35.504Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-24T10:02:35.539Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-24T10:02:35.578Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-24T10:02:35.608Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-24T10:02:35.617Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-24T10:02:35.654Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-24T10:02:45.284Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-24T10:02:45.320Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-24T10:02:45.357Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-24T10:02:45.391Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-24T10:02:45.402Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-24T10:02:45.442Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-24T12:33:41.760Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:33:41.789Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:33:41.824Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:33:41.861Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:33:41.870Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:33:41.907Z
-STATUS:    FAIL
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    4 lines with issues  (0.98%)
-
-DIFFERENCES:
-  - (missing)  <https://sbolstandard.org/examples/ReceiverSystem/Constraint3> <http://sbols.org/v3#restriction> <http://sbols.org/v3#verifyIdentical> .
-  - (missing)  <https://sbolstandard.org/examples/SenderSystem/Constraint3> <http://sbols.org/v3#restriction> <http://sbols.org/v3#verifyIdentical> .
-  + (extra)    <https://sbolstandard.org/examples/ReceiverSystem/Constraint3> <http://sbols.org/v3#restriction> <http://sbols.org/v3#replaces> .
-  + (extra)    <https://sbolstandard.org/examples/SenderSystem/Constraint3> <http://sbols.org/v3#restriction> <http://sbols.org/v3#replaces> .
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-24T12:34:20.558Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:34:20.591Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:34:20.625Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:34:20.665Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:34:20.675Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:34:20.716Z
-STATUS:    FAIL
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    4 lines with issues  (0.98%)
-
-DIFFERENCES:
-  - (missing)  <https://sbolstandard.org/examples/ReceiverSystem/Constraint3> <http://sbols.org/v3#restriction> <http://sbols.org/v3#verifyIdentical> .
-  - (missing)  <https://sbolstandard.org/examples/SenderSystem/Constraint3> <http://sbols.org/v3#restriction> <http://sbols.org/v3#verifyIdentical> .
-  + (extra)    <https://sbolstandard.org/examples/ReceiverSystem/Constraint3> <http://sbols.org/v3#restriction> <http://sbols.org/v3#replaces> .
-  + (extra)    <https://sbolstandard.org/examples/SenderSystem/Constraint3> <http://sbols.org/v3#restriction> <http://sbols.org/v3#replaces> .
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-24T12:51:13.935Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:51:13.964Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:51:13.998Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:51:14.037Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:51:14.045Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:51:14.083Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-24T12:54:38.794Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:54:38.822Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:54:38.858Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:54:38.896Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:54:38.905Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:54:38.944Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-04-24T12:56:04.041Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:56:04.070Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:56:04.105Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:56:04.142Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:56:04.151Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-04-24T12:56:04.187Z
+TIMESTAMP: 2026-05-20T14:56:59.403Z
 STATUS:    PASS
 INPUT:     usecases/MulticellularTest.js
 OUTPUT:    entity/multicellular.js

@@ -1,6 +1,5 @@
 # sbol-script
-
-A TypeScript/JavaScript library for creating and serialising [SBOL3](https://sbolstandard.org/) documents in the browser and Node.js.
+Sbol-script is a TypeScript/JavaScript library for creating and serialising [SBOL3](https://sbolstandard.org/). It can be used with Node.js to develop applications or directly in the browser.
 
 ## Project Structure
 
@@ -44,28 +43,28 @@ sbol-script/
 - npm
 
 ## Install
-
-```bash
+First download the project and then run:
+```
 npm install
 ```
 
 ## Build
 
-Development build (source maps included):
-```bash
+Development build:
+```
 npm run build:dev
 ```
 
-Production build (minified):
-```bash
+Production build:
+```
 npm run build
 ```
 
-Output: `dist/sbol-script.js`
+This process creates a distributable file that can be included for client-side applications in `dist/sbol-script.js`.
 
 ## Browser Usage
 
-Include [rdflib](https://github.com/linkeddata/rdflib.js) before the bundle (it is a required peer dependency):
+Include [rdflib](https://unpkg.com/rdflib/dist/rdflib.min.js) and the sbol-script dependency together, as shown below using the same order:
 
 ```html
 <script src="https://unpkg.com/rdflib/dist/rdflib.min.js"></script>
@@ -76,15 +75,15 @@ Include [rdflib](https://github.com/linkeddata/rdflib.js) before the bundle (it 
     const doc = new SBOLDocument('https://example.org/');
 
     const promoter = SBOLAPI.createPromoterDNAComponent(
-        doc, 'https://example.org/promoter1', 'https://example.org'
+        doc, 'https://example.org/promA', 'https://example.org'
     );
-    promoter.setName('MyPromoter');
+    promoter.setName('Promoter A');
 
     console.log(doc.toRDF(RDFFormat.TURTLE));
 </script>
 ```
 
-Open `main.html` in a browser after building for a full working demo.
+Open `simple.html` for a minimal working demo or `main.html` for a full demo, after building.
 
 ## Key Classes
 
