@@ -72,16 +72,19 @@ After you build the project, open `ex_simple_part.html` for the working demo of 
   - Genetic production to protein1
   - Degradation for protein1
 
-### Global Name
-When loaded as a UMD bundle in the browser the library is exposed as `window.sbolScript` (configured in `webpack.config.js` via `library.name`).
+### Referring to the library
+When loaded as a JS bundle in the browser, the library is exposed as `window.sbolScript`. For details, please see `webpack.config.js`.
 
-## Node.js and browser examples:
-Detailed examples are available under 'tests/entity'. The outputs and JS implementation examples of the same examples are available from '../output/examples'. 
+### Node.js examples:
+Detailed examples are available under 'tests/entity'. The 'output/examples' and 'output/usecases' folders contain one folder for each example. Each example folder has the SBOL RDF outputs. 
 
 Examples for six use cases using the high-level API are available from 'tests/usecases'.
 
+### Browser-based (JS) examples
+Each example folder in 'outputs/examples' includes an HTML file, which shows the use of the library using low-level API methods. 
 
-## Key Classes
+
+## Important Concepts
 
 ### `SBOLDocument`
 SBOLDocument is the main class of the library provides factory methods for all top-level SBOL entities.
@@ -112,7 +115,7 @@ doc.toRDF(RDFFormat.N_TRIPLES_ORDERED)
 doc.toRDF(RDFFormat.JSON_LD)
 ```
 
-### Project Structure
+## Project Structure
 
 ```
 sbol-script/
@@ -188,7 +191,3 @@ The comparator will exit with an error if the libSBOLj3 output folder is not fou
 - `report`: All comparison results. If there is a failin test, it will include line-level differences.
 
 - `report_mt_10`: Shows tests where the error rate > 10%.
-
-
-
-
