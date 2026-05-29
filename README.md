@@ -1,13 +1,15 @@
 # sbol-script
-
 Sbol-script is a TypeScript/JavaScript library for creating and serialising [SBOL3](https://sbolstandard.org/). It can be used with Node.js to develop applications or directly in the browser.
 
-## History
+## LLM Experiments
+LLM experiments are available from https://github.com/goksel/libSBOL3.js, which was used to derive the sbol-script library/
+
+## Development History
 - 2024 - libSBOLjs3-Light: Started as a proof-of-concept project named libSBOLjs3-Light to support the creation of client-side JS projects. Various TypeScript and JavaScript options were tested to create a single JS bundle. The project is available from https://github.com/goksel/libSBOLjs3-Light. 
-- 2025 - libSBOL3.js : Started formalising the underlying graph framework and applied LLM eperiments later. Available from https://github.com/goksel/libSBOL3.js.
+- 2025 - libSBOL3.js : Started formalising the underlying graph framework and applied LLM experiments later. Available from https://github.com/goksel/libSBOL3.js.
 - 2026 - sbol-script: The libSBOL3.js project from the final LLM experiment was checked against errors and released as sbol-script for community use.
 
-We plan to make libSBOLjs3-Light and libSBOL3.js projects private after the review process to prevent developers accessing incomplete and not maintained projects. The sbol-script library, in this repository, is the final and maintained version.
+We plan to make libSBOLjs3-Light and libSBOL3.js projects private after the review process to prevent developers from accessing incomplete projects that are not maintained. The sbol-script library in this repository is the final and maintained version.
 
 
 ## Repository Structure
@@ -72,19 +74,22 @@ After you build the project, open `ex_simple_part.html` for the working demo of 
   - Genetic production to protein1
   - Degradation for protein1
 
-### Global Name
-When loaded as a UMD bundle in the browser the library is exposed as `window.sbolScript` (configured in `webpack.config.js` via `library.name`).
+### Referring to the library
+When loaded as a JS bundle in the browser, the library is exposed as `window.sbolScript`. For details, please see `webpack.config.js`.
 
-## Node.js and browser examples:
-Detailed examples are available under 'tests/entity'. The outputs and JS implementation examples of the same examples are available from '../output/examples'. 
+### Node.js examples:
+Detailed examples are available under 'tests/entity'. The 'output/examples' and 'output/usecases' folders contain one folder for each example. Each example folder has the SBOL RDF outputs. 
 
 Examples for six use cases using the high-level API are available from 'tests/usecases'.
 
+### Browser-based (JS) examples
+Each example folder in 'outputs/examples' includes an HTML file, which demonstrates how to use the library via low-level API methods. 
 
-## Key Classes
+
+## Important Concepts
 
 ### `SBOLDocument`
-SBOLDocument is the main class of the library provides factory methods for all top-level SBOL entities.
+SBOLDocument is the main class of the library and provides factory methods for all top-level SBOL entities.
 
 ```js
 const doc = new SBOLDocument('https://example.org/');
@@ -112,7 +117,7 @@ doc.toRDF(RDFFormat.N_TRIPLES_ORDERED)
 doc.toRDF(RDFFormat.JSON_LD)
 ```
 
-### Project Structure
+## Project Structure
 
 ```
 sbol-script/
@@ -185,10 +190,6 @@ node tests/comparator.js
 
 The comparator will exit with an error if the libSBOLj3 output folder is not found. It creates the following files:
 
-- `report`: All comparison results. If there is a failin test, it will include line-level differences.
+- `report`: All comparison results. If there is a failing test, it will include line-level differences.
 
 - `report_mt_10`: Shows tests where the error rate > 10%.
-
-
-
-
