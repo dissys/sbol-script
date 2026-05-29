@@ -1,4 +1,6 @@
 const path = require('path');
+const webpack = require('webpack');
+const { version } = require('./package.json');
 
 module.exports = {
   entry: './src/index.ts',
@@ -17,5 +19,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     library: { name: 'sbolScript', type: 'umd' },
     globalObject: 'this'
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      __VERSION__: JSON.stringify(version)
+    })
+  ]
 };
