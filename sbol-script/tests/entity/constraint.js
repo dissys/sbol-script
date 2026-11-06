@@ -29,10 +29,7 @@ function generate() {
 
   const cr1 = device.createComponentReference(sc1.getIdentifier(), sc1_sys.getIdentifier(), 'ComponentReference1');
 
-  const c1 = device.createConstraint('Constraint1');
-  c1.setRestriction(ConstraintRestriction.Meets);
-  c1.setSubject(sc2.getIdentifier());
-  c1.setObject(cr1.getIdentifier());
+  device.createConstraint(sc2.getIdentifier(), ConstraintRestriction.Meets, cr1.getIdentifier(), 'Constraint1');
 
   return {
     rdfXml:          doc.toRDF(RDFFormat.RDF_XML),

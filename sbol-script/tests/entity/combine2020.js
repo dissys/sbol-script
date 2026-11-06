@@ -49,29 +49,29 @@ function generate() {
   i13504.addRole(SO + '0000804'); i13504.addSequence(seq_i13504.getIdentifier());
 
   const i_sc1 = i13504.createSubComponent(b0034.getIdentifier(), 'SubComponent1');
-  i_sc1.setOrientation(Orientation.INLINE);
+  i_sc1.setOrientation(Orientation.Inline);
   const i_r1 = i_sc1.createRange(seq_i13504.getIdentifier(), 1, 12, 'Range1');
-  i_r1.setOrientation(Orientation.INLINE);
+  i_r1.setOrientation(Orientation.Inline);
 
   const i_sc2 = i13504.createSubComponent(e0040.getIdentifier(), 'SubComponent2');
-  i_sc2.setOrientation(Orientation.INLINE);
+  i_sc2.setOrientation(Orientation.Inline);
   const i_r2 = i_sc2.createRange(seq_i13504.getIdentifier(), 19, 738, 'Range1');
-  i_r2.setOrientation(Orientation.INLINE);
+  i_r2.setOrientation(Orientation.Inline);
 
   const i_sc3 = i13504.createSubComponent(b0015.getIdentifier(), 'SubComponent3');
-  i_sc3.setOrientation(Orientation.INLINE);
+  i_sc3.setOrientation(Orientation.Inline);
   const i_r3 = i_sc3.createRange(seq_i13504.getIdentifier(), 747, 826, 'Range1');
-  i_r3.setOrientation(Orientation.INLINE);
+  i_r3.setOrientation(Orientation.Inline);
 
   const sf1 = i13504.createSequenceFeature('SequenceFeature1');
-  sf1.setOrientation(Orientation.INLINE);
+  sf1.setOrientation(Orientation.Inline);
   const sf1_r = sf1.createRange(seq_i13504.getIdentifier(), 13, 18, 'Range1');
-  sf1_r.setOrientation(Orientation.INLINE);
+  sf1_r.setOrientation(Orientation.Inline);
 
   const sf2 = i13504.createSequenceFeature('SequenceFeature2');
-  sf2.setOrientation(Orientation.INLINE);
+  sf2.setOrientation(Orientation.Inline);
   const sf2_r = sf2.createRange(seq_i13504.getIdentifier(), 739, 746, 'Range1');
-  sf2_r.setOrientation(Orientation.INLINE);
+  sf2_r.setOrientation(Orientation.Inline);
 
   const i13504_sys = doc.createComponent(NS + '/i13504_system', NS, [ComponentType.FunctionalEntity.iri]);
   i13504_sys.setName('i13504 system');

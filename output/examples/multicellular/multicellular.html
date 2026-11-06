@@ -144,18 +144,17 @@
     ahl_prod.addRole(SO + '0000704');
 
     const ap_sc1 = ahl_prod.createSubComponent(pConstLuxI.getIdentifier(), 'SubComponent1');
-    ap_sc1.setOrientation(Orientation.INLINE);
+    ap_sc1.setOrientation(Orientation.Inline);
     const ap_sc2 = ahl_prod.createSubComponent(rbs_luxI.getIdentifier(), 'SubComponent2');
-    ap_sc2.setOrientation(Orientation.INLINE);
+    ap_sc2.setOrientation(Orientation.Inline);
     const ap_sc3 = ahl_prod.createSubComponent(luxI.getIdentifier(), 'SubComponent3');
-    ap_sc3.setOrientation(Orientation.INLINE);
+    ap_sc3.setOrientation(Orientation.Inline);
     const ap_sc4 = ahl_prod.createSubComponent(ter_luxI.getIdentifier(), 'SubComponent4');
-    ap_sc4.setOrientation(Orientation.INLINE);
+    ap_sc4.setOrientation(Orientation.Inline);
     const ap_sc5 = ahl_prod.createSubComponent(ahl.getIdentifier(), 'SubComponent5');
 
     // AHL_producer Interaction1: genetic production — luxI CDS (template) → AHL (product)
-    const ap_int1 = ahl_prod.createInteraction('Interaction1');
-    ap_int1.setType({ iri: SBO + '0000589' });
+    const ap_int1 = ahl_prod.createInteraction({ iri: SBO + '0000589' }, 'Interaction1');
     ap_int1.createParticipation({ iri: SBO + '0000645' }, ap_sc3.getIdentifier(), 'Participation1');
     ap_int1.createParticipation({ iri: SBO + '0000011' }, ap_sc5.getIdentifier(), 'Participation2');
 
@@ -166,47 +165,43 @@
     ahl_recv.addRole(SO + '0000704');
 
     const ar_sc1  = ahl_recv.createSubComponent(pConstLuxR.getIdentifier(), 'SubComponent1');
-    ar_sc1.setOrientation(Orientation.INLINE);
+    ar_sc1.setOrientation(Orientation.Inline);
     const ar_sc2  = ahl_recv.createSubComponent(rbs_luxR.getIdentifier(), 'SubComponent2');
-    ar_sc2.setOrientation(Orientation.INLINE);
+    ar_sc2.setOrientation(Orientation.Inline);
     const ar_sc3  = ahl_recv.createSubComponent(luxR.getIdentifier(), 'SubComponent3');
-    ar_sc3.setOrientation(Orientation.INLINE);
+    ar_sc3.setOrientation(Orientation.Inline);
     const ar_sc4  = ahl_recv.createSubComponent(ter_luxR.getIdentifier(), 'SubComponent4');
-    ar_sc4.setOrientation(Orientation.INLINE);
+    ar_sc4.setOrientation(Orientation.Inline);
     const ar_sc5  = ahl_recv.createSubComponent(pLuxR.getIdentifier(), 'SubComponent5');
-    ar_sc5.setOrientation(Orientation.INLINE);
+    ar_sc5.setOrientation(Orientation.Inline);
     const ar_sc6  = ahl_recv.createSubComponent(rbs_gfp.getIdentifier(), 'SubComponent6');
-    ar_sc6.setOrientation(Orientation.INLINE);
+    ar_sc6.setOrientation(Orientation.Inline);
     const ar_sc7  = ahl_recv.createSubComponent(gfp.getIdentifier(), 'SubComponent7');
-    ar_sc7.setOrientation(Orientation.INLINE);
+    ar_sc7.setOrientation(Orientation.Inline);
     const ar_sc8  = ahl_recv.createSubComponent(ter_gfp.getIdentifier(), 'SubComponent8');
-    ar_sc8.setOrientation(Orientation.INLINE);
+    ar_sc8.setOrientation(Orientation.Inline);
     const ar_sc9  = ahl_recv.createSubComponent(ahl.getIdentifier(), 'SubComponent9');
     const ar_sc10 = ahl_recv.createSubComponent(luxr_p.getIdentifier(), 'SubComponent10');
     const ar_sc11 = ahl_recv.createSubComponent(gfp_p.getIdentifier(), 'SubComponent11');
     const ar_sc12 = ahl_recv.createSubComponent(luxr_ahl.getIdentifier(), 'SubComponent12');
 
     // AHL_receiver Interaction1: genetic production — luxR CDS (template) → LuxR_protein (product)
-    const ar_int1 = ahl_recv.createInteraction('Interaction1');
-    ar_int1.setType({ iri: SBO + '0000589' });
+    const ar_int1 = ahl_recv.createInteraction({ iri: SBO + '0000589' }, 'Interaction1');
     ar_int1.createParticipation({ iri: SBO + '0000645' }, ar_sc3.getIdentifier(), 'Participation1');
     ar_int1.createParticipation({ iri: SBO + '0000011' }, ar_sc10.getIdentifier(), 'Participation2');
 
     // AHL_receiver Interaction2: genetic production — gfp CDS (template) → GFP_protein (product)
-    const ar_int2 = ahl_recv.createInteraction('Interaction2');
-    ar_int2.setType({ iri: SBO + '0000589' });
+    const ar_int2 = ahl_recv.createInteraction({ iri: SBO + '0000589' }, 'Interaction2');
     ar_int2.createParticipation({ iri: SBO + '0000645' }, ar_sc7.getIdentifier(), 'Participation1');
     ar_int2.createParticipation({ iri: SBO + '0000011' }, ar_sc11.getIdentifier(), 'Participation2');
 
     // AHL_receiver Interaction3: stimulation — pLuxR (stimulator) → LuxR_AHL (stimulated)
-    const ar_int3 = ahl_recv.createInteraction('Interaction3');
-    ar_int3.setType({ iri: SBO + '0000170' });
+    const ar_int3 = ahl_recv.createInteraction({ iri: SBO + '0000170' }, 'Interaction3');
     ar_int3.createParticipation({ iri: SBO + '0000643' }, ar_sc5.getIdentifier(), 'Participation1');
     ar_int3.createParticipation({ iri: SBO + '0000459' }, ar_sc12.getIdentifier(), 'Participation2');
 
     // AHL_receiver Interaction4: non-covalent binding — LuxR_protein + AHL → LuxR_AHL
-    const ar_int4 = ahl_recv.createInteraction('Interaction4');
-    ar_int4.setType({ iri: SBO + '0000177' });
+    const ar_int4 = ahl_recv.createInteraction({ iri: SBO + '0000177' }, 'Interaction4');
     ar_int4.createParticipation({ iri: SBO + '0000010' }, ar_sc10.getIdentifier(), 'Participation1');
     ar_int4.createParticipation({ iri: SBO + '0000010' }, ar_sc9.getIdentifier(), 'Participation2');
     ar_int4.createParticipation({ iri: SBO + '0000011' }, ar_sc12.getIdentifier(), 'Participation3');
@@ -221,24 +216,13 @@
     const s_sc2 = sender.createSubComponent(ahl.getIdentifier(), 'SubComponent2');
     const s_sc3 = sender.createSubComponent(ahl_prod.getIdentifier(), 'SubComponent3');
 
-    const s_cr1 = sender.createComponentReference('ComponentReference1');
-    s_cr1.setInChildOf(s_sc3.getIdentifier());
-    s_cr1.setRefersTo(ap_sc5.getIdentifier()); // AHL_producer/SubComponent5 (AHL)
+    const s_cr1 = sender.createComponentReference(s_sc3.getIdentifier(), ap_sc5.getIdentifier(), 'ComponentReference1'); // AHL_producer/SubComponent5 (AHL)
 
-    const s_c1 = sender.createConstraint('Constraint1');
-    s_c1.setRestriction(ConstraintRestriction.Contains);
-    s_c1.setSubject(s_sc1.getIdentifier());
-    s_c1.setObject(s_sc2.getIdentifier());
+    const s_c1 = sender.createConstraint(s_sc1.getIdentifier(), ConstraintRestriction.Contains, s_sc2.getIdentifier(), 'Constraint1');
 
-    const s_c2 = sender.createConstraint('Constraint2');
-    s_c2.setRestriction(ConstraintRestriction.Contains);
-    s_c2.setSubject(s_sc1.getIdentifier());
-    s_c2.setObject(s_sc3.getIdentifier());
+    const s_c2 = sender.createConstraint(s_sc1.getIdentifier(), ConstraintRestriction.Contains, s_sc3.getIdentifier(), 'Constraint2');
 
-    const s_c3 = sender.createConstraint('Constraint3');
-    s_c3.setRestriction(ConstraintRestriction.VerifyIdentical);
-    s_c3.setSubject(s_cr1.getIdentifier());
-    s_c3.setObject(s_sc2.getIdentifier());
+    const s_c3 = sender.createConstraint(s_cr1.getIdentifier(), ConstraintRestriction.VerifyIdentical, s_sc2.getIdentifier(), 'Constraint3');
 
     // ── ReceiverSystem ─────────────────────────────────────────────────────
     const receiver = doc.createComponent(NS + '/ReceiverSystem', NS, [ComponentType.FunctionalEntity.iri]);
@@ -250,24 +234,13 @@
     const r_sc2 = receiver.createSubComponent(ahl.getIdentifier(), 'SubComponent2');
     const r_sc3 = receiver.createSubComponent(ahl_recv.getIdentifier(), 'SubComponent3');
 
-    const r_cr1 = receiver.createComponentReference('ComponentReference1');
-    r_cr1.setInChildOf(r_sc3.getIdentifier());
-    r_cr1.setRefersTo(ar_sc9.getIdentifier()); // AHL_receiver/SubComponent9 (AHL)
+    const r_cr1 = receiver.createComponentReference(r_sc3.getIdentifier(), ar_sc9.getIdentifier(), 'ComponentReference1'); // AHL_receiver/SubComponent9 (AHL)
 
-    const r_c1 = receiver.createConstraint('Constraint1');
-    r_c1.setRestriction(ConstraintRestriction.Contains);
-    r_c1.setSubject(r_sc1.getIdentifier());
-    r_c1.setObject(r_sc2.getIdentifier());
+    const r_c1 = receiver.createConstraint(r_sc1.getIdentifier(), ConstraintRestriction.Contains, r_sc2.getIdentifier(), 'Constraint1');
 
-    const r_c2 = receiver.createConstraint('Constraint2');
-    r_c2.setRestriction(ConstraintRestriction.Contains);
-    r_c2.setSubject(r_sc1.getIdentifier());
-    r_c2.setObject(r_sc3.getIdentifier());
+    const r_c2 = receiver.createConstraint(r_sc1.getIdentifier(), ConstraintRestriction.Contains, r_sc3.getIdentifier(), 'Constraint2');
 
-    const r_c3 = receiver.createConstraint('Constraint3');
-    r_c3.setRestriction(ConstraintRestriction.VerifyIdentical);
-    r_c3.setSubject(r_cr1.getIdentifier());
-    r_c3.setObject(r_sc2.getIdentifier());
+    const r_c3 = receiver.createConstraint(r_cr1.getIdentifier(), ConstraintRestriction.VerifyIdentical, r_sc2.getIdentifier(), 'Constraint3');
 
     // ── MulticellularSystem ────────────────────────────────────────────────
     const multi = doc.createComponent(NS + '/MulticellularSystem', NS, [ComponentType.FunctionalEntity.iri]);
@@ -278,18 +251,11 @@
     const m_sc1 = multi.createSubComponent(sender.getIdentifier(), 'SubComponent1');
     const m_sc2 = multi.createSubComponent(receiver.getIdentifier(), 'SubComponent2');
 
-    const m_cr1 = multi.createComponentReference('ComponentReference1');
-    m_cr1.setInChildOf(m_sc1.getIdentifier());
-    m_cr1.setRefersTo(s_sc2.getIdentifier()); // SenderSystem/SubComponent2 (AHL)
+    const m_cr1 = multi.createComponentReference(m_sc1.getIdentifier(), s_sc2.getIdentifier(), 'ComponentReference1'); // SenderSystem/SubComponent2 (AHL)
 
-    const m_cr2 = multi.createComponentReference('ComponentReference2');
-    m_cr2.setInChildOf(m_sc2.getIdentifier());
-    m_cr2.setRefersTo(r_sc2.getIdentifier()); // ReceiverSystem/SubComponent2 (AHL)
+    const m_cr2 = multi.createComponentReference(m_sc2.getIdentifier(), r_sc2.getIdentifier(), 'ComponentReference2'); // ReceiverSystem/SubComponent2 (AHL)
 
-    const m_c1 = multi.createConstraint('Constraint1');
-    m_c1.setRestriction(ConstraintRestriction.VerifyIdentical);
-    m_c1.setSubject(m_cr1.getIdentifier());
-    m_c1.setObject(m_cr2.getIdentifier());
+    const m_c1 = multi.createConstraint(m_cr1.getIdentifier(), ConstraintRestriction.VerifyIdentical, m_cr2.getIdentifier(), 'Constraint1');
 
     document.getElementById('turtleOutput').textContent         = doc.toRDF(RDFFormat.TURTLE);
     document.getElementById('xmlOutput').textContent            = doc.toRDF(RDFFormat.RDF_XML);

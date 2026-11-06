@@ -45,8 +45,9 @@
     // Note: in the NT file model1 has namespace https://sbolstandard.org
     const model1 = doc.createModel(NS + '/model1', NS);
     model1.setSource('http://virtualparts.org');
-    model1.setLanguage(ModelLanguage.SBML);       // SBML → edam:format_2585
-    model1.setFramework(ModelFramework.ODE);      // ODE  → SBO:0000062
+    model1.setLanguage(ModelLanguage.SBML);         // SBML       → edam:format_2585
+    model1.setFramework(ModelFramework.Continuous); // Continuous → SBO:0000062
+    model1.setNamespace('https://sbolstandard.org');
 
     // ── Component referencing the model ────────────────────────────────────────
     const toggle_switch = doc.createComponent(NS + '/toggle_switch', NS, [ComponentType.FunctionalEntity.iri]);

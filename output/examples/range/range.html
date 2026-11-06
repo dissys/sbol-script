@@ -66,10 +66,9 @@
 
     // ── SubComponent with Range ────────────────────────────────────────────────
     const sc1 = i13504.createSubComponent(b0015.getIdentifier(), 'SubComponent1');
-    sc1.setOrientation(Orientation.INLINE);
-    const range1 = sc1.createRange(1, 80, 'Range1');
-    range1.setSequenceIRI(seq_i13504.getIdentifier());
-    range1.setOrientation(Orientation.INLINE);
+    sc1.setOrientation(Orientation.Inline);
+    const range1 = sc1.createRange(seq_i13504.getIdentifier(), 1, 80, 'Range1');
+    range1.setOrientation(Orientation.Inline);
     range1.setOrder(1);
 
     document.getElementById('turtleOutput').textContent         = doc.toRDF(RDFFormat.TURTLE);

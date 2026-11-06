@@ -451,7 +451,7 @@ export class FunctionalEntityComponent extends Component {
 export class PromoterDNAComponent extends DNAComponent {
     private constructor(store: any, identifier: IRI) {
         super(store, identifier);
-        this.setRole(DNARole.PROMOTER);
+        this.setRole(DNARole.Promoter);
     }
     static create(store: any, identifier: IRI): PromoterDNAComponent {
         return new PromoterDNAComponent(store, identifier);

@@ -43,7 +43,7 @@ function generate() {
 
   // TetR_producer DNA parts
   const tetr_prod = SBOLAPI.createDnaComponent(doc, 'TetR_producer', 'TetR device',    'TetR producer', DNARole.Gene.iri, null);
-  const pLacI     = SBOLAPI.createDnaComponent(doc, 'pLacI',         'pLacI promoter', 'LacI repressible promoter', DNARole.PROMOTER.iri, null);
+  const pLacI     = SBOLAPI.createDnaComponent(doc, 'pLacI',         'pLacI promoter', 'LacI repressible promoter', DNARole.Promoter.iri, null);
   const rbs_tetr  = SBOLAPI.createDnaComponent(doc, 'rbs_tetR',      'rbs',            'tetR RBS',    DNARole.RBS.iri, null);
   const tetR      = SBOLAPI.createDnaComponent(doc, 'tetR',          'tetR',           'tetR coding sequence', DNARole.CDS.iri, null);
   const ter_tetr  = SBOLAPI.createDnaComponent(doc, 'ter_tetR',      'tetR terminator','Terminator',  DNARole.Terminator.iri, null);
@@ -68,7 +68,7 @@ function generate() {
 
   // LacI_producer DNA parts
   const laci_prod = SBOLAPI.createDnaComponent(doc, 'LacI_producer', 'LacI producer', 'LacI producer', DNARole.Gene.iri, null);
-  const pTetR     = SBOLAPI.createDnaComponent(doc, 'pTetR',         'pTetR',         'TetR repressible promoter', DNARole.PROMOTER.iri, null);
+  const pTetR     = SBOLAPI.createDnaComponent(doc, 'pTetR',         'pTetR',         'TetR repressible promoter', DNARole.Promoter.iri, null);
   const rbs_laci  = SBOLAPI.createDnaComponent(doc, 'rbs_lacI',      'rbs',           'RBS',           DNARole.RBS.iri, null);
   const lacI      = SBOLAPI.createDnaComponent(doc, 'lacI',          'lacI',          'lacI coding sequence', DNARole.CDS.iri, null);
   const rbs_gfp   = SBOLAPI.createDnaComponent(doc, 'rbs_gfp',       'rbs',           'RBS',           DNARole.RBS.iri, null);

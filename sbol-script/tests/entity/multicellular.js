@@ -86,13 +86,13 @@ function generate() {
   ahl_prod.addRole(SO + '0000704');
 
   const ap_sc1 = ahl_prod.createSubComponent(pConstLuxI.getIdentifier(), 'SubComponent1');
-  ap_sc1.setOrientation(Orientation.INLINE);
+  ap_sc1.setOrientation(Orientation.Inline);
   const ap_sc2 = ahl_prod.createSubComponent(rbs_luxI.getIdentifier(), 'SubComponent2');
-  ap_sc2.setOrientation(Orientation.INLINE);
+  ap_sc2.setOrientation(Orientation.Inline);
   const ap_sc3 = ahl_prod.createSubComponent(luxI.getIdentifier(), 'SubComponent3');
-  ap_sc3.setOrientation(Orientation.INLINE);
+  ap_sc3.setOrientation(Orientation.Inline);
   const ap_sc4 = ahl_prod.createSubComponent(ter_luxI.getIdentifier(), 'SubComponent4');
-  ap_sc4.setOrientation(Orientation.INLINE);
+  ap_sc4.setOrientation(Orientation.Inline);
   const ap_sc5 = ahl_prod.createSubComponent(ahl.getIdentifier(), 'SubComponent5');
 
   const ap_int1 = ahl_prod.createInteraction({ iri: SBO + '0000589' }, 'Interaction1');
@@ -105,21 +105,21 @@ function generate() {
   ahl_recv.addRole(SO + '0000704');
 
   const ar_sc1  = ahl_recv.createSubComponent(pConstLuxR.getIdentifier(), 'SubComponent1');
-  ar_sc1.setOrientation(Orientation.INLINE);
+  ar_sc1.setOrientation(Orientation.Inline);
   const ar_sc2  = ahl_recv.createSubComponent(rbs_luxR.getIdentifier(), 'SubComponent2');
-  ar_sc2.setOrientation(Orientation.INLINE);
+  ar_sc2.setOrientation(Orientation.Inline);
   const ar_sc3  = ahl_recv.createSubComponent(luxR.getIdentifier(), 'SubComponent3');
-  ar_sc3.setOrientation(Orientation.INLINE);
+  ar_sc3.setOrientation(Orientation.Inline);
   const ar_sc4  = ahl_recv.createSubComponent(ter_luxR.getIdentifier(), 'SubComponent4');
-  ar_sc4.setOrientation(Orientation.INLINE);
+  ar_sc4.setOrientation(Orientation.Inline);
   const ar_sc5  = ahl_recv.createSubComponent(pLuxR.getIdentifier(), 'SubComponent5');
-  ar_sc5.setOrientation(Orientation.INLINE);
+  ar_sc5.setOrientation(Orientation.Inline);
   const ar_sc6  = ahl_recv.createSubComponent(rbs_gfp.getIdentifier(), 'SubComponent6');
-  ar_sc6.setOrientation(Orientation.INLINE);
+  ar_sc6.setOrientation(Orientation.Inline);
   const ar_sc7  = ahl_recv.createSubComponent(gfp.getIdentifier(), 'SubComponent7');
-  ar_sc7.setOrientation(Orientation.INLINE);
+  ar_sc7.setOrientation(Orientation.Inline);
   const ar_sc8  = ahl_recv.createSubComponent(ter_gfp.getIdentifier(), 'SubComponent8');
-  ar_sc8.setOrientation(Orientation.INLINE);
+  ar_sc8.setOrientation(Orientation.Inline);
   const ar_sc9  = ahl_recv.createSubComponent(ahl.getIdentifier(), 'SubComponent9');
   const ar_sc10 = ahl_recv.createSubComponent(luxr_p.getIdentifier(), 'SubComponent10');
   const ar_sc11 = ahl_recv.createSubComponent(gfp_p.getIdentifier(), 'SubComponent11');

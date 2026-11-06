@@ -55,6 +55,8 @@
     e0040.setDescription('gfp coding sequence');
     e0040.addSequence(e0040_seq.getIdentifier());
 
+    const TetR = doc.createProteinComponent(NS + '/TetR', NS);
+
     // EntireSequence feature on E0040 referencing gfp_start
     const gfp_start = doc.createSequence(NS + '/gfp_start', NS);
 
@@ -76,10 +78,9 @@
     i13504.addSequence(i13504_seq.getIdentifier());
 
     const sc_i13504 = i13504.createSubComponent(e0040.getIdentifier(), 'SubComponent1');
-    sc_i13504.setOrientation(Orientation.INLINE);
-    const range1 = sc_i13504.createRange(1, 720, 'Range1');
-    range1.setSequenceIRI(i13504_seq.getIdentifier());
-    range1.setOrientation(Orientation.INLINE);
+    sc_i13504.setOrientation(Orientation.Inline);
+    const range1 = sc_i13504.createRange(i13504_seq.getIdentifier(), 1, 720, 'Range1');
+    range1.setOrientation(Orientation.Inline);
 
     // ── i13504_system with participations ──────────────────────────────────────
     const i13504_system = doc.createComponent(NS + '/i13504_system', NS, [ComponentType.DNA.iri]);
@@ -90,19 +91,15 @@
     const sc1 = i13504_system.createSubComponent(i13504.getIdentifier(), 'SubComponent1');
     const sc2 = i13504_system.createSubComponent(gfp_p.getIdentifier(), 'SubComponent2');
 
-    const cr1 = i13504_system.createComponentReference('ComponentReference1');
-    cr1.setInChildOf(sc1.getIdentifier());
-    cr1.setRefersTo(sc_i13504.getIdentifier());
+    const cr1 = i13504_system.createComponentReference(sc1.getIdentifier(), sc_i13504.getIdentifier(), 'ComponentReference1');
 
     // Interaction1: GeneticProduction — CDS (ComponentReference1) → GFP_protein (SubComponent2)
-    const int1 = i13504_system.createInteraction('Interaction1');
-    int1.setType(InteractionType.GeneticProduction);
+    const int1 = i13504_system.createInteraction(InteractionType.GeneticProduction, 'Interaction1');
     const p1_1 = int1.createParticipation(ParticipationType.Template, cr1.getIdentifier(), 'Participation1');
     const p1_2 = int1.createParticipation(ParticipationType.Product, sc2.getIdentifier(), 'Participation2');
 
     // Interaction2: type SBO:0000169 — higherOrderParticipant
-    const int2 = i13504_system.createInteraction('Interaction2');
-    int2.setType(SBO + '0000169');
+    const int2 = i13504_system.createInteraction(SBO + '0000169', 'Interaction2');
     const p2_1 = int2.createParticipation(SBO + '0000020', null, 'Participation1');
     p2_1.setHigherOrderParticipant(int1.getIdentifier());
 

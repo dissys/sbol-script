@@ -959,7 +959,7 @@ export class SBOLAPI {
      * If the child has a sequence, a Range location is created on the subcomponent
      * pointing to the appropriate region in the parent's sequence.
      */
-    static appendComponent( doc: SBOLDocument, parent: Component, child: Component, orientation: typeof Orientation.INLINE = Orientation.INLINE ): SubComponent {
+    static appendComponent( doc: SBOLDocument, parent: Component, child: Component, orientation: typeof Orientation.Inline = Orientation.Inline ): SubComponent {
         const subComponent = parent.createSubComponent(child.getIdentifier());
         subComponent.setOrientation(orientation);
         const childSequences = child.getSequences();
@@ -976,7 +976,7 @@ export class SBOLAPI {
      * Appends a SequenceFeature (inline, default orientation) to `parent` and
      * extends the parent's sequence by `elements`. Returns the created SequenceFeature.
      */
-    static appendSequenceFeature( doc: SBOLDocument, parent: Component, elements: string, orientation: typeof Orientation.INLINE ): SequenceFeature | null {
+    static appendSequenceFeature( doc: SBOLDocument, parent: Component, elements: string, orientation: typeof Orientation.Inline ): SequenceFeature | null {
         if (!elements || elements.length === 0) return null;
 
         const sequences = parent.getSequences();
@@ -994,7 +994,7 @@ export class SBOLAPI {
             end = elements.length - 1;
         }
 
-        if (orientation === Orientation.INLINE) {
+        if (orientation === Orientation.Inline) {
             sequence.setElements((sequence.getElements() ?? '') + elements);
         } else {
             throw new Error('Reverse complement sequence addition has not been implemented yet!');
@@ -1013,7 +1013,7 @@ export class SBOLAPI {
      * Private helper: creates a Range location on `subComponent` within `parent`,
      * appending `elements` to the parent sequence (reverse-complementing if needed).
      */
-    private static _createRange( doc: SBOLDocument, parent: Component, subComponent: SubComponent, elements: string, orientation: typeof Orientation.INLINE ): Range | null {
+    private static _createRange( doc: SBOLDocument, parent: Component, subComponent: SubComponent, elements: string, orientation: typeof Orientation.Inline ): Range | null {
         if (!elements || elements.length === 0) return null;
 
         const sequences = parent.getSequences();
@@ -1032,7 +1032,7 @@ export class SBOLAPI {
         }
 
         let actualElements = elements;
-        if (orientation === Orientation.REVERSE_COMPLEMENT) {
+        if (orientation === Orientation.ReverseComplement) {
             actualElements = SBOLAPI._getReverseComplement(elements);
         }
         sequence.setElements((sequence.getElements() ?? '') + actualElements);

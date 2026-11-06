@@ -299,7 +299,7 @@ export const SBOLEntity = {
 
 export const DNARole = {
   SequenceFeature: { iri: SBOLNamespaces.SO('0000110').value, label: "Sequence Feature" },
-  PROMOTER: { iri: SBOLNamespaces.SO('0000167').value, label: "Promoter" },
+  Promoter:  { iri: SBOLNamespaces.SO('0000167').value, label: "Promoter" },
   RBS:       { iri: SBOLNamespaces.SO('0000139').value, label: "Ribosome Binding Site" },
   CDS:       { iri: SBOLNamespaces.SO('0000316').value, label: "Coding Sequence" },
   Terminator: { iri: SBOLNamespaces.SO('0000141').value, label: "Terminator" },
@@ -348,8 +348,8 @@ export const Encoding = {
 };
 
 export const Orientation = {
-  INLINE:             { iri: SBOLNamespaces.SO('0001030').value, label: "Inline" },
-  REVERSE_COMPLEMENT: { iri: SBOLNamespaces.SO('0001031').value, label: "Reverse Complement" },
+  Inline:            { iri: SBOLNamespaces.SO('0001030').value, label: "Inline" },
+  ReverseComplement: { iri: SBOLNamespaces.SO('0001031').value, label: "Reverse Complement" },
   isOrientationIRI: (iri: any) => /^https?:\/\/identifiers\.org\/SO:\d{7}$/.test(iri)
 };
 

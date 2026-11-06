@@ -121,14 +121,14 @@ function generate() {
   doubleTerminator.setSequence(doubleTerminator_seq.getIdentifier());
 
   const dt_sc_b0010 = doubleTerminator.createSubComponent(b0010.getIdentifier());
-  dt_sc_b0010.setOrientation(Orientation.INLINE);
+  dt_sc_b0010.setOrientation(Orientation.Inline);
   const dt_r1 = dt_sc_b0010.createRange(doubleTerminator_seq.getIdentifier(), 1, 80, 'Range1');
-  dt_r1.setOrientation(Orientation.INLINE);
+  dt_r1.setOrientation(Orientation.Inline);
 
   const dt_sc_b0012 = doubleTerminator.createSubComponent(b0012.getIdentifier());
-  dt_sc_b0012.setOrientation(Orientation.INLINE);
+  dt_sc_b0012.setOrientation(Orientation.Inline);
   const dt_r2 = dt_sc_b0012.createRange(doubleTerminator_seq.getIdentifier(), 81, 121, 'Range1');
-  dt_r2.setOrientation(Orientation.INLINE);
+  dt_r2.setOrientation(Orientation.Inline);
 
   // ── Assemble popsReceiver ──────────────────────────────────────────────────
 
@@ -144,29 +144,29 @@ function generate() {
   popsReceiver.setSequence(popsReceiver_seq.getIdentifier());
 
   const sc_pTetR = popsReceiver.createSubComponent(pTetR.getIdentifier());
-  sc_pTetR.setOrientation(Orientation.INLINE);
+  sc_pTetR.setOrientation(Orientation.Inline);
   const r_pTetR = sc_pTetR.createRange(popsReceiver_seq.getIdentifier(), 1, 54, 'Range1');
-  r_pTetR.setOrientation(Orientation.INLINE);
+  r_pTetR.setOrientation(Orientation.Inline);
 
   const sc_rbs = popsReceiver.createSubComponent(rbs.getIdentifier());
-  sc_rbs.setOrientation(Orientation.INLINE);
+  sc_rbs.setOrientation(Orientation.Inline);
   const r_rbs = sc_rbs.createRange(popsReceiver_seq.getIdentifier(), 55, 66, 'Range1');
-  r_rbs.setOrientation(Orientation.INLINE);
+  r_rbs.setOrientation(Orientation.Inline);
 
   const sc_luxR = popsReceiver.createSubComponent(luxR.getIdentifier());
-  sc_luxR.setOrientation(Orientation.INLINE);
+  sc_luxR.setOrientation(Orientation.Inline);
   const r_luxR = sc_luxR.createRange(popsReceiver_seq.getIdentifier(), 67, 847, 'Range1');
-  r_luxR.setOrientation(Orientation.INLINE);
+  r_luxR.setOrientation(Orientation.Inline);
 
   const sc_dt = popsReceiver.createSubComponent(doubleTerminator.getIdentifier());
-  sc_dt.setOrientation(Orientation.INLINE);
+  sc_dt.setOrientation(Orientation.Inline);
   const r_dt = sc_dt.createRange(popsReceiver_seq.getIdentifier(), 848, 968, 'Range1');
-  r_dt.setOrientation(Orientation.INLINE);
+  r_dt.setOrientation(Orientation.Inline);
 
   const sc_pLuxR = popsReceiver.createSubComponent(pLuxR.getIdentifier());
-  sc_pLuxR.setOrientation(Orientation.INLINE);
+  sc_pLuxR.setOrientation(Orientation.Inline);
   const r_pLuxR = sc_pLuxR.createRange(popsReceiver_seq.getIdentifier(), 969, 1023, 'Range1');
-  r_pLuxR.setOrientation(Orientation.INLINE);
+  r_pLuxR.setOrientation(Orientation.Inline);
 
   // ── Interactions ──────────────────────────────────────────────────────────
 

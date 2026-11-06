@@ -27,9 +27,9 @@ function generate() {
   i13504.addSequence(seq_i13504.getIdentifier());
 
   const sc1 = i13504.createSubComponent(b0015.getIdentifier(), 'SubComponent1');
-  sc1.setOrientation(Orientation.INLINE);
+  sc1.setOrientation(Orientation.Inline);
   const range1 = sc1.createRange(seq_i13504.getIdentifier(), 1, 80, 'Range1');
-  range1.setOrientation(Orientation.INLINE);
+  range1.setOrientation(Orientation.Inline);
 
   return {
     rdfXml:          doc.toRDF(RDFFormat.RDF_XML),

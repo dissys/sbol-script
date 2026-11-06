@@ -40,14 +40,14 @@ function generate() {
   const luxR_protein = SBOLAPI.createProteinComponentInContainer(doc, popsReceiver, 'BBa_C0062_protein', 'LuxR', 'LuxR protein', SBOLNamespaces.GO('0003700'), 'NNNNNNNNNNN');
   const tetR_protein = SBOLAPI.createProteinComponentInContainer(doc, popsReceiver, 'TetR_protein', 'TetR', 'TetR protein', SBOLNamespaces.GO('0003700'), 'NNNNNNNNNNN');
 
-  SBOLAPI.appendComponent(doc, doubleTerminator, b0010, Orientation.INLINE);
-  SBOLAPI.appendComponent(doc, doubleTerminator, b0012, Orientation.INLINE);
+  SBOLAPI.appendComponent(doc, doubleTerminator, b0010, Orientation.Inline);
+  SBOLAPI.appendComponent(doc, doubleTerminator, b0012, Orientation.Inline);
 
-  SBOLAPI.appendComponent(doc, popsReceiver, pTetR, Orientation.INLINE);
-  SBOLAPI.appendComponent(doc, popsReceiver, rbs, Orientation.INLINE);
-  SBOLAPI.appendComponent(doc, popsReceiver, luxR, Orientation.INLINE);
-  SBOLAPI.appendComponent(doc, popsReceiver, doubleTerminator, Orientation.INLINE);
-  SBOLAPI.appendComponent(doc, popsReceiver, pLuxR, Orientation.INLINE);
+  SBOLAPI.appendComponent(doc, popsReceiver, pTetR, Orientation.Inline);
+  SBOLAPI.appendComponent(doc, popsReceiver, rbs, Orientation.Inline);
+  SBOLAPI.appendComponent(doc, popsReceiver, luxR, Orientation.Inline);
+  SBOLAPI.appendComponent(doc, popsReceiver, doubleTerminator, Orientation.Inline);
+  SBOLAPI.appendComponent(doc, popsReceiver, pLuxR, Orientation.Inline);
 
   SBOLAPI.createInteractionFromComponents([InteractionType.GeneticProduction], popsReceiver, luxR, [ParticipationType.Template], luxR_protein, [ParticipationType.Product]);
   SBOLAPI.createInteractionFromComponents([InteractionType.Stimulation], popsReceiver, pLuxR, [ParticipationType.Stimulated], luxR_protein, [ParticipationType.Stimulator]);

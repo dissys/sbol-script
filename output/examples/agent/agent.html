@@ -13,7 +13,7 @@
 <body class="bg-light">
 <div class="container py-4">
     <h1 class="mb-4">SBOL3 Agent</h1>
-    <p class="text-muted">An Agent (CodonOptimiserSoftware) and a Plan (CodonOptimisationProtocol), plus a toggle_switch Component.</p>
+    <p class="text-muted">An Agent (CodonOptimiserSoftware), plus a toggle_switch Component.</p>
     <div class="card mb-4">
         <div class="card-header bg-primary text-white">Turtle (text/turtle)</div>
         <div class="card-body"><pre id="turtleOutput"></pre></div>
@@ -45,11 +45,6 @@
     const agent = doc.createAgent(NS + '/CodonOptimiserSoftware', NS);
     agent.setName('Codon Optimiser Software');
     agent.setDescription('Used to optimise bacterial DNA sequences.');
-
-    // ── CodonOptimisationProtocol — Plan ───────────────────────────────────
-    const plan = doc.createPlan(NS + '/CodonOptimisationProtocol', NS);
-    plan.setName('Codon Optimisation Protocol');
-    plan.setDescription('Optimisation protocol to improve the translation of mRNAs.');
 
     // ── toggle_switch — Component ──────────────────────────────────────────
     const toggle = doc.createComponent(NS + '/toggle_switch', NS, [ComponentType.FunctionalEntity.iri]);

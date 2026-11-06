@@ -82,9 +82,7 @@
 
     const sc1 = device.createSubComponent(i13504_system.getIdentifier(), 'SubComponent1');
 
-    const cr1 = device.createComponentReference('ComponentReference1');
-    cr1.setInChildOf(sc1.getIdentifier());
-    cr1.setRefersTo(sc1_sys.getIdentifier());
+    const cr1 = device.createComponentReference(sc1.getIdentifier(), sc1_sys.getIdentifier(), 'ComponentReference1');
 
     document.getElementById('turtleOutput').textContent         = doc.toRDF(RDFFormat.TURTLE);
     document.getElementById('xmlOutput').textContent            = doc.toRDF(RDFFormat.RDF_XML);

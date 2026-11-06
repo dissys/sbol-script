@@ -13,7 +13,7 @@
 <body class="bg-light">
 <div class="container py-4">
     <h1 class="mb-4">SBOL3 Plan</h1>
-    <p class="text-muted">A Plan (CodonOptimisationProtocol) and an Agent (CodonOptimiserSoftware), plus a toggle_switch Component.</p>
+    <p class="text-muted">A Plan (CodonOptimisationProtocol).</p>
     <div class="card mb-4">
         <div class="card-header bg-primary text-white">Turtle (text/turtle)</div>
         <div class="card-body"><pre id="turtleOutput"></pre></div>
@@ -45,16 +45,6 @@
     const plan = doc.createPlan(NS + '/CodonOptimisationProtocol', NS);
     plan.setName('Codon Optimisation Protocol');
     plan.setDescription('Optimisation protocol to improve the translation of mRNAs.');
-
-    // ── CodonOptimiserSoftware — Agent ─────────────────────────────────────
-    const agent = doc.createAgent(NS + '/CodonOptimiserSoftware', NS);
-    agent.setName('Codon Optimiser Software');
-    agent.setDescription('Used to optimise bacterial DNA sequences.');
-
-    // ── toggle_switch — Component ──────────────────────────────────────────
-    const toggle = doc.createComponent(NS + '/toggle_switch', NS, [ComponentType.FunctionalEntity.iri]);
-    toggle.setName('Toggle Switch');
-    toggle.setDescription('Toggle Switch genetic circuit');
 
     document.getElementById('turtleOutput').textContent         = doc.toRDF(RDFFormat.TURTLE);
     document.getElementById('xmlOutput').textContent            = doc.toRDF(RDFFormat.RDF_XML);

@@ -54,8 +54,7 @@
     e0040.addSequence(seq_e0040.getIdentifier());
 
     const sf1 = e0040.createSequenceFeature('SequenceFeature1');
-    const range1 = sf1.createRange(1, 3, 'Range1');
-    range1.setSequenceIRI(seq_e0040.getIdentifier());
+    const range1 = sf1.createRange(seq_e0040.getIdentifier(), 1, 3, 'Range1');
 
     document.getElementById('turtleOutput').textContent         = doc.toRDF(RDFFormat.TURTLE);
     document.getElementById('xmlOutput').textContent            = doc.toRDF(RDFFormat.RDF_XML);

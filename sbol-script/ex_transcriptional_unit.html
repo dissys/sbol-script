@@ -70,7 +70,7 @@
     region.addSequence(seq1.getIdentifier());
 
     const sc_promoter = region.createSubComponent(promoter.getIdentifier(), 'sc_promoter');
-    sc_promoter.setOrientation(Orientation.INLINE);
+    sc_promoter.setOrientation(Orientation.Inline);
     sc_promoter.createRange(seq1.getIdentifier(), 1, 200, 'pRange');
 
     const sc_rbs     = region.createSubComponent(rbs.getIdentifier(), 'sc_rbs');

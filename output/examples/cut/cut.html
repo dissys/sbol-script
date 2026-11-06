@@ -56,8 +56,7 @@
 
     // ── SequenceFeature with Cut ───────────────────────────────────────────────
     const sf1 = bba_r0040.createSequenceFeature('SequenceFeature1');
-    const cut1 = sf1.createCut(5, 'Cut1');
-    cut1.setSequenceIRI(seq_r0040.getIdentifier());
+    const cut1 = sf1.createCut(seq_r0040.getIdentifier(), 5, 'Cut1');
 
     document.getElementById('turtleOutput').textContent         = doc.toRDF(RDFFormat.TURTLE);
     document.getElementById('xmlOutput').textContent            = doc.toRDF(RDFFormat.RDF_XML);

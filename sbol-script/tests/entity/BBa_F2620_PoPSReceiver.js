@@ -75,14 +75,14 @@ function generate() {
   b0015.addRole(SO + '0000141'); b0015.addSequence(seq_b0015.getIdentifier());
 
   const b15_sc1 = b0015.createSubComponent(b0010.getIdentifier(), 'SubComponent1');
-  b15_sc1.setOrientation(Orientation.INLINE);
+  b15_sc1.setOrientation(Orientation.Inline);
   const b15_r1 = b15_sc1.createRange(seq_b0015.getIdentifier(), 1, 80, 'Range1');
-  b15_r1.setOrientation(Orientation.INLINE);
+  b15_r1.setOrientation(Orientation.Inline);
 
   const b15_sc2 = b0015.createSubComponent(b0012.getIdentifier(), 'SubComponent2');
-  b15_sc2.setOrientation(Orientation.INLINE);
+  b15_sc2.setOrientation(Orientation.Inline);
   const b15_r2 = b15_sc2.createRange(seq_b0015.getIdentifier(), 81, 121, 'Range1');
-  b15_r2.setOrientation(Orientation.INLINE);
+  b15_r2.setOrientation(Orientation.Inline);
 
   const c0062_prot = doc.createComponent(NS + '/BBa_C0062_protein', NS, [ComponentType.Protein.iri]);
   c0062_prot.setName('LuxR'); c0062_prot.setDescription('LuxR protein');
@@ -100,29 +100,29 @@ function generate() {
   const f_sc2 = f2620.createSubComponent(tetr_prot.getIdentifier(), 'SubComponent2');
 
   const f_sc3 = f2620.createSubComponent(r0040.getIdentifier(), 'SubComponent3');
-  f_sc3.setOrientation(Orientation.INLINE);
+  f_sc3.setOrientation(Orientation.Inline);
   const f_r3 = f_sc3.createRange(seq_f2620.getIdentifier(), 1, 54, 'Range1');
-  f_r3.setOrientation(Orientation.INLINE);
+  f_r3.setOrientation(Orientation.Inline);
 
   const f_sc4 = f2620.createSubComponent(b0034.getIdentifier(), 'SubComponent4');
-  f_sc4.setOrientation(Orientation.INLINE);
+  f_sc4.setOrientation(Orientation.Inline);
   const f_r4 = f_sc4.createRange(seq_f2620.getIdentifier(), 55, 66, 'Range1');
-  f_r4.setOrientation(Orientation.INLINE);
+  f_r4.setOrientation(Orientation.Inline);
 
   const f_sc5 = f2620.createSubComponent(c0062.getIdentifier(), 'SubComponent5');
-  f_sc5.setOrientation(Orientation.INLINE);
+  f_sc5.setOrientation(Orientation.Inline);
   const f_r5 = f_sc5.createRange(seq_f2620.getIdentifier(), 67, 847, 'Range1');
-  f_r5.setOrientation(Orientation.INLINE);
+  f_r5.setOrientation(Orientation.Inline);
 
   const f_sc6 = f2620.createSubComponent(b0015.getIdentifier(), 'SubComponent6');
-  f_sc6.setOrientation(Orientation.INLINE);
+  f_sc6.setOrientation(Orientation.Inline);
   const f_r6 = f_sc6.createRange(seq_f2620.getIdentifier(), 848, 968, 'Range1');
-  f_r6.setOrientation(Orientation.INLINE);
+  f_r6.setOrientation(Orientation.Inline);
 
   const f_sc7 = f2620.createSubComponent(r0062.getIdentifier(), 'SubComponent7');
-  f_sc7.setOrientation(Orientation.INLINE);
+  f_sc7.setOrientation(Orientation.Inline);
   const f_r7 = f_sc7.createRange(seq_f2620.getIdentifier(), 969, 1023, 'Range1');
-  f_r7.setOrientation(Orientation.INLINE);
+  f_r7.setOrientation(Orientation.Inline);
 
   const f_int1 = f2620.createInteraction({ iri: SBO + '0000589' }, 'Interaction1');
   f_int1.createParticipation({ iri: SBO + '0000645' }, f_sc5.getIdentifier(), 'Participation1');

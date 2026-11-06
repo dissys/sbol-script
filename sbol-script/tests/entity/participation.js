@@ -40,9 +40,9 @@ function generate() {
   i13504.addSequence(i13504_seq.getIdentifier());
 
   const sc_i13504 = i13504.createSubComponent(e0040.getIdentifier(), 'SubComponent1');
-  sc_i13504.setOrientation(Orientation.INLINE);
+  sc_i13504.setOrientation(Orientation.Inline);
   const range1 = sc_i13504.createRange(i13504_seq.getIdentifier(), 1, 720, 'Range1');
-  range1.setOrientation(Orientation.INLINE);
+  range1.setOrientation(Orientation.Inline);
 
   const i13504_system = doc.createComponent(NS + '/i13504_system', NS, [ComponentType.DNA.iri]);
   i13504_system.setName('i13504 system');

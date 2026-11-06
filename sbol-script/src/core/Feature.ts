@@ -16,16 +16,16 @@ export default abstract class Feature extends Identified {
 
     // ── orientation ────────────────────────────────────────────────────────
 
-    setOrientation(orientation: typeof Orientation.INLINE): void {
+    setOrientation(orientation: typeof Orientation.Inline): void {
         SBOL3Util.setProperty(this.store, this.resource, SBOLEntity.Feature.properties.orientation, [orientation]);
     }
 
-    getOrientation(): typeof Orientation.INLINE | null {
+    getOrientation(): typeof Orientation.Inline | null {
         const vals = RDFUtil.getProperty(this.store, this.resource, SBOLEntity.Feature.properties.orientation);
         if (!vals || vals.length === 0) return null;
         const iri = vals[0];
-        if (iri === Orientation.INLINE.iri) return Orientation.INLINE;
-        if (iri === Orientation.REVERSE_COMPLEMENT.iri) return Orientation.REVERSE_COMPLEMENT;
+        if (iri === Orientation.Inline.iri) return Orientation.Inline;
+        if (iri === Orientation.ReverseComplement.iri) return Orientation.ReverseComplement;
         return null;
     }
 

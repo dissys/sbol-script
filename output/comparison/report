@@ -1,7 +1,7 @@
 
 ================================================================================
 TEST:      BBa_F2620_PoPSReceiver
-TIMESTAMP: 2026-05-07T18:26:20.970Z
+TIMESTAMP: 2026-10-19T10:45:43.362Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/BBa_F2620_PoPSReceiver/BBa_F2620_PoPSReceiver_ordered.nt
 OUTPUT:    ../../output/examples/BBa_F2620_PoPSReceiver/BBa_F2620_PoPSReceiver_ordered.nt
@@ -11,7 +11,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      activity
-TIMESTAMP: 2026-05-07T18:26:20.971Z
+TIMESTAMP: 2026-10-19T10:45:43.363Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/provenance_entity/activity/activity_ordered.nt
 OUTPUT:    ../../output/examples/activity/activity_ordered.nt
@@ -21,7 +21,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      agent
-TIMESTAMP: 2026-05-07T18:26:20.971Z
+TIMESTAMP: 2026-10-19T10:45:43.363Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/provenance_entity/agent/agent_ordered.nt
 OUTPUT:    ../../output/examples/agent/agent_ordered.nt
@@ -31,7 +31,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      annotation
-TIMESTAMP: 2026-05-07T18:26:20.972Z
+TIMESTAMP: 2026-10-19T10:45:43.363Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/annotation/annotation_ordered.nt
 OUTPUT:    ../../output/examples/annotation/annotation_ordered.nt
@@ -41,7 +41,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      attachment
-TIMESTAMP: 2026-05-07T18:26:20.972Z
+TIMESTAMP: 2026-10-19T10:45:43.364Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/attachment/attachment_ordered.nt
 OUTPUT:    ../../output/examples/attachment/attachment_ordered.nt
@@ -51,7 +51,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      collection
-TIMESTAMP: 2026-05-07T18:26:20.972Z
+TIMESTAMP: 2026-10-19T10:45:43.364Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/collection/collection_ordered.nt
 OUTPUT:    ../../output/examples/collection/collection_ordered.nt
@@ -61,7 +61,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      combinatorialderivation
-TIMESTAMP: 2026-05-07T18:26:20.972Z
+TIMESTAMP: 2026-10-19T10:45:43.364Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/combinatorialderivation/combinatorialderivation_ordered.nt
 OUTPUT:    ../../output/examples/combinatorialderivation/combinatorialderivation_ordered.nt
@@ -71,7 +71,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      combine2020
-TIMESTAMP: 2026-05-07T18:26:20.973Z
+TIMESTAMP: 2026-10-19T10:45:43.365Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/combine2020/combine2020_ordered.nt
 OUTPUT:    ../../output/examples/combine2020/combine2020_ordered.nt
@@ -81,7 +81,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      component
-TIMESTAMP: 2026-05-07T18:26:20.973Z
+TIMESTAMP: 2026-10-19T10:45:43.365Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/component/component_ordered.nt
 OUTPUT:    ../../output/examples/component/component_ordered.nt
@@ -91,27 +91,17 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      component_urn_uri
-TIMESTAMP: 2026-05-07T18:26:20.974Z
-STATUS:    FAIL
+TIMESTAMP: 2026-10-19T10:45:43.365Z
+STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/component_urn_uri/component_urn_uri_ordered.nt
 OUTPUT:    ../../output/examples/component_urn_uri/component_urn_uri_ordered.nt
 LINES:     Generated=4  Reference=4  Total=4
-ERRORS:    8 lines with issues  (200.00%)
-
-DIFFERENCES:
-  - (missing)  <urn:uuid:5cc1a915-15e1-469d-91c6-7a4e2f633fef> <http://sbols.org/v3#hasNamespace> <urn:uuid:1832db29-1a27-4fee-97da-f910bdf413b3> .
-  - (missing)  <urn:uuid:5cc1a915-15e1-469d-91c6-7a4e2f633fef> <http://sbols.org/v3#name> "TetR" .
-  - (missing)  <urn:uuid:5cc1a915-15e1-469d-91c6-7a4e2f633fef> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000252> .
-  - (missing)  <urn:uuid:5cc1a915-15e1-469d-91c6-7a4e2f633fef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
-  + (extra)    <urn:uuid:71d71541-4282-4bf6-89f2-779814288e52> <http://sbols.org/v3#hasNamespace> <urn:uuid:246d7405-19bb-4722-9f98-939165f6ef00> .
-  + (extra)    <urn:uuid:71d71541-4282-4bf6-89f2-779814288e52> <http://sbols.org/v3#name> "TetR" .
-  + (extra)    <urn:uuid:71d71541-4282-4bf6-89f2-779814288e52> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000252> .
-  + (extra)    <urn:uuid:71d71541-4282-4bf6-89f2-779814288e52> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Component> .
+ERRORS:    0 lines with issues  (0.00%)
 ================================================================================
 
 ================================================================================
 TEST:      componentreference
-TIMESTAMP: 2026-05-07T18:26:20.974Z
+TIMESTAMP: 2026-10-19T10:45:43.366Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/componentreference/componentreference_ordered.nt
 OUTPUT:    ../../output/examples/componentreference/componentreference_ordered.nt
@@ -121,7 +111,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      constraint
-TIMESTAMP: 2026-05-07T18:26:20.975Z
+TIMESTAMP: 2026-10-19T10:45:43.366Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/constraint/constraint_ordered.nt
 OUTPUT:    ../../output/examples/constraint/constraint_ordered.nt
@@ -131,7 +121,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      cut
-TIMESTAMP: 2026-05-07T18:26:20.975Z
+TIMESTAMP: 2026-10-19T10:45:43.366Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/cut/cut_ordered.nt
 OUTPUT:    ../../output/examples/cut/cut_ordered.nt
@@ -141,7 +131,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      experiment
-TIMESTAMP: 2026-05-07T18:26:20.975Z
+TIMESTAMP: 2026-10-19T10:45:43.366Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/experiment/experiment_ordered.nt
 OUTPUT:    ../../output/examples/experiment/experiment_ordered.nt
@@ -151,7 +141,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      externallydefined
-TIMESTAMP: 2026-05-07T18:26:20.975Z
+TIMESTAMP: 2026-10-19T10:45:43.366Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/externallydefined/externallydefined_ordered.nt
 OUTPUT:    ../../output/examples/externallydefined/externallydefined_ordered.nt
@@ -161,7 +151,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      implementation
-TIMESTAMP: 2026-05-07T18:26:20.975Z
+TIMESTAMP: 2026-10-19T10:45:43.367Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/implementation/implementation_ordered.nt
 OUTPUT:    ../../output/examples/implementation/implementation_ordered.nt
@@ -171,7 +161,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      interaction
-TIMESTAMP: 2026-05-07T18:26:20.976Z
+TIMESTAMP: 2026-10-19T10:45:43.367Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/interaction/interaction_ordered.nt
 OUTPUT:    ../../output/examples/interaction/interaction_ordered.nt
@@ -181,7 +171,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      interface
-TIMESTAMP: 2026-05-07T18:26:20.976Z
+TIMESTAMP: 2026-10-19T10:45:43.367Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/interface/interface_ordered.nt
 OUTPUT:    ../../output/examples/interface/interface_ordered.nt
@@ -191,7 +181,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      localsubcomponent
-TIMESTAMP: 2026-05-07T18:26:20.976Z
+TIMESTAMP: 2026-10-19T10:45:43.367Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/localsubcomponent/localsubcomponent_ordered.nt
 OUTPUT:    ../../output/examples/localsubcomponent/localsubcomponent_ordered.nt
@@ -201,7 +191,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      measurement
-TIMESTAMP: 2026-05-07T18:26:20.976Z
+TIMESTAMP: 2026-10-19T10:45:43.368Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/measurement_entity/measurement/measurement_ordered.nt
 OUTPUT:    ../../output/examples/measurement/measurement_ordered.nt
@@ -211,7 +201,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      measurement_using_units_From_OM
-TIMESTAMP: 2026-05-07T18:26:20.977Z
+TIMESTAMP: 2026-10-19T10:45:43.368Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/measurement_entity/measurement_using_units_From_OM/measurement_using_units_From_OM_ordered.nt
 OUTPUT:    ../../output/examples/measurement_using_units_From_OM/measurement_using_units_From_OM_ordered.nt
@@ -221,7 +211,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      model
-TIMESTAMP: 2026-05-07T18:26:20.977Z
+TIMESTAMP: 2026-10-19T10:45:43.368Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/model/model_ordered.nt
 OUTPUT:    ../../output/examples/model/model_ordered.nt
@@ -231,7 +221,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      multicellular
-TIMESTAMP: 2026-05-07T18:26:20.978Z
+TIMESTAMP: 2026-10-19T10:45:43.369Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/multicellular/multicellular_ordered.nt
 OUTPUT:    ../../output/examples/multicellular/multicellular_ordered.nt
@@ -241,7 +231,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      multicellular_simple
-TIMESTAMP: 2026-05-07T18:26:20.978Z
+TIMESTAMP: 2026-10-19T10:45:43.369Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/multicellular_simple/multicellular_simple_ordered.nt
 OUTPUT:    ../../output/examples/multicellular_simple/multicellular_simple_ordered.nt
@@ -251,7 +241,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      participation
-TIMESTAMP: 2026-05-07T18:26:20.979Z
+TIMESTAMP: 2026-10-19T10:45:43.370Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/participation/participation_ordered.nt
 OUTPUT:    ../../output/examples/participation/participation_ordered.nt
@@ -261,7 +251,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      plan
-TIMESTAMP: 2026-05-07T18:26:20.979Z
+TIMESTAMP: 2026-10-19T10:45:43.370Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/provenance_entity/plan/plan_ordered.nt
 OUTPUT:    ../../output/examples/plan/plan_ordered.nt
@@ -271,7 +261,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      range
-TIMESTAMP: 2026-05-07T18:26:20.979Z
+TIMESTAMP: 2026-10-19T10:45:43.370Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/range/range_ordered.nt
 OUTPUT:    ../../output/examples/range/range_ordered.nt
@@ -281,7 +271,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      sequencefeature
-TIMESTAMP: 2026-05-07T18:26:20.979Z
+TIMESTAMP: 2026-10-19T10:45:43.370Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/sequencefeature/sequencefeature_ordered.nt
 OUTPUT:    ../../output/examples/sequencefeature/sequencefeature_ordered.nt
@@ -291,7 +281,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      subcomponent
-TIMESTAMP: 2026-05-07T18:26:20.980Z
+TIMESTAMP: 2026-10-19T10:45:43.370Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/entity/subcomponent/subcomponent_ordered.nt
 OUTPUT:    ../../output/examples/subcomponent/subcomponent_ordered.nt
@@ -301,7 +291,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      toggle_switch
-TIMESTAMP: 2026-05-07T18:26:20.980Z
+TIMESTAMP: 2026-10-19T10:45:43.371Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/toggle_switch/toggle_switch_ordered.nt
 OUTPUT:    ../../output/examples/toggle_switch/toggle_switch_ordered.nt
@@ -311,7 +301,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      toggle_switch_v2
-TIMESTAMP: 2026-05-07T18:26:20.982Z
+TIMESTAMP: 2026-10-19T10:45:43.372Z
 STATUS:    PASS
 INPUT:     ../../../libSBOLj3/libSBOLj3/output/toggle_switch_v2/toggle_switch_v2_ordered.nt
 OUTPUT:    ../../output/examples/toggle_switch_v2/toggle_switch_v2_ordered.nt
@@ -321,7 +311,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-05-07T18:32:53.316Z
+TIMESTAMP: 2026-10-19T10:45:51.375Z
 STATUS:    PASS
 INPUT:     usecases/GettingStartedTutorial.js
 OUTPUT:    entity/combine2020.js
@@ -331,67 +321,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-05-07T18:32:53.354Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-05-07T18:32:53.391Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-05-07T18:32:53.429Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-05-07T18:32:53.439Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-05-07T18:32:53.488Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-05-20T14:50:34.971Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-05-20T14:50:35.002Z
+TIMESTAMP: 2026-10-19T10:45:51.405Z
 STATUS:    PASS
 INPUT:     usecases/PoPSReceiverExampleTest.js
 OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
@@ -401,230 +331,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      BBa_F2620_PoPSReceiver_entity_vs_highlevel
-TIMESTAMP: 2026-05-20T14:50:35.024Z
-STATUS:    FAIL
-INPUT:     usecases/PoPSReceiverExampleUsingHighLevelEntitiesTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=219  Reference=284  Total=284
-ERRORS:    151 lines with issues  (53.17%)
-
-DIFFERENCES:
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent1/Range1> <http://sbols.org/v3#displayId> "Range1" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent1/Range1> <http://sbols.org/v3#end> "80" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent1/Range1> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent1/Range1> <http://sbols.org/v3#orientation> <https://identifiers.org/SO:0001030> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent1/Range1> <http://sbols.org/v3#start> "1" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent1/Range1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Range> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent1> <http://sbols.org/v3#hasLocation> <https://synbiohub.org/public/igem/BBa_B0015/SubComponent1/Range1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent2/Range1> <http://sbols.org/v3#displayId> "Range1" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent2/Range1> <http://sbols.org/v3#end> "121" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent2/Range1> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent2/Range1> <http://sbols.org/v3#orientation> <https://identifiers.org/SO:0001030> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent2/Range1> <http://sbols.org/v3#start> "81" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent2/Range1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Range> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015/SubComponent2> <http://sbols.org/v3#hasLocation> <https://synbiohub.org/public/igem/BBa_B0015/SubComponent2/Range1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> <http://sbols.org/v3#description> "BBa_B0015 sequence" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> <http://sbols.org/v3#displayId> "BBa_B0015_Sequence1" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> <http://sbols.org/v3#elements> "ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctcacactggctcaccttcgggtgggcctttctgcgtttata" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> <http://sbols.org/v3#encoding> <https://identifiers.org/edam:format_1207> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> <http://sbols.org/v3#name> "Sequence1" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_B0015_Sequence1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Sequence> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation1> <http://sbols.org/v3#displayId> "Participation1" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation1> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000645> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation2> <http://sbols.org/v3#displayId> "Participation2" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation2> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation2> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000011> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1> <http://sbols.org/v3#displayId> "Interaction1" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/Interaction1/Participation2> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000589> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Interaction> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation1> <http://sbols.org/v3#displayId> "Participation1" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation1> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000643> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation2> <http://sbols.org/v3#displayId> "Participation2" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation2> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation2> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000459> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2> <http://sbols.org/v3#displayId> "Interaction2" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/Interaction2/Participation2> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000170> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Interaction> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation1> <http://sbols.org/v3#displayId> "Participation1" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation1> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000643> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation2> <http://sbols.org/v3#displayId> "Participation2" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation2> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent2> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation2> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000459> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3> <http://sbols.org/v3#displayId> "Interaction3" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/Interaction3/Participation2> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000170> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/Interaction3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Interaction> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3/Range1> <http://sbols.org/v3#displayId> "Range1" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3/Range1> <http://sbols.org/v3#end> "54" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3/Range1> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3/Range1> <http://sbols.org/v3#orientation> <https://identifiers.org/SO:0001030> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3/Range1> <http://sbols.org/v3#start> "1" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3/Range1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Range> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3> <http://sbols.org/v3#hasLocation> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3/Range1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent4/Range1> <http://sbols.org/v3#displayId> "Range1" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent4/Range1> <http://sbols.org/v3#end> "66" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent4/Range1> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent4/Range1> <http://sbols.org/v3#orientation> <https://identifiers.org/SO:0001030> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent4/Range1> <http://sbols.org/v3#start> "55" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent4/Range1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Range> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent4> <http://sbols.org/v3#hasLocation> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent4/Range1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5/Range1> <http://sbols.org/v3#displayId> "Range1" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5/Range1> <http://sbols.org/v3#end> "847" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5/Range1> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5/Range1> <http://sbols.org/v3#orientation> <https://identifiers.org/SO:0001030> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5/Range1> <http://sbols.org/v3#start> "67" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5/Range1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Range> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5> <http://sbols.org/v3#hasLocation> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5/Range1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent6/Range1> <http://sbols.org/v3#displayId> "Range1" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent6/Range1> <http://sbols.org/v3#end> "968" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent6/Range1> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent6/Range1> <http://sbols.org/v3#orientation> <https://identifiers.org/SO:0001030> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent6/Range1> <http://sbols.org/v3#start> "848" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent6/Range1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Range> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent6> <http://sbols.org/v3#hasLocation> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent6/Range1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7/Range1> <http://sbols.org/v3#displayId> "Range1" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7/Range1> <http://sbols.org/v3#end> "1023" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7/Range1> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7/Range1> <http://sbols.org/v3#orientation> <https://identifiers.org/SO:0001030> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7/Range1> <http://sbols.org/v3#start> "969" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7/Range1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Range> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7> <http://sbols.org/v3#hasLocation> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7/Range1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620> <http://sbols.org/v3#hasInteraction> <https://synbiohub.org/public/igem/BBa_F2620/Interaction1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620> <http://sbols.org/v3#hasInteraction> <https://synbiohub.org/public/igem/BBa_F2620/Interaction2> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620> <http://sbols.org/v3#hasInteraction> <https://synbiohub.org/public/igem/BBa_F2620/Interaction3> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620> <http://sbols.org/v3#hasSequence> <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> <http://sbols.org/v3#description> "BBa_F2620 sequence" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> <http://sbols.org/v3#displayId> "BBa_F2620_Sequence1" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> <http://sbols.org/v3#elements> "tccctatcagtgatagagattgacatccctatcagtgatagagatactgagcacaaagaggagaaaatgaaaaacataaatgccgacgacacatacagaataattaataaaattaaagcttgtagaagcaataatgatattaatcaatgcttatctgatatgactaaaatggtacattgtgaatattatttactcgcgatcatttatcctcattctatggttaaatctgatatttcaatcctagataattaccctaaaaaatggaggcaatattatgatgacgctaatttaataaaatatgatcctatagtagattattctaactccaatcattcaccaattaattggaatatatttgaaaacaatgctgtaaataaaaaatctccaaatgtaattaaagaagcgaaaacatcaggtcttatcactgggtttagtttccctattcatacggctaacaatggcttcggaatgcttagttttgcacattcagaaaaagacaactatatagatagtttatttttacatgcgtgtatgaacataccattaattgttccttctctagttgataattatcgaaaaataaatatagcaaataataaatcaaacaacgatttaaccaaaagagaaaaagaatgtttagcgtgggcatgcgaaggaaaaagctcttgggatatttcaaaaatattaggttgcagtgagcgtactgtcactttccatttaaccaatgcgcaaatgaaactcaatacaacaaaccgctgccaaagtatttctaaagcaattttaacaggagcaattgattgcccatactttaaaaattaataacactgatagtgctagtgtagatcacccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctcacactggctcaccttcgggtgggcctttctgcgtttataacctgtaggatcgtacaggtttacgcaagaaaatggtttgttatagtcgaataaa" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> <http://sbols.org/v3#encoding> <https://identifiers.org/edam:format_1207> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> <http://sbols.org/v3#hasNamespace> <https://synbiohub.org/public/igem> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> <http://sbols.org/v3#name> "Sequence1" .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_F2620_Sequence1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Sequence> .
-  - (missing)  <https://synbiohub.org/public/igem/BBa_R0062> <http://sbols.org/v3#description> "Promoter (luxR &amp; HSL regulated -- lux pR)" .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Product2> <http://sbols.org/v3#displayId> "Product2" .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Product2> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent1> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Product2> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000011> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Product2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Template1> <http://sbols.org/v3#displayId> "Template1" .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Template1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent5> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Template1> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000645> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Template1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1> <http://sbols.org/v3#displayId> "GeneticProduction1" .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Product2> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1/Template1> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000589> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Interaction> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulated1> <http://sbols.org/v3#displayId> "Stimulated1" .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulated1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent7> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulated1> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000643> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulated1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulator1> <http://sbols.org/v3#displayId> "Stimulator1" .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulator1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent1> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulator1> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000459> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulator1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2> <http://sbols.org/v3#displayId> "StimulationInteraction2" .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulated1> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2/Stimulator1> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000170> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Interaction> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulated1> <http://sbols.org/v3#displayId> "Stimulated1" .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulated1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent3> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulated1> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000643> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulated1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulator1> <http://sbols.org/v3#displayId> "Stimulator1" .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulator1> <http://sbols.org/v3#participant> <https://synbiohub.org/public/igem/BBa_F2620/SubComponent2> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulator1> <http://sbols.org/v3#role> <https://identifiers.org/SBO:0000459> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulator1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Participation> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3> <http://sbols.org/v3#displayId> "StimulationInteraction3" .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulated1> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3> <http://sbols.org/v3#hasParticipation> <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3/Stimulator1> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3> <http://sbols.org/v3#type> <https://identifiers.org/SBO:0000170> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sbols.org/v3#Interaction> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620> <http://sbols.org/v3#hasInteraction> <https://synbiohub.org/public/igem/BBa_F2620/GeneticProduction1> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620> <http://sbols.org/v3#hasInteraction> <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction2> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_F2620> <http://sbols.org/v3#hasInteraction> <https://synbiohub.org/public/igem/BBa_F2620/StimulationInteraction3> .
-  + (extra)    <https://synbiohub.org/public/igem/BBa_R0062> <http://sbols.org/v3#description> "Promoter (luxR & HSL regulated -- lux pR)" .
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-05-20T14:50:35.058Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-05-20T14:50:35.093Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-05-20T14:50:35.102Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-05-20T14:50:35.138Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-05-20T14:56:11.138Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-05-20T14:56:11.168Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_highlevel
-TIMESTAMP: 2026-05-20T14:56:11.190Z
+TIMESTAMP: 2026-10-19T10:45:51.431Z
 STATUS:    PASS
 INPUT:     usecases/PoPSReceiverExampleUsingHighLevelEntitiesTest.js
 OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
@@ -634,7 +341,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-05-20T14:56:11.226Z
+TIMESTAMP: 2026-10-19T10:45:51.465Z
 STATUS:    PASS
 INPUT:     usecases/ToggleSwitchTest.js
 OUTPUT:    entity/toggle_switch.js
@@ -644,7 +351,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-05-20T14:56:11.263Z
+TIMESTAMP: 2026-10-19T10:45:51.499Z
 STATUS:    PASS
 INPUT:     usecases/ToggleSwitch_v2Test.js
 OUTPUT:    entity/toggle_switch_v2.js
@@ -654,7 +361,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-05-20T14:56:11.273Z
+TIMESTAMP: 2026-10-19T10:45:51.507Z
 STATUS:    PASS
 INPUT:     usecases/MulticellularSimpleTest.js
 OUTPUT:    entity/multicellular_simple.js
@@ -664,77 +371,7 @@ ERRORS:    0 lines with issues  (0.00%)
 
 ================================================================================
 TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-05-20T14:56:11.311Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularTest.js
-OUTPUT:    entity/multicellular.js
-LINES:     Generated=409  Reference=409  Total=409
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      combine2020_vs_GettingStartedTutorial
-TIMESTAMP: 2026-05-20T14:56:59.230Z
-STATUS:    PASS
-INPUT:     usecases/GettingStartedTutorial.js
-OUTPUT:    entity/combine2020.js
-LINES:     Generated=215  Reference=215  Total=215
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_usecase
-TIMESTAMP: 2026-05-20T14:56:59.259Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      BBa_F2620_PoPSReceiver_entity_vs_highlevel
-TIMESTAMP: 2026-05-20T14:56:59.283Z
-STATUS:    PASS
-INPUT:     usecases/PoPSReceiverExampleUsingHighLevelEntitiesTest.js
-OUTPUT:    entity/BBa_F2620_PoPSReceiver.js
-LINES:     Generated=284  Reference=284  Total=284
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_entity_vs_usecase
-TIMESTAMP: 2026-05-20T14:56:59.320Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitchTest.js
-OUTPUT:    entity/toggle_switch.js
-LINES:     Generated=371  Reference=371  Total=371
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      toggle_switch_v2_entity_vs_usecase
-TIMESTAMP: 2026-05-20T14:56:59.358Z
-STATUS:    PASS
-INPUT:     usecases/ToggleSwitch_v2Test.js
-OUTPUT:    entity/toggle_switch_v2.js
-LINES:     Generated=405  Reference=405  Total=405
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_simple_entity_vs_usecase
-TIMESTAMP: 2026-05-20T14:56:59.367Z
-STATUS:    PASS
-INPUT:     usecases/MulticellularSimpleTest.js
-OUTPUT:    entity/multicellular_simple.js
-LINES:     Generated=94  Reference=94  Total=94
-ERRORS:    0 lines with issues  (0.00%)
-================================================================================
-
-================================================================================
-TEST:      multicellular_entity_vs_usecase
-TIMESTAMP: 2026-05-20T14:56:59.403Z
+TIMESTAMP: 2026-10-19T10:45:51.541Z
 STATUS:    PASS
 INPUT:     usecases/MulticellularTest.js
 OUTPUT:    entity/multicellular.js

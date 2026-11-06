@@ -3,8 +3,10 @@
 const { SBOLDocument, RDFFormat, ComponentType } = require('../sbolLib');
 
 function generate() {
-  const NS_IRI   = 'urn:uuid:246d7405-19bb-4722-9f98-939165f6ef00';
-  const COMP_IRI = 'urn:uuid:71d71541-4282-4bf6-89f2-779814288e52';
+  // Must match the UUIDs in the libSBOLj3 reference output, which generates
+  // random UUIDs on each run (Component_with_URN_URI_Test.java).
+  const NS_IRI   = 'urn:uuid:1832db29-1a27-4fee-97da-f910bdf413b3';
+  const COMP_IRI = 'urn:uuid:5cc1a915-15e1-469d-91c6-7a4e2f633fef';
 
   const doc = new SBOLDocument(NS_IRI + '/');
 

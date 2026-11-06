@@ -54,21 +54,21 @@ function generate() {
   const rbs = SBOLAPI.createDnaComponent(doc, 'B0034', 'rbs', 'RBS (Elowitz 1999)', SBOLNamespaces.SO('0000139'), 'aaagaggagaaa');
 
   // Start assembling the i13504 device's sequence by adding the RBS component.
-  SBOLAPI.appendComponent(doc, device, rbs, Orientation.INLINE);
+  SBOLAPI.appendComponent(doc, device, rbs, Orientation.Inline);
   console.log(`Added the RBS subcomponent: ${rbs.getIdentifier()}`);
 
   // Add the scar sequence between the RBS and CDS components
-  const scar1 = SBOLAPI.appendSequenceFeature(doc, device, 'tactag', Orientation.INLINE);
+  const scar1 = SBOLAPI.appendSequenceFeature(doc, device, 'tactag', Orientation.Inline);
   console.log(`Added the scar sequence between the RBS and the CDS components: ${scar1.getIdentifier()}`);
 
   // Create the GFP component and add it as a subcomponent to continue assembling the i13504 device.
   const gfp_na = 'atgcgtaaaggagaagaacttttcactggagttgtcccaattcttgttgaattagatggtgatgttaatgggcacaaattttctgtcagtggagagggtgaaggtgatgcaacatacggaaaacttacccttaaatttatttgcactactggaaaactacctgttccatggccaacacttgtcactactttcggttatggtgttcaatgctttgcgagatacccagatcatatgaaacagcatgactttttcaagagtgccatgcccgaaggttatgtacaggaaagaactatatttttcaaagatgacgggaactacaagacacgtgctgaagtcaagtttgaaggtgatacccttgttaatagaatcgagttaaaaggtattgattttaaagaagatggaaacattcttggacacaaattggaatacaactataactcacacaatgtatacatcatggcagacaaacaaaagaatggaatcaaagttaacttcaaaattagacacaacattgaagatggaagcgttcaactagcagaccattatcaacaaaatactccaattggcgatggccctgtccttttaccagacaaccattacctgtccacacaatctgccctttcgaaagatcccaacgaaaagagagaccacatggtccttcttgagtttgtaacagctgctgggattacacatggcatggatgaactatacaaataataa';
   const gfp = SBOLAPI.createDnaComponent(doc, 'E0040', 'gfp', 'gfp coding sequence', SBOLNamespaces.SO('0000316'), gfp_na);
-  const gfpSubComponent = SBOLAPI.appendComponent(doc, device, gfp, Orientation.INLINE);
+  const gfpSubComponent = SBOLAPI.appendComponent(doc, device, gfp, Orientation.Inline);
   console.log(`Added the GFP subcomponent ${gfp.getIdentifier()}`);
 
   // Add the scar between the CDS and terminator components
-  const scar2 = SBOLAPI.appendSequenceFeature(doc, device, 'tactagag', Orientation.INLINE);
+  const scar2 = SBOLAPI.appendSequenceFeature(doc, device, 'tactagag', Orientation.Inline);
   console.log(`Added the scar sequence between the CDS and the terminator components: ${scar2.getIdentifier()}`);
 
   // Create the terminator component
@@ -76,7 +76,7 @@ function generate() {
   const term = SBOLAPI.createDnaComponent(doc, 'B0015', 'terminator', 'B0015 double terminator', SBOLNamespaces.SO('0000141'), term_na);
 
   // Add the terminator as a subcomponent.
-  SBOLAPI.appendComponent(doc, device, term, Orientation.INLINE);
+  SBOLAPI.appendComponent(doc, device, term, Orientation.Inline);
   console.log(`Added the terminator subcomponent ${term.getIdentifier()}`);
 
   // ── Slide 32: GFP production from expression cassette ────────────────────

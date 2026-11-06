@@ -80,17 +80,17 @@ function generate() {
   laci_prod.addRole(SO + '0000704');
 
   const lp_sc1  = laci_prod.createSubComponent(pTetR.getIdentifier(), 'SubComponent1');
-  lp_sc1.setOrientation(Orientation.INLINE);
+  lp_sc1.setOrientation(Orientation.Inline);
   const lp_sc2  = laci_prod.createSubComponent(rbs_laci.getIdentifier(), 'SubComponent2');
-  lp_sc2.setOrientation(Orientation.INLINE);
+  lp_sc2.setOrientation(Orientation.Inline);
   const lp_sc3  = laci_prod.createSubComponent(lacI.getIdentifier(), 'SubComponent3');
-  lp_sc3.setOrientation(Orientation.INLINE);
+  lp_sc3.setOrientation(Orientation.Inline);
   const lp_sc4  = laci_prod.createSubComponent(rbs_gfp.getIdentifier(), 'SubComponent4');
-  lp_sc4.setOrientation(Orientation.INLINE);
+  lp_sc4.setOrientation(Orientation.Inline);
   const lp_sc5  = laci_prod.createSubComponent(gfp.getIdentifier(), 'SubComponent5');
-  lp_sc5.setOrientation(Orientation.INLINE);
+  lp_sc5.setOrientation(Orientation.Inline);
   const lp_sc6  = laci_prod.createSubComponent(ter_laci.getIdentifier(), 'SubComponent6');
-  lp_sc6.setOrientation(Orientation.INLINE);
+  lp_sc6.setOrientation(Orientation.Inline);
   const lp_sc7  = laci_prod.createSubComponent(laci_p.getIdentifier(), 'SubComponent7');
   const lp_sc8  = laci_prod.createSubComponent(gfp_p.getIdentifier(), 'SubComponent8');
   const lp_sc9  = laci_prod.createSubComponent(tetr_p.getIdentifier(), 'SubComponent9');
@@ -120,13 +120,13 @@ function generate() {
   tetr_prod.addRole(SO + '0000704');
 
   const tp_sc1 = tetr_prod.createSubComponent(pLacI.getIdentifier(), 'SubComponent1');
-  tp_sc1.setOrientation(Orientation.INLINE);
+  tp_sc1.setOrientation(Orientation.Inline);
   const tp_sc2 = tetr_prod.createSubComponent(rbs_tetr.getIdentifier(), 'SubComponent2');
-  tp_sc2.setOrientation(Orientation.INLINE);
+  tp_sc2.setOrientation(Orientation.Inline);
   const tp_sc3 = tetr_prod.createSubComponent(tetR.getIdentifier(), 'SubComponent3');
-  tp_sc3.setOrientation(Orientation.INLINE);
+  tp_sc3.setOrientation(Orientation.Inline);
   const tp_sc4 = tetr_prod.createSubComponent(ter_tetr.getIdentifier(), 'SubComponent4');
-  tp_sc4.setOrientation(Orientation.INLINE);
+  tp_sc4.setOrientation(Orientation.Inline);
   const tp_sc5 = tetr_prod.createSubComponent(tetr_p.getIdentifier(), 'SubComponent5');
   const tp_sc6 = tetr_prod.createSubComponent(laci_p.getIdentifier(), 'SubComponent6');
   const tp_sc7 = tetr_prod.createSubComponent(iptg.getIdentifier(), 'SubComponent7');
